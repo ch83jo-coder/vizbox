@@ -6,3 +6,74 @@
 .language-switch{display:flex;gap:3px;flex-shrink:0;padding:3px;background:#edf4fa;border-radius:9px}.language-switch button{border:0;background:transparent;color:#64748b;padding:7px 9px;border-radius:6px;font-size:11px;white-space:nowrap}.language-switch button[aria-pressed="true"]{background:white;color:#168ff0;box-shadow:0 1px 5px #0001;font-weight:700}@media(max-width:600px){header{flex-wrap:wrap!important;height:auto!important;gap:14px;padding-block:16px!important}header nav{order:3;width:100%;justify-content:center}header nav a:first-child{display:block}.hero h1{font-size:30px}}
 
 .seo-spot-image,#app>.section>img{width:100%;max-height:450px;object-fit:cover;border-radius:20px}.rank-row h2{font-size:15px;margin:0 0 7px}
+
+/* Keep flexible content within its column, including long bilingual names. */
+.regions>* ,.spots>* ,.section-heading>*{min-width:0}
+.rank-row .spot-open,.rank-row .spot-open>div{min-width:0}
+.rank-row img{flex-shrink:0}
+.rank-row h2,.rank-row h3,.rank-row p,.spot h3,.spot p{overflow-wrap:anywhere}
+.primary{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+@media(max-width:900px){
+ body>header{padding-inline:24px;gap:16px}
+ header nav{gap:16px}
+}
+@media(max-width:600px){
+ body>header{display:grid;grid-template-columns:minmax(0,1fr) auto;padding:14px 16px!important;gap:12px 8px}
+ header .brand{white-space:normal;min-width:0;font-size:12px}
+ header .logo{flex-shrink:0}
+ header .brand small{letter-spacing:.6px;font-size:6px}
+ header>.brand{grid-column:1;grid-row:1}
+ header>.language-switch{grid-column:2;grid-row:1}
+ header nav{grid-column:1/-1;grid-row:2;order:initial;gap:8px;justify-content:space-between;font-size:12px}
+ header nav a{display:flex!important;align-items:center;justify-content:center;gap:4px;min-height:44px;flex:1;text-align:center}
+ .language-switch{gap:0;padding:2px}
+ .language-switch button{min-height:40px;padding:6px 8px;font-size:11px}
+ .hero{height:440px}
+ .hero-content{left:20px;right:20px;top:42px}
+ .hero h1{font-size:clamp(26px,7.5vw,34px);line-height:1.5;letter-spacing:0;overflow-wrap:anywhere}
+ .hero p{font-size:12px;line-height:1.9;overflow-wrap:anywhere}
+ .hero-tag{left:20px;right:auto;bottom:58px}
+ .search{width:calc(100% - 32px);gap:6px;padding:10px}
+ .search input{padding:8px 2px;font-size:13px;min-height:44px}
+ .search button{flex-shrink:0;min-height:44px;padding:10px 12px}
+ .section{padding-inline:16px;margin-block:36px}
+ .section-heading{flex-wrap:wrap;align-items:flex-start;gap:12px;margin-bottom:20px}
+ .section-heading h2{font-size:22px;overflow-wrap:anywhere}
+ .section-heading p{font-size:12px;line-height:1.7}
+ .region-text{left:16px;right:12px;bottom:18px}
+ .region-text h3{font-size:26px}
+ .region-text p{line-height:1.6;overflow-wrap:anywhere}
+ .spot h3{font-size:14px;line-height:1.5}
+ .spot p{font-size:12px;line-height:1.7}
+ .rank-row{gap:8px;padding:14px 0;align-items:flex-start}
+ .rank{min-width:24px;font-size:19px;padding-top:23px}
+ .rank-row .spot-open{width:auto;gap:10px;align-items:flex-start}
+ .rank-row img{width:72px;height:76px;border-radius:9px}
+ .rank-row h2,.rank-row h3{font-size:14px;line-height:1.5;margin:0 0 5px}
+ .rank-row p{font-size:12px;line-height:1.6}
+ .rank-row .heart{width:44px;height:44px;margin-top:16px}
+ .heart{width:44px;height:44px}
+ .cover-text{left:20px;right:20px}
+ .cover-text h1{font-size:34px}
+ .back{left:20px;min-height:44px;display:flex;align-items:center}
+ .tabs button{min-height:44px}
+ .promo-content{padding:24px 20px}
+ .detail-body{padding:20px 16px}
+ .detail-body h2,#app>.section>h1{font-size:24px;overflow-wrap:anywhere}
+ dialog{width:calc(100% - 24px);max-width:640px;max-height:calc(100dvh - 24px);border-radius:18px}
+ dialog img{height:210px}
+ .close{width:44px;height:44px;right:10px;top:10px}
+ .detail-actions>*{width:100%;min-height:48px;text-align:center;white-space:normal}
+ .seo-spot-image,#app>.section>img{height:auto;max-height:300px;aspect-ratio:4/3}
+ footer{margin:44px 16px 0;padding-block:24px;line-height:1.8}
+ footer small{font-size:11px;overflow-wrap:anywhere}
+ .toast{width:max-content;max-width:calc(100% - 32px);text-align:center;bottom:calc(20px + env(safe-area-inset-bottom));overflow-wrap:anywhere}
+}
+@media(max-width:360px){
+ .spots{grid-template-columns:1fr}
+ .spot-img{height:190px}
+ .rank-row{gap:6px}
+ .rank-row .spot-open{gap:8px}
+ .rank-row img{width:58px;height:68px}
+ header .brand small{display:none}
+}
