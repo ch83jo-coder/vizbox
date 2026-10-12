@@ -29,3 +29,11 @@ claude --agent japan-travel-designer -p 'japan-travel のUIとアクセシビリ
 ## 言語
 
 初回は韓国語（ko）を表示します。ヘッダーの韓国語・日本語ボタンで切り替え、選択を `japan-travel-language` に保存します。50スポットの名前・説明、ナビゲーション、検索、詳細、代替テキストを両言語に対応させています。検索は表示言語に関係なく韓国語と日本語を受け付け、Google Mapsには元の日本語名を渡します。
+
+## SEO / 静的ページ
+
+本番ドメインは https://japantravel.play-labo.com/ 。韓国語は `/`、日本語は `/ja/`、地域一覧は `/regions/`、地域別は `/regions/<id>/`、観光地は `/spots/<slug>/` を使用します。旧ハッシュURLは新しいURLへ移動します。
+
+データ・ページ雛形を編集した後は `python3 japan-travel/scripts/build_seo.py` を実行し、生成されたHTMLとsitemap.xmlを一緒にコミットしてください。雛形は `scripts/page-template.html` です。ビルドなしでも全ページの見出し・本文・リンク・JSON-LDをHTTP応答に含めます。言語はURLで決まり、切り替えボタンは同じページの別言語URLへ移動します。
+
+各ページにcanonical・hreflang・OGP・Twitter Cardを設定。お気に入りはnoindexです。robots.txtからsitemap.xmlを案内します。公開後、Google Search Consoleでドメイン所有権を確認し `https://japantravel.play-labo.com/sitemap.xml` を送信してください。検索結果への掲載時期は検索エンジンによって決まります。
