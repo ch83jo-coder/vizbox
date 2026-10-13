@@ -6,6 +6,7 @@
 | --- | --- |
 | [japan-density](./japan-density) | 日本の人口密度 3D マップ |
 | [japan-travel](./japan-travel) | 写真で探す日本旅行 TOP10・50スポット |
+| [fire-ready](./fire-ready) | FIRE 資産シミュレーター（Next.js） |
 
 ## 構成ルール
 
@@ -18,6 +19,7 @@
 1. Vercel で New Project から このリポジトリを選択
 2. Root Directory にプロジェクトのフォルダ(例: `japan-density`)を指定
 3. 静的サイトなら Framework Preset は Other、Build Command は空欄
+4. Next.js のプロジェクト(`fire-ready`)は Framework Preset を Next.js にし、Build Command は既定のまま
 
 プロジェクトごとに Vercel プロジェクトを1つ作る形になります。関係ないフォルダの変更で再デプロイされないよう、各プロジェクトの Settings → Git で "Ignored Build Step" に次を設定しておくと便利です。
 
