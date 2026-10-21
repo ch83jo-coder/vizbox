@@ -1,0 +1,705 @@
+{
+  "checkedAt": "2026-10-21T14:26:43Z",
+  "entries": [
+    {
+      "id": 1,
+      "name": "Wikipedia / Wikimedia wikis",
+      "region": "global",
+      "category": "knowledge",
+      "status": "official",
+      "source": "Wikimedia Foundation · Impact of PHP vulnerabilities on Wikimedia tools and services; Wikitech · Incidents/2026-10-21 PHP security update/Community",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "재단이 긴급 대응을 공지. 위키 중단을 피하기 위해 작업 중이며, 지원 서비스 중단과 위키 전체 중단은 구별해야 함.",
+        "ja": "財団が緊急対応を公表。ウィキの停止回避に取り組んでおり、支援サービスの停止は全ウィキの停止を意味しない。",
+        "en": "The Foundation announced emergency work to avoid wiki downtime. Supporting-service shutdowns do not mean all wikis are offline."
+      }
+    },
+    {
+      "id": 2,
+      "name": "Wikimedia Toolforge",
+      "region": "global",
+      "category": "knowledge",
+      "status": "official",
+      "source": "Wikimedia Foundation · Impact of PHP vulnerabilities on Wikimedia tools and services; Wikitech · Incidents/2026-10-21 PHP security update/Community",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "자원봉사 개발자 도구 호스팅을 예방적으로 중단. 소유자의 패치 작업에 따라 복구 시점이 달라짐.",
+        "ja": "ボランティア開発者向けホスティングを予防的に停止。復旧は所有者の更新作業に依存。",
+        "en": "Developer-tool hosting was taken offline as a precaution. Restoration depends on owners applying updates."
+      }
+    },
+    {
+      "id": 3,
+      "name": "Wikimedia Cloud VPS",
+      "region": "global",
+      "category": "knowledge",
+      "status": "official",
+      "source": "Wikimedia Foundation · Impact of PHP vulnerabilities on Wikimedia tools and services; Wikitech · Incidents/2026-10-21 PHP security update/Community",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "Cloud VPS와 그 안의 여러 PHP 앱이 예방적 중단 대상.",
+        "ja": "Cloud VPSとその上の多数のPHPアプリが予防的停止の対象。",
+        "en": "Cloud VPS and many hosted PHP applications were included in precautionary shutdowns."
+      }
+    },
+    {
+      "id": 4,
+      "name": "Wikimedia Phabricator",
+      "region": "global",
+      "category": "knowledge",
+      "status": "official",
+      "source": "Wikimedia Foundation · Impact of PHP vulnerabilities on Wikimedia tools and services; Wikitech · Incidents/2026-10-21 PHP security update/Community",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "공식 사고 공지에 오프라인 서비스로 명시. 침해 확인 발표는 아님.",
+        "ja": "公式インシデント告知に停止対象として記載。侵害確認の発表ではない。",
+        "en": "Listed as offline in the official incident notice; this is not a confirmed compromise announcement."
+      }
+    },
+    {
+      "id": 5,
+      "name": "translatewiki",
+      "region": "global",
+      "category": "knowledge",
+      "status": "official",
+      "source": "Wikimedia Foundation · Impact of PHP vulnerabilities on Wikimedia tools and services; Wikitech · Incidents/2026-10-21 PHP security update/Community",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "Wikitech 사고 공지에서 오프라인 대상으로 명시.",
+        "ja": "Wikitechの告知で停止対象として明記。",
+        "en": "Named as offline in the Wikitech incident notice."
+      }
+    },
+    {
+      "id": 6,
+      "name": "Uma Musume Pretty Derby",
+      "region": "jp",
+      "category": "games",
+      "status": "official",
+      "source": "Cygames · PHPの脆弱性対応に伴うメンテナンスのお知らせ · 21:16 JST更新",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "PHP 취약점 대응 점검을 22:00 JST경 시작하도록 변경. 공지 시점에 악용 피해·데이터 유출은 확인되지 않았다고 설명.",
+        "ja": "PHP脆弱性対応のメンテナンス開始を22:00頃に変更。告知時点で悪用被害・データ流出は未確認と説明。",
+        "en": "PHP-related maintenance was moved to around 22:00 JST. The notice says no exploitation damage or data leak had been confirmed at publication."
+      }
+    },
+    {
+      "id": 7,
+      "name": "CoDMON",
+      "region": "jp",
+      "category": "education",
+      "status": "official",
+      "source": "CoDMON · 10月21日サービス停止を伴う緊急メンテナンス実施のお知らせ",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "PHP 취약점 위험 회피를 위해 보호자 앱을 포함한 모든 관련 서비스를 즉시 중단한다고 공지. 재개 시각 미정.",
+        "ja": "PHPのリスク回避のため保護者アプリを含む全サービスの即時停止を告知。再開時刻は未定。",
+        "en": "Announced an immediate preventive shutdown of all related services, including the parent app. No reopening time was given."
+      }
+    },
+    {
+      "id": 8,
+      "name": "tomoLinks",
+      "region": "jp",
+      "category": "education",
+      "status": "official",
+      "source": "Konica Minolta · PHPの脆弱性情報公開に伴うtomoLinksへの影響確認について",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "사용 중인 PHP의 중대한 취약점 위험을 피하기 위한 긴급 정지라고 설명.",
+        "ja": "利用中のPHPの重大な脆弱性リスクを避けるための緊急停止と説明。",
+        "en": "Explained that its emergency suspension was intended to avoid risks from critical PHP vulnerabilities."
+      }
+    },
+    {
+      "id": 9,
+      "name": "DMM Online Salon",
+      "region": "jp",
+      "category": "community",
+      "status": "reported",
+      "source": "DMM Help Center · 重要 臨時メンテナンスのお知らせ · announcement 831",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "공식 공지는 외부 소프트웨어 취약점 대응으로 22:00 JST부터 살롱 서비스·커뮤니티를 점검한다고 설명. PHP를 명시하지 않아 관련성은 추가 확인 필요. 유출은 없다고 공지.",
+        "ja": "公式告知は外部ソフトの脆弱性対応として22:00からサロンとコミュニティをメンテナンス。PHPの明記はなく関連は要確認。漏えいなしと説明。",
+        "en": "The official notice schedules salon and community maintenance from 22:00 JST for an external-software flaw. It does not name PHP; the connection needs confirmation. It states no data leak occurred."
+      }
+    },
+    {
+      "id": 10,
+      "name": "Sakura Cloud Database Appliance",
+      "region": "jp",
+      "category": "hosting",
+      "status": "official",
+      "source": "Sakura Cloud · データベース アプライアンスにおける一部機能の提供停止のお知らせ",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "PHP 취약점 대응으로 DB 관리 Web UI를 중단. DB 클러스터는 대상에서 제외.",
+        "ja": "PHP脆弱性対応でDB管理Web UIを停止。データベースクラスタは対象外。",
+        "en": "Suspended database-management web interfaces for PHP remediation. Database Cluster is excluded."
+      }
+    },
+    {
+      "id": 11,
+      "name": "Sakura Rental / Managed Server",
+      "region": "jp",
+      "category": "hosting",
+      "status": "official",
+      "source": "Sakura Internet · 緊急メンテナンス · notice 39972",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "23:00 JST부터 PHP 버전 업데이트 공지. 웹 접속이 수초 끊길 수 있으며 완료 시점은 미정.",
+        "ja": "23:00からPHP更新を告知。数秒のWeb接続断が発生する可能性があり、終了時刻は未定。",
+        "en": "Announced PHP upgrades from 23:00 JST with possible brief web interruptions. The notice gives no completion time."
+      }
+    },
+    {
+      "id": 12,
+      "name": "KAGOYA",
+      "region": "jp",
+      "category": "hosting",
+      "status": "official",
+      "source": "KAGOYA · PHPの脆弱性に関する当社サービスへの影響について",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "렌탈·관리형 전용·WordPress 플랜의 영향을 조사 중이라고 공지. 패치 완료 공지는 확인하지 못함.",
+        "ja": "レンタル・マネージド専用・WordPressプランへの影響を調査中と公表。更新完了は未確認。",
+        "en": "Announced impact investigation for rental, managed dedicated and WordPress plans. Patch completion was not verified."
+      }
+    },
+    {
+      "id": 13,
+      "name": "Hetzner",
+      "region": "eu",
+      "category": "hosting",
+      "status": "official",
+      "source": "Hetzner Online Status · PHP security issues CVE-2026-109618 and CVE-2026-109619 · 11:04 UTC",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "사용 중인 PHP 버전이 영향을 받는다고 공식 인정. 패치·완화 방안 조사 상태의 공지를 확인.",
+        "ja": "使用中のPHPが影響を受けると公式に確認。パッチと緩和策を調査中の告知を確認。",
+        "en": "Confirmed its PHP versions are affected. The retrieved notice was investigating patches and mitigations."
+      }
+    },
+    {
+      "id": 14,
+      "name": "Mijndomein",
+      "region": "eu",
+      "category": "hosting",
+      "status": "official",
+      "source": "Mijndomein Helpdesk · Beveiligingsupdate MijnAccount, Mijndomein & Webhosting",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "계정·호스팅 관련 PHP 보안 대응 공지를 게시. 개별 고객 사이트의 침해나 패치 완료를 의미하지 않음.",
+        "ja": "アカウント・ホスティング向けPHP対応告知を掲載。個別サイトの侵害や更新完了を示すものではない。",
+        "en": "Published a PHP security notice for account and hosting services. It does not establish compromise or completed patching for individual customer sites."
+      }
+    },
+    {
+      "id": 15,
+      "name": "HostUp",
+      "region": "eu",
+      "category": "hosting",
+      "status": "official",
+      "source": "HostUp Status · PHP security vulnerabilities: web hosting protected",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "알려진 공격 경로에 대한 임시 설정·방화벽 대응을 공지. 공식 PHP 패치 설치 완료와는 별도로 확인해야 함.",
+        "ja": "既知の攻撃経路への暫定設定とWAF対応を公表。正式パッチ適用完了とは別に確認が必要。",
+        "en": "Reported interim configuration and firewall measures for the known attack path. Verify final PHP patch deployment separately."
+      }
+    },
+    {
+      "id": 16,
+      "name": "Vimexx",
+      "region": "eu",
+      "category": "hosting",
+      "status": "official",
+      "source": "Vimexx NOC · php2shell",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "PHP 보안 업데이트 제공 즉시 서버를 업데이트할 방침을 공지. 비관리형 서버는 고객이 업데이트해야 함.",
+        "ja": "更新提供後にサーバーを更新する方針を告知。非管理型サーバーは利用者が更新する必要がある。",
+        "en": "Announced plans to update servers when packages arrive. Unmanaged-server customers remain responsible for updates."
+      }
+    },
+    {
+      "id": 17,
+      "name": "Profihost",
+      "region": "eu",
+      "category": "hosting",
+      "status": "official",
+      "source": "Profihost Status · Kritische PHP Sicherheitslücke",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "호스팅·클라우드에 임시 설정을 배포한다고 공지. 임시 설정이 완전한 보호를 보장하지 않는다고 명시.",
+        "ja": "ホスティング・クラウドに暫定設定を展開すると告知。完全な保護を保証しないと明記。",
+        "en": "Announced interim configuration changes for hosting and cloud services, explicitly stating these do not guarantee protection."
+      }
+    },
+    {
+      "id": 18,
+      "name": "Smarthost",
+      "region": "eu",
+      "category": "hosting",
+      "status": "official",
+      "source": "Smarthost · Komunikaty techniczne · Krytyczna podatność w PHP",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "공식·공급업체 업데이트를 기다리며 관련 PHP 버전을 갱신할 계획이라고 공지.",
+        "ja": "公式・ベンダーの更新を待ち、対象PHPを更新する計画を告知。",
+        "en": "Published a plan to update affected PHP versions once upstream and vendor packages become available."
+      }
+    },
+    {
+      "id": 19,
+      "name": "Shippeo",
+      "region": "eu",
+      "category": "business",
+      "status": "official",
+      "source": "Shippeo Status · Scheduled security maintenance",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "두 CVE에 대응하는 PHP 구성요소 예방 점검 공지. 공지에서는 서비스 중단을 예상하지 않는다고 설명.",
+        "ja": "2件のCVEに対応するPHP部品の予防保守を告知。サービス停止は想定しないと説明。",
+        "en": "Scheduled preventive maintenance of a PHP component for both CVEs. The notice expected no service interruption."
+      }
+    },
+    {
+      "id": 20,
+      "name": "Plesk",
+      "region": "global",
+      "category": "hosting",
+      "status": "official",
+      "source": "Plesk Support · Remote code execution in PHP shipped with Plesk · 2026-10-20",
+      "published": "2026-10-20",
+      "summary": {
+        "ko": "Linux·Windows에 함께 제공되는 PHP가 영향을 받는다고 공지. 공급업체 수정 후 패키지 배포 예정으로 안내.",
+        "ja": "Linux・Windows同梱PHPへの影響を告知。上流修正後にパッケージを配信する予定と説明。",
+        "en": "Confirmed affected bundled PHP on Linux and Windows; its retrieved notice planned packages after the upstream fix."
+      }
+    },
+    {
+      "id": 21,
+      "name": "CloudLinux / Imunify360",
+      "region": "global",
+      "category": "hosting",
+      "status": "official",
+      "source": "CloudLinux · PHP CVE-2026-109618 and CVE-2026-109619: Imunify360 Ruleset 8.83",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "WAF 규칙 8.83이 공개된 공격 형태를 차단한다고 설명. 가상 패치는 임시 대응이며 PHP 업데이트가 필요하다고 명시.",
+        "ja": "WAFルール8.83が公開済みの攻撃形式を遮断すると説明。暫定対応でありPHP更新が必要と明記。",
+        "en": "Reported ruleset 8.83 coverage for the public exploit pattern. Explicitly calls it an interim measure requiring PHP updates."
+      }
+    },
+    {
+      "id": 22,
+      "name": "InMotion Hosting",
+      "region": "us",
+      "category": "hosting",
+      "status": "official",
+      "source": "InMotion Hosting · Critical PHP Security Release Scheduled October 21, 2026 · 2026-10-20",
+      "published": "2026-10-20",
+      "summary": {
+        "ko": "관리형 서버에 예방 설정을 적용하고 수정 빌드를 배포할 계획이라고 안내. VPS·전용 서버의 책임 범위는 별도.",
+        "ja": "管理サーバーに予防設定を適用し修正版を配布する計画。VPS・専用サーバーは管理責任を別途確認。",
+        "en": "Announced precautions on managed servers and plans to deploy fixed builds. Responsibility differs for VPS and dedicated servers."
+      }
+    },
+    {
+      "id": 23,
+      "name": "GoDaddy",
+      "region": "us",
+      "category": "hosting",
+      "status": "official",
+      "source": "GoDaddy · Important PHP security update: What website owners need to do · 2026-10-20",
+      "published": "2026-10-20",
+      "summary": {
+        "ko": "긴급 PHP 업데이트 안내를 게시. 이 자료만으로 전체 고객 사이트의 패치 완료나 침해 여부는 판단할 수 없음.",
+        "ja": "PHP緊急更新ガイドを掲載。この資料だけでは全顧客サイトの更新完了や侵害の有無は判断できない。",
+        "en": "Published an emergency PHP update guide. This alone does not establish patch completion or compromise across customer sites."
+      }
+    },
+    {
+      "id": 24,
+      "name": "Universal.Cloud managed PHP",
+      "region": "eu",
+      "category": "hosting",
+      "status": "official",
+      "source": "Universal.Cloud · Critical PHP vulnerability: what you need to know and what we are doing",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "관리하는 PHP 환경의 패치 계획 공지. 회사 자체 사이트·uCompose는 PHP 없는 정적 사이트로 영향이 없다고 설명.",
+        "ja": "管理PHP環境の更新計画を告知。自社サイトとuComposeはPHPを使わない静的構成で影響なしと説明。",
+        "en": "Announced patch plans for managed PHP environments. Says its own website and uCompose are static and unaffected."
+      }
+    },
+    {
+      "id": 25,
+      "name": "Movable Type",
+      "region": "jp",
+      "category": "business",
+      "status": "official",
+      "source": "Six Apart · PHP の脆弱性による Movable Type への影響と対応について",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "동적 퍼블리싱과 일부 플러그인이 PHP를 사용한다고 안내. 모든 정적 출력 페이지가 중단됐다는 의미는 아님.",
+        "ja": "動的パブリッシングと一部プラグインでPHPを使用すると案内。すべての静的出力ページの停止を意味しない。",
+        "en": "Explained PHP use in dynamic publishing and some plugins. This does not imply all statically published pages are offline."
+      }
+    },
+    {
+      "id": 26,
+      "name": "Science Tokyo WWW hosting",
+      "region": "jp",
+      "category": "education",
+      "status": "official",
+      "source": "Science Tokyo NOC · WWWサーバ代行サービス PHPの重大な脆弱性に関する一時対応および今後の対応について",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "대학 웹 호스팅 전체에 임시 설정과 웹 서버 재시작을 공지. 수정판 확인 후 영구 업데이트 예정.",
+        "ja": "大学Webホスティング全体に暫定設定とWebサーバー再起動を告知。修正版確認後に恒久更新予定。",
+        "en": "Announced interim settings and web-server restarts across university hosting, followed by permanent updates after reviewing fixed releases."
+      }
+    },
+    {
+      "id": 27,
+      "name": "XServer",
+      "region": "jp",
+      "category": "hosting",
+      "status": "reported",
+      "source": "Impress Watch · 国内大手サービスが緊急メンテやサービス停止 PHP脆弱性で対策 · 22:05 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "관리 화면 등의 예방적 중단이 보도됨. 고객 웹사이트 전체 중단으로 확대 해석하면 안 됨.",
+        "ja": "管理画面などの予防的停止が報道された。顧客サイト全体の停止と解釈しないこと。",
+        "en": "Precautionary suspension of management interfaces was reported; do not infer all customer websites are offline."
+      }
+    },
+    {
+      "id": 28,
+      "name": "BASE",
+      "region": "jp",
+      "category": "business",
+      "status": "reported",
+      "source": "Impress Watch · 国内大手サービスが緊急メンテやサービス停止 PHP脆弱性で対策 · 22:05 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "긴급 점검이 보도됨. 이번 PHP 이슈와의 정확한 연관·영향 범위·재개 여부는 원문 추가 확인 필요.",
+        "ja": "緊急保守が報道された。PHPとの正確な関係・範囲・復旧状況は原文の追加確認が必要。",
+        "en": "Emergency maintenance was reported; the exact PHP connection, scope and recovery need primary-source confirmation."
+      }
+    },
+    {
+      "id": 29,
+      "name": "pixiv",
+      "region": "jp",
+      "category": "community",
+      "status": "reported",
+      "source": "Impress Watch · 国内大手サービスが緊急メンテやサービス停止 PHP脆弱性で対策 · 22:05 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "일부 서비스 긴급 점검이 보도됨. 전체 pixiv 서비스가 중단됐다고 확인한 것은 아님.",
+        "ja": "一部サービスの緊急保守が報道された。pixiv全体の停止を確認したわけではない。",
+        "en": "Emergency maintenance involving some services was reported; a platform-wide outage was not established."
+      }
+    },
+    {
+      "id": 30,
+      "name": "BOOTH",
+      "region": "jp",
+      "category": "business",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "공식 사이트의 긴급 점검 공지가 보도됨. PHP 관련성·현재 상태는 원문 추가 확인 필요.",
+        "ja": "公式サイトの緊急保守告知が報道された。PHPとの関係と現状は原文の追加確認が必要。",
+        "en": "A website maintenance announcement was reported. Confirm PHP relevance and current status with the original notice."
+      }
+    },
+    {
+      "id": 31,
+      "name": "niconico",
+      "region": "jp",
+      "category": "community",
+      "status": "reported",
+      "source": "Impress Watch · 国内大手サービスが緊急メンテやサービス停止 PHP脆弱性で対策 · 22:05 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "긴급 점검이 보도됨. 전체 동영상·생방송 기능의 중단이나 침해를 확인한 것은 아님.",
+        "ja": "緊急保守が報道された。動画・生放送全機能の停止や侵害を確認したものではない。",
+        "en": "Emergency maintenance was reported; this does not establish compromise or an outage of every video and live feature."
+      }
+    },
+    {
+      "id": 32,
+      "name": "Granblue Fantasy",
+      "region": "jp",
+      "category": "games",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "PHP 발표에 따른 긴급 점검이 보도됨. 공식 원문의 최신 진행 상황 추가 확인 필요.",
+        "ja": "PHP発表を受けた緊急保守が報道された。公式原文で最新の進行状況を要確認。",
+        "en": "PHP-related emergency maintenance was reported. Latest progress needs confirmation against the official notice."
+      }
+    },
+    {
+      "id": 33,
+      "name": "Shadowverse: Worlds Beyond",
+      "region": "jp",
+      "category": "games",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "PHP 발표에 따른 점검이 보도됨. 침해 피해가 확인됐다는 의미는 아님.",
+        "ja": "PHP発表に伴う保守が報道された。侵害被害の確認を意味しない。",
+        "en": "Maintenance following the PHP announcement was reported; this does not establish a compromise."
+      }
+    },
+    {
+      "id": 34,
+      "name": "Princess Connect! Re:Dive",
+      "region": "jp",
+      "category": "games",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "안전 확보를 위한 점검이 보도됨. 적용 버전·재개 상태는 원문 추가 확인 필요.",
+        "ja": "安全確保の保守が報道された。適用版と復旧状況は公式原文の追加確認が必要。",
+        "en": "Preventive maintenance was reported. Applied versions and restoration need primary-source confirmation."
+      }
+    },
+    {
+      "id": 35,
+      "name": "Bushiroad website",
+      "region": "jp",
+      "category": "games",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "공식 웹사이트 긴급 점검이 보도됨. 모든 게임·서비스가 중단됐다고 볼 수 없음.",
+        "ja": "公式Webサイトの緊急保守が報道された。全ゲーム・全サービスの停止とは言えない。",
+        "en": "Emergency maintenance of the corporate website was reported; do not infer every game and service is offline."
+      }
+    },
+    {
+      "id": 36,
+      "name": "Bandai Channel",
+      "region": "jp",
+      "category": "community",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "공식 사이트의 긴급 점검이 보도됨. PHP 관련성·영향 범위는 원문 추가 확인 필요.",
+        "ja": "公式サイトの緊急保守が報道された。PHPとの関係と影響範囲は原文の追加確認が必要。",
+        "en": "Website maintenance was reported. The PHP connection and affected scope need original-notice confirmation."
+      }
+    },
+    {
+      "id": 37,
+      "name": "Fourth Boundary",
+      "region": "jp",
+      "category": "community",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "공식 사이트 긴급 점검이 보도됨. PHP 관련성·복구 상태 추가 확인 필요.",
+        "ja": "公式サイトの緊急保守が報道された。PHPとの関係と復旧状況は要確認。",
+        "en": "Website maintenance was reported. The PHP connection and restoration status remain to be confirmed."
+      }
+    },
+    {
+      "id": 38,
+      "name": "OBS website (identity unverified)",
+      "region": "global",
+      "category": "community",
+      "status": "reported",
+      "source": "電ファミニコゲーマー · ウマ娘やグラブルがPHPの重大な2件の脆弱性に関する発表で緊急メンテ · 20:26 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "보도에 OBS라는 사이트의 점검이 언급됐지만 서비스의 정확한 식별과 원문은 미확인. OBS Studio 앱의 취약점을 뜻하지 않음.",
+        "ja": "報道にOBSというサイトの保守があるが、サービスの正確な特定と原文は未確認。OBS Studioアプリの脆弱性を意味しない。",
+        "en": "Reporting mentions maintenance of a site called OBS, but its exact identity and original notice were not verified. This does not establish an OBS Studio application flaw."
+      }
+    },
+    {
+      "id": 39,
+      "name": "Namecheap EasyWP",
+      "region": "us",
+      "category": "hosting",
+      "status": "reported",
+      "source": "Pingoru · Namecheap: Emergency Mitigation of PHP Security Vulnerability Affecting EasyWP Managed Hosting · 12:04 UTC",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "상태 수집 서비스가 EasyWP 긴급 업데이트·HackGuardian 활성화 공지를 전재. 원래 공지와 완료 여부 추가 확인 필요.",
+        "ja": "状態集約サービスがEasyWP更新・HackGuardian有効化の告知を転載。原文と完了状況を要確認。",
+        "en": "A status aggregator relayed EasyWP updates and HackGuardian activation. Verify the original notice and completion status."
+      }
+    },
+    {
+      "id": 40,
+      "name": "ConoHa WING",
+      "region": "jp",
+      "category": "hosting",
+      "status": "reported",
+      "source": "Fukurowl Tech · PHPに重大な脆弱性2件 WordPressの対策とConoHa・XServerの対応状況",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "19:00 JST부터 점검 공지가 보고됐으나 PHP 대응이라고 명시되지 않았다고 자료가 설명. 원인 연관 미확인.",
+        "ja": "19:00からの保守告知が報告されたが、PHP対応の明記はないと資料が説明。因果関係は未確認。",
+        "en": "A maintenance notice from 19:00 JST was reported, but the report says PHP was not named. Causation remains unconfirmed."
+      }
+    },
+    {
+      "id": 41,
+      "name": "Lolipop",
+      "region": "jp",
+      "category": "hosting",
+      "status": "reported",
+      "source": "Yuji · BASEもコドモンも止まった PHPの脆弱性php2shellで日本のサービスに起きたこと · 20:47 JST",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "예방적 점검이 2차 자료에서 언급됨. 공식 원문·이번 취약점과의 연관·대상 범위는 추가 확인 필요.",
+        "ja": "予防保守が二次資料で言及された。公式原文・今回の脆弱性との関係・範囲は要確認。",
+        "en": "A secondary account mentioned preventive maintenance. The primary notice, PHP relevance and scope remain unverified."
+      }
+    },
+    {
+      "id": 42,
+      "name": "Heaven Burns Red (JP)",
+      "region": "jp",
+      "category": "games",
+      "status": "unknown",
+      "source": "Reddit · JP Version will have special maintenance to fix PHP vulnerability issues · community report",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "커뮤니티에 점검 주장이 있으나 공식 원문을 확인하지 못함. PHP 영향·중단·침해 모두 미확인.",
+        "ja": "コミュニティで保守の主張があるが公式原文は未確認。PHP影響・停止・侵害はいずれも未確認。",
+        "en": "A community maintenance claim was found, but no original notice was verified. PHP impact, downtime and compromise remain unconfirmed."
+      }
+    },
+    {
+      "id": 43,
+      "name": "Old School RuneScape Wiki",
+      "region": "global",
+      "category": "knowledge",
+      "status": "unknown",
+      "source": "Reddit · OSRS Wiki unplanned maintenance · community report",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "커뮤니티 언급만으로 이번 취약점 영향이나 침해를 단정할 수 없음. 공식 공지 확인 필요.",
+        "ja": "コミュニティの言及だけでは今回の影響や侵害を断定できない。公式告知の確認が必要。",
+        "en": "Community discussion alone does not establish exposure or compromise. An official notice is needed."
+      }
+    },
+    {
+      "id": 44,
+      "name": "RuneScape Wiki",
+      "region": "global",
+      "category": "knowledge",
+      "status": "unknown",
+      "source": "Related wiki service to verify; no original operator notice verified",
+      "published": null,
+      "summary": {
+        "ko": "관련 위키 서비스 확인 대상으로 수록. 해당 서비스의 공식 PHP 사고·점검·피해 공지는 확인하지 못함.",
+        "ja": "関連ウィキサービスの確認対象。公式のPHP事故・保守・被害告知は未確認。",
+        "en": "Included as a related wiki service to verify. No official PHP incident, maintenance or compromise notice for this service was verified."
+      }
+    },
+    {
+      "id": 45,
+      "name": "OVHcloud",
+      "region": "eu",
+      "category": "hosting",
+      "status": "unknown",
+      "source": "OVHcloud Community · Upcoming critical PHP security release · customer discussion",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "고객 커뮤니티에서 대응 질문을 확인. 공식 배포 완료·개별 서비스 영향은 확인하지 못함.",
+        "ja": "顧客コミュニティで対応の質問を確認。公式の配布完了・個別サービスへの影響は未確認。",
+        "en": "Found customer discussion about remediation; official deployment completion and service-specific impact were not verified."
+      }
+    },
+    {
+      "id": 46,
+      "name": "Kinsta",
+      "region": "global",
+      "category": "hosting",
+      "status": "unknown",
+      "source": "Codeable · PHP Security Release on 21 October 2026 · managed hosting examples",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "주요 관리형 WordPress 호스팅 확인 대상으로 수록. 해당 업체의 피해·중단·패치 완료를 입증한 자료는 아님.",
+        "ja": "主要マネージドWordPressホスティングの確認対象。被害・停止・更新完了を立証する資料ではない。",
+        "en": "Included as a major managed WordPress host to check. The source does not establish compromise, downtime or completed patching for this provider."
+      }
+    },
+    {
+      "id": 47,
+      "name": "WP Engine",
+      "region": "global",
+      "category": "hosting",
+      "status": "unknown",
+      "source": "Codeable · PHP Security Release on 21 October 2026 · managed hosting examples",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "주요 관리형 WordPress 호스팅 확인 대상으로 수록. 해당 업체의 피해·중단·패치 완료를 입증한 자료는 아님.",
+        "ja": "主要マネージドWordPressホスティングの確認対象。被害・停止・更新完了を立証する資料ではない。",
+        "en": "Included as a major managed WordPress host to check. The source does not establish compromise, downtime or completed patching for this provider."
+      }
+    },
+    {
+      "id": 48,
+      "name": "Pressable",
+      "region": "global",
+      "category": "hosting",
+      "status": "unknown",
+      "source": "Codeable · PHP Security Release on 21 October 2026 · managed hosting examples",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "주요 관리형 WordPress 호스팅 확인 대상으로 수록. 해당 업체의 피해·중단·패치 완료를 입증한 자료는 아님.",
+        "ja": "主要マネージドWordPressホスティングの確認対象。被害・停止・更新完了を立証する資料ではない。",
+        "en": "Included as a major managed WordPress host to check. The source does not establish compromise, downtime or completed patching for this provider."
+      }
+    },
+    {
+      "id": 49,
+      "name": "WordPress VIP",
+      "region": "global",
+      "category": "hosting",
+      "status": "unknown",
+      "source": "Codeable · PHP Security Release on 21 October 2026 · managed hosting examples",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "주요 관리형 WordPress 호스팅 확인 대상으로 수록. 해당 업체의 피해·중단·패치 완료를 입증한 자료는 아님.",
+        "ja": "主要マネージドWordPressホスティングの確認対象。被害・停止・更新完了を立証する資料ではない。",
+        "en": "Included as a major managed WordPress host to check. The source does not establish compromise, downtime or completed patching for this provider."
+      }
+    },
+    {
+      "id": 50,
+      "name": "Nextcloud deployments",
+      "region": "global",
+      "category": "business",
+      "status": "unknown",
+      "source": "Nextcloud Community · Is nextcloud susceptible to the PHP2shell attack? · user discussion",
+      "published": "2026-10-21",
+      "summary": {
+        "ko": "사용자 토론을 확인했으나 모든 Nextcloud 서비스에 대한 공식 사고 확인은 아님. 설치별 PHP 패치 상태 확인 필요.",
+        "ja": "利用者の議論を確認したが全Nextcloudサービスの公式事故確認ではない。導入環境ごとのPHP更新状況を要確認。",
+        "en": "User discussion was found; it is not an official incident confirmation across Nextcloud services. PHP patch status depends on each deployment."
+      }
+    }
+  ]
+}
