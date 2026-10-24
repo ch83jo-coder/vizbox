@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
+import LogoMark from "./LogoMark";
 
 const NAV_ITEMS = [
   { href: "/#simulator", label: "シミュレーター" },
@@ -28,6 +29,7 @@ export default function SiteHeader() {
           sx={{
             display: "inline-flex",
             alignItems: "center",
+            gap: 1,
             minHeight: 44,
             color: "text.primary",
             fontWeight: 700,
@@ -35,6 +37,7 @@ export default function SiteHeader() {
             letterSpacing: "0.14em",
           }}
         >
+          <LogoMark size={32} />
           FIRE READY
         </Link>
         <Box component="nav" aria-label="メインメニュー">
