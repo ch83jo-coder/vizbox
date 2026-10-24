@@ -1,4 +1,5 @@
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import AppTheme from "@/components/AppTheme";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <SiteFooter />
           </AppTheme>
         </AppRouterCacheProvider>
+        <Analytics />
       </body>
     </html>
   );
