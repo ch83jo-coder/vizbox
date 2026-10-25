@@ -1,6 +1,6 @@
-# 日本旅行 TOP10
+# 世界旅行 TOP10
 
-東京・大阪・京都・九州・沖縄・札幌・横浜・名古屋・広島・福岡の100スポットを写真から探す独立した静的サイト。地域別TOP10、検索、詳細ダイアログ、Google Maps、地域フィルター付きお気に入りを提供します。保存先はブラウザーのlocalStorageです。
+日本・韓国・台湾・香港・タイ・ベトナム・シンガポール・フランス・イギリス・イタリア・スペイン・チェコ・アメリカ・オーストラリアの14の国・地域、26エリア・260スポットを写真から探す独立した静的サイト。国・地域 → エリア → スポットの順に辿れます。エリア別TOP10、検索、詳細ダイアログ、Google Maps、エリアフィルター付きお気に入りを提供します。保存先はブラウザーのlocalStorageです。フォルダ名・localStorageキーは日本版のまま `japan-travel` を使います。
 
 ## ローカル確認
 
@@ -8,11 +8,13 @@
 python3 -m http.server 8080 --directory japan-travel
 ```
 
-http://localhost:8080 を開きます。ビルド不要。画像と日本語フォントにはネットワーク接続が必要です。添付コラージュはローカルに保存しています。100スポットの写真はWikimedia Commonsから選定し、`assets/spots/`に保存しています。詳細画面に撮影者・ライセンス・出典を表示します。青の洞窟には所在地の真栄田岬海岸の写真を使用し、その旨を明記しています。順位は編集上のおすすめ順です。
+http://localhost:8080 を開きます。ビルド不要。画像と日本語フォントにはネットワーク接続が必要です。添付コラージュはローカルに保存しています。全スポットの写真はWikimedia Commonsから選定し、`assets/spots/`に保存しています。詳細画面に撮影者・ライセンス・出典を表示します。青の洞窟には所在地の真栄田岬海岸の写真を使用し、その旨を明記しています。順位は編集上のおすすめ順です。
 
 ## データ更新
 
-`data.json` の地域とスポットを編集します。写真の再取得は `python3 japan-travel/scripts/fetch_spot_images.py` を実行します。営業時間・料金は未検証のため掲載していません。
+`data.json` の地域とスポットを編集します。各エリアには `country`・`countryJa`・`countryKo`・`countryEn` を持たせ、国・地域ページはこの値でまとめます。写真の再取得は `python3 japan-travel/scripts/fetch_spot_images.py` を実行します。
+
+スポットを追加するときは `imageArticle`（英語版WikipediaのURL）と `image`（`assets/spots/<slug>.jpg`）だけを書き、`python3 japan-travel/scripts/fetch_spot_images.py --missing` を実行すると、記事の代表写真（Commonsのjpg）を選んで保存し、撮影者・ライセンスを記録します。代表写真が地図・ロゴなど不適切な場合や見つからない場合は `imageFilePage` にCommonsのファイルページを直接指定します。営業時間・料金は未検証のため掲載していません。
 
 ## デプロイ
 
@@ -28,20 +30,24 @@ claude --agent japan-travel-designer -p 'japan-travel のUIとアクセシビリ
 
 ## 言語
 
-初回は韓国語（ko）を表示します。ヘッダーの韓国語・日本語ボタンで切り替え、選択を `japan-travel-language` に保存します。100スポットの名前・説明、ナビゲーション、検索、詳細、代替テキストを両言語に対応させています。検索は表示言語に関係なく韓国語と日本語を受け付け、Google Mapsには元の日本語名を渡します。
+初回は韓国語（ko）を表示します。ヘッダーの韓国語・日本語ボタンで切り替え、選択を `japan-travel-language` に保存します。全スポットの名前・説明、ナビゲーション、検索、詳細、代替テキストを両言語に対応させています。検索は表示言語に関係なく韓国語と日本語を受け付け、Google Mapsには元の日本語名を渡します。
 
 ## SEO / 静的ページ
 
-本番ドメインは https://japantravel.play-labo.com/ 。韓国語は `/`、日本語は `/ja/`、地域一覧は `/regions/`、地域別は `/regions/<id>/`、観光地は `/spots/<slug>/` を使用します。旧ハッシュURLは新しいURLへ移動します。
+本番ドメインは https://travel.play-labo.com/ 。韓国語は `/`、日本語は `/ja/`、エリア一覧は `/regions/`、国・地域別は `/countries/<id>/`、エリア別は `/regions/<id>/`、観光地は `/spots/<slug>/` を使用します。旧ハッシュURLは新しいURLへ移動します。
 
 データ・ページ雛形を編集した後は `python3 japan-travel/scripts/build_seo.py` を実行し、生成されたHTMLとsitemap.xmlを一緒にコミットしてください。雛形は `scripts/page-template.html` です。ビルドなしでも全ページの見出し・本文・リンク・JSON-LDをHTTP応答に含めます。言語はURLで決まり、切り替えボタンは同じページの別言語URLへ移動します。
 
-各ページにcanonical・hreflang・OGP・Twitter Cardを設定。お気に入りはnoindexです。robots.txtからsitemap.xmlを案内します。公開後、Google Search Consoleでドメイン所有権を確認し `https://japantravel.play-labo.com/sitemap.xml` を送信してください。検索結果への掲載時期は検索エンジンによって決まります。
+各ページにcanonical・hreflang・OGP・Twitter Cardを設定。お気に入りはnoindexです。robots.txtからsitemap.xmlを案内します。公開後、Google Search Consoleでドメイン所有権を確認し `https://travel.play-labo.com/sitemap.xml` を送信してください。検索結果への掲載時期は検索エンジンによって決まります。
 
-新規地域も各10件の編集おすすめを掲載します。広島には宮島・尾道・大久野島など県内の周辺旅行先を含め、福岡は福岡市のスポットを中心に紹介します。地域数・スポット数はデータから自動計算します。
+### 旧ドメインからの移行
+
+旧ドメイン https://japantravel.play-labo.com/ はURLパスが同じなので、Vercelの Settings → Domains で `travel.play-labo.com` を追加した後、`japantravel.play-labo.com` を「Redirect to travel.play-labo.com（308）」に変更します。新ドメインを接続する前にこのビルドを公開すると、canonicalがまだ存在しないドメインを指すため、ドメイン接続を先に済ませてください。Search Consoleでは新ドメインのプロパティを確認した後、旧プロパティで「アドレス変更」を実行します。Naverサーチアドバイザーにも新ドメインを登録します。
+
+各エリアに10件の編集おすすめを掲載します。広島には宮島・尾道・大久野島など県内の周辺旅行先を含め、福岡は福岡市のスポットを中心に紹介します。地域数・スポット数はデータから自動計算します。
 
 地域候補・説明の確認先：[札幌観光](https://www.sapporo.travel/)、[横浜観光](https://www.yokohamajapan.com/)、[名古屋観光](https://www.nagoya-info.jp/)、[広島観光](https://dive-hiroshima.com/)、[福岡市観光](https://www.gofukuoka.jp/)。各写真の出典は data.json に記録しています。
 
 ## OG画像
 
-共有画像は `assets/og/japan-travel-ko.jpg` と `japan-travel-ja.jpg`（1200×630）です。`scripts/og-card.html` がデザイン元で、浅草寺・清水寺・美ら海水族館の掲載写真を使用します。各写真の撮影者・ライセンスは `data.json` の該当スポットを参照してください。全ページに言語別のOG画像・Twitter Cardを設定しています。
+共有画像は `assets/og/japan-travel-ko.jpg` と `japan-travel-ja.jpg`（1200×630）です。`scripts/og-card.html` がデザイン元で、エッフェル塔・浅草寺・シドニー・オペラハウスの掲載写真を使用します。各写真の撮影者・ライセンスは `data.json` の該当スポットを参照してください。全ページに言語別のOG画像・Twitter Cardを設定しています。
