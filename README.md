@@ -5,7 +5,7 @@
 | プロジェクト | 内容 |
 | --- | --- |
 | [japan-density](./japan-density) | 日本の人口密度 3D マップ |
-| [japan-travel](./japan-travel) | 写真で探す日本旅行 TOP10・50スポット |
+| [japan-travel](./japan-travel) | 写真で探す世界旅行 TOP10・14の国・地域260スポット |
 | [fire-ready](./fire-ready) | FIRE 資産シミュレーター（Next.js） |
 | [php-security](./php-security) | PHP セキュリティ対応・50サービス一覧（韓・日・英、外部リンクなし） |
 

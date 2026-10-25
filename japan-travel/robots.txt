@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://japantravel.play-labo.com/sitemap.xml
+Sitemap: https://travel.play-labo.com/sitemap.xml
