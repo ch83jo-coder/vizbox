@@ -77,3 +77,22 @@
  .rank-row img{width:58px;height:68px}
  header .brand small{display:none}
 }
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.split .rank-list{max-width:none;margin:0}
+.rank-row.selected{background:#eef6fd;border-radius:12px}
+.detail-pane{position:sticky;top:16px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow:auto;background:white;border-radius:20px;box-shadow:0 8px 30px #172b4014}
+.detail-pane:focus{outline:none}
+.detail-pane img{width:100%;height:260px;object-fit:cover;display:block}
+.detail-pane h2{font-size:22px;margin:8px 0}
+@media(max-width:900px){
+ .split{gap:16px}
+ .detail-pane img{height:180px}
+ .detail-pane .detail-body{padding:18px}
+ .detail-pane .detail-body p{font-size:13px;line-height:1.8}
+}
+@media(horizontal-viewport-segments:2){
+ .section:has(>.split){max-width:none;padding-inline:0}
+ .section:has(>.split)>.tabs{margin-inline:16px}
+ .split{grid-template-columns:env(viewport-segment-width 0 0) env(viewport-segment-width 1 0);column-gap:calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0))}
+ .split>.rank-list,.split>.detail-pane{margin-inline:16px}
+}
