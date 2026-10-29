@@ -9,14 +9,15 @@ import html,json,re,sys,time,urllib.parse,urllib.request
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def request(url):
-    for attempt in range(3):
+    for attempt in range(6):
         try:
-            req=urllib.request.Request(url,headers={'User-Agent':'JapanTravelCatalog/1.0'})
+            req=urllib.request.Request(url,headers={'User-Agent':'TravelTop10/1.0 (https://travel.play-labo.com/)'})
             with urllib.request.urlopen(req,timeout=40) as response:
                 return response.read(),response.headers.get('Content-Type','')
-        except Exception:
-            if attempt==2:raise
-            time.sleep(2*(attempt+1))
+        except Exception as error:
+            if attempt==5:raise
+            wait=getattr(error,'headers',None) and error.headers.get('Retry-After')
+            time.sleep(min(int(wait),90) if wait and wait.isdigit() else 2*(attempt+1))
 def clean(value):return html.unescape(re.sub('<[^>]+>','',value)).strip()
 def pick_lead_photos(spots):
     for offset in range(0,len(spots),50):

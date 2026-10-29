@@ -36,6 +36,10 @@ claude --agent japan-travel-designer -p 'travel のUIとアクセシビリティ
 
 エリアページの見出しに「<エリア>のグルメを探す」、各スポットの詳細に「近くのグルメを探す」リンクを置き、Google Mapsで `restaurants near <スポット名> <エリア名>` を検索します。店舗データは持たず、検索結果はGoogle Mapsに任せます。
 
+### 名物グルメ（写真・住所）
+
+エリアページのTOP10の下に、そのエリアの名物グルメを写真・住所・地図リンク付きで表示します。候補は `scripts/restaurants.json`（エリアIDごとの英語版Wikipedia記事名）に書き、`python3 travel/scripts/fetch_restaurants.py` を実行すると、記事・Wikidata（座標・住所P6375・日韓の名前）・Commons（代表写真・撮影者・ライセンス）で確認できたものだけを `data.json` の `restaurants` に保存し、写真を `assets/restaurants/` に置きます。座標や代表写真がない候補は載せずに一覧表示します。スポットと同じ記事は除外します。住所は現地表記のまま翻訳しません。その後 `build_seo.py` を実行します。
+
 ## 2カラム表示と折りたたみ端末
 
 ビューポート幅560px以上、または画面が左右2つに分かれている端末（`horizontal-viewport-segments: 2`）では、エリアページのTOP10リストと詳細を左右に並べます。リストを押すと右側の詳細だけが切り替わります。幅が狭い場合は従来どおりダイアログで表示し、回転などで幅が変わるとその場で切り替わります。
