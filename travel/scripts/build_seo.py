@@ -2,6 +2,8 @@
 import json,re,html,xml.etree.ElementTree as ET
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+from urllib.parse import quote
+food=lambda q:'https://www.google.com/maps/search/?api=1&amp;query='+quote('restaurants near '+q)
 ORIGIN='https://travel.play-labo.com'
 data=json.loads((ROOT/'data.json').read_text());template=(ROOT/'scripts/page-template.html').read_text()
 e=lambda s:html.escape(str(s),quote=True)
@@ -52,12 +54,12 @@ for lang in ['ko','ja']:
         desc=(f'{rn} 여행에서 가볼 만한 관광지 TOP10. '+', '.join(s[namekey] for s in r['spots'][:3])+' 등 추천 명소의 사진과 지도 정보를 확인하세요.') if korean else f'{rn}旅行で訪れたい観光スポットTOP10。'+ '、'.join(s[namekey] for s in r['spots'][:3])+'などの写真と地図をご紹介します。'
         items=''.join(f'<article class="rank-row"><span class="rank rank-{s["rank"]}">{s["rank"]}</span><a class="spot-open" href="{url(lang,"spots/"+s["slug"]+"/")}"><img src="/{s["image"]}" alt="{e(s[namekey])}" loading="lazy"><div><h2>{e(s[namekey])}</h2><p>{e(s[desckey])}</p></div></a></article>' for s in r['spots'])
         listing={'@type':'ItemList','name':title,'itemListOrder':'https://schema.org/ItemListOrderAscending','numberOfItems':10,'itemListElement':[{'@type':'ListItem','position':s['rank'],'name':s[namekey],'url':url(lang,'spots/'+s['slug']+'/')} for s in r['spots']]}
-        page(lang,'regions/'+r['id']+'/',title,desc,f'<section class="section"><a href="{country_crumb[1]}">{e(cn)}</a><h1>{e(title.split(" | ")[0])}</h1><p>{e(desc)}</p><div class="rank-list">{items}</div></section>',listing,crumbs=[country_crumb])
+        page(lang,'regions/'+r['id']+'/',title,desc,f'<section class="section"><a href="{country_crumb[1]}">{e(cn)}</a><h1>{e(title.split(" | ")[0])}</h1><p>{e(desc)}</p><p><a class="small-link" href="{food(r['nameJa'])}">{e(rn)} {'맛집 찾기' if korean else 'のグルメを探す'} ↗</a></p><div class="rank-list">{items}</div></section>',listing,crumbs=[country_crumb])
         for s in r['spots']:
             title=s[namekey]+' | '+rn+' '+('여행 관광지 안내' if korean else '旅行観光ガイド');desc=s[desckey]+('. 사진, 지도와 함께 다음 '+rn+' 여행을 계획해 보세요.' if korean else '。写真と地図で次の'+rn+'旅行を計画しましょう。')
             credit=f'<p class="photo-credit">{e(s["imageArtist"])} · <a href="{e(s["imageLicenseUrl"])}">{e(s["imageLicense"])}</a> · <a href="{e(s["imageFilePage"])}">Wikimedia Commons</a></p>'
             caption=e(s.get('imageCaptionKo' if korean else 'imageCaption',''))
-            body=f'<section class="section"><a href="{url(lang,"regions/"+r["id"]+"/")}">{rn} TOP10</a><h1>{e(s[namekey])}</h1><img class="seo-spot-image" src="/{s["image"]}" alt="{e(s[namekey])}"><p>{caption}</p><p>{e(desc)}</p>{credit}<a class="primary" href="https://www.google.com/maps/search/?api=1&amp;query={__import__("urllib.parse",fromlist=["quote"]).quote(s["nameJa"]+" "+r["nameJa"])}">Google Maps ↗</a></section>'
+            body=f'<section class="section"><a href="{url(lang,"regions/"+r["id"]+"/")}">{rn} TOP10</a><h1>{e(s[namekey])}</h1><img class="seo-spot-image" src="/{s["image"]}" alt="{e(s[namekey])}"><p>{caption}</p><p>{e(desc)}</p>{credit}<a class="primary" href="https://www.google.com/maps/search/?api=1&amp;query={__import__("urllib.parse",fromlist=["quote"]).quote(s["nameJa"]+" "+r["nameJa"])}">Google Maps ↗</a> <a class="secondary" href="{food(s["nameJa"]+" "+r["nameJa"])}">{"근처 맛집 찾기" if korean else "近くのグルメを探す"} ↗</a></section>'
             spot={'@type':'TouristAttraction','@id':url(lang,'spots/'+s['slug']+'/')+'#attraction','name':s[namekey],'description':s[desckey],'image':ORIGIN+'/'+s['image'],'url':url(lang,'spots/'+s['slug']+'/'),'containedInPlace':{'@type':'Place','name':rn,'containedInPlace':{'@type':'Place','name':cn}}}
             page(lang,'spots/'+s['slug']+'/',title,desc,body,spot,crumbs=[country_crumb,(rn+' TOP10',url(lang,'regions/'+r['id']+'/'))])
 ns='http://www.sitemaps.org/schemas/sitemap/0.9';xh='http://www.w3.org/1999/xhtml';ET.register_namespace('',ns);ET.register_namespace('xhtml',xh);tree=ET.Element('{'+ns+'}urlset')
