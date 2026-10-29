@@ -38,7 +38,7 @@ claude --agent japan-travel-designer -p 'travel のUIとアクセシビリティ
 
 ### 名物グルメ（写真・住所）
 
-エリアページのTOP10の下に、そのエリアの名物グルメを写真・住所・地図リンク付きで表示します。候補は `scripts/restaurants.json`（エリアIDごとの英語版Wikipedia記事名）に書き、`python3 travel/scripts/fetch_restaurants.py` を実行すると、記事・Wikidata（座標・住所P6375・日韓の名前）・Commons（代表写真・撮影者・ライセンス）で確認できたものだけを `data.json` の `restaurants` に保存し、写真を `assets/restaurants/` に置きます。座標や代表写真がない候補は載せずに一覧表示します。スポットと同じ記事は除外します。住所は現地表記のまま翻訳しません。その後 `build_seo.py` を実行します。
+エリアページのTOP10の下に、そのエリアの名物グルメを写真・住所・地図リンク付きで表示します。候補は `scripts/restaurants.json`（エリアIDごとの英語版Wikipedia記事名）に書き、`python3 travel/scripts/fetch_restaurants.py` を実行すると、記事・Wikidata（座標・住所P6375・日韓の名前）・Commons（代表写真・撮影者・ライセンス）で確認できたものだけを `data.json` の `restaurants` に保存し、写真を `assets/restaurants/` に置きます。座標や代表写真がない候補は載せずに一覧表示します。スポットと同じ記事は除外します。Wikidataの名前・住所が誤っている、または足りない場合は、候補を `{"title": ..., "nameKo": ..., "address": ...}` の形で書くと上書きできます。住所は現地表記のまま翻訳しません。その後 `build_seo.py` を実行します。
 
 ## 2カラム表示と折りたたみ端末
 

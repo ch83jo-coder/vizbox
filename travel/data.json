@@ -181,7 +181,54 @@
         "descriptionKo": "사계절의 자연이 아름다운 정원"
       }
     ],
-    "nameKo": "도쿄"
+    "nameKo": "도쿄",
+    "restaurants": [
+      {
+        "slug": "sukiyabashi-jiro",
+        "nameJa": "すきやばし次郎",
+        "nameKo": "스키야바시 지로",
+        "nameEn": "Sukiyabashi Jiro",
+        "article": "https://en.wikipedia.org/wiki/Sukiyabashi_Jiro",
+        "address": "",
+        "lat": 35.6727,
+        "lon": 139.764,
+        "image": "assets/restaurants/sukiyabashi-jiro.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Inside_Sukiyabashi_Jiro_%2811557082593%29.jpg",
+        "imageArtist": "City Foodsters",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      {
+        "slug": "toyosu-market",
+        "nameJa": "豊洲市場",
+        "nameKo": "도요스 시장",
+        "nameEn": "Toyosu market",
+        "article": "https://en.wikipedia.org/wiki/Toyosu_Market",
+        "address": "",
+        "lat": 35.644167,
+        "lon": 139.783611,
+        "image": "assets/restaurants/toyosu-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Toyosu_Market_Tokyo_2.jpg",
+        "imageArtist": "Arne Müseler",
+        "imageLicense": "CC BY-SA 3.0 de",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+      },
+      {
+        "slug": "ameya-yokocho",
+        "nameJa": "アメヤ横丁",
+        "nameKo": "아메야요코초",
+        "nameEn": "Ameya-Yokochō",
+        "article": "https://en.wikipedia.org/wiki/Ameya-Yokoch%C5%8D",
+        "address": "",
+        "lat": 35.710059,
+        "lon": 139.774543,
+        "image": "assets/restaurants/ameya-yokocho.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Ueno_20241210_133139.jpg",
+        "imageArtist": "Ka23 13",
+        "imageLicense": "CC BY 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
+      }
+    ]
   },
   {
     "id": "osaka",
@@ -364,24 +411,7 @@
         "descriptionKo": "거대한 수조로 사랑받는 수족관"
       }
     ],
-    "nameKo": "오사카",
-    "restaurants": [
-      {
-        "slug": "hozen-ji",
-        "nameJa": "法善寺",
-        "nameKo": "Hōzen-ji Temple",
-        "nameEn": "Hōzen-ji Temple",
-        "article": "https://en.wikipedia.org/wiki/H%C5%8Dzen-ji",
-        "address": "山梨県南アルプス市加賀美3509",
-        "lat": 35.6033,
-        "lon": 138.484736,
-        "image": "assets/restaurants/hozen-ji.jpg",
-        "imageFilePage": "https://commons.wikimedia.org/wiki/File:HouzennjiDVC00213.JPG",
-        "imageArtist": "shouichi",
-        "imageLicense": "CC0",
-        "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
-      }
-    ]
+    "nameKo": "오사카"
   },
   {
     "id": "kyoto",
@@ -566,7 +596,24 @@
         "descriptionKo": "말차와 유서 깊은 사찰로 유명한 도시"
       }
     ],
-    "nameKo": "교토"
+    "nameKo": "교토",
+    "restaurants": [
+      {
+        "slug": "ponto-cho",
+        "nameJa": "先斗町",
+        "nameKo": "폰토쵸",
+        "nameEn": "Ponto-chō",
+        "article": "https://en.wikipedia.org/wiki/Ponto-ch%C5%8D",
+        "address": "",
+        "lat": 35.00796,
+        "lon": 135.77111,
+        "image": "assets/restaurants/ponto-cho.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg",
+        "imageArtist": "Wolfiewolf from Pontocho street in Nakagyo, Kyoto",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
+    ]
   },
   {
     "id": "kyushu",
@@ -748,7 +795,24 @@
         "descriptionKo": "아름다운 해안과 카페로 사랑받는 지역"
       }
     ],
-    "nameKo": "규슈"
+    "nameKo": "규슈",
+    "restaurants": [
+      {
+        "slug": "nagasaki-shinchi-chinatown",
+        "nameJa": "長崎新地中華街",
+        "nameKo": "나가사키 차이나타운",
+        "nameEn": "Nagasaki Shinchi Chinatown",
+        "article": "https://en.wikipedia.org/wiki/Nagasaki_Shinchi_Chinatown",
+        "address": "",
+        "lat": 32.741472,
+        "lon": 129.875278,
+        "image": "assets/restaurants/nagasaki-shinchi-chinatown.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Chinatown_Nagasaki_Japan05n.jpg",
+        "imageArtist": "663highland",
+        "imageLicense": "CC BY 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5"
+      }
+    ]
   },
   {
     "id": "okinawa",
@@ -1300,6 +1364,38 @@
         "imageArtist": "Aw1805",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "shin-yokohama-ramen-museum",
+        "nameJa": "新横浜ラーメン博物館",
+        "nameKo": "신요코하마 라멘 박물관",
+        "nameEn": "Shin-Yokohama Raumen Museum",
+        "article": "https://en.wikipedia.org/wiki/Shin-Yokohama_Ramen_Museum",
+        "address": "",
+        "lat": 35.509874,
+        "lon": 139.614537,
+        "image": "assets/restaurants/shin-yokohama-ramen-museum.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Shinyokohama_ramen_museum.jpg",
+        "imageArtist": "Douglas P Perkins (Douglaspperkins (talk))",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
+      },
+      {
+        "slug": "hotel-new-grand",
+        "nameJa": "ホテルニューグランド",
+        "nameKo": "호텔 뉴 그랜드",
+        "nameEn": "Hotel New Grand",
+        "article": "https://en.wikipedia.org/wiki/Hotel_New_Grand",
+        "address": "神奈川県横浜市中区山下町10",
+        "lat": 35.44517,
+        "lon": 139.64941,
+        "image": "assets/restaurants/hotel-new-grand.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Hotel_New_Grand_Yokohama_2009.jpg",
+        "imageArtist": "Wiiii",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
     ]
   },
@@ -2043,6 +2139,38 @@
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/94/Gwangjang_Market%2C_Seoul_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "noryangjin-fisheries-wholesale-market",
+        "nameJa": "鷺梁津水産市場",
+        "nameKo": "노량진수산시장",
+        "nameEn": "Noryangjin Fisheries Wholesale Market",
+        "article": "https://en.wikipedia.org/wiki/Noryangjin_Fisheries_Wholesale_Market",
+        "address": "",
+        "lat": 37.515231,
+        "lon": 126.941064,
+        "image": "assets/restaurants/noryangjin-fisheries-wholesale-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Korea-Seoul-Noryangjin_Fish_Market-03.jpg",
+        "imageArtist": "Gaël Chardon",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "slug": "tongin-market",
+        "nameJa": "通仁市場",
+        "nameKo": "통인시장",
+        "nameEn": "Tongin Market",
+        "article": "https://en.wikipedia.org/wiki/Tongin_Market",
+        "address": "",
+        "lat": 37.580653,
+        "lon": 126.970053,
+        "image": "assets/restaurants/tongin-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Tongin_Market_2018-06-17-18-28-59.jpg",
+        "imageArtist": "ChoiSojeong",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
     ]
   },
   {
@@ -2413,6 +2541,23 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Seongeup_Historic_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "jeju-dongmun-traditional-market",
+        "nameJa": "Jeju Dongmun Traditional Market",
+        "nameKo": "동문재래시장",
+        "nameEn": "Jeju Dongmun Traditional Market",
+        "article": "https://en.wikipedia.org/wiki/Jeju_Dongmun_Traditional_Market",
+        "address": "",
+        "lat": 33.5122,
+        "lon": 126.5267,
+        "image": "assets/restaurants/jeju-dongmun-traditional-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Jeju_Dongmun_Traditional_Market_08.jpg",
+        "imageArtist": "Grapesurgeon",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
     ]
   },
   {
@@ -2597,6 +2742,38 @@
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e9/20190415_Yehliu_geopark_rock_formations-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "raohe-street-night-market",
+        "nameJa": "饒河街観光夜市",
+        "nameKo": "라오허지에 관광 야시장",
+        "nameEn": "Raohe Street Night Market",
+        "article": "https://en.wikipedia.org/wiki/Raohe_Street_Night_Market",
+        "address": "",
+        "lat": 25.050167,
+        "lon": 121.572639,
+        "image": "assets/restaurants/raohe-street-night-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:East_Entrance_of_Raohe_Street_Night_Market_20060118_night.jpg",
+        "imageArtist": "Fauzty",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      {
+        "slug": "ningxia-night-market",
+        "nameJa": "寧夏路夜市",
+        "nameKo": "닝샤루 야시장",
+        "nameEn": "Ningxia Road Night Market",
+        "article": "https://en.wikipedia.org/wiki/Ningxia_Night_Market",
+        "address": "",
+        "lat": 25.055376,
+        "lon": 121.515098,
+        "image": "assets/restaurants/ningxia-night-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Ningxia_Night_Market_20250520.jpg",
+        "imageArtist": "迷惘的人生",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
       }
     ]
   },
@@ -2785,6 +2962,36 @@
       }
     ],
     "restaurants": [
+      {
+        "slug": "lin-heung-tea-house",
+        "nameJa": "Lin Heung Tea House",
+        "nameKo": "Lin Heung Tea House",
+        "nameEn": "Lin Heung Tea House",
+        "article": "https://en.wikipedia.org/wiki/Lin_Heung_Tea_House",
+        "address": "",
+        "lat": 22.284294,
+        "lon": 114.153446,
+        "image": "assets/restaurants/lin-heung-tea-house.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:HK_Lin_Heng_Teahouse_ou.jpg",
+        "imageArtist": "No machine-readable author provided. WAHKEE assumed (based on copyright claims).",
+        "imageLicense": "CC BY-SA 2.5",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
+      },
+      {
+        "slug": "temple-street-hong-kong",
+        "nameJa": "テンプル・ストリート",
+        "nameKo": "Temple Street",
+        "nameEn": "Temple Street",
+        "article": "https://en.wikipedia.org/wiki/Temple_Street%2C_Hong_Kong",
+        "address": "",
+        "lat": 22.30767,
+        "lon": 114.170291,
+        "image": "assets/restaurants/temple-street-hong-kong.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:GateOfTempleInHongKong.jpg",
+        "imageArtist": "hkgalbert",
+        "imageLicense": "CC0",
+        "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      },
       {
         "slug": "mak-s-noodle",
         "nameJa": "Mak's Noodle",
@@ -2984,6 +3191,23 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9e/%282022%29_%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B9%81%E0%B8%96%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B8%A3%E0%B8%B2%E0%B8%8A_%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%A7%E0%B8%87%E0%B8%A8%E0%B9%8C_%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "jay-fai",
+        "nameJa": "Jay Fai",
+        "nameKo": "Jay Fai",
+        "nameEn": "Jay Fai",
+        "article": "https://en.wikipedia.org/wiki/Jay_Fai",
+        "address": "327 Maha Chai Rd, Khwaeng Samran Rat, Khet Phra Nakhon, Bangkok 10200",
+        "lat": 13.752568,
+        "lon": 100.504737,
+        "image": "assets/restaurants/jay-fai.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Jay_Fai%2C_bangkok_20180406.jpg",
+        "imageArtist": "Sais.isa",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
     ]
   },
@@ -3355,6 +3579,38 @@
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/79/Singapore_Flyer_20250903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "lau-pa-sat",
+        "nameJa": "テロック・エア・マーケット",
+        "nameKo": "Lau Pa Sat",
+        "nameEn": "Lau Pa Sat",
+        "article": "https://en.wikipedia.org/wiki/Lau_Pa_Sat",
+        "address": "18 Raffles Quay",
+        "lat": 1.28061,
+        "lon": 103.85,
+        "image": "assets/restaurants/lau-pa-sat.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Lau_Pa_Sat_Singapore_2.jpg",
+        "imageArtist": "kallerna",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      {
+        "slug": "maxwell-food-centre",
+        "nameJa": "Maxwell Food Centre",
+        "nameKo": "Maxwell Food Centre",
+        "nameEn": "Maxwell Food Centre",
+        "article": "https://en.wikipedia.org/wiki/Maxwell_Food_Centre",
+        "address": "1 Kadayanallur Street, Singapore 069184",
+        "lat": 1.280336,
+        "lon": 103.844767,
+        "image": "assets/restaurants/maxwell-food-centre.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Maxwell_Food_Centre.jpg",
+        "imageArtist": "Aaaatu",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
     ]
   },
   {
@@ -3539,6 +3795,68 @@
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Pont_Alexandre_III_depuis_pont_de_la_Concorde_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "cafe-procope",
+        "nameJa": "カフェ・プロコップ",
+        "nameKo": "카페 프로코프",
+        "nameEn": "Café Procope",
+        "article": "https://en.wikipedia.org/wiki/Caf%C3%A9_Procope",
+        "address": "13 Rue de l'Ancienne Comédie",
+        "lat": 48.853056,
+        "lon": 2.33875,
+        "image": "assets/restaurants/cafe-procope.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Le_Procope_1%2C_Paris_2010.jpg",
+        "imageArtist": "Jean-Marie Hullot from France",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "slug": "cafe-de-flore",
+        "nameJa": "カフェ・ド・フロール",
+        "nameKo": "카페 드 플로르",
+        "nameEn": "Café de Flore",
+        "article": "https://en.wikipedia.org/wiki/Caf%C3%A9_de_Flore",
+        "address": "",
+        "lat": 48.853889,
+        "lon": 2.3325,
+        "image": "assets/restaurants/cafe-de-flore.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg",
+        "imageArtist": "Celette",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      {
+        "slug": "les-deux-magots",
+        "nameJa": "ドゥ・マゴ",
+        "nameKo": "카페 레 되 마고",
+        "nameEn": "Les Deux Magots",
+        "article": "https://en.wikipedia.org/wiki/Les_Deux_Magots",
+        "address": "6 place Saint-Germain-des-Prés, 75006 Paris, France",
+        "lat": 48.853889,
+        "lon": 2.333056,
+        "image": "assets/restaurants/les-deux-magots.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Les_Deux_Magots%2C_25_September_2019.jpg",
+        "imageArtist": "Cheng-en Cheng from Taichung City, Taiwan",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "slug": "le-train-bleu-restaurant",
+        "nameJa": "Le Train Bleu",
+        "nameKo": "Le Train Bleu",
+        "nameEn": "Le Train Bleu",
+        "article": "https://en.wikipedia.org/wiki/Le_Train_Bleu_%28restaurant%29",
+        "address": "",
+        "lat": 48.845,
+        "lon": 2.373333,
+        "image": "assets/restaurants/le-train-bleu-restaurant.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Le_Train_Bleu.jpg",
+        "imageArtist": "Gryffindor",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
     ]
   },
@@ -3725,6 +4043,53 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Galer%C3%ADa_Nacional%2C_Londres%2C_Inglaterra%2C_2014-08-07%2C_DD_036.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "borough-market",
+        "nameJa": "バラ市場",
+        "nameKo": "버러 마켓",
+        "nameEn": "Borough Market",
+        "article": "https://en.wikipedia.org/wiki/Borough_Market",
+        "address": "",
+        "lat": 51.505556,
+        "lon": -0.090833,
+        "image": "assets/restaurants/borough-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:London_2018_March_IMG_0663.jpg",
+        "imageArtist": "Øyvind Holmstad",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      {
+        "slug": "rules-restaurant",
+        "nameJa": "ルールズ (レストラン)",
+        "nameKo": "Rules",
+        "nameEn": "Rules",
+        "article": "https://en.wikipedia.org/wiki/Rules_%28restaurant%29",
+        "address": "",
+        "lat": 51.5108,
+        "lon": -0.1232,
+        "image": "assets/restaurants/rules-restaurant.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Rules%2C_London%27s_oldest_restaurant._-_geograph.org.uk_-_510375.jpg",
+        "imageArtist": "Steve  F",
+        "imageLicense": "CC BY-SA 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+      },
+      {
+        "slug": "simpson-s-in-the-strand",
+        "nameJa": "Simpson's-in-the-Strand",
+        "nameKo": "Simpson's-in-the-Strand",
+        "nameEn": "Simpson's-in-the-Strand",
+        "article": "https://en.wikipedia.org/wiki/Simpson%27s-in-the-Strand",
+        "address": "",
+        "lat": 51.510694,
+        "lon": -0.120611,
+        "image": "assets/restaurants/simpson-s-in-the-strand.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Simpson%27s-in-the-Strand_2023-12-04.jpg",
+        "imageArtist": "Matt Brown",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
     ]
   },
   {
@@ -3909,6 +4274,23 @@
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Trastevere_fountain.jpg",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Santa_Maria_in_Trastevere_fountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "antico-caffe-greco",
+        "nameJa": "アンティコ・カフェ・グレコ",
+        "nameKo": "Antico Caffè Greco",
+        "nameEn": "Antico Caffè Greco",
+        "article": "https://en.wikipedia.org/wiki/Antico_Caff%C3%A8_Greco",
+        "address": "",
+        "lat": 41.905558,
+        "lon": 12.481436,
+        "image": "assets/restaurants/antico-caffe-greco.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg",
+        "imageArtist": "Ludwig Passini",
+        "imageLicense": "Public domain",
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg"
       }
     ]
   },
@@ -4095,6 +4477,23 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Platja_de_la_Barceloneta_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "els-quatre-gats",
+        "nameJa": "四匹の猫",
+        "nameKo": "Els Quatre Gats",
+        "nameEn": "Els Quatre Gats",
+        "article": "https://en.wikipedia.org/wiki/Els_Quatre_Gats",
+        "address": "Montsió, 3 bis",
+        "lat": 41.385778,
+        "lon": 2.173667,
+        "image": "assets/restaurants/els-quatre-gats.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:15-10-27-Els_Quatre_Gats-RalfR-WMA_2729.jpg",
+        "imageArtist": "Ralf Roletschek",
+        "imageLicense": "GFDL 1.2",
+        "imageLicenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html"
+      }
     ]
   },
   {
@@ -4279,6 +4678,53 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Petrin_Praha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "u-fleku",
+        "nameJa": "U Fleků",
+        "nameKo": "U Fleků",
+        "nameEn": "U Fleků",
+        "article": "https://en.wikipedia.org/wiki/U_Flek%C5%AF",
+        "address": "",
+        "lat": 50.0788,
+        "lon": 14.4172,
+        "image": "assets/restaurants/u-fleku.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Prag%2C_U_Flek%C5%AF_--_2019_--_6735.jpg",
+        "imageArtist": "Dietmar Rabich",
+        "imageLicense": "CC BY-SA 4.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+      },
+      {
+        "slug": "cafe-slavia",
+        "nameJa": "Café Slavia",
+        "nameKo": "Café Slavia",
+        "nameEn": "Café Slavia",
+        "article": "https://en.wikipedia.org/wiki/Caf%C3%A9_Slavia",
+        "address": "",
+        "lat": 50.08182,
+        "lon": 14.413258,
+        "image": "assets/restaurants/cafe-slavia.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Slavia_Praha.jpg",
+        "imageArtist": "Corradox",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      {
+        "slug": "u-medvidku",
+        "nameJa": "U Medvídků",
+        "nameKo": "U Medvídků",
+        "nameEn": "U Medvídků",
+        "article": "https://en.wikipedia.org/wiki/U_Medv%C3%ADdk%C5%AF",
+        "address": "",
+        "lat": 50.08284,
+        "lon": 14.418381,
+        "image": "assets/restaurants/u-medvidku.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Na_Per%C5%A1t%C3%BDn%C4%9B_5%2C_U_Medv%C3%ADdk%C5%AF.jpg",
+        "imageArtist": "ŠJů (cs:ŠJů)",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
     ]
   },
@@ -4465,6 +4911,68 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Rockefeller_Center_Christmas_Tree_2021_%2851770696938%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "katz-s-delicatessen",
+        "nameJa": "カッツ・デリカテッセン",
+        "nameKo": "카츠 델리카트슨",
+        "nameEn": "Katz's Delicatessen",
+        "article": "https://en.wikipedia.org/wiki/Katz%27s_Delicatessen",
+        "address": "",
+        "lat": 40.7223,
+        "lon": -73.9874,
+        "image": "assets/restaurants/katz-s-delicatessen.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Katz%27s_Delicatessen_%2851623899326%29.jpg",
+        "imageArtist": "ajay_suresh",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      {
+        "slug": "peter-luger-steak-house",
+        "nameJa": "ピーター・ルーガー・ステーキハウス",
+        "nameKo": "피터 루거 스테이크 하우스",
+        "nameEn": "Peter Luger Steak House",
+        "article": "https://en.wikipedia.org/wiki/Peter_Luger_Steak_House",
+        "address": "",
+        "lat": 40.7099,
+        "lon": -73.9626,
+        "image": "assets/restaurants/peter-luger-steak-house.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Peter_Luger_Steak_House_%28Brooklyn%2C_New_York%29_001_crop.jpg",
+        "imageArtist": "Leonard J. DeFrancisci",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      },
+      {
+        "slug": "grand-central-oyster-bar-restaurant",
+        "nameJa": "オイスター・バー",
+        "nameKo": "오이스터 바",
+        "nameEn": "Oyster Bar",
+        "article": "https://en.wikipedia.org/wiki/Grand_Central_Oyster_Bar_%26_Restaurant",
+        "address": "",
+        "lat": 40.7523,
+        "lon": -73.9772,
+        "image": "assets/restaurants/grand-central-oyster-bar-restaurant.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:The_Oyster_Bar%2C_Grand_Central_Terminal%2C_New_York_City_%284057303042%29.jpg",
+        "imageArtist": "Jazz Guy from New Jersey, United States",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      },
+      {
+        "slug": "chelsea-market",
+        "nameJa": "チェルシー・マーケット",
+        "nameKo": "첼시 마켓",
+        "nameEn": "Chelsea Market",
+        "article": "https://en.wikipedia.org/wiki/Chelsea_Market",
+        "address": "",
+        "lat": 40.7425,
+        "lon": -74.0061,
+        "image": "assets/restaurants/chelsea-market.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Chelsea_Market_%2849052085186%29.jpg",
+        "imageArtist": "Ajay Suresh from New York, NY, USA",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
     ]
   },
   {
@@ -4650,6 +5158,23 @@
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/WaimeaBay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "leonard-s-bakery",
+        "nameJa": "Leonard's Bakery",
+        "nameKo": "Leonard's Bakery",
+        "nameEn": "Leonard's Bakery",
+        "article": "https://en.wikipedia.org/wiki/Leonard%27s_Bakery",
+        "address": "",
+        "lat": 21.2849,
+        "lon": -157.8133,
+        "image": "assets/restaurants/leonard-s-bakery.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Leonard%27s_Bakery_%284290322777%29.jpg",
+        "imageArtist": "Arnold Gatilao from Oakland, CA, USA",
+        "imageLicense": "CC BY 2.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+      }
     ]
   },
   {
@@ -4834,6 +5359,23 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/07/Summer_days_at_Manly_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "quay-restaurant",
+        "nameJa": "Quay",
+        "nameKo": "Quay",
+        "nameEn": "Quay",
+        "article": "https://en.wikipedia.org/wiki/Quay_%28restaurant%29",
+        "address": "",
+        "lat": -33.8585,
+        "lon": 151.21,
+        "image": "assets/restaurants/quay-restaurant.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Quay_Restaurant.jpg",
+        "imageArtist": "Camw",
+        "imageLicense": "CC BY-SA 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
     ]
   }

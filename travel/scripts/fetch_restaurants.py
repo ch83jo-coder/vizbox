@@ -3,7 +3,8 @@
 A candidate is published only when its English Wikipedia article resolves,
 Wikidata gives coordinates, and the article's lead photo is a Commons jpg.
 Names come from Wikidata labels (ja/ko, English fallback); the address is the
-Wikidata street address (P6375) when one exists. Photos are saved to
+Wikidata street address (P6375) when one exists. A candidate written as
+{"title": ..., "nameKo": ..., "address": ...} overrides wrong or missing Wikidata values. Photos are saved to
 assets/restaurants/<slug>.jpg with artist and license, like the spot photos.
 Progress is saved after every photo, so a rerun resumes where it stopped.
 """
@@ -34,7 +35,8 @@ def main():
     spot_articles={urllib.parse.unquote(s.get('imageArticle','')).split('/wiki/')[-1].replace('_',' ') for r in regions for s in r['spots']}
     previous={x['slug']:x for r in regions for x in r.get('restaurants',[])}
     for region in regions:
-        titles=[t for t in picks.get(region['id'],[]) if t not in spot_articles]
+        fixes={c['title']:{k:v for k,v in c.items() if k!='title'} for c in picks.get(region['id'],[]) if isinstance(c,dict)}
+        titles=[c['title'] if isinstance(c,dict) else c for c in picks.get(region['id'],[])];titles=[t for t in titles if t not in spot_articles]
         if not titles:region.pop('restaurants',None);continue
         pages=wiki(titles);entities=wikidata(sorted({p['pageprops']['wikibase_item'] for p in pages.values()})) if pages else {};items=[]
         for title in titles:
@@ -44,7 +46,7 @@ def main():
             if not point:skipped.append(f'{region["id"]}: {title} (座標なし)');continue
             if '/wikipedia/commons/' not in page.get('original',{}).get('source','') or not photo.lower().endswith(('.jpg','.jpeg')):skipped.append(f'{region["id"]}: {title} (Commons写真なし)');continue
             slug=slugify(page['title']);address=claim(entity,'P6375')
-            items.append({'slug':slug,'nameJa':label(entity,'ja'),'nameKo':label(entity,'ko'),'nameEn':label(entity,'en') or page['title'],'article':'https://en.wikipedia.org/wiki/'+urllib.parse.quote(page['title'].replace(' ','_')),'address':address['text'] if address else '','lat':round(point['latitude'],6),'lon':round(point['longitude'],6),'image':f'assets/restaurants/{slug}.jpg','imageFilePage':'https://commons.wikimedia.org/wiki/File:'+urllib.parse.quote(photo)})
+            items.append({**{'slug':slug,'nameJa':label(entity,'ja'),'nameKo':label(entity,'ko'),'nameEn':label(entity,'en') or page['title'],'article':'https://en.wikipedia.org/wiki/'+urllib.parse.quote(page['title'].replace(' ','_')),'address':address['text'] if address else '','lat':round(point['latitude'],6),'lon':round(point['longitude'],6),'image':f'assets/restaurants/{slug}.jpg','imageFilePage':'https://commons.wikimedia.org/wiki/File:'+urllib.parse.quote(photo)},**fixes.get(title,{})})
         if items:region['restaurants']=items
         else:region.pop('restaurants',None)
         time.sleep(.2)

@@ -6,8 +6,7 @@
     "Ameya-Yokochō"
   ],
   "osaka": [
-    "Kani Doraku",
-    "Hōzen-ji"
+    "Kani Doraku"
   ],
   "kyoto": [
     "Nishiki Market",
@@ -26,7 +25,10 @@
   "yokohama": [
     "Shin-Yokohama Rāmen Museum",
     "CupNoodles Museum Yokohama",
-    "Hotel New Grand"
+    {
+      "title": "Hotel New Grand",
+      "address": "神奈川県横浜市中区山下町10"
+    }
   ],
   "nagoya": [
     "Komeda Coffee"
@@ -101,7 +103,10 @@
     "U Medvídků"
   ],
   "new-york": [
-    "Katz's Delicatessen",
+    {
+      "title": "Katz's Delicatessen",
+      "nameKo": "카츠 델리카트슨"
+    },
     "Peter Luger Steak House",
     "Grand Central Oyster Bar & Restaurant",
     "Chelsea Market"
@@ -110,7 +115,6 @@
     "Leonard's Bakery"
   ],
   "sydney": [
-    "Sydney Fish Market",
     "Harry's Cafe de Wheels",
     "Quay (restaurant)"
   ]
