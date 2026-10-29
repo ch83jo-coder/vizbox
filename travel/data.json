@@ -364,7 +364,24 @@
         "descriptionKo": "거대한 수조로 사랑받는 수족관"
       }
     ],
-    "nameKo": "오사카"
+    "nameKo": "오사카",
+    "restaurants": [
+      {
+        "slug": "hozen-ji",
+        "nameJa": "法善寺",
+        "nameKo": "Hōzen-ji Temple",
+        "nameEn": "Hōzen-ji Temple",
+        "article": "https://en.wikipedia.org/wiki/H%C5%8Dzen-ji",
+        "address": "山梨県南アルプス市加賀美3509",
+        "lat": 35.6033,
+        "lon": 138.484736,
+        "image": "assets/restaurants/hozen-ji.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:HouzennjiDVC00213.JPG",
+        "imageArtist": "shouichi",
+        "imageLicense": "CC0",
+        "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    ]
   },
   {
     "id": "kyoto",
@@ -2765,6 +2782,23 @@
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Sai_Yeung_Choi_Street_South_2008_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "mak-s-noodle",
+        "nameJa": "Mak's Noodle",
+        "nameKo": "Mak's Noodle",
+        "nameEn": "Mak's Noodle",
+        "article": "https://en.wikipedia.org/wiki/Mak%27s_Noodle",
+        "address": "",
+        "lat": 22.2831,
+        "lon": 114.155,
+        "image": "assets/restaurants/mak-s-noodle.jpg",
+        "imageFilePage": "https://commons.wikimedia.org/wiki/File:Maks3.jpg",
+        "imageArtist": "User:Ohconfucius",
+        "imageLicense": "CC BY 3.0",
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
       }
     ]
   },

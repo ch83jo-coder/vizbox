@@ -65,7 +65,7 @@ def main():
         aliases={a['from']:a['to'] for a in query.get('normalized',[])};infos={p['title']:p.get('imageinfo',[{}])[0] for p in query['pages'].values()}
         for x,title in zip(group,titles):
             try:
-                info=infos[aliases.get(title,title)];content,kind=request(info.get('thumburl',info['url']))
+                info=infos[aliases.get(title,title)];content,kind=request(info.get('thumburl',info['url']).replace('//thumb.wikimedia.org/','//upload.wikimedia.org/'))
                 if not kind.startswith('image/'):raise ValueError('Response is not an image')
                 target=ROOT/x['image'];temporary=target.with_suffix('.jpg.tmp');temporary.write_bytes(content);temporary.replace(target)
                 meta=info.get('extmetadata',{})
