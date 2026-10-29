@@ -5,12 +5,12 @@ Wikidata gives coordinates, and the article's lead photo is a Commons jpg.
 Names come from Wikidata labels (ja/ko, English fallback); the address is the
 Wikidata street address (P6375) when one exists. Photos are saved to
 assets/restaurants/<slug>.jpg with artist and license, like the spot photos.
---missing downloads only photos that do not exist locally yet.
+Progress is saved after every photo, so a rerun resumes where it stopped.
 """
-import json,re,sys,time,urllib.parse
+import json,re,sys,time,unicodedata,urllib.parse
 from pathlib import Path
 from fetch_spot_images import ROOT,request,clean
-def slugify(title):return re.sub(r'[^a-z0-9]+','-',urllib.parse.unquote(title).lower().encode('ascii','ignore').decode()).strip('-')
+def slugify(title):return re.sub(r'[^a-z0-9]+','-',unicodedata.normalize('NFKD',urllib.parse.unquote(title).lower()).encode('ascii','ignore').decode()).strip('-')
 def wiki(titles):
     params={'action':'query','format':'json','prop':'pageimages|pageprops','piprop':'name|original','ppprop':'wikibase_item','titles':'|'.join(titles),'redirects':1}
     raw,_=request('https://en.wikipedia.org/w/api.php?'+urllib.parse.urlencode(params));query=json.loads(raw)['query']
@@ -48,26 +48,36 @@ def main():
         if items:region['restaurants']=items
         else:region.pop('restaurants',None)
         time.sleep(.2)
-    eats=[x for r in regions for x in r.get('restaurants',[])];failed=[]
+    eats=[x for r in regions for x in r.get('restaurants',[])];failed=[];credits=('imageArtist','imageLicense','imageLicenseUrl')
+    def save():
+        out=[dict(r,restaurants=[x for x in r['restaurants'] if x.get('imageLicense')]) if r.get('restaurants') else r for r in regions]
+        for r in out:
+            if 'restaurants' in r and not r['restaurants']:del r['restaurants']
+        target=ROOT/'data.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');temporary.replace(target)
     for x in eats:
         old=previous.get(x['slug'],{})
-        if '--missing' in sys.argv and (ROOT/x['image']).exists() and old.get('imageFilePage')==x['imageFilePage']:x.update({k:old[k] for k in ('imageArtist','imageLicense','imageLicenseUrl') if k in old});continue
-        try:
-            params={'action':'query','format':'json','prop':'imageinfo','titles':'File:'+urllib.parse.unquote(x['imageFilePage'].split('File:')[-1]),'iiprop':'url|extmetadata','iiurlwidth':640}
-            raw,_=request('https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode(params));info=next(iter(json.loads(raw)['query']['pages'].values()))['imageinfo'][0]
-            content,kind=request(info.get('thumburl',info['url']))
-            if not kind.startswith('image/'):raise ValueError('Response is not an image')
-            target=ROOT/x['image'];temporary=target.with_suffix('.jpg.tmp');temporary.write_bytes(content);temporary.replace(target)
-            meta=info.get('extmetadata',{})
-            x.update(imageArtist=clean(meta.get('Artist',{}).get('value','Wikimedia Commons')),imageLicense=clean(meta.get('LicenseShortName',{}).get('value','出典を参照')),imageLicenseUrl=meta.get('LicenseUrl',{}).get('value',x['imageFilePage']))
-            print('Updated',x['slug'],flush=True)
-        except Exception as error:failed.append(x['slug']);print('Failed',x['slug'],str(error),flush=True)
-        time.sleep(.2)
+        if (ROOT/x['image']).exists() and old.get('imageFilePage')==x['imageFilePage'] and old.get('imageLicense'):x.update({k:old[k] for k in credits})
+    todo=[x for x in eats if not x.get('imageLicense')]
+    for offset in range(0,len(todo),25):
+        group=todo[offset:offset+25];titles=['File:'+urllib.parse.unquote(x['imageFilePage'].split('File:')[-1]) for x in group]
+        params={'action':'query','format':'json','prop':'imageinfo','titles':'|'.join(titles),'iiprop':'url|extmetadata','iiurlwidth':500}
+        raw,_=request('https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode(params));query=json.loads(raw)['query']
+        aliases={a['from']:a['to'] for a in query.get('normalized',[])};infos={p['title']:p.get('imageinfo',[{}])[0] for p in query['pages'].values()}
+        for x,title in zip(group,titles):
+            try:
+                info=infos[aliases.get(title,title)];content,kind=request(info.get('thumburl',info['url']))
+                if not kind.startswith('image/'):raise ValueError('Response is not an image')
+                target=ROOT/x['image'];temporary=target.with_suffix('.jpg.tmp');temporary.write_bytes(content);temporary.replace(target)
+                meta=info.get('extmetadata',{})
+                x.update(imageArtist=clean(meta.get('Artist',{}).get('value','Wikimedia Commons')),imageLicense=clean(meta.get('LicenseShortName',{}).get('value','出典を参照')),imageLicenseUrl=meta.get('LicenseUrl',{}).get('value',x['imageFilePage']))
+                print('Updated',x['slug'],flush=True);save()
+            except Exception as error:failed.append(x['slug']);print('Failed',x['slug'],str(error),flush=True)
+            time.sleep(1)
+    save()
     for r in regions:
         if 'restaurants' in r:
-            r['restaurants']=[x for x in r['restaurants'] if x['slug'] not in failed]
+            r['restaurants']=[x for x in r['restaurants'] if x.get('imageLicense')]
             if not r['restaurants']:del r['restaurants']
-    target=ROOT/'data.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(regions,ensure_ascii=False,indent=2)+'\n');temporary.replace(target)
     print('Published',sum(len(r.get('restaurants',[])) for r in regions),'places in',sum(1 for r in regions if r.get('restaurants')),'areas')
     if skipped:print('Skipped:\n  '+'\n  '.join(skipped))
     if failed:raise SystemExit('Photo download failed for: '+', '.join(failed))
