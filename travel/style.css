@@ -96,3 +96,4 @@
  .split{grid-template-columns:env(viewport-segment-width 0 0) env(viewport-segment-width 1 0);column-gap:calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0))}
  .split>.rank-list,.split>.detail-pane{margin-inline:16px}
 }
+.eats .spot-info{display:flex;flex-direction:column;gap:8px}.eats .spot h3{margin:0}.eat-address{overflow-wrap:anywhere}.eats .small-link{display:inline-flex;align-items:center;min-height:32px}.eats .photo-credit{font-size:10px;line-height:1.6}.eats .photo-credit a{text-decoration:underline}
