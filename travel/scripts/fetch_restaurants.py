@@ -4,7 +4,9 @@ A candidate is published only when its English Wikipedia article resolves,
 Wikidata gives coordinates, and the article's lead photo is a Commons jpg.
 Names come from Wikidata labels (ja/ko, English fallback); the address is the
 Wikidata street address (P6375) when one exists. A candidate written as
-{"title": ..., "nameKo": ..., "address": ...} overrides wrong or missing Wikidata values. Photos are saved to
+{"title": ..., "nameKo": ..., "address": ...} overrides wrong or missing Wikidata values (addressSource records where
+the address was checked). A candidate without "title" (slug, nameJa, nameKo, nameEn,
+address, addressSource) is published as is, without a photo. Photos are saved to
 assets/restaurants/<slug>.jpg with artist and license, like the spot photos.
 Progress is saved after every photo, so a rerun resumes where it stopped.
 """
@@ -35,10 +37,10 @@ def main():
     spot_articles={urllib.parse.unquote(s.get('imageArticle','')).split('/wiki/')[-1].replace('_',' ') for r in regions for s in r['spots']}
     previous={x['slug']:x for r in regions for x in r.get('restaurants',[])}
     for region in regions:
-        fixes={c['title']:{k:v for k,v in c.items() if k!='title'} for c in picks.get(region['id'],[]) if isinstance(c,dict)}
-        titles=[c['title'] if isinstance(c,dict) else c for c in picks.get(region['id'],[])];titles=[t for t in titles if t not in spot_articles]
-        if not titles:region.pop('restaurants',None);continue
-        pages=wiki(titles);entities=wikidata(sorted({p['pageprops']['wikibase_item'] for p in pages.values()})) if pages else {};items=[]
+        candidates=picks.get(region['id'],[]);manual=[dict(c,article=c.get('addressSource','')) for c in candidates if isinstance(c,dict) and 'title' not in c]
+        fixes={c['title']:{k:v for k,v in c.items() if k!='title'} for c in candidates if isinstance(c,dict) and 'title' in c}
+        titles=[c['title'] if isinstance(c,dict) else c for c in candidates if not isinstance(c,dict) or 'title' in c];titles=[t for t in titles if t not in spot_articles]
+        pages=wiki(titles) if titles else {};entities=wikidata(sorted({p['pageprops']['wikibase_item'] for p in pages.values()})) if pages else {};items=[]
         for title in titles:
             page=pages.get(title)
             if not page:skipped.append(f'{region["id"]}: {title} (記事なし)');continue
@@ -47,19 +49,20 @@ def main():
             if '/wikipedia/commons/' not in page.get('original',{}).get('source','') or not photo.lower().endswith(('.jpg','.jpeg')):skipped.append(f'{region["id"]}: {title} (Commons写真なし)');continue
             slug=slugify(page['title']);address=claim(entity,'P6375')
             items.append({**{'slug':slug,'nameJa':label(entity,'ja'),'nameKo':label(entity,'ko'),'nameEn':label(entity,'en') or page['title'],'article':'https://en.wikipedia.org/wiki/'+urllib.parse.quote(page['title'].replace(' ','_')),'address':address['text'] if address else '','lat':round(point['latitude'],6),'lon':round(point['longitude'],6),'image':f'assets/restaurants/{slug}.jpg','imageFilePage':'https://commons.wikimedia.org/wiki/File:'+urllib.parse.quote(photo)},**fixes.get(title,{})})
+        items+=manual
         if items:region['restaurants']=items
         else:region.pop('restaurants',None)
         time.sleep(.2)
     eats=[x for r in regions for x in r.get('restaurants',[])];failed=[];credits=('imageArtist','imageLicense','imageLicenseUrl')
     def save():
-        out=[dict(r,restaurants=[x for x in r['restaurants'] if x.get('imageLicense')]) if r.get('restaurants') else r for r in regions]
+        out=[dict(r,restaurants=[x for x in r['restaurants'] if x.get('imageLicense') or not x.get('image')]) if r.get('restaurants') else r for r in regions]
         for r in out:
             if 'restaurants' in r and not r['restaurants']:del r['restaurants']
         target=ROOT/'data.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');temporary.replace(target)
     for x in eats:
         old=previous.get(x['slug'],{})
-        if (ROOT/x['image']).exists() and old.get('imageFilePage')==x['imageFilePage'] and old.get('imageLicense'):x.update({k:old[k] for k in credits})
-    todo=[x for x in eats if not x.get('imageLicense')]
+        if x.get('image') and (ROOT/x['image']).exists() and old.get('imageFilePage')==x['imageFilePage'] and old.get('imageLicense'):x.update({k:old[k] for k in credits})
+    todo=[x for x in eats if x.get('image') and not x.get('imageLicense')]
     for offset in range(0,len(todo),25):
         group=todo[offset:offset+25];titles=['File:'+urllib.parse.unquote(x['imageFilePage'].split('File:')[-1]) for x in group]
         params={'action':'query','format':'json','prop':'imageinfo','titles':'|'.join(titles),'iiprop':'url|extmetadata','iiurlwidth':500}
@@ -78,7 +81,7 @@ def main():
     save()
     for r in regions:
         if 'restaurants' in r:
-            r['restaurants']=[x for x in r['restaurants'] if x.get('imageLicense')]
+            r['restaurants']=[x for x in r['restaurants'] if x.get('imageLicense') or not x.get('image')]
             if not r['restaurants']:del r['restaurants']
     print('Published',sum(len(r.get('restaurants',[])) for r in regions),'places in',sum(1 for r in regions if r.get('restaurants')),'areas')
     if skipped:print('Skipped:\n  '+'\n  '.join(skipped))

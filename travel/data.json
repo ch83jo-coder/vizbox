@@ -189,11 +189,12 @@
         "nameKo": "스키야바시 지로",
         "nameEn": "Sukiyabashi Jiro",
         "article": "https://en.wikipedia.org/wiki/Sukiyabashi_Jiro",
-        "address": "",
+        "address": "東京都中央区銀座4-2-15 塚本総業ビルB1",
         "lat": 35.6727,
         "lon": 139.764,
         "image": "assets/restaurants/sukiyabashi-jiro.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Inside_Sukiyabashi_Jiro_%2811557082593%29.jpg",
+        "addressSource": "https://www.sushi-jiro.jp/shop",
         "imageArtist": "City Foodsters",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
@@ -204,11 +205,12 @@
         "nameKo": "도요스 시장",
         "nameEn": "Toyosu market",
         "article": "https://en.wikipedia.org/wiki/Toyosu_Market",
-        "address": "",
+        "address": "東京都江東区豊洲6-6-1",
         "lat": 35.644167,
         "lon": 139.783611,
         "image": "assets/restaurants/toyosu-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Toyosu_Market_Tokyo_2.jpg",
+        "addressSource": "https://rurubu.jp/andmore/spot/80091690",
         "imageArtist": "Arne Müseler",
         "imageLicense": "CC BY-SA 3.0 de",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
@@ -219,11 +221,12 @@
         "nameKo": "아메야요코초",
         "nameEn": "Ameya-Yokochō",
         "article": "https://en.wikipedia.org/wiki/Ameya-Yokoch%C5%8D",
-        "address": "",
+        "address": "東京都台東区上野4丁目",
         "lat": 35.710059,
         "lon": 139.774543,
         "image": "assets/restaurants/ameya-yokocho.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Ueno_20241210_133139.jpg",
+        "addressSource": "https://matcha-jp.com/jp/27",
         "imageArtist": "Ka23 13",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
@@ -411,7 +414,27 @@
         "descriptionKo": "거대한 수조로 사랑받는 수족관"
       }
     ],
-    "nameKo": "오사카"
+    "nameKo": "오사카",
+    "restaurants": [
+      {
+        "slug": "horai-551-honten",
+        "nameJa": "551蓬莱 本店",
+        "nameKo": "551호라이 본점",
+        "nameEn": "551 Horai Main Store",
+        "address": "大阪府大阪市中央区難波3-6-3",
+        "addressSource": "https://www.mapple.net/region/a0503010205_g02061000/spot/",
+        "article": "https://www.mapple.net/region/a0503010205_g02061000/spot/"
+      },
+      {
+        "slug": "mizuno-dotonbori",
+        "nameJa": "お好み焼 美津の",
+        "nameKo": "오코노미야키 미즈노",
+        "nameEn": "Okonomiyaki Mizuno",
+        "address": "大阪府大阪市中央区道頓堀1-4-15",
+        "addressSource": "https://www.mapple.net/original/487974/",
+        "article": "https://www.mapple.net/original/487974/"
+      }
+    ]
   },
   {
     "id": "kyoto",
@@ -604,11 +627,12 @@
         "nameKo": "폰토쵸",
         "nameEn": "Ponto-chō",
         "article": "https://en.wikipedia.org/wiki/Ponto-ch%C5%8D",
-        "address": "",
+        "address": "京都府京都市中京区先斗町",
         "lat": 35.00796,
         "lon": 135.77111,
         "image": "assets/restaurants/ponto-cho.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg",
+        "addressSource": "https://en.wikipedia.org/wiki/Ponto-ch%C5%8D",
         "imageArtist": "Wolfiewolf from Pontocho street in Nakagyo, Kyoto",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
@@ -803,11 +827,12 @@
         "nameKo": "나가사키 차이나타운",
         "nameEn": "Nagasaki Shinchi Chinatown",
         "article": "https://en.wikipedia.org/wiki/Nagasaki_Shinchi_Chinatown",
-        "address": "",
+        "address": "長崎県長崎市新地町",
         "lat": 32.741472,
         "lon": 129.875278,
         "image": "assets/restaurants/nagasaki-shinchi-chinatown.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Chinatown_Nagasaki_Japan05n.jpg",
+        "addressSource": "https://rurubu.jp/andmore/spot/80039180",
         "imageArtist": "663highland",
         "imageLicense": "CC BY 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5"
@@ -995,7 +1020,18 @@
         "descriptionKo": "풍성한 자연과 아름다운 바다를 즐기는 섬"
       }
     ],
-    "nameKo": "오키나와"
+    "nameKo": "오키나와",
+    "restaurants": [
+      {
+        "slug": "makishi-public-market",
+        "nameJa": "第一牧志公設市場",
+        "nameKo": "다이이치 마키시 공설시장",
+        "nameEn": "Daiichi Makishi Public Market",
+        "address": "沖縄県那覇市松尾2-10-1",
+        "addressSource": "https://rurubu.jp/andmore/spot/80042438",
+        "article": "https://rurubu.jp/andmore/spot/80042438"
+      }
+    ]
   },
   {
     "id": "sapporo",
@@ -1179,6 +1215,26 @@
         "imageArtist": "Wikimedia Commons",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3ATsukimiBashi2004-12.jpg"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "nijo-market",
+        "nameJa": "二条市場",
+        "nameKo": "니조 시장",
+        "nameEn": "Nijo Market",
+        "address": "北海道札幌市中央区南3条東1丁目",
+        "addressSource": "https://www.sapporo.travel/choose/keywords/sapporo-nijo-market-curb-market/",
+        "article": "https://www.sapporo.travel/choose/keywords/sapporo-nijo-market-curb-market/"
+      },
+      {
+        "slug": "ganso-ramen-yokocho",
+        "nameJa": "元祖さっぽろラーメン横丁",
+        "nameKo": "원조 삿포로 라멘 골목",
+        "nameEn": "Ganso Sapporo Ramen Yokocho",
+        "address": "北海道札幌市中央区南5条西3丁目 N・グランデビル1F",
+        "addressSource": "https://rurubu.jp/andmore/spot/80000110",
+        "article": "https://rurubu.jp/andmore/spot/80000110"
       }
     ]
   },
@@ -1373,11 +1429,12 @@
         "nameKo": "신요코하마 라멘 박물관",
         "nameEn": "Shin-Yokohama Raumen Museum",
         "article": "https://en.wikipedia.org/wiki/Shin-Yokohama_Ramen_Museum",
-        "address": "",
+        "address": "神奈川県横浜市港北区新横浜2-14-21",
         "lat": 35.509874,
         "lon": 139.614537,
         "image": "assets/restaurants/shin-yokohama-ramen-museum.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Shinyokohama_ramen_museum.jpg",
+        "addressSource": "https://www.welcome.city.yokohama.jp/spot/details.php?bbid=17",
         "imageArtist": "Douglas P Perkins (Douglaspperkins (talk))",
         "imageLicense": "CC BY 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
@@ -1582,6 +1639,26 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "atsuta-horaiken",
+        "nameJa": "あつた蓬莱軒 本店",
+        "nameKo": "아츠타 호라이켄 본점",
+        "nameEn": "Atsuta Horaiken Main Store",
+        "address": "愛知県名古屋市熱田区神戸町503",
+        "addressSource": "https://rurubu.jp/andmore/spot/80023782",
+        "article": "https://rurubu.jp/andmore/spot/80023782"
+      },
+      {
+        "slug": "yabaton-yabacho",
+        "nameJa": "矢場とん 矢場町本店",
+        "nameKo": "야바톤 야바초 본점",
+        "nameEn": "Yabaton Yabacho Main Store",
+        "address": "愛知県名古屋市中区大須3-6-18",
+        "addressSource": "https://www.gltjp.com/ja/directory/item/11886/",
+        "article": "https://www.gltjp.com/ja/directory/item/11886/"
+      }
     ]
   },
   {
@@ -1769,6 +1846,17 @@
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3AOkunoshima_2.JPG"
       }
+    ],
+    "restaurants": [
+      {
+        "slug": "okonomimura",
+        "nameJa": "お好み村",
+        "nameKo": "오코노미무라",
+        "nameEn": "Okonomimura",
+        "address": "広島県広島市中区新天地5-13",
+        "addressSource": "https://rurubu.jp/andmore/spot/80034199",
+        "article": "https://rurubu.jp/andmore/spot/80034199"
+      }
     ]
   },
   {
@@ -1953,6 +2041,26 @@
         "imageArtist": "Saigen Jiro",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "nakasu-yatai",
+        "nameJa": "中洲屋台",
+        "nameKo": "나카스 포장마차",
+        "nameEn": "Nakasu Yatai",
+        "address": "福岡県福岡市博多区中洲1丁目 清流公園周辺",
+        "addressSource": "https://www.knt.co.jp/meito/sp/nakasu_yatai/",
+        "article": "https://www.knt.co.jp/meito/sp/nakasu_yatai/"
+      },
+      {
+        "slug": "yanagibashi-market",
+        "nameJa": "柳橋連合市場",
+        "nameKo": "야나기바시 연합시장",
+        "nameEn": "Yanagibashi Rengo Market",
+        "address": "福岡県福岡市中央区春吉1-6-1",
+        "addressSource": "https://www.crossroadfukuoka.jp/spot/12640",
+        "article": "https://www.crossroadfukuoka.jp/spot/12640"
       }
     ]
   },
@@ -2147,11 +2255,12 @@
         "nameKo": "노량진수산시장",
         "nameEn": "Noryangjin Fisheries Wholesale Market",
         "article": "https://en.wikipedia.org/wiki/Noryangjin_Fisheries_Wholesale_Market",
-        "address": "",
+        "address": "서울특별시 동작구 노들로 674",
         "lat": 37.515231,
         "lon": 126.941064,
         "image": "assets/restaurants/noryangjin-fisheries-wholesale-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Korea-Seoul-Noryangjin_Fish_Market-03.jpg",
+        "addressSource": "https://www.ktriptips.com/kor/shopping/132216",
         "imageArtist": "Gaël Chardon",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
@@ -2162,11 +2271,12 @@
         "nameKo": "통인시장",
         "nameEn": "Tongin Market",
         "article": "https://en.wikipedia.org/wiki/Tongin_Market",
-        "address": "",
+        "address": "서울특별시 종로구 자하문로15길 18",
         "lat": 37.580653,
         "lon": 126.970053,
         "image": "assets/restaurants/tongin-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Tongin_Market_2018-06-17-18-28-59.jpg",
+        "addressSource": "https://www.ktriptips.com/kor/shopping/1590323",
         "imageArtist": "ChoiSojeong",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -2355,6 +2465,17 @@
         "imageLicense": "Attribution",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Oryukdo_in_2018.jpg",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Oryukdo_in_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "bupyeong-kkangtong-market",
+        "nameJa": "富平カントン市場",
+        "nameKo": "부평깡통시장",
+        "nameEn": "Bupyeong Kkangtong Market",
+        "address": "부산광역시 중구 부평1길 48",
+        "addressSource": "https://mom-mom.net/travel/places/65936a28b48147c080a98264",
+        "article": "https://mom-mom.net/travel/places/65936a28b48147c080a98264"
       }
     ]
   },
@@ -2549,11 +2670,12 @@
         "nameKo": "동문재래시장",
         "nameEn": "Jeju Dongmun Traditional Market",
         "article": "https://en.wikipedia.org/wiki/Jeju_Dongmun_Traditional_Market",
-        "address": "",
+        "address": "제주특별자치도 제주시 관덕로14길 20",
         "lat": 33.5122,
         "lon": 126.5267,
         "image": "assets/restaurants/jeju-dongmun-traditional-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Jeju_Dongmun_Traditional_Market_08.jpg",
+        "addressSource": "https://www.ktriptips.com/kor/shopping/1013246",
         "imageArtist": "Grapesurgeon",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -2751,11 +2873,12 @@
         "nameKo": "라오허지에 관광 야시장",
         "nameEn": "Raohe Street Night Market",
         "article": "https://en.wikipedia.org/wiki/Raohe_Street_Night_Market",
-        "address": "",
+        "address": "台北市松山區饒河街",
         "lat": 25.050167,
         "lon": 121.572639,
         "image": "assets/restaurants/raohe-street-night-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:East_Entrance_of_Raohe_Street_Night_Market_20060118_night.jpg",
+        "addressSource": "https://supertaste.tvbs.com.tw/travel/313968",
         "imageArtist": "Fauzty",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -2766,11 +2889,12 @@
         "nameKo": "닝샤루 야시장",
         "nameEn": "Ningxia Road Night Market",
         "article": "https://en.wikipedia.org/wiki/Ningxia_Night_Market",
-        "address": "",
+        "address": "台北市大同區寧夏路",
         "lat": 25.055376,
         "lon": 121.515098,
         "image": "assets/restaurants/ningxia-night-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Ningxia_Night_Market_20250520.jpg",
+        "addressSource": "https://bunnyann.tw/ningxia/",
         "imageArtist": "迷惘的人生",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
@@ -2968,11 +3092,12 @@
         "nameKo": "Lin Heung Tea House",
         "nameEn": "Lin Heung Tea House",
         "article": "https://en.wikipedia.org/wiki/Lin_Heung_Tea_House",
-        "address": "",
+        "address": "160-164 Wellington Street, Central, Hong Kong",
         "lat": 22.284294,
         "lon": 114.153446,
         "image": "assets/restaurants/lin-heung-tea-house.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:HK_Lin_Heng_Teahouse_ou.jpg",
+        "addressSource": "https://www.timeout.com/hong-kong/restaurants/lin-heung-tea-house",
         "imageArtist": "No machine-readable author provided. WAHKEE assumed (based on copyright claims).",
         "imageLicense": "CC BY-SA 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5"
@@ -2983,11 +3108,12 @@
         "nameKo": "Temple Street",
         "nameEn": "Temple Street",
         "article": "https://en.wikipedia.org/wiki/Temple_Street%2C_Hong_Kong",
-        "address": "",
+        "address": "Temple Street, Yau Ma Tei, Kowloon, Hong Kong",
         "lat": 22.30767,
         "lon": 114.170291,
         "image": "assets/restaurants/temple-street-hong-kong.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:GateOfTempleInHongKong.jpg",
+        "addressSource": "https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong",
         "imageArtist": "hkgalbert",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
@@ -2998,11 +3124,12 @@
         "nameKo": "Mak's Noodle",
         "nameEn": "Mak's Noodle",
         "article": "https://en.wikipedia.org/wiki/Mak%27s_Noodle",
-        "address": "",
+        "address": "G/F, 77 Wellington Street, Central, Hong Kong",
         "lat": 22.2831,
         "lon": 114.155,
         "image": "assets/restaurants/mak-s-noodle.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Maks3.jpg",
+        "addressSource": "https://www.discoverhongkong.com/uk/interactive-map/mak-s-noodle.html",
         "imageArtist": "User:Ohconfucius",
         "imageLicense": "CC BY 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
@@ -3393,6 +3520,26 @@
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ganesha%2C_Champa_Hindu_artwork%2C_Museum_of_Cham_Sculpture%2C_Da_Nang_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+      }
+    ],
+    "restaurants": [
+      {
+        "slug": "han-market",
+        "nameJa": "ハン市場",
+        "nameKo": "한 시장",
+        "nameEn": "Han Market",
+        "address": "119 Trần Phú, Hải Châu, Đà Nẵng",
+        "addressSource": "https://vinpearl.com/vi/luon-lo-cho-han-da-nang-tat-tan-tat-nhung-dieu-ban-nen-biet",
+        "article": "https://vinpearl.com/vi/luon-lo-cho-han-da-nang-tat-tan-tat-nhung-dieu-ban-nen-biet"
+      },
+      {
+        "slug": "con-market",
+        "nameJa": "コン市場",
+        "nameKo": "꼰 시장",
+        "nameEn": "Con Market",
+        "address": "290 Hùng Vương, Hải Châu, Đà Nẵng",
+        "addressSource": "https://www.vietnamairlines.com/au/vi/plan-book/travel/travel-guide/cho-con-da-nang",
+        "article": "https://www.vietnamairlines.com/au/vi/plan-book/travel/travel-guide/cho-con-da-nang"
       }
     ]
   },
@@ -3819,11 +3966,12 @@
         "nameKo": "카페 드 플로르",
         "nameEn": "Café de Flore",
         "article": "https://en.wikipedia.org/wiki/Caf%C3%A9_de_Flore",
-        "address": "",
+        "address": "172 Boulevard Saint-Germain, 75006 Paris",
         "lat": 48.853889,
         "lon": 2.3325,
         "image": "assets/restaurants/cafe-de-flore.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_de_Flore%2C_172_boulevard_Saint-Germain%2C_Paris_6e.jpg",
+        "addressSource": "https://parisjetaime.com/eng/restaurant/cafe-de-flore-p674",
         "imageArtist": "Celette",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -3849,11 +3997,12 @@
         "nameKo": "Le Train Bleu",
         "nameEn": "Le Train Bleu",
         "article": "https://en.wikipedia.org/wiki/Le_Train_Bleu_%28restaurant%29",
-        "address": "",
+        "address": "Gare de Lyon, Place Louis-Armand, 75012 Paris",
         "lat": 48.845,
         "lon": 2.373333,
         "image": "assets/restaurants/le-train-bleu-restaurant.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Le_Train_Bleu.jpg",
+        "addressSource": "https://parisjetaime.com/eng/restaurant/le-train-bleu-p3313",
         "imageArtist": "Gryffindor",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -4051,11 +4200,12 @@
         "nameKo": "버러 마켓",
         "nameEn": "Borough Market",
         "article": "https://en.wikipedia.org/wiki/Borough_Market",
-        "address": "",
+        "address": "8 Southwark Street, London SE1 1TL",
         "lat": 51.505556,
         "lon": -0.090833,
         "image": "assets/restaurants/borough-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:London_2018_March_IMG_0663.jpg",
+        "addressSource": "https://www.southwark.gov.uk/business-and-licences/markets-and-street-trading/private-and-community-run-markets/borough-market",
         "imageArtist": "Øyvind Holmstad",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -4066,11 +4216,12 @@
         "nameKo": "Rules",
         "nameEn": "Rules",
         "article": "https://en.wikipedia.org/wiki/Rules_%28restaurant%29",
-        "address": "",
+        "address": "34-35 Maiden Lane, London WC2E 7LB",
         "lat": 51.5108,
         "lon": -0.1232,
         "image": "assets/restaurants/rules-restaurant.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Rules%2C_London%27s_oldest_restaurant._-_geograph.org.uk_-_510375.jpg",
+        "addressSource": "https://www.visitlondon.com/things-to-do/place/57641-rules-restaurant",
         "imageArtist": "Steve  F",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
@@ -4081,11 +4232,12 @@
         "nameKo": "Simpson's-in-the-Strand",
         "nameEn": "Simpson's-in-the-Strand",
         "article": "https://en.wikipedia.org/wiki/Simpson%27s-in-the-Strand",
-        "address": "",
+        "address": "100 Strand, London WC2R 0EW",
         "lat": 51.510694,
         "lon": -0.120611,
         "image": "assets/restaurants/simpson-s-in-the-strand.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Simpson%27s-in-the-Strand_2023-12-04.jpg",
+        "addressSource": "https://www.hardens.com/uk-london/26-02-2026/trolleys-ahoy-simpsons-in-the-strand-is-back/",
         "imageArtist": "Matt Brown",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
@@ -4283,11 +4435,12 @@
         "nameKo": "Antico Caffè Greco",
         "nameEn": "Antico Caffè Greco",
         "article": "https://en.wikipedia.org/wiki/Antico_Caff%C3%A8_Greco",
-        "address": "",
+        "address": "Via dei Condotti 86, 00187 Roma",
         "lat": 41.905558,
         "lon": 12.481436,
         "image": "assets/restaurants/antico-caffe-greco.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg",
+        "addressSource": "https://www.turismoroma.it/it/luoghi/antico-caff%C3%A8-greco",
         "imageArtist": "Ludwig Passini",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg"
@@ -4687,11 +4840,12 @@
         "nameKo": "U Fleků",
         "nameEn": "U Fleků",
         "article": "https://en.wikipedia.org/wiki/U_Flek%C5%AF",
-        "address": "",
+        "address": "Křemencova 11, 110 00 Praha 1",
         "lat": 50.0788,
         "lon": 14.4172,
         "image": "assets/restaurants/u-fleku.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Prag%2C_U_Flek%C5%AF_--_2019_--_6735.jpg",
+        "addressSource": "https://en.ufleku.cz",
         "imageArtist": "Dietmar Rabich",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
@@ -4702,11 +4856,12 @@
         "nameKo": "Café Slavia",
         "nameEn": "Café Slavia",
         "article": "https://en.wikipedia.org/wiki/Caf%C3%A9_Slavia",
-        "address": "",
+        "address": "Smetanovo nábřeží 2, 110 00 Praha 1",
         "lat": 50.08182,
         "lon": 14.413258,
         "image": "assets/restaurants/cafe-slavia.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Slavia_Praha.jpg",
+        "addressSource": "https://www.prague.eu/en/object/food/931/kavarna-slavia",
         "imageArtist": "Corradox",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
@@ -4717,11 +4872,12 @@
         "nameKo": "U Medvídků",
         "nameEn": "U Medvídků",
         "article": "https://en.wikipedia.org/wiki/U_Medv%C3%ADdk%C5%AF",
-        "address": "",
+        "address": "Na Perštýně 7, 110 00 Praha 1",
         "lat": 50.08284,
         "lon": 14.418381,
         "image": "assets/restaurants/u-medvidku.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Na_Per%C5%A1t%C3%BDn%C4%9B_5%2C_U_Medv%C3%ADdk%C5%AF.jpg",
+        "addressSource": "https://www.prague.eu/en/object/food/292/restaurace-a-pivovar-u-medvidku",
         "imageArtist": "ŠJů (cs:ŠJů)",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
@@ -4919,11 +5075,12 @@
         "nameKo": "카츠 델리카트슨",
         "nameEn": "Katz's Delicatessen",
         "article": "https://en.wikipedia.org/wiki/Katz%27s_Delicatessen",
-        "address": "",
+        "address": "205 East Houston Street, New York, NY 10002",
         "lat": 40.7223,
         "lon": -73.9874,
         "image": "assets/restaurants/katz-s-delicatessen.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Katz%27s_Delicatessen_%2851623899326%29.jpg",
+        "addressSource": "https://www.frommers.com/destinations/new-york-city/restaurants/katzs-delicatessen",
         "imageArtist": "ajay_suresh",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
@@ -4934,11 +5091,12 @@
         "nameKo": "피터 루거 스테이크 하우스",
         "nameEn": "Peter Luger Steak House",
         "article": "https://en.wikipedia.org/wiki/Peter_Luger_Steak_House",
-        "address": "",
+        "address": "178 Broadway, Brooklyn, NY 11211",
         "lat": 40.7099,
         "lon": -73.9626,
         "image": "assets/restaurants/peter-luger-steak-house.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Peter_Luger_Steak_House_%28Brooklyn%2C_New_York%29_001_crop.jpg",
+        "addressSource": "https://www.timeout.com/newyork/restaurants/peter-luger",
         "imageArtist": "Leonard J. DeFrancisci",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
@@ -4949,11 +5107,12 @@
         "nameKo": "오이스터 바",
         "nameEn": "Oyster Bar",
         "article": "https://en.wikipedia.org/wiki/Grand_Central_Oyster_Bar_%26_Restaurant",
-        "address": "",
+        "address": "Grand Central Terminal Lower Level, 89 East 42nd Street, New York, NY 10017",
         "lat": 40.7523,
         "lon": -73.9772,
         "image": "assets/restaurants/grand-central-oyster-bar-restaurant.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:The_Oyster_Bar%2C_Grand_Central_Terminal%2C_New_York_City_%284057303042%29.jpg",
+        "addressSource": "https://nyctourism.com/restaurants/the-grand-central-oyster-bar-restaurant/",
         "imageArtist": "Jazz Guy from New Jersey, United States",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
@@ -4964,11 +5123,12 @@
         "nameKo": "첼시 마켓",
         "nameEn": "Chelsea Market",
         "article": "https://en.wikipedia.org/wiki/Chelsea_Market",
-        "address": "",
+        "address": "75 Ninth Avenue, New York, NY 10011",
         "lat": 40.7425,
         "lon": -74.0061,
         "image": "assets/restaurants/chelsea-market.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Chelsea_Market_%2849052085186%29.jpg",
+        "addressSource": "https://chelseamarket.com/visit",
         "imageArtist": "Ajay Suresh from New York, NY, USA",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
@@ -5166,11 +5326,12 @@
         "nameKo": "Leonard's Bakery",
         "nameEn": "Leonard's Bakery",
         "article": "https://en.wikipedia.org/wiki/Leonard%27s_Bakery",
-        "address": "",
+        "address": "933 Kapahulu Avenue, Honolulu, HI 96816",
         "lat": 21.2849,
         "lon": -157.8133,
         "image": "assets/restaurants/leonard-s-bakery.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Leonard%27s_Bakery_%284290322777%29.jpg",
+        "addressSource": "https://www.hawaiimagazine.com/listing/directory/leonards-bakery",
         "imageArtist": "Arnold Gatilao from Oakland, CA, USA",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
@@ -5368,11 +5529,12 @@
         "nameKo": "Quay",
         "nameEn": "Quay",
         "article": "https://en.wikipedia.org/wiki/Quay_%28restaurant%29",
-        "address": "",
+        "address": "Upper Level, Overseas Passenger Terminal, The Rocks, Sydney NSW 2000",
         "lat": -33.8585,
         "lon": 151.21,
         "image": "assets/restaurants/quay-restaurant.jpg",
         "imageFilePage": "https://commons.wikimedia.org/wiki/File:Quay_Restaurant.jpg",
+        "addressSource": "https://www.timeout.com/sydney/restaurants/quay",
         "imageArtist": "Camw",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"

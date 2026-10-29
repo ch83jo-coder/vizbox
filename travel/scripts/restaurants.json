@@ -1,29 +1,90 @@
 {
-  "_note": "エリアごとの名物グルメ候補（英語版Wikipediaの記事名）。fetch_restaurants.py が記事・Wikidata・Commonsで確認できたものだけを data.json に載せます。",
+  "_note": "エリアごとの名物グルメ候補（英語版Wikipediaの記事名）。fetch_restaurants.py が記事・Wikidata・Commonsで確認できたものだけを data.json に載せます。 記事のない店は slug・名前・住所・出典を直接書くと、写真なしのカードとして載ります。",
   "tokyo": [
-    "Sukiyabashi Jiro",
-    "Toyosu Market",
-    "Ameya-Yokochō"
+    {
+      "title": "Sukiyabashi Jiro",
+      "address": "東京都中央区銀座4-2-15 塚本総業ビルB1",
+      "addressSource": "https://www.sushi-jiro.jp/shop"
+    },
+    {
+      "title": "Toyosu Market",
+      "address": "東京都江東区豊洲6-6-1",
+      "addressSource": "https://rurubu.jp/andmore/spot/80091690"
+    },
+    {
+      "title": "Ameya-Yokochō",
+      "address": "東京都台東区上野4丁目",
+      "addressSource": "https://matcha-jp.com/jp/27"
+    }
   ],
   "osaka": [
-    "Kani Doraku"
+    {
+      "slug": "horai-551-honten",
+      "nameJa": "551蓬莱 本店",
+      "nameKo": "551호라이 본점",
+      "nameEn": "551 Horai Main Store",
+      "address": "大阪府大阪市中央区難波3-6-3",
+      "addressSource": "https://www.mapple.net/region/a0503010205_g02061000/spot/"
+    },
+    {
+      "slug": "mizuno-dotonbori",
+      "nameJa": "お好み焼 美津の",
+      "nameKo": "오코노미야키 미즈노",
+      "nameEn": "Okonomiyaki Mizuno",
+      "address": "大阪府大阪市中央区道頓堀1-4-15",
+      "addressSource": "https://www.mapple.net/original/487974/"
+    }
   ],
   "kyoto": [
     "Nishiki Market",
-    "Pontochō"
+    {
+      "title": "Pontochō",
+      "address": "京都府京都市中京区先斗町",
+      "addressSource": "https://en.wikipedia.org/wiki/Ponto-ch%C5%8D"
+    }
   ],
   "kyushu": [
     "Ichiran",
-    "Nagasaki Shinchi Chinatown"
+    {
+      "title": "Nagasaki Shinchi Chinatown",
+      "address": "長崎県長崎市新地町",
+      "addressSource": "https://rurubu.jp/andmore/spot/80039180"
+    }
   ],
   "okinawa": [
-    "Blue Seal Ice Cream"
+    {
+      "slug": "makishi-public-market",
+      "nameJa": "第一牧志公設市場",
+      "nameKo": "다이이치 마키시 공설시장",
+      "nameEn": "Daiichi Makishi Public Market",
+      "address": "沖縄県那覇市松尾2-10-1",
+      "addressSource": "https://rurubu.jp/andmore/spot/80042438"
+    }
   ],
   "sapporo": [
-    "Sapporo Beer Museum"
+    {
+      "slug": "nijo-market",
+      "nameJa": "二条市場",
+      "nameKo": "니조 시장",
+      "nameEn": "Nijo Market",
+      "address": "北海道札幌市中央区南3条東1丁目",
+      "addressSource": "https://www.sapporo.travel/choose/keywords/sapporo-nijo-market-curb-market/"
+    },
+    {
+      "slug": "ganso-ramen-yokocho",
+      "nameJa": "元祖さっぽろラーメン横丁",
+      "nameKo": "원조 삿포로 라멘 골목",
+      "nameEn": "Ganso Sapporo Ramen Yokocho",
+      "address": "北海道札幌市中央区南5条西3丁目 N・グランデビル1F",
+      "addressSource": "https://rurubu.jp/andmore/spot/80000110"
+    }
   ],
   "yokohama": [
-    "Shin-Yokohama Rāmen Museum",
+    {
+      "title": "Shin-Yokohama Rāmen Museum",
+      "address": "神奈川県横浜市港北区新横浜2-14-21",
+      "addressSource": "https://www.welcome.city.yokohama.jp/spot/details.php?bbid=17"
+    },
     "CupNoodles Museum Yokohama",
     {
       "title": "Hotel New Grand",
@@ -31,39 +92,113 @@
     }
   ],
   "nagoya": [
-    "Komeda Coffee"
+    {
+      "slug": "atsuta-horaiken",
+      "nameJa": "あつた蓬莱軒 本店",
+      "nameKo": "아츠타 호라이켄 본점",
+      "nameEn": "Atsuta Horaiken Main Store",
+      "address": "愛知県名古屋市熱田区神戸町503",
+      "addressSource": "https://rurubu.jp/andmore/spot/80023782"
+    },
+    {
+      "slug": "yabaton-yabacho",
+      "nameJa": "矢場とん 矢場町本店",
+      "nameKo": "야바톤 야바초 본점",
+      "nameEn": "Yabaton Yabacho Main Store",
+      "address": "愛知県名古屋市中区大須3-6-18",
+      "addressSource": "https://www.gltjp.com/ja/directory/item/11886/"
+    }
   ],
   "hiroshima": [
-    "Okonomi-mura"
+    {
+      "slug": "okonomimura",
+      "nameJa": "お好み村",
+      "nameKo": "오코노미무라",
+      "nameEn": "Okonomimura",
+      "address": "広島県広島市中区新天地5-13",
+      "addressSource": "https://rurubu.jp/andmore/spot/80034199"
+    }
   ],
   "fukuoka": [
-    "Nakasu",
-    "Ichiran"
+    {
+      "slug": "nakasu-yatai",
+      "nameJa": "中洲屋台",
+      "nameKo": "나카스 포장마차",
+      "nameEn": "Nakasu Yatai",
+      "address": "福岡県福岡市博多区中洲1丁目 清流公園周辺",
+      "addressSource": "https://www.knt.co.jp/meito/sp/nakasu_yatai/"
+    },
+    {
+      "slug": "yanagibashi-market",
+      "nameJa": "柳橋連合市場",
+      "nameKo": "야나기바시 연합시장",
+      "nameEn": "Yanagibashi Rengo Market",
+      "address": "福岡県福岡市中央区春吉1-6-1",
+      "addressSource": "https://www.crossroadfukuoka.jp/spot/12640"
+    }
   ],
   "seoul": [
     "Gwangjang Market",
-    "Noryangjin Fisheries Wholesale Market",
-    "Tongin Market",
+    {
+      "title": "Noryangjin Fisheries Wholesale Market",
+      "address": "서울특별시 동작구 노들로 674",
+      "addressSource": "https://www.ktriptips.com/kor/shopping/132216"
+    },
+    {
+      "title": "Tongin Market",
+      "address": "서울특별시 종로구 자하문로15길 18",
+      "addressSource": "https://www.ktriptips.com/kor/shopping/1590323"
+    },
     "Mingles (restaurant)"
   ],
   "busan": [
-    "Jagalchi Market",
-    "Gukje Market"
+    {
+      "slug": "bupyeong-kkangtong-market",
+      "nameJa": "富平カントン市場",
+      "nameKo": "부평깡통시장",
+      "nameEn": "Bupyeong Kkangtong Market",
+      "address": "부산광역시 중구 부평1길 48",
+      "addressSource": "https://mom-mom.net/travel/places/65936a28b48147c080a98264"
+    }
   ],
   "jeju": [
-    "Jeju Dongmun Traditional Market"
+    {
+      "title": "Jeju Dongmun Traditional Market",
+      "address": "제주특별자치도 제주시 관덕로14길 20",
+      "addressSource": "https://www.ktriptips.com/kor/shopping/1013246"
+    }
   ],
   "taipei": [
     "Din Tai Fung",
     "Shilin Night Market",
-    "Raohe Street Night Market",
-    "Ningxia Night Market"
+    {
+      "title": "Raohe Street Night Market",
+      "address": "台北市松山區饒河街",
+      "addressSource": "https://supertaste.tvbs.com.tw/travel/313968"
+    },
+    {
+      "title": "Ningxia Night Market",
+      "address": "台北市大同區寧夏路",
+      "addressSource": "https://bunnyann.tw/ningxia/"
+    }
   ],
   "hong-kong": [
     "Tim Ho Wan",
-    "Lin Heung Tea House",
-    "Temple Street Night Market",
-    "Mak's Noodle"
+    {
+      "title": "Lin Heung Tea House",
+      "address": "160-164 Wellington Street, Central, Hong Kong",
+      "addressSource": "https://www.timeout.com/hong-kong/restaurants/lin-heung-tea-house"
+    },
+    {
+      "title": "Temple Street Night Market",
+      "address": "Temple Street, Yau Ma Tei, Kowloon, Hong Kong",
+      "addressSource": "https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong"
+    },
+    {
+      "title": "Mak's Noodle",
+      "address": "G/F, 77 Wellington Street, Central, Hong Kong",
+      "addressSource": "https://www.discoverhongkong.com/uk/interactive-map/mak-s-noodle.html"
+    }
   ],
   "bangkok": [
     "Jay Fai",
@@ -71,7 +206,24 @@
     "Or Tor Kor Market",
     "Chatuchak Weekend Market"
   ],
-  "da-nang": [],
+  "da-nang": [
+    {
+      "slug": "han-market",
+      "nameJa": "ハン市場",
+      "nameKo": "한 시장",
+      "nameEn": "Han Market",
+      "address": "119 Trần Phú, Hải Châu, Đà Nẵng",
+      "addressSource": "https://vinpearl.com/vi/luon-lo-cho-han-da-nang-tat-tan-tat-nhung-dieu-ban-nen-biet"
+    },
+    {
+      "slug": "con-market",
+      "nameJa": "コン市場",
+      "nameKo": "꼰 시장",
+      "nameEn": "Con Market",
+      "address": "290 Hùng Vương, Hải Châu, Đà Nẵng",
+      "addressSource": "https://www.vietnamairlines.com/au/vi/plan-book/travel/travel-guide/cho-con-da-nang"
+    }
+  ],
   "singapore": [
     "Lau Pa Sat",
     "Maxwell Food Centre",
@@ -80,42 +232,100 @@
   "paris": [
     "Café Procope",
     "Ladurée",
-    "Café de Flore",
+    {
+      "title": "Café de Flore",
+      "address": "172 Boulevard Saint-Germain, 75006 Paris",
+      "addressSource": "https://parisjetaime.com/eng/restaurant/cafe-de-flore-p674"
+    },
     "Les Deux Magots",
-    "Le Train Bleu (restaurant)"
+    {
+      "title": "Le Train Bleu (restaurant)",
+      "address": "Gare de Lyon, Place Louis-Armand, 75012 Paris",
+      "addressSource": "https://parisjetaime.com/eng/restaurant/le-train-bleu-p3313"
+    }
   ],
   "london": [
-    "Borough Market",
-    "Rules (restaurant)",
-    "Simpson's-in-the-Strand",
+    {
+      "title": "Borough Market",
+      "address": "8 Southwark Street, London SE1 1TL",
+      "addressSource": "https://www.southwark.gov.uk/business-and-licences/markets-and-street-trading/private-and-community-run-markets/borough-market"
+    },
+    {
+      "title": "Rules (restaurant)",
+      "address": "34-35 Maiden Lane, London WC2E 7LB",
+      "addressSource": "https://www.visitlondon.com/things-to-do/place/57641-rules-restaurant"
+    },
+    {
+      "title": "Simpson's-in-the-Strand",
+      "address": "100 Strand, London WC2R 0EW",
+      "addressSource": "https://www.hardens.com/uk-london/26-02-2026/trolleys-ahoy-simpsons-in-the-strand-is-back/"
+    },
     "Dishoom"
   ],
   "rome": [
-    "Antico Caffè Greco"
+    {
+      "title": "Antico Caffè Greco",
+      "address": "Via dei Condotti 86, 00187 Roma",
+      "addressSource": "https://www.turismoroma.it/it/luoghi/antico-caff%C3%A8-greco"
+    }
   ],
   "barcelona": [
     "Els Quatre Gats",
     "Santa Caterina Market"
   ],
   "prague": [
-    "U Fleků",
-    "Café Slavia",
-    "U Medvídků"
+    {
+      "title": "U Fleků",
+      "address": "Křemencova 11, 110 00 Praha 1",
+      "addressSource": "https://en.ufleku.cz"
+    },
+    {
+      "title": "Café Slavia",
+      "address": "Smetanovo nábřeží 2, 110 00 Praha 1",
+      "addressSource": "https://www.prague.eu/en/object/food/931/kavarna-slavia"
+    },
+    {
+      "title": "U Medvídků",
+      "address": "Na Perštýně 7, 110 00 Praha 1",
+      "addressSource": "https://www.prague.eu/en/object/food/292/restaurace-a-pivovar-u-medvidku"
+    }
   ],
   "new-york": [
     {
       "title": "Katz's Delicatessen",
-      "nameKo": "카츠 델리카트슨"
+      "nameKo": "카츠 델리카트슨",
+      "address": "205 East Houston Street, New York, NY 10002",
+      "addressSource": "https://www.frommers.com/destinations/new-york-city/restaurants/katzs-delicatessen"
     },
-    "Peter Luger Steak House",
-    "Grand Central Oyster Bar & Restaurant",
-    "Chelsea Market"
+    {
+      "title": "Peter Luger Steak House",
+      "address": "178 Broadway, Brooklyn, NY 11211",
+      "addressSource": "https://www.timeout.com/newyork/restaurants/peter-luger"
+    },
+    {
+      "title": "Grand Central Oyster Bar & Restaurant",
+      "address": "Grand Central Terminal Lower Level, 89 East 42nd Street, New York, NY 10017",
+      "addressSource": "https://nyctourism.com/restaurants/the-grand-central-oyster-bar-restaurant/"
+    },
+    {
+      "title": "Chelsea Market",
+      "address": "75 Ninth Avenue, New York, NY 10011",
+      "addressSource": "https://chelseamarket.com/visit"
+    }
   ],
   "hawaii": [
-    "Leonard's Bakery"
+    {
+      "title": "Leonard's Bakery",
+      "address": "933 Kapahulu Avenue, Honolulu, HI 96816",
+      "addressSource": "https://www.hawaiimagazine.com/listing/directory/leonards-bakery"
+    }
   ],
   "sydney": [
     "Harry's Cafe de Wheels",
-    "Quay (restaurant)"
+    {
+      "title": "Quay (restaurant)",
+      "address": "Upper Level, Overseas Passenger Terminal, The Rocks, Sydney NSW 2000",
+      "addressSource": "https://www.timeout.com/sydney/restaurants/quay"
+    }
   ]
 }
