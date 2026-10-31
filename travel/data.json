@@ -26,7 +26,9 @@
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "nameKo": "센소지",
-        "descriptionKo": "도쿄를 대표하는 유서 깊은 사찰"
+        "descriptionKo": "도쿄를 대표하는 유서 깊은 사찰",
+        "nameEn": "Sensō-ji",
+        "descriptionEn": "Tokyo's most iconic historic temple"
       },
       {
         "rank": 2,
@@ -43,7 +45,9 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "nameKo": "도쿄 스카이트리",
-        "descriptionKo": "도쿄의 전경을 한눈에 담는 전망 명소"
+        "descriptionKo": "도쿄의 전경을 한눈에 담는 전망 명소",
+        "nameEn": "Tokyo Skytree",
+        "descriptionEn": "Observation decks with sweeping views over Tokyo"
       },
       {
         "rank": 3,
@@ -60,7 +64,9 @@
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
         "nameKo": "시부야 스크램블 교차로",
-        "descriptionKo": "세계적으로 유명한 시부야의 교차로"
+        "descriptionKo": "세계적으로 유명한 시부야의 교차로",
+        "nameEn": "Shibuya Crossing",
+        "descriptionEn": "Shibuya's world-famous scramble crossing"
       },
       {
         "rank": 4,
@@ -77,7 +83,9 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "nameKo": "메이지 신궁",
-        "descriptionKo": "도심 속 고요한 숲과 신사"
+        "descriptionKo": "도심 속 고요한 숲과 신사",
+        "nameEn": "Meiji Shrine",
+        "descriptionEn": "A quiet shrine in a forest in the heart of the city"
       },
       {
         "rank": 5,
@@ -94,7 +102,9 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "nameKo": "우에노 공원",
-        "descriptionKo": "미술관과 자연을 함께 즐기는 공원"
+        "descriptionKo": "미술관과 자연을 함께 즐기는 공원",
+        "nameEn": "Ueno Park",
+        "descriptionEn": "A park with museums and greenery to enjoy"
       },
       {
         "rank": 6,
@@ -111,7 +121,9 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "nameKo": "도쿄 타워",
-        "descriptionKo": "도쿄를 상징하는 랜드마크"
+        "descriptionKo": "도쿄를 상징하는 랜드마크",
+        "nameEn": "Tokyo Tower",
+        "descriptionEn": "The landmark that symbolizes Tokyo"
       },
       {
         "rank": 7,
@@ -128,7 +140,9 @@
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
         "nameKo": "오다이바",
-        "descriptionKo": "바다 풍경과 쇼핑을 즐기는 거리"
+        "descriptionKo": "바다 풍경과 쇼핑을 즐기는 거리",
+        "nameEn": "Odaiba",
+        "descriptionEn": "A waterfront district for sea views and shopping"
       },
       {
         "rank": 8,
@@ -144,7 +158,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/80/At_teamLab_Planets_%2848277798316%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "팀랩 플래닛",
-        "descriptionKo": "몰입감 넘치는 디지털 아트 체험"
+        "descriptionKo": "몰입감 넘치는 디지털 아트 체험",
+        "nameEn": "teamLab Planets",
+        "descriptionEn": "An immersive digital art experience"
       },
       {
         "rank": 9,
@@ -161,7 +177,9 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "nameKo": "긴자",
-        "descriptionKo": "쇼핑과 미식의 즐거움이 있는 거리"
+        "descriptionKo": "쇼핑과 미식의 즐거움이 있는 거리",
+        "nameEn": "Ginza",
+        "descriptionEn": "A district of upscale shopping and fine dining"
       },
       {
         "rank": 10,
@@ -178,7 +196,9 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "nameKo": "신주쿠 교엔",
-        "descriptionKo": "사계절의 자연이 아름다운 정원"
+        "descriptionKo": "사계절의 자연이 아름다운 정원",
+        "nameEn": "Shinjuku Gyoen",
+        "descriptionEn": "A garden that is beautiful in every season"
       }
     ],
     "nameKo": "도쿄",
@@ -231,7 +251,10 @@
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
       }
-    ]
+    ],
+    "nameEnglish": "Tokyo",
+    "themeEn": "Where tradition meets the future",
+    "countryName": "Japan"
   },
   {
     "id": "osaka",
@@ -260,7 +283,9 @@
         "imageLicense": "CC BY 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
         "nameKo": "오사카성",
-        "descriptionKo": "오사카의 역사를 상징하는 성"
+        "descriptionKo": "오사카의 역사를 상징하는 성",
+        "nameEn": "Osaka Castle",
+        "descriptionEn": "The famous castle that symbolizes Osaka's history"
       },
       {
         "rank": 2,
@@ -277,7 +302,9 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "nameKo": "도톤보리",
-        "descriptionKo": "오사카의 미식과 네온이 모이는 번화가"
+        "descriptionKo": "오사카의 미식과 네온이 모이는 번화가",
+        "nameEn": "Dōtonbori",
+        "descriptionEn": "A lively district of Osaka street food and neon"
       },
       {
         "rank": 3,
@@ -294,7 +321,9 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
         "nameKo": "유니버설 스튜디오 재팬",
-        "descriptionKo": "영화 속 세상을 만나는 테마파크"
+        "descriptionKo": "영화 속 세상을 만나는 테마파크",
+        "nameEn": "Universal Studios Japan",
+        "descriptionEn": "A theme park that brings the movies to life"
       },
       {
         "rank": 4,
@@ -311,7 +340,9 @@
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d2/New_Tsutenkaku%2C_Osaka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "쓰텐카쿠",
-        "descriptionKo": "신세카이에 솟은 오사카의 상징"
+        "descriptionKo": "신세카이에 솟은 오사카의 상징",
+        "nameEn": "Tsūtenkaku",
+        "descriptionEn": "Osaka's symbol, towering over Shinsekai"
       },
       {
         "rank": 5,
@@ -327,7 +358,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Namba_Grand_Kagetsu_Mar._2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "난바 그랜드 가게쓰",
-        "descriptionKo": "오사카의 코미디 문화를 만나는 극장"
+        "descriptionKo": "오사카의 코미디 문화를 만나는 극장",
+        "nameEn": "Namba Grand Kagetsu",
+        "descriptionEn": "A theater for Osaka's comedy culture"
       },
       {
         "rank": 6,
@@ -343,7 +376,9 @@
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/42/%E9%BB%92%E9%96%80%E5%B8%82%E5%A0%B4_2024%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "구로몬 시장",
-        "descriptionKo": "신선한 해산물과 길거리 음식을 즐기는 시장"
+        "descriptionKo": "신선한 해산물과 길거리 음식을 즐기는 시장",
+        "nameEn": "Kuromon Market",
+        "descriptionEn": "A market for fresh seafood and street snacks"
       },
       {
         "rank": 7,
@@ -360,7 +395,9 @@
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a5/%E3%81%82%E3%81%B9%E3%81%AE%E3%83%8F%E3%83%AB%E3%82%AB%E3%82%B9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "아베노 하루카스",
-        "descriptionKo": "오사카 시내를 내려다보는 초고층 빌딩"
+        "descriptionKo": "오사카 시내를 내려다보는 초고층 빌딩",
+        "nameEn": "Abeno Harukas",
+        "descriptionEn": "A skyscraper with views across Osaka"
       },
       {
         "rank": 8,
@@ -377,7 +414,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/95/Shinsekai_and_Tsutenkaku_at_night_2019-04-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "신세카이",
-        "descriptionKo": "쇼와 시대 분위기가 남아 있는 거리"
+        "descriptionKo": "쇼와 시대 분위기가 남아 있는 거리",
+        "nameEn": "Shinsekai",
+        "descriptionEn": "A retro Shōwa-era neighborhood of old Osaka"
       },
       {
         "rank": 9,
@@ -394,7 +433,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e9/131116_Expo_Commemoration_Park_Suita_Osaka_pref_Japan04s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "만박기념공원",
-        "descriptionKo": "태양의 탑이 있는 넓은 공원"
+        "descriptionKo": "태양의 탑이 있는 넓은 공원",
+        "nameEn": "Expo '70 Commemorative Park",
+        "descriptionEn": "A vast park home to the Tower of the Sun"
       },
       {
         "rank": 10,
@@ -411,7 +452,9 @@
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Kaiy%C5%ABkan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "가이유칸",
-        "descriptionKo": "거대한 수조로 사랑받는 수족관"
+        "descriptionKo": "거대한 수조로 사랑받는 수족관",
+        "nameEn": "Osaka Aquarium Kaiyukan",
+        "descriptionEn": "An aquarium famous for its giant tank"
       }
     ],
     "nameKo": "오사카",
@@ -434,7 +477,10 @@
         "addressSource": "https://www.mapple.net/original/487974/",
         "article": "https://www.mapple.net/original/487974/"
       }
-    ]
+    ],
+    "nameEnglish": "Osaka",
+    "themeEn": "Delicious, fun Osaka",
+    "countryName": "Japan"
   },
   {
     "id": "kyoto",
@@ -463,7 +509,9 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "nameKo": "기요미즈데라",
-        "descriptionKo": "교토 시내를 내려다보는 유서 깊은 사찰"
+        "descriptionKo": "교토 시내를 내려다보는 유서 깊은 사찰",
+        "nameEn": "Kiyomizu-dera",
+        "descriptionEn": "A historic temple overlooking Kyoto"
       },
       {
         "rank": 2,
@@ -480,7 +528,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "후시미 이나리 신사",
-        "descriptionKo": "끝없이 이어지는 붉은 도리이로 유명한 신사"
+        "descriptionKo": "끝없이 이어지는 붉은 도리이로 유명한 신사",
+        "nameEn": "Fushimi Inari Taisha",
+        "descriptionEn": "The shrine famous for its thousands of torii gates"
       },
       {
         "rank": 3,
@@ -497,7 +547,9 @@
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Arashiyama%2C_Part_II_-_Arashiyama7534.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "아라시야마",
-        "descriptionKo": "대나무 숲과 도게츠교가 아름다운 명소"
+        "descriptionKo": "대나무 숲과 도게츠교가 아름다운 명소",
+        "nameEn": "Arashiyama",
+        "descriptionEn": "Bamboo groves and the Togetsukyō Bridge"
       },
       {
         "rank": 4,
@@ -514,7 +566,9 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "nameKo": "금각사",
-        "descriptionKo": "금빛으로 빛나는 아름다운 사찰"
+        "descriptionKo": "금빛으로 빛나는 아름다운 사찰",
+        "nameEn": "Kinkaku-ji",
+        "descriptionEn": "The beautiful temple that shines in gold"
       },
       {
         "rank": 5,
@@ -531,7 +585,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/06/Ginkakuji_Kyoto03-r.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "은각사",
-        "descriptionKo": "일본의 와비사비를 느끼는 사찰"
+        "descriptionKo": "일본의 와비사비를 느끼는 사찰",
+        "nameEn": "Ginkaku-ji",
+        "descriptionEn": "A temple that embodies Japanese wabi-sabi"
       },
       {
         "rank": 6,
@@ -548,7 +604,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/23/150124_Gion_Kyoto_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "기온·하나미코지",
-        "descriptionKo": "교토의 전통적인 거리 풍경"
+        "descriptionKo": "교토의 전통적인 거리 풍경",
+        "nameEn": "Gion and Hanamikoji",
+        "descriptionEn": "Kyoto's classic traditional streetscape"
       },
       {
         "rank": 7,
@@ -565,7 +623,9 @@
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:NinomaruPalace.jpg",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/dd/NinomaruPalace.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "니조성",
-        "descriptionKo": "도쿠가와 가문과 인연 깊은 세계유산"
+        "descriptionKo": "도쿠가와 가문과 인연 깊은 세계유산",
+        "nameEn": "Nijō Castle",
+        "descriptionEn": "A World Heritage castle tied to the Tokugawa shoguns"
       },
       {
         "rank": 8,
@@ -582,7 +642,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Nishiki_Ichiba_by_matsuyuki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "니시키 시장",
-        "descriptionKo": "교토의 부엌으로 사랑받는 시장"
+        "descriptionKo": "교토의 부엌으로 사랑받는 시장",
+        "nameEn": "Nishiki Market",
+        "descriptionEn": "The market known as Kyoto's kitchen"
       },
       {
         "rank": 9,
@@ -599,7 +661,9 @@
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/92/Japan_Kyoto_philosophers_walk_DSC00297.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "철학의 길",
-        "descriptionKo": "벚꽃길이 아름다운 산책로"
+        "descriptionKo": "벚꽃길이 아름다운 산책로",
+        "nameEn": "Philosopher's Path",
+        "descriptionEn": "A walking path lined with cherry trees"
       },
       {
         "rank": 10,
@@ -616,7 +680,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/69/Phoenix_Hall%2C_Byodo-in%2C_November_2016_-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "우지",
-        "descriptionKo": "말차와 유서 깊은 사찰로 유명한 도시"
+        "descriptionKo": "말차와 유서 깊은 사찰로 유명한 도시",
+        "nameEn": "Uji",
+        "descriptionEn": "A town known for matcha and historic temples"
       }
     ],
     "nameKo": "교토",
@@ -637,7 +703,10 @@
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
       }
-    ]
+    ],
+    "nameEnglish": "Kyoto",
+    "themeEn": "Walk through history, feel the seasons",
+    "countryName": "Japan"
   },
   {
     "id": "kyushu",
@@ -666,7 +735,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Beppu_Tower02s4s3200.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "벳푸 온천",
-        "descriptionKo": "일본을 대표하는 온천 여행지"
+        "descriptionKo": "일본을 대표하는 온천 여행지",
+        "nameEn": "Beppu Onsen",
+        "descriptionEn": "One of Japan's leading hot spring towns"
       },
       {
         "rank": 2,
@@ -683,7 +754,9 @@
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Lake_Kinrin_in_Yufuin,_Oita_-_Aug_24,_2018_(1).jpg",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/95/Lake_Kinrin_in_Yufuin%2C_Oita_-_Aug_24%2C_2018_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "유후인",
-        "descriptionKo": "자연과 온천의 매력이 어우러진 마을"
+        "descriptionKo": "자연과 온천의 매력이 어우러진 마을",
+        "nameEn": "Yufuin",
+        "descriptionEn": "A resort town loved for nature and hot springs"
       },
       {
         "rank": 3,
@@ -700,7 +773,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a1/20140516%E9%98%BF%E8%98%87%E5%B1%B1%E5%BA%83%E5%9F%9F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "아소산",
-        "descriptionKo": "웅장한 화산 풍경을 만나는 곳"
+        "descriptionKo": "웅장한 화산 풍경을 만나는 곳",
+        "nameEn": "Mount Aso",
+        "descriptionEn": "A place to take in grand volcanic scenery"
       },
       {
         "rank": 4,
@@ -716,7 +791,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/42/Kurokawa_Onsen_-%E6%B8%A9%E6%B3%89%E8%A1%97.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "구로카와 온천",
-        "descriptionKo": "정취 가득한 온천 마을"
+        "descriptionKo": "정취 가득한 온천 마을",
+        "nameEn": "Kurokawa Onsen",
+        "descriptionEn": "A charming hot spring village"
       },
       {
         "rank": 5,
@@ -733,7 +810,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8b/20100719_Dazaifu_Tenmangu_Shrine_3328.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "다자이후 덴만구",
-        "descriptionKo": "학문의 신을 모시는 신사"
+        "descriptionKo": "학문의 신을 모시는 신사",
+        "nameEn": "Dazaifu Tenmangū",
+        "descriptionEn": "A shrine to the god of learning"
       },
       {
         "rank": 6,
@@ -750,7 +829,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Huis_Ten_Bosch_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "하우스텐보스",
-        "descriptionKo": "유럽의 거리 풍경을 재현한 테마파크"
+        "descriptionKo": "유럽의 거리 풍경을 재현한 테마파크",
+        "nameEn": "Huis Ten Bosch",
+        "descriptionEn": "A theme park recreating a European town"
       },
       {
         "rank": 7,
@@ -767,7 +848,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Sakurajima55.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "사쿠라지마",
-        "descriptionKo": "가고시마를 상징하는 활화산"
+        "descriptionKo": "가고시마를 상징하는 활화산",
+        "nameEn": "Sakurajima",
+        "descriptionEn": "The active volcano that symbolizes Kagoshima"
       },
       {
         "rank": 8,
@@ -783,7 +866,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Kirishima-Jingu_Front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "기리시마 신궁",
-        "descriptionKo": "자연에 둘러싸인 유서 깊은 신사"
+        "descriptionKo": "자연에 둘러싸인 유서 깊은 신사",
+        "nameEn": "Kirishima Shrine",
+        "descriptionEn": "A historic shrine surrounded by nature"
       },
       {
         "rank": 9,
@@ -799,7 +884,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/28/Takachiho-kyo%28Gorge%29_-_River_-_%E5%B7%9D.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "다카치호 협곡",
-        "descriptionKo": "신비로운 협곡과 폭포"
+        "descriptionKo": "신비로운 협곡과 폭포",
+        "nameEn": "Takachiho Gorge",
+        "descriptionEn": "A mystical gorge with a waterfall"
       },
       {
         "rank": 10,
@@ -816,7 +903,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/49/Futamigaura_Beach_from_observation_deck_of_Futamigaura_Cemetery_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "이토시마",
-        "descriptionKo": "아름다운 해안과 카페로 사랑받는 지역"
+        "descriptionKo": "아름다운 해안과 카페로 사랑받는 지역",
+        "nameEn": "Itoshima",
+        "descriptionEn": "A coastline popular for its beaches and cafés"
       }
     ],
     "nameKo": "규슈",
@@ -837,7 +926,10 @@
         "imageLicense": "CC BY 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5"
       }
-    ]
+    ],
+    "nameEnglish": "Kyushu",
+    "themeEn": "Unwind in hot springs and nature",
+    "countryName": "Japan"
   },
   {
     "id": "okinawa",
@@ -866,7 +958,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Whale_Shark_-_Churaumi_aquarium%2C_Okinawa%2C_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "오키나와 추라우미 수족관",
-        "descriptionKo": "고래상어로 유명한 대형 수족관"
+        "descriptionKo": "고래상어로 유명한 대형 수족관",
+        "nameEn": "Okinawa Churaumi Aquarium",
+        "descriptionEn": "A large aquarium famous for its whale sharks"
       },
       {
         "rank": 2,
@@ -882,7 +976,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/64/Nago_Okinawa_Kouri-Bridge-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "고우리섬",
-        "descriptionKo": "에메랄드빛 바다에 둘러싸인 섬"
+        "descriptionKo": "에메랄드빛 바다에 둘러싸인 섬",
+        "nameEn": "Kouri Island",
+        "descriptionEn": "An island ringed by emerald-green sea"
       },
       {
         "rank": 3,
@@ -898,7 +994,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/89/Kokusai-dori08s3s4440.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "국제거리",
-        "descriptionKo": "오키나와 음식과 기념품이 모이는 번화가"
+        "descriptionKo": "오키나와 음식과 기념품이 모이는 번화가",
+        "nameEn": "Kokusai Street",
+        "descriptionEn": "A busy street of Okinawan food and souvenirs"
       },
       {
         "rank": 4,
@@ -915,7 +1013,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/56/Naha_Okinawa_Japan_Shuri-Castle-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "슈리성",
-        "descriptionKo": "류큐 왕국의 역사를 전하는 성터"
+        "descriptionKo": "류큐 왕국의 역사를 전하는 성터",
+        "nameEn": "Shuri Castle",
+        "descriptionEn": "A castle site that tells the story of the Ryukyu Kingdom"
       },
       {
         "rank": 5,
@@ -931,7 +1031,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Umikaji_Terrace_Senagajima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "세나가섬 우미카지 테라스",
-        "descriptionKo": "바다를 바라보며 식사하는 명소"
+        "descriptionKo": "바다를 바라보며 식사하는 명소",
+        "nameEn": "Senaga Island Umikaji Terrace",
+        "descriptionEn": "A spot for dining with a view of the sea"
       },
       {
         "rank": 6,
@@ -948,7 +1050,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/53/Onna_Okinawa_Japan_Cape-Manzamo-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "만자모",
-        "descriptionKo": "바다를 내려다보는 절경의 절벽"
+        "descriptionKo": "바다를 내려다보는 절경의 절벽",
+        "nameEn": "Cape Manzamo",
+        "descriptionEn": "A spectacular cliff overlooking the sea"
       },
       {
         "rank": 7,
@@ -966,7 +1070,10 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Cape_Maeda.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "푸른 동굴",
         "descriptionKo": "푸른빛으로 빛나는 해중 동굴",
-        "imageCaptionKo": "사진: 푸른 동굴이 있는 마에다곶 해안입니다. 동굴 내부 사진이 아닙니다."
+        "imageCaptionKo": "사진: 푸른 동굴이 있는 마에다곶 해안입니다. 동굴 내부 사진이 아닙니다.",
+        "nameEn": "Blue Cave",
+        "descriptionEn": "A sea cave that glows blue",
+        "imageCaptionEn": "Photo: the coast at Cape Maeda, where the Blue Cave is. Not a photo of the cave interior."
       },
       {
         "rank": 8,
@@ -983,7 +1090,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Village_in_Taketomi_Island_-_located_at_southwest_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "다케토미섬",
-        "descriptionKo": "붉은 기와 마을이 남아 있는 아름다운 섬"
+        "descriptionKo": "붉은 기와 마을이 남아 있는 아름다운 섬",
+        "nameEn": "Taketomi Island",
+        "descriptionEn": "A lovely island with a red-tiled village"
       },
       {
         "rank": 9,
@@ -1000,7 +1109,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0f/202408_Yonaha_Maehama_Beach_around_11_o%27clock_in_summer_%28JK-DSC0765%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "미야코섬",
-        "descriptionKo": "투명한 바다와 하얀 모래사장이 아름다운 섬"
+        "descriptionKo": "투명한 바다와 하얀 모래사장이 아름다운 섬",
+        "nameEn": "Miyako Island",
+        "descriptionEn": "An island of crystal-clear water and white sand"
       },
       {
         "rank": 10,
@@ -1017,7 +1128,9 @@
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Kabira_Bay_Ishigaki_Island40bs3s4592.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "nameKo": "이시가키섬",
-        "descriptionKo": "풍성한 자연과 아름다운 바다를 즐기는 섬"
+        "descriptionKo": "풍성한 자연과 아름다운 바다를 즐기는 섬",
+        "nameEn": "Ishigaki Island",
+        "descriptionEn": "An island of rich nature and beautiful seas"
       }
     ],
     "nameKo": "오키나와",
@@ -1031,7 +1144,10 @@
         "addressSource": "https://rurubu.jp/andmore/spot/80042438",
         "article": "https://rurubu.jp/andmore/spot/80042438"
       }
-    ]
+    ],
+    "nameEnglish": "Okinawa",
+    "themeEn": "Blue seas and island time",
+    "countryName": "Japan"
   },
   {
     "id": "sapporo",
@@ -1061,7 +1177,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Hokkaido_Sapporo_Odori_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Nkns",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "nameEn": "Odori Park",
+        "descriptionEn": "A green promenade across the city center"
       },
       {
         "rank": 2,
@@ -1078,7 +1196,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/42/Sapporo-Clock-Tower-2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Bjørn Christian Tørrissen",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Sapporo Clock Tower",
+        "descriptionEn": "A wooden clock tower that tells Sapporo's history"
       },
       {
         "rank": 3,
@@ -1095,7 +1215,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/93/Sapporo-TV-Tower-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "AlphaBetaGamma",
         "imageLicense": "CC BY 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "nameEn": "Sapporo TV Tower",
+        "descriptionEn": "A tower overlooking Odori Park and the city"
       },
       {
         "rank": 4,
@@ -1112,7 +1234,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/65/Hokkaido_Prefectural_Office02s5s4272.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "663highland",
         "imageLicense": "CC BY 2.5",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "nameEn": "Former Hokkaido Government Office",
+        "descriptionEn": "Red-brick architecture and Hokkaido's history"
       },
       {
         "rank": 5,
@@ -1129,7 +1253,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Moiwa_Mountain_in_Sapporo_in_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Nikm",
         "imageLicense": "Public domain",
-        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3AMoiwa_Mountain_in_Sapporo_in_2009.jpg"
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3AMoiwa_Mountain_in_Sapporo_in_2009.jpg",
+        "nameEn": "Mount Moiwa",
+        "descriptionEn": "A mountain with views of Sapporo by night"
       },
       {
         "rank": 6,
@@ -1146,7 +1272,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Moere02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "もんもん at Japanese Wikipedia",
         "imageLicense": "Public domain",
-        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3AMoere02.jpg"
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3AMoere02.jpg",
+        "nameEn": "Moerenuma Park",
+        "descriptionEn": "An artistic park designed by Isamu Noguchi"
       },
       {
         "rank": 7,
@@ -1163,7 +1291,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/72/Shiroi_Koibito_Park_20260703o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "掬茶",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Shiroi Koibito Park",
+        "descriptionEn": "A theme park of sweets and gardens"
       },
       {
         "rank": 8,
@@ -1180,7 +1310,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Sapporo_Beer_Museum.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "The original uploader was K. Takeda at Japanese Wikipedia.",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "nameEn": "Sapporo Beer Museum",
+        "descriptionEn": "Beer history in a red-brick building"
       },
       {
         "rank": 9,
@@ -1197,7 +1329,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ee/%28JPN-Hokkaido%29_Hokkaido_Shrine_2026-06-06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "S5A-0043",
         "imageLicense": "CC BY 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "nameEn": "Hokkaido Shrine",
+        "descriptionEn": "A shrine with a leafy approach to stroll"
       },
       {
         "rank": 10,
@@ -1214,7 +1348,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7d/TsukimiBashi2004-12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Wikimedia Commons",
         "imageLicense": "Public domain",
-        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3ATsukimiBashi2004-12.jpg"
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3ATsukimiBashi2004-12.jpg",
+        "nameEn": "Jōzankei Onsen",
+        "descriptionEn": "A retreat of gorge views and hot springs"
       }
     ],
     "restaurants": [
@@ -1236,7 +1372,10 @@
         "addressSource": "https://rurubu.jp/andmore/spot/80000110",
         "article": "https://rurubu.jp/andmore/spot/80000110"
       }
-    ]
+    ],
+    "nameEnglish": "Sapporo",
+    "themeEn": "Snowy scenes, parks and Hokkaido city walks",
+    "countryName": "Japan"
   },
   {
     "id": "yokohama",
@@ -1266,7 +1405,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Minato_Mirai_In_Blue.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "akumach from Kawasaki City, Japan",
         "imageLicense": "CC BY 2.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "nameEn": "Minato Mirai 21",
+        "descriptionEn": "A waterfront of harbor views and skyscrapers"
       },
       {
         "rank": 2,
@@ -1283,7 +1424,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Yokohama_Chinatown_signage_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Wpcpey",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Yokohama Chinatown",
+        "descriptionEn": "Colorful gates and a wide range of food"
       },
       {
         "rank": 3,
@@ -1300,7 +1443,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/92/Akarenga_Yokohama_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Alex Brogan",
         "imageLicense": "CC BY 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "nameEn": "Yokohama Red Brick Warehouse",
+        "descriptionEn": "Shopping and sea views in historic warehouses"
       },
       {
         "rank": 4,
@@ -1317,7 +1462,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Sangkaien_Garden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Arisdp",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "nameEn": "Sankeien Garden",
+        "descriptionEn": "Historic buildings and a garden for all seasons"
       },
       {
         "rank": 5,
@@ -1334,7 +1481,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Parque_Yamashita_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "外国人",
         "imageLicense": "CC BY 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "nameEn": "Yamashita Park",
+        "descriptionEn": "A harbor park for a seaside stroll"
       },
       {
         "rank": 6,
@@ -1351,7 +1500,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/03/Yokohama_Landmark_Tower_201507.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Sunwater~jawiki",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Yokohama Landmark Tower",
+        "descriptionEn": "The skyscraper that defines Yokohama's skyline"
       },
       {
         "rank": 7,
@@ -1368,7 +1519,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Cupnoodles-Museum-Yokohama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Rs1421",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "nameEn": "CupNoodles Museum Yokohama",
+        "descriptionEn": "A museum about the invention of instant ramen"
       },
       {
         "rank": 8,
@@ -1385,7 +1538,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Osanbashi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Gleam at Japanese Wikipedia",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "nameEn": "Ōsanbashi Pier",
+        "descriptionEn": "A cruise terminal with harbor views"
       },
       {
         "rank": 9,
@@ -1402,7 +1557,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/13/Yokohama_Hakkeijima_Sea_Paradise_2015_%28crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "U.S. Army photos by Sgt. John L. Carkeet IV, U.S. Army Japan",
         "imageLicense": "CC BY 2.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "nameEn": "Yokohama Hakkeijima Sea Paradise",
+        "descriptionEn": "A sea theme park with an aquarium and rides"
       },
       {
         "rank": 10,
@@ -1419,7 +1576,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/da/Harbour_View_Park%2C_Yamate%2C_Yokohama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Aw1805",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Harbor View Park",
+        "descriptionEn": "A hilltop garden overlooking Yokohama Port"
       }
     ],
     "restaurants": [
@@ -1454,7 +1613,10 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
-    ]
+    ],
+    "nameEnglish": "Yokohama",
+    "themeEn": "Harbor views and an international feel",
+    "countryName": "Japan"
   },
   {
     "id": "nagoya",
@@ -1484,7 +1646,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/56/Nagoya_Castle_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Bariston",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Nagoya Castle",
+        "descriptionEn": "A historic castle crowned with golden shachihoko"
       },
       {
         "rank": 2,
@@ -1501,7 +1665,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Atsuta_Shrine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Bariston",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Atsuta Shrine",
+        "descriptionEn": "A venerable shrine wrapped in deep greenery"
       },
       {
         "rank": 3,
@@ -1518,7 +1684,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/db/Osu_Kannon_main_hall_2025-02_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Asturio Cantabrio",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Ōsu Kannon",
+        "descriptionEn": "A temple next to a lively shopping arcade"
       },
       {
         "rank": 4,
@@ -1535,7 +1703,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Nagoya_Cty_Science_Museum_01%2C_Sakae_Naka_Ward_Nagoya_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Tomio344456",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Nagoya City Science Museum",
+        "descriptionEn": "Science exhibits and a planetarium"
       },
       {
         "rank": 5,
@@ -1552,7 +1722,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Toyota_tecno_museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Bariston",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Toyota Commemorative Museum of Industry and Technology",
+        "descriptionEn": "Exhibits on the history of textile and car technology"
       },
       {
         "rank": 6,
@@ -1569,7 +1741,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Port_of_Nagoya_Public_Aquarium_Exterior_%281%29%2C_Minato-machi_Minato_Ward_Nagoya_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Tomio344456",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Port of Nagoya Public Aquarium",
+        "descriptionEn": "A harbor aquarium full of sea life"
       },
       {
         "rank": 7,
@@ -1586,7 +1760,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tokugawaen_Ryusen-ko_02%2C_Tokugawa-cho_Higashi_Ward_Nagoya_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Tomio344456",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Tokugawa Garden",
+        "descriptionEn": "A Japanese garden with a pond and wooded paths"
       },
       {
         "rank": 8,
@@ -1603,7 +1779,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/88/Nagoya_TV_Tower2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Bariston",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Chubu Electric Power MIRAI TOWER",
+        "descriptionEn": "An observation tower in the heart of Sakae"
       },
       {
         "rank": 9,
@@ -1620,7 +1798,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Higashiyama_botanical_gardens-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "KAMUI",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/"
+        "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "nameEn": "Higashiyama Zoo and Botanical Gardens",
+        "descriptionEn": "A large park of animals and plants"
       },
       {
         "rank": 10,
@@ -1637,7 +1817,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/77/SCMaglev_and_Railway_Park_in_Aichi_Prefecture.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Bariston",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "SCMaglev and Railway Park",
+        "descriptionEn": "A museum of shinkansen and railway cars"
       }
     ],
     "restaurants": [
@@ -1659,7 +1841,10 @@
         "addressSource": "https://www.gltjp.com/ja/directory/item/11886/",
         "article": "https://www.gltjp.com/ja/directory/item/11886/"
       }
-    ]
+    ],
+    "nameEnglish": "Nagoya",
+    "themeEn": "Castles and a culture of craftsmanship",
+    "countryName": "Japan"
   },
   {
     "id": "hiroshima",
@@ -1689,7 +1874,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b2/20181111_Hiroshima_Memorial_Cenotaph-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Balon Greyjoy",
         "imageLicense": "CC0",
-        "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "nameEn": "Hiroshima Peace Memorial Park",
+        "descriptionEn": "A riverside park with memorials to peace"
       },
       {
         "rank": 2,
@@ -1706,7 +1893,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/77/Genbaku_Dome04-r.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Oilstreet",
         "imageLicense": "CC BY 2.5",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "nameEn": "Atomic Bomb Dome",
+        "descriptionEn": "A World Heritage site that speaks of history and peace"
       },
       {
         "rank": 3,
@@ -1723,7 +1912,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Itsukushima_Shrine_Torii_Gate_%2813890465459%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "redlegsfan21",
         "imageLicense": "CC BY-SA 2.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "nameEn": "Itsukushima Shrine",
+        "descriptionEn": "A shrine that seems to float on Miyajima's sea"
       },
       {
         "rank": 4,
@@ -1740,7 +1931,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/29/Keep_tower%2C_Hiroshima_Castle%2C_Southwest_remote_view_20190417_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "DXR",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Hiroshima Castle",
+        "descriptionEn": "A historic site of moats and castle walls"
       },
       {
         "rank": 5,
@@ -1757,7 +1950,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Rainbow_bridge_in_Shukkei-en_Hiroshima.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "No machine-readable author provided. Fg2 assumed (based on copyright claims).",
         "imageLicense": "Public domain",
-        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3ARainbow_bridge_in_Shukkei-en_Hiroshima.jpg"
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3ARainbow_bridge_in_Shukkei-en_Hiroshima.jpg",
+        "nameEn": "Shukkeien Garden",
+        "descriptionEn": "A pond garden in the middle of the city"
       },
       {
         "rank": 6,
@@ -1774,7 +1969,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Hiroshima_Peace_Memorial_Museum_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Wiiii",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "nameEn": "Hiroshima Peace Memorial Museum",
+        "descriptionEn": "A museum on the atomic bombing and peace"
       },
       {
         "rank": 7,
@@ -1791,7 +1988,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Mt.Misen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "As6022014",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "nameEn": "Mount Misen",
+        "descriptionEn": "A mountain overlooking Miyajima and the Seto Inland Sea"
       },
       {
         "rank": 8,
@@ -1808,7 +2007,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Miyajima%2C_daisho-in_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Sailko",
         "imageLicense": "CC BY 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "nameEn": "Daishō-in",
+        "descriptionEn": "A historic temple at the foot of Miyajima's mountain"
       },
       {
         "rank": 9,
@@ -1827,7 +2028,10 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
         "imageCaption": "尾道の浄土寺の風景",
-        "imageCaptionKo": "오노미치의 조도지 사찰 풍경"
+        "imageCaptionKo": "오노미치의 조도지 사찰 풍경",
+        "nameEn": "Onomichi",
+        "descriptionEn": "Hillside lanes, temples and sea views in Hiroshima Prefecture",
+        "imageCaptionEn": "Jōdo-ji temple in Onomichi"
       },
       {
         "rank": 10,
@@ -1844,7 +2048,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Okunoshima_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Vickerman625",
         "imageLicense": "Public domain",
-        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3AOkunoshima_2.JPG"
+        "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File%3AOkunoshima_2.JPG",
+        "nameEn": "Ōkunoshima",
+        "descriptionEn": "A small island in the Seto Inland Sea"
       }
     ],
     "restaurants": [
@@ -1857,7 +2063,10 @@
         "addressSource": "https://rurubu.jp/andmore/spot/80034199",
         "article": "https://rurubu.jp/andmore/spot/80034199"
       }
-    ]
+    ],
+    "nameEnglish": "Hiroshima",
+    "themeEn": "Prayers for peace and Seto Inland Sea views",
+    "countryName": "Japan"
   },
   {
     "id": "fukuoka",
@@ -1887,7 +2096,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/3e/%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92_%283360365578%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Tzuhsun Hsu from Taipei, Taiwan",
         "imageLicense": "CC BY-SA 2.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "nameEn": "Ōhori Park",
+        "descriptionEn": "A city park with a walk around a large pond"
       },
       {
         "rank": 2,
@@ -1904,7 +2115,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Fukuoka_Tower_Before_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Steffen Flor",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Fukuoka Tower",
+        "descriptionEn": "A tower overlooking the sea at Momochi and the city"
       },
       {
         "rank": 3,
@@ -1921,7 +2134,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Kushidajinjafukuoka01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Pontafon",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "nameEn": "Kushida Shrine",
+        "descriptionEn": "A shrine at the heart of Hakata's traditions and festivals"
       },
       {
         "rank": 4,
@@ -1938,7 +2153,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/53/Canalcityhakatainner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Pontafon",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "nameEn": "Canal City Hakata",
+        "descriptionEn": "Shopping and entertainment around a canal"
       },
       {
         "rank": 5,
@@ -1955,7 +2172,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Fukuoka_Castle_Simonohasi_Otemon_gate.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Mukai",
         "imageLicense": "CC BY-SA 3.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "nameEn": "Fukuoka Castle Ruins",
+        "descriptionEn": "Stone walls and parkland to explore"
       },
       {
         "rank": 6,
@@ -1972,7 +2191,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Ferris_wheel_and_nemophila_in_Umino_Nakamichi_Seaside_Park.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "そらみみ (Soramimi)",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Uminonakamichi Seaside Park",
+        "descriptionEn": "A park of flower fields and cycling paths"
       },
       {
         "rank": 7,
@@ -1989,7 +2210,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/57/Marine_World_Uminonakamichi_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "そらみみ (Soramimi)",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Marine World Uminonakamichi",
+        "descriptionEn": "An aquarium of sea life from around Kyushu"
       },
       {
         "rank": 8,
@@ -2006,7 +2229,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/84/Fukuoka_Seaside_Momochi_Aerial_Shoot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Chihaya Sta",
         "imageLicense": "CC BY 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "nameEn": "Seaside Momochi",
+        "descriptionEn": "A seaside walk close to the city"
       },
       {
         "rank": 9,
@@ -2023,7 +2248,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/85/Fukuoka_City_Museum_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "そらみみ (Soramimi)",
         "imageLicense": "CC BY-SA 4.0",
-        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+        "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "nameEn": "Fukuoka City Museum",
+        "descriptionEn": "A museum of Fukuoka's history and culture"
       },
       {
         "rank": 10,
@@ -2040,7 +2267,9 @@
         "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/84/Nokonoshima_Island%2C_enkei.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "imageArtist": "Saigen Jiro",
         "imageLicense": "CC0",
-        "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+        "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "nameEn": "Nokonoshima Island",
+        "descriptionEn": "A ferry ride to an island of flowers and sea"
       }
     ],
     "restaurants": [
@@ -2062,7 +2291,10 @@
         "addressSource": "https://www.crossroadfukuoka.jp/spot/12640",
         "article": "https://www.crossroadfukuoka.jp/spot/12640"
       }
-    ]
+    ],
+    "nameEnglish": "Fukuoka",
+    "themeEn": "Seaside, history and easy city walks",
+    "countryName": "Japan"
   },
   {
     "id": "seoul",
@@ -2092,7 +2324,9 @@
         "imageArtist": "서울관광 아카이브",
         "imageLicense": "KOGL Type 1",
         "imageLicenseUrl": "http://www.kogl.or.kr/info/licenseType1.do",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Gyeongbokgung Palace",
+        "descriptionEn": "The grand palace of the Joseon dynasty"
       },
       {
         "rank": 2,
@@ -2109,7 +2343,9 @@
         "imageArtist": "Bgag",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Bukchon_Hanok_Village_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Bukchon_Hanok_Village_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Bukchon Hanok Village",
+        "descriptionEn": "Charming alleys lined with traditional houses"
       },
       {
         "rank": 3,
@@ -2126,7 +2362,9 @@
         "imageArtist": "Rtflakfizer",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Namsan_Tower_sunset%2C_Seoul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Namsan_Tower_sunset%2C_Seoul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "N Seoul Tower",
+        "descriptionEn": "A tower on Namsan with views over the city"
       },
       {
         "rank": 4,
@@ -2143,7 +2381,9 @@
         "imageArtist": "서울연구데이터서비스",
         "imageLicense": "KOGL Type 1",
         "imageLicenseUrl": "http://www.kogl.or.kr/info/licenseType1.do",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/32/%EB%AA%85%EB%8F%998%EA%B8%B8_%EA%B1%B0%EB%A6%AC_%282020.03%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/32/%EB%AA%85%EB%8F%998%EA%B8%B8_%EA%B1%B0%EB%A6%AC_%282020.03%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Myeong-dong",
+        "descriptionEn": "The go-to area for shopping and street food"
       },
       {
         "rank": 5,
@@ -2160,7 +2400,9 @@
         "imageArtist": "문화재청",
         "imageLicense": "KOGL Type 1",
         "imageLicenseUrl": "http://www.kogl.or.kr/info/licenseType1.do",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d4/%EC%B0%BD%EB%8D%95%EA%B6%81_%EC%A0%84%EA%B2%BD_%282012%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d4/%EC%B0%BD%EB%8D%95%EA%B6%81_%EC%A0%84%EA%B2%BD_%282012%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Changdeokgung Palace",
+        "descriptionEn": "A World Heritage palace with a beautiful rear garden"
       },
       {
         "rank": 6,
@@ -2177,7 +2419,9 @@
         "imageArtist": "S h y numis",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/00/Insa-dong_%EC%9D%B8%EC%82%AC%EB%8F%99_October_1_2020_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/00/Insa-dong_%EC%9D%B8%EC%82%AC%EB%8F%99_October_1_2020_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Insa-dong",
+        "descriptionEn": "A street of traditional crafts and tea houses"
       },
       {
         "rank": 7,
@@ -2194,7 +2438,9 @@
         "imageArtist": "lumoplank",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Dongdaemun_Design_Plaza_-_DDP2376.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Dongdaemun_Design_Plaza_-_DDP2376.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Dongdaemun Design Plaza",
+        "descriptionEn": "A futuristic complex of sweeping curves"
       },
       {
         "rank": 8,
@@ -2211,7 +2457,9 @@
         "imageArtist": "kallerna",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/57/Lotte_World_morning_view_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/57/Lotte_World_morning_view_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Lotte World Tower",
+        "descriptionEn": "Korea's tallest skyscraper"
       },
       {
         "rank": 9,
@@ -2228,7 +2476,9 @@
         "imageArtist": "Basile Morin",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Cheonggyecheon",
+        "descriptionEn": "A relaxing stream walk through downtown"
       },
       {
         "rank": 10,
@@ -2245,7 +2495,9 @@
         "imageArtist": "Bgag",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/94/Gwangjang_Market%2C_Seoul_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/94/Gwangjang_Market%2C_Seoul_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Gwangjang Market",
+        "descriptionEn": "A historic market famous for street food"
       }
     ],
     "restaurants": [
@@ -2281,7 +2533,10 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
-    ]
+    ],
+    "nameEnglish": "Seoul",
+    "themeEn": "Royal palaces alongside the latest trends",
+    "countryName": "South Korea"
   },
   {
     "id": "busan",
@@ -2311,7 +2566,9 @@
         "imageArtist": "Brit in Seoul",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Haeundae_Beach_May_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Haeundae_Beach_May_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Haeundae Beach",
+        "descriptionEn": "Korea's best-known white-sand beach"
       },
       {
         "rank": 2,
@@ -2328,7 +2585,9 @@
         "imageArtist": "Bl00dnFl4mes",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Gamcheon_Houses%2C_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Gamcheon_Houses%2C_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Gamcheon Culture Village",
+        "descriptionEn": "A hillside village of colorful houses"
       },
       {
         "rank": 3,
@@ -2345,7 +2604,9 @@
         "imageArtist": "박혜민",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6f/%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC_%EC%82%AC%EC%B0%B0_%EC%A0%84%EA%B2%BD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6f/%ED%95%B4%EB%8F%99%EC%9A%A9%EA%B6%81%EC%82%AC_%EC%82%AC%EC%B0%B0_%EC%A0%84%EA%B2%BD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Haedong Yonggungsa",
+        "descriptionEn": "A rare temple on the rocks by the sea"
       },
       {
         "rank": 4,
@@ -2362,7 +2623,9 @@
         "imageArtist": "Chelsea Hicks",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/17/Gwangalli_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/17/Gwangalli_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Gwangalli Beach",
+        "descriptionEn": "A beach with night views of Gwangan Bridge"
       },
       {
         "rank": 5,
@@ -2379,7 +2642,9 @@
         "imageArtist": "Mobius6",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jagalchi_Market_20200523_019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Jagalchi_Market_20200523_019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Jagalchi Market",
+        "descriptionEn": "One of Korea's largest seafood markets"
       },
       {
         "rank": 6,
@@ -2396,7 +2661,9 @@
         "imageArtist": "*intacto",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/47/Korea-Busan-Taejongdae-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/47/Korea-Busan-Taejongdae-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Taejongdae",
+        "descriptionEn": "A coastal park of cliffs and a lighthouse"
       },
       {
         "rank": 7,
@@ -2413,7 +2680,9 @@
         "imageArtist": "부산광역시, 부산관광공사",
         "imageLicense": "KOGL Type 1",
         "imageLicenseUrl": "http://www.kogl.or.kr/info/licenseType1.do",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0e/298-1_%EC%B5%9C%EC%88%98%EC%A7%84_%EB%B2%94%EC%96%B4%EC%82%AC%EC%9D%98_%EA%B0%80%EC%9D%84.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0e/298-1_%EC%B5%9C%EC%88%98%EC%A7%84_%EB%B2%94%EC%96%B4%EC%82%AC%EC%9D%98_%EA%B0%80%EC%9D%84.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Beomeosa Temple",
+        "descriptionEn": "A renowned temple at the foot of Geumjeongsan"
       },
       {
         "rank": 8,
@@ -2430,7 +2699,9 @@
         "imageArtist": "Ahmed",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Gukje_Market%2C_October_2019_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Gukje_Market%2C_October_2019_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Gukje Market",
+        "descriptionEn": "A bustling old-style market"
       },
       {
         "rank": 9,
@@ -2447,7 +2718,9 @@
         "imageArtist": "Mobius6",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/32/Busan_Tower_and_Yongdusan_Park_20200522_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/32/Busan_Tower_and_Yongdusan_Park_20200522_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Busan Tower",
+        "descriptionEn": "The port city's symbol in Yongdusan Park"
       },
       {
         "rank": 10,
@@ -2464,7 +2737,9 @@
         "imageArtist": "Garam",
         "imageLicense": "Attribution",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Oryukdo_in_2018.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Oryukdo_in_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Oryukdo_in_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Oryukdo Islets",
+        "descriptionEn": "Islets that change shape with the tide"
       }
     ],
     "restaurants": [
@@ -2477,7 +2752,10 @@
         "addressSource": "https://mom-mom.net/travel/places/65936a28b48147c080a98264",
         "article": "https://mom-mom.net/travel/places/65936a28b48147c080a98264"
       }
-    ]
+    ],
+    "nameEnglish": "Busan",
+    "themeEn": "A port city between sea and mountains",
+    "countryName": "South Korea"
   },
   {
     "id": "jeju",
@@ -2507,7 +2785,9 @@
         "imageArtist": "Korea.net / Korean Culture and Information Service",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/61/Seongsan_Ilchulbong_from_the_air.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/61/Seongsan_Ilchulbong_from_the_air.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Seongsan Ilchulbong",
+        "descriptionEn": "A World Heritage volcano famous for its sunrise"
       },
       {
         "rank": 2,
@@ -2524,7 +2804,9 @@
         "imageArtist": "LG전자",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Hallasan_Above.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Hallasan_Above.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Hallasan",
+        "descriptionEn": "Korea's highest and grandest mountain"
       },
       {
         "rank": 3,
@@ -2541,7 +2823,9 @@
         "imageArtist": "AhmadElq",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Manjanggul_lava_column%2C_largest_in_the_world.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Manjanggul_lava_column%2C_largest_in_the_world.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Manjanggul Cave",
+        "descriptionEn": "A walk through a huge lava tube"
       },
       {
         "rank": 4,
@@ -2558,7 +2842,9 @@
         "imageArtist": "Sgroey",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/55/Cheonjiyeon_waterfall_jeju_korea_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/55/Cheonjiyeon_waterfall_jeju_korea_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Cheonjiyeon Falls",
+        "descriptionEn": "A waterfall in a green gorge"
       },
       {
         "rank": 5,
@@ -2575,7 +2861,9 @@
         "imageArtist": "SpaceFox\n\n This photo was taken with Nikon D5600",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/85/Jeongbang_loin_de_la_mer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/85/Jeongbang_loin_de_la_mer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Jeongbang Falls",
+        "descriptionEn": "A rare waterfall that drops straight into the sea"
       },
       {
         "rank": 6,
@@ -2592,7 +2880,9 @@
         "imageArtist": "제주영상문화산업진흥원-공공누리 제1유형",
         "imageLicense": "KOGL Type 1",
         "imageLicenseUrl": "http://www.kogl.or.kr/info/licenseType1.do",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/04/Udo%2C_Jeju_Province%2C_South_Korea_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/04/Udo%2C_Jeju_Province%2C_South_Korea_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Udo Island",
+        "descriptionEn": "A small island surrounded by clear water"
       },
       {
         "rank": 7,
@@ -2609,7 +2899,9 @@
         "imageArtist": "Bernard Gagnon",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Daepo_Jusangjeolli_Cliff_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Daepo_Jusangjeolli_Cliff_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Jusangjeolli Cliff",
+        "descriptionEn": "A coast of hexagonal basalt columns"
       },
       {
         "rank": 8,
@@ -2626,7 +2918,9 @@
         "imageArtist": "Lcarrion88",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hyeopjae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hyeopjae.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Hyeopjae Beach",
+        "descriptionEn": "A shallow beach of emerald water"
       },
       {
         "rank": 9,
@@ -2643,7 +2937,9 @@
         "imageArtist": "Korea.net / Korean Culture and Information Service",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c3/KOCIS_Jeju_Island_%285982744003%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c3/KOCIS_Jeju_Island_%285982744003%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sanbangsan",
+        "descriptionEn": "A lava-dome mountain rising by the sea"
       },
       {
         "rank": 10,
@@ -2660,7 +2956,9 @@
         "imageArtist": "Trainholic",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Seongeup_Historic_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Seongeup_Historic_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Seongeup Folk Village",
+        "descriptionEn": "A village of traditional stone-walled houses"
       }
     ],
     "restaurants": [
@@ -2680,7 +2978,10 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
-    ]
+    ],
+    "nameEnglish": "Jeju",
+    "themeEn": "A volcanic island of stunning scenery",
+    "countryName": "South Korea"
   },
   {
     "id": "taipei",
@@ -2710,7 +3011,9 @@
         "imageArtist": "Andrew Van Ova",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Taipei_skyline_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Taipei_skyline_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Taipei 101",
+        "descriptionEn": "The skyscraper that defines Taipei's skyline"
       },
       {
         "rank": 2,
@@ -2727,7 +3030,9 @@
         "imageArtist": "Peellden",
         "imageLicense": "CC BY 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b4/NationalPalace_MuseumFrontView.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b4/NationalPalace_MuseumFrontView.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "National Palace Museum",
+        "descriptionEn": "A museum of Chinese civilization's treasures"
       },
       {
         "rank": 3,
@@ -2744,7 +3049,9 @@
         "imageArtist": "lumoplank",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a5/A-mei_Tea_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a5/A-mei_Tea_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Jiufen",
+        "descriptionEn": "A retro mountain town lit by lanterns"
       },
       {
         "rank": 4,
@@ -2761,7 +3068,9 @@
         "imageArtist": "Wikimedia Commons",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Shilin_night_market_alley_2.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Shilin_night_market_alley_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Shilin_night_market_alley_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Shilin Night Market",
+        "descriptionEn": "One of Taipei's biggest, busiest night markets"
       },
       {
         "rank": 5,
@@ -2778,7 +3087,9 @@
         "imageArtist": "AngMoKio",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Chiang_Kai-shek_memorial_amk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Chiang_Kai-shek_memorial_amk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Chiang Kai-shek Memorial Hall",
+        "descriptionEn": "A memorial hall known for its changing of the guard"
       },
       {
         "rank": 6,
@@ -2795,7 +3106,9 @@
         "imageArtist": "This Photo was taken by Supanut Arunoprayote.\n\nFeel free to use any of my images, but please mention me as the author and may send me a message.  (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) \n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bangka_Lungshan_Temple_07.23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bangka_Lungshan_Temple_07.23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Longshan Temple",
+        "descriptionEn": "A historic temple at the center of local worship"
       },
       {
         "rank": 7,
@@ -2812,7 +3125,9 @@
         "imageArtist": "Wei-Te Wong",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/21/Mount_Qixing_under_clear_sky_on_13th_February_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/21/Mount_Qixing_under_clear_sky_on_13th_February_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Yangmingshan National Park",
+        "descriptionEn": "A national park of volcanic landscapes and flowers"
       },
       {
         "rank": 8,
@@ -2829,7 +3144,9 @@
         "imageArtist": "Mrmarkertw",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e8/%E5%BE%9E%E5%B1%88%E8%87%A3%E6%B0%8F%E8%A5%BF%E9%96%80%E9%96%80%E5%B8%82%E5%88%B0%E9%8C%A2%E6%AB%83%E5%8F%B0%E5%8C%97%E4%B8%AD%E8%8F%AF%E6%96%B0%E9%A4%A8_20211204.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e8/%E5%BE%9E%E5%B1%88%E8%87%A3%E6%B0%8F%E8%A5%BF%E9%96%80%E9%96%80%E5%B8%82%E5%88%B0%E9%8C%A2%E6%AB%83%E5%8F%B0%E5%8C%97%E4%B8%AD%E8%8F%AF%E6%96%B0%E9%A4%A8_20211204.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Ximending",
+        "descriptionEn": "A shopping district for youth culture"
       },
       {
         "rank": 9,
@@ -2846,7 +3163,9 @@
         "imageArtist": "Sdfery",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e8/%E7%B4%85%E6%AF%9B%E5%9F%8E%E4%B9%8B%E7%BE%8E.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e8/%E7%B4%85%E6%AF%9B%E5%9F%8E%E4%B9%8B%E7%BE%8E.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Tamsui",
+        "descriptionEn": "A river-mouth port town with beautiful sunsets"
       },
       {
         "rank": 10,
@@ -2863,7 +3182,9 @@
         "imageArtist": "Balon Greyjoy",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e9/20190415_Yehliu_geopark_rock_formations-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e9/20190415_Yehliu_geopark_rock_formations-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Yehliu Geopark",
+        "descriptionEn": "A coastal geopark of strange rock formations"
       }
     ],
     "restaurants": [
@@ -2899,7 +3220,10 @@
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0"
       }
-    ]
+    ],
+    "nameEnglish": "Taipei",
+    "themeEn": "Night market food and mountain-town walks",
+    "countryName": "Taiwan"
   },
   {
     "id": "hong-kong",
@@ -2929,7 +3253,9 @@
         "imageArtist": "Daniel Case",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7d/High_West_and_Victoria_Peak_from_Victoria_Gap_%28crop1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7d/High_West_and_Victoria_Peak_from_Victoria_Gap_%28crop1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Victoria Peak",
+        "descriptionEn": "A summit with a million-dollar night view"
       },
       {
         "rank": 2,
@@ -2946,7 +3272,9 @@
         "imageArtist": "Benh LIEU SONG (Flickr)",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Hong_Kong_Harbour_Night_2019-06-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Hong_Kong_Harbour_Night_2019-06-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Victoria Harbour",
+        "descriptionEn": "Hong Kong's skyscraper-lined gateway"
       },
       {
         "rank": 3,
@@ -2963,7 +3291,9 @@
         "imageArtist": "Wpcpey",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/06/Avenue_of_Stars_201901.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/06/Avenue_of_Stars_201901.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Avenue of Stars",
+        "descriptionEn": "A waterfront promenade facing the skyline"
       },
       {
         "rank": 4,
@@ -2980,7 +3310,9 @@
         "imageArtist": "Baycrest",
         "imageLicense": "CC BY-SA 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/59/Tsim_Sha_Tsui_Ferry_Pier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/59/Tsim_Sha_Tsui_Ferry_Pier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Star Ferry",
+        "descriptionEn": "A harbor ferry with over 100 years of history"
       },
       {
         "rank": 5,
@@ -2997,7 +3329,9 @@
         "imageArtist": "Huangdan2060",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tian_Tan_Buddha_2023081302.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tian_Tan_Buddha_2023081302.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Tian Tan Buddha",
+        "descriptionEn": "A giant Buddha seated on Lantau Island"
       },
       {
         "rank": 6,
@@ -3014,7 +3348,9 @@
         "imageArtist": "Richard Mortel from Riyadh, Saudi Arabia",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Man_Mo_Temple%2C_1847-62%2C_Sheung_Wan%2C_Hong_Kong_%2817%29_%2832748033042%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Man_Mo_Temple%2C_1847-62%2C_Sheung_Wan%2C_Hong_Kong_%2817%29_%2832748033042%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Man Mo Temple",
+        "descriptionEn": "A historic temple filled with incense coils"
       },
       {
         "rank": 7,
@@ -3031,7 +3367,9 @@
         "imageArtist": "hkgalbert",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a6/GateOfTempleInHongKong.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a6/GateOfTempleInHongKong.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Temple Street",
+        "descriptionEn": "A night market of food stalls and street vendors"
       },
       {
         "rank": 8,
@@ -3048,7 +3386,9 @@
         "imageArtist": "Chong Fat",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:HK_WongTaiSinTemple.JPG",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2e/HK_WongTaiSinTemple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2e/HK_WongTaiSinTemple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Wong Tai Sin Temple",
+        "descriptionEn": "A temple said to make wishes come true"
       },
       {
         "rank": 9,
@@ -3065,7 +3405,9 @@
         "imageArtist": "Wiki.lkfa",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/LKF_Street_View01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/LKF_Street_View01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Lan Kwai Fong",
+        "descriptionEn": "A nightlife district of bars and restaurants"
       },
       {
         "rank": 10,
@@ -3082,7 +3424,9 @@
         "imageArtist": "[2]",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Sai_Yeung_Choi_Street_South_2008_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Sai_Yeung_Choi_Street_South_2008_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Mong Kok",
+        "descriptionEn": "A busy district packed with neon and markets"
       }
     ],
     "restaurants": [
@@ -3134,7 +3478,10 @@
         "imageLicense": "CC BY 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0"
       }
-    ]
+    ],
+    "nameEnglish": "Hong Kong",
+    "themeEn": "Skyscraper night views and a lively harbor",
+    "countryName": "Hong Kong"
   },
   {
     "id": "bangkok",
@@ -3164,7 +3511,9 @@
         "imageArtist": "Preecha.MJ",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c7/0005574_-_Wat_Phra_Kaew_006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c7/0005574_-_Wat_Phra_Kaew_006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Grand Palace",
+        "descriptionEn": "The gleaming golden palace of the Thai royal family"
       },
       {
         "rank": 2,
@@ -3181,7 +3530,9 @@
         "imageArtist": "Mastertongapollo",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2a/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2a/%E0%B9%80%E0%B8%88%E0%B8%94%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B9%8C%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AD%E0%B8%A3%E0%B8%B8%E0%B8%932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Wat Arun",
+        "descriptionEn": "The Temple of Dawn rising by the river"
       },
       {
         "rank": 3,
@@ -3198,7 +3549,9 @@
         "imageArtist": "Mastertongapollo",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/53/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%84%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%95%E0%B8%B8%E0%B8%9E%E0%B8%99.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/53/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%98%E0%B9%84%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%95%E0%B8%B8%E0%B8%9E%E0%B8%99.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Wat Pho",
+        "descriptionEn": "The temple famous for its giant reclining Buddha"
       },
       {
         "rank": 4,
@@ -3215,7 +3568,9 @@
         "imageArtist": "Azreey",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/33/Bangkok_-_Jatujak_Market_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/33/Bangkok_-_Jatujak_Market_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Chatuchak Weekend Market",
+        "descriptionEn": "A huge market with over 10,000 stalls"
       },
       {
         "rank": 5,
@@ -3232,7 +3587,9 @@
         "imageArtist": "Marcin Konsek",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Ulica_Khaosan_%2808%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Ulica_Khaosan_%2808%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Khaosan Road",
+        "descriptionEn": "A lively street where travelers gather"
       },
       {
         "rank": 6,
@@ -3249,7 +3606,9 @@
         "imageArtist": "BerryJ",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a4/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%81%E0%B8%A8-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a4/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%81%E0%B8%A8-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Wat Saket",
+        "descriptionEn": "A temple on the Golden Mount with city views"
       },
       {
         "rank": 7,
@@ -3266,7 +3625,9 @@
         "imageArtist": "Don Ramey Logan",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Main_House_of_Jim_Thompson_photo_Don_Ramey_Logan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Main_House_of_Jim_Thompson_photo_Don_Ramey_Logan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Jim Thompson House",
+        "descriptionEn": "The traditional home of the Thai silk king"
       },
       {
         "rank": 8,
@@ -3283,7 +3644,9 @@
         "imageArtist": "Roberto Faccenda from Canale CN, Italy",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Understanding_the_%22floating_market%22_%2815801439261%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Understanding_the_%22floating_market%22_%2815801439261%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Damnoen Saduak Floating Market",
+        "descriptionEn": "A floating market busy with small boats"
       },
       {
         "rank": 9,
@@ -3300,7 +3663,9 @@
         "imageArtist": "Diego Delso",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/03/Templo_Mahathat%2C_Ayutthaya%2C_Tailandia%2C_2013-08-23%2C_DD_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/03/Templo_Mahathat%2C_Ayutthaya%2C_Tailandia%2C_2013-08-23%2C_DD_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Ayutthaya Historical Park",
+        "descriptionEn": "A World Heritage site of the old capital's ruins"
       },
       {
         "rank": 10,
@@ -3317,7 +3682,9 @@
         "imageArtist": "กสิณธร ราชโอรส",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9e/%282022%29_%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B9%81%E0%B8%96%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B8%A3%E0%B8%B2%E0%B8%8A_%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%A7%E0%B8%87%E0%B8%A8%E0%B9%8C_%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9e/%282022%29_%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B9%81%E0%B8%96%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%96%E0%B8%99%E0%B8%99%E0%B9%80%E0%B8%A2%E0%B8%B2%E0%B8%A7%E0%B8%A3%E0%B8%B2%E0%B8%8A_%E0%B9%80%E0%B8%82%E0%B8%95%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%A7%E0%B8%87%E0%B8%A8%E0%B9%8C_%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Yaowarat (Chinatown)",
+        "descriptionEn": "A Chinatown full of street food"
       }
     ],
     "restaurants": [
@@ -3336,7 +3703,10 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
-    ]
+    ],
+    "nameEnglish": "Bangkok",
+    "themeEn": "Golden temples and street food buzz",
+    "countryName": "Thailand"
   },
   {
     "id": "da-nang",
@@ -3366,7 +3736,9 @@
         "imageArtist": "DvTor8303",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Golden_Bridge_at_Ba_Na_Hills_20250718.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Golden_Bridge_at_Ba_Na_Hills_20250718.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Golden Bridge",
+        "descriptionEn": "A bridge in the sky held up by giant hands"
       },
       {
         "rank": 2,
@@ -3383,7 +3755,9 @@
         "imageArtist": "Steffen Schmitz (more photos)",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d6/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d6/H%E1%BB%99i_An%2C_Ancient_Town%2C_2020-01_CN-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Hội An Ancient Town",
+        "descriptionEn": "A lantern-lit World Heritage port town"
       },
       {
         "rank": 3,
@@ -3400,7 +3774,9 @@
         "imageArtist": "Jpatokal",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e5/My_Khe_Beach_Danang_Coastline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e5/My_Khe_Beach_Danang_Coastline.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Mỹ Khê Beach",
+        "descriptionEn": "Da Nang's signature stretch of white sand"
       },
       {
         "rank": 4,
@@ -3417,7 +3793,9 @@
         "imageArtist": "Viethavvh at vi.wikipedia",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ngu_hanh_son_toan_canh.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ngu_hanh_son_toan_canh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Ngu_hanh_son_toan_canh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Marble Mountains",
+        "descriptionEn": "Marble hills dotted with cave temples"
       },
       {
         "rank": 5,
@@ -3434,7 +3812,9 @@
         "imageArtist": "Bùi Thụy Đào Nguyên",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4a/C%E1%BA%A7u_R%E1%BB%93ng.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4a/C%E1%BA%A7u_R%E1%BB%93ng.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Dragon Bridge",
+        "descriptionEn": "A dragon bridge that breathes fire on weekend nights"
       },
       {
         "rank": 6,
@@ -3451,7 +3831,9 @@
         "imageArtist": "CEphoto, Uwe Aranas",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Son-Tra-Peninsula_Da-Nang_Vietnam_Statue-of-the-Bodhisattva-of-Mercy-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Son-Tra-Peninsula_Da-Nang_Vietnam_Statue-of-the-Bodhisattva-of-Mercy-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sơn Trà Peninsula",
+        "descriptionEn": "A green peninsula with the Linh Ung Pagoda's Lady Buddha"
       },
       {
         "rank": 7,
@@ -3468,7 +3850,9 @@
         "imageArtist": "Daderot",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Da_Nang_Cathedral_-_Da_Nang%2C_Vietnam_-_DSC02464.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Da_Nang_Cathedral_-_Da_Nang%2C_Vietnam_-_DSC02464.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Da Nang Cathedral",
+        "descriptionEn": "A church with a striking pink façade"
       },
       {
         "rank": 8,
@@ -3485,7 +3869,9 @@
         "imageArtist": "Steffen Schmitz",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8b/L%C4%83ng_C%C3%B4%2C_H%E1%BA%A3i_V%C3%A2n_Pass%2C_2020-01_CN-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8b/L%C4%83ng_C%C3%B4%2C_H%E1%BA%A3i_V%C3%A2n_Pass%2C_2020-01_CN-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Hải Vân Pass",
+        "descriptionEn": "A scenic mountain pass above the sea"
       },
       {
         "rank": 9,
@@ -3502,7 +3888,9 @@
         "imageArtist": "Chainwit.",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f3/2024_-_M%E1%BB%B9_S%C6%A1n_Sanctuary_Temple_E7_-_img_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f3/2024_-_M%E1%BB%B9_S%C6%A1n_Sanctuary_Temple_E7_-_img_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Mỹ Sơn Sanctuary",
+        "descriptionEn": "Ruins of the Champa Kingdom"
       },
       {
         "rank": 10,
@@ -3519,7 +3907,9 @@
         "imageArtist": "Ms Sarah Welch",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ganesha%2C_Champa_Hindu_artwork%2C_Museum_of_Cham_Sculpture%2C_Da_Nang_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ganesha%2C_Champa_Hindu_artwork%2C_Museum_of_Cham_Sculpture%2C_Da_Nang_Vietnam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Museum of Cham Sculpture",
+        "descriptionEn": "A museum of Champa Kingdom sculpture"
       }
     ],
     "restaurants": [
@@ -3541,7 +3931,10 @@
         "addressSource": "https://www.vietnamairlines.com/au/vi/plan-book/travel/travel-guide/cho-con-da-nang",
         "article": "https://www.vietnamairlines.com/au/vi/plan-book/travel/travel-guide/cho-con-da-nang"
       }
-    ]
+    ],
+    "nameEnglish": "Da Nang",
+    "themeEn": "Beach resorts and ancient towns",
+    "countryName": "Vietnam"
   },
   {
     "id": "singapore",
@@ -3571,7 +3964,9 @@
         "imageArtist": "This Photo was taken by Supanut Arunoprayote.\n\nFeel free to use any of my images, but please mention me as the author and may send me a message.  (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) \n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Marina_Bay_Sands_%28I%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Marina_Bay_Sands_%28I%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Marina Bay Sands",
+        "descriptionEn": "The iconic hotel famous for its rooftop pool"
       },
       {
         "rank": 2,
@@ -3588,7 +3983,9 @@
         "imageArtist": "Shiny Things.",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore_-_20120712-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore_-_20120712-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Gardens by the Bay",
+        "descriptionEn": "Gardens with towering artificial trees"
       },
       {
         "rank": 3,
@@ -3605,7 +4002,9 @@
         "imageArtist": "Bjørn Christian Tørrissen",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/81/Singapore_Merlion_BCT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/81/Singapore_Merlion_BCT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Merlion Park",
+        "descriptionEn": "Home of the Merlion, Singapore's symbol"
       },
       {
         "rank": 4,
@@ -3622,7 +4021,9 @@
         "imageArtist": "Chensiyuan",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c3/1_sentosa_aerial_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c3/1_sentosa_aerial_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sentosa",
+        "descriptionEn": "A resort island of beaches and entertainment"
       },
       {
         "rank": 5,
@@ -3639,7 +4040,9 @@
         "imageArtist": "Velela",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Symphony_Lake%2C_Singapore_Botanic_Gardens_-_20041025.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/24/Symphony_Lake%2C_Singapore_Botanic_Gardens_-_20041025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/24/Symphony_Lake%2C_Singapore_Botanic_Gardens_-_20041025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Singapore Botanic Gardens",
+        "descriptionEn": "A lush tropical World Heritage garden"
       },
       {
         "rank": 6,
@@ -3656,7 +4059,9 @@
         "imageArtist": "Bob Tan",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Aerial_perspective_of_Singapore%27s_Chinatown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Aerial_perspective_of_Singapore%27s_Chinatown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Chinatown",
+        "descriptionEn": "A historic district of temples and food stalls"
       },
       {
         "rank": 7,
@@ -3673,7 +4078,9 @@
         "imageArtist": "KimonBerlin",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/57/Little_India_%284048444495%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/57/Little_India_%284048444495%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Little India",
+        "descriptionEn": "A colorful neighborhood of Indian culture"
       },
       {
         "rank": 8,
@@ -3690,7 +4097,9 @@
         "imageArtist": "Chensiyuan",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e1/1_clarke_quay_singapore_night_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e1/1_clarke_quay_singapore_night_2014.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Clarke Quay",
+        "descriptionEn": "Riverside restaurants and nightlife"
       },
       {
         "rank": 9,
@@ -3707,7 +4116,9 @@
         "imageArtist": "Chainwit.",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Masjid_Sultan%2C_Singapore_%282023_June%29_-_img_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Masjid_Sultan%2C_Singapore_%282023_June%29_-_img_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sultan Mosque",
+        "descriptionEn": "A golden-domed mosque in Kampong Glam"
       },
       {
         "rank": 10,
@@ -3724,7 +4135,9 @@
         "imageArtist": "DvTor8303",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/79/Singapore_Flyer_20250903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/79/Singapore_Flyer_20250903.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Singapore Flyer",
+        "descriptionEn": "A giant observation wheel over the bay"
       }
     ],
     "restaurants": [
@@ -3758,7 +4171,10 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
-    ]
+    ],
+    "nameEnglish": "Singapore",
+    "themeEn": "A future city of many cultures",
+    "countryName": "Singapore"
   },
   {
     "id": "paris",
@@ -3788,7 +4204,9 @@
         "imageArtist": "Benh LIEU SONG",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Eiffel Tower",
+        "descriptionEn": "The Iron Lady towering over Paris"
       },
       {
         "rank": 2,
@@ -3805,7 +4223,9 @@
         "imageArtist": "Benh LIEU SONG (Flickr)",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/66/Louvre_Museum_Wikimedia_Commons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Louvre Museum",
+        "descriptionEn": "One of the world's largest museums, home to the Mona Lisa"
       },
       {
         "rank": 3,
@@ -3822,7 +4242,9 @@
         "imageArtist": "Ali Sabbagh",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Notre-Dame de Paris",
+        "descriptionEn": "A masterpiece of Gothic architecture"
       },
       {
         "rank": 4,
@@ -3839,7 +4261,9 @@
         "imageArtist": "ZeusUpsistos",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Arc de Triomphe",
+        "descriptionEn": "The monument at the top of the Champs-Élysées"
       },
       {
         "rank": 5,
@@ -3856,7 +4280,9 @@
         "imageArtist": "Tonchino",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Le_sacre_coeur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Le_sacre_coeur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sacré-Cœur",
+        "descriptionEn": "A white basilica on the hill of Montmartre"
       },
       {
         "rank": 6,
@@ -3873,7 +4299,9 @@
         "imageArtist": "Pierre Blaché from Paris, France",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Pont_Royal_and_Mus%C3%A9e_d%27Orsay%2C_Paris_10_July_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Pont_Royal_and_Mus%C3%A9e_d%27Orsay%2C_Paris_10_July_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Musée d'Orsay",
+        "descriptionEn": "Impressionist masterpieces in a former railway station"
       },
       {
         "rank": 7,
@@ -3890,7 +4318,9 @@
         "imageArtist": "ToucanWings",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/95/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_081_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Palace of Versailles",
+        "descriptionEn": "A lavish palace famous for its Hall of Mirrors"
       },
       {
         "rank": 8,
@@ -3907,7 +4337,9 @@
         "imageArtist": "Josh Hallett",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Avenue_des_Champs-%C3%89lys%C3%A9es_July_24%2C_2009_N1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Champs-Élysées",
+        "descriptionEn": "Paris's grandest tree-lined avenue"
       },
       {
         "rank": 9,
@@ -3924,7 +4356,9 @@
         "imageArtist": "Didier B (Sam67fr)",
         "imageLicense": "CC BY-SA 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/70/Sainte_Chapelle_-_Upper_level_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/70/Sainte_Chapelle_-_Upper_level_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sainte-Chapelle",
+        "descriptionEn": "A chapel with breathtaking stained glass"
       },
       {
         "rank": 10,
@@ -3941,7 +4375,9 @@
         "imageArtist": "Jebulon",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Pont_Alexandre_III_depuis_pont_de_la_Concorde_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Pont_Alexandre_III_depuis_pont_de_la_Concorde_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Pont Alexandre III",
+        "descriptionEn": "The most ornate bridge over the Seine"
       }
     ],
     "restaurants": [
@@ -4007,7 +4443,10 @@
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
       }
-    ]
+    ],
+    "nameEnglish": "Paris",
+    "themeEn": "The city of art and fine food",
+    "countryName": "France"
   },
   {
     "id": "london",
@@ -4037,7 +4476,9 @@
         "imageArtist": "Christian David",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/05/Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/05/Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Big Ben",
+        "descriptionEn": "The clock tower of the Houses of Parliament"
       },
       {
         "rank": 2,
@@ -4054,7 +4495,9 @@
         "imageArtist": "Fuzzypiggy",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/59/Tower_Bridge_at_Dawn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/59/Tower_Bridge_at_Dawn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Tower Bridge",
+        "descriptionEn": "A bascule bridge over the Thames"
       },
       {
         "rank": 3,
@@ -4071,7 +4514,9 @@
         "imageArtist": "Ham",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/3a/British_Museum_from_NE_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/3a/British_Museum_from_NE_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "British Museum",
+        "descriptionEn": "A world-class museum of human history"
       },
       {
         "rank": 4,
@@ -4088,7 +4533,9 @@
         "imageArtist": "Julian Herzog (Website)",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Buckingham_Palace_London_Morning_2020_01_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Buckingham_Palace_London_Morning_2020_01_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Buckingham Palace",
+        "descriptionEn": "The royal palace known for the Changing of the Guard"
       },
       {
         "rank": 5,
@@ -4105,7 +4552,9 @@
         "imageArtist": "Khamtran",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d6/London-Eye-2009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d6/London-Eye-2009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "London Eye",
+        "descriptionEn": "A giant observation wheel on the Thames"
       },
       {
         "rank": 6,
@@ -4122,7 +4571,9 @@
         "imageArtist": "Antiquary",
         "imageLicense": "CC BY 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/47/Westminster_Abbey%2C_Westminster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/47/Westminster_Abbey%2C_Westminster.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Westminster Abbey",
+        "descriptionEn": "The historic abbey where coronations take place"
       },
       {
         "rank": 7,
@@ -4139,7 +4590,9 @@
         "imageArtist": "[Duncan] from Nottingham, UK",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Tower of London",
+        "descriptionEn": "A historic fortress guarding the Crown Jewels"
       },
       {
         "rank": 8,
@@ -4156,7 +4609,9 @@
         "imageArtist": "Mark Fosh",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/cb/St_Pauls_aerial_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/cb/St_Pauls_aerial_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "St Paul's Cathedral",
+        "descriptionEn": "A cathedral crowned by a great dome"
       },
       {
         "rank": 9,
@@ -4173,7 +4628,9 @@
         "imageArtist": "Covent_Garden_Interior_May_2006.jpg: Diliff\nderivative work: SilkTork (talk)",
         "imageLicense": "CC BY 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/42/Covent_Garden_Interior_May_2006_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/42/Covent_Garden_Interior_May_2006_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Covent Garden",
+        "descriptionEn": "A square of street performers and shopping"
       },
       {
         "rank": 10,
@@ -4190,7 +4647,9 @@
         "imageArtist": "Diego Delso",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Galer%C3%ADa_Nacional%2C_Londres%2C_Inglaterra%2C_2014-08-07%2C_DD_036.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Galer%C3%ADa_Nacional%2C_Londres%2C_Inglaterra%2C_2014-08-07%2C_DD_036.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "National Gallery",
+        "descriptionEn": "A gallery of masterpieces with free admission"
       }
     ],
     "restaurants": [
@@ -4242,7 +4701,10 @@
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
       }
-    ]
+    ],
+    "nameEnglish": "London",
+    "themeEn": "Royal tradition and cutting-edge culture",
+    "countryName": "United Kingdom"
   },
   {
     "id": "rome",
@@ -4272,7 +4734,9 @@
         "imageArtist": "FeaturedPics",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Colosseum",
+        "descriptionEn": "The amphitheater that symbolizes ancient Rome"
       },
       {
         "rank": 2,
@@ -4289,7 +4753,9 @@
         "imageArtist": "NikonZ7II",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Trevi_Fountain_-_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Trevi_Fountain_-_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Trevi Fountain",
+        "descriptionEn": "Toss a coin to make sure you return"
       },
       {
         "rank": 3,
@@ -4306,7 +4772,9 @@
         "imageArtist": "NikonZ7II",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Pantheon_%28Rome%29_-_Right_side_and_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Pantheon_%28Rome%29_-_Right_side_and_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Pantheon",
+        "descriptionEn": "An ancient temple with a vast dome"
       },
       {
         "rank": 4,
@@ -4323,7 +4791,9 @@
         "imageArtist": "Alvesgaspar",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "St. Peter's Basilica",
+        "descriptionEn": "One of the world's largest churches, in the Vatican"
       },
       {
         "rank": 5,
@@ -4340,7 +4810,9 @@
         "imageArtist": "Andreas Tille",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f0/VaticanMuseumStaircase.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f0/VaticanMuseumStaircase.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Vatican Museums",
+        "descriptionEn": "The museums that include the Sistine Chapel"
       },
       {
         "rank": 6,
@@ -4357,7 +4829,9 @@
         "imageArtist": "This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here are not appropriate.\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Foro_Romano_Musei_Capitolini_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Foro_Romano_Musei_Capitolini_Roma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Roman Forum",
+        "descriptionEn": "The ruins of ancient Rome's center"
       },
       {
         "rank": 7,
@@ -4374,7 +4848,9 @@
         "imageArtist": "Arnaud 25",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Piazza_di_Spagna_%28Rome%29_0004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Piazza_di_Spagna_%28Rome%29_0004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Spanish Steps",
+        "descriptionEn": "Square-side steps made famous by the movies"
       },
       {
         "rank": 8,
@@ -4391,7 +4867,9 @@
         "imageArtist": "NikonZ7II",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/08/Piazza_Navona_%28Rome%29_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/08/Piazza_Navona_%28Rome%29_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Piazza Navona",
+        "descriptionEn": "A Baroque square of fountains and street artists"
       },
       {
         "rank": 9,
@@ -4408,7 +4886,9 @@
         "imageArtist": "Livioandronico2013",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/57/Castel_Sant%27Angelo_at_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/57/Castel_Sant%27Angelo_at_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Castel Sant'Angelo",
+        "descriptionEn": "A round castle beside the Tiber"
       },
       {
         "rank": 10,
@@ -4425,7 +4905,9 @@
         "imageArtist": "Jensens",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Trastevere_fountain.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Santa_Maria_in_Trastevere_fountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Santa_Maria_in_Trastevere_fountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Trastevere",
+        "descriptionEn": "A cobbled neighborhood lined with trattorias"
       }
     ],
     "restaurants": [
@@ -4445,7 +4927,10 @@
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_Passini_-_K%C3%BCnstler_im_Cafe_Greco_in_Rom.jpg"
       }
-    ]
+    ],
+    "nameEnglish": "Rome",
+    "themeEn": "Walking through antiquity in the Eternal City",
+    "countryName": "Italy"
   },
   {
     "id": "barcelona",
@@ -4475,7 +4960,9 @@
         "imageArtist": "Canaan",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ef/SF_maig_2_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ef/SF_maig_2_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sagrada Família",
+        "descriptionEn": "Gaudí's still-unfinished masterpiece"
       },
       {
         "rank": 2,
@@ -4492,7 +4979,9 @@
         "imageArtist": "essetefano",
         "imageLicense": "CC BY 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/33/Parc_guell_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/33/Parc_guell_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Park Güell",
+        "descriptionEn": "A hillside park decorated with mosaic tiles"
       },
       {
         "rank": 3,
@@ -4509,7 +4998,9 @@
         "imageArtist": "ChristianSchd",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Casa_Batllo_Overview_Barcelona_Spain_cut.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Casa_Batllo_Overview_Barcelona_Spain_cut.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Casa Batlló",
+        "descriptionEn": "A house with distinctive bone-like columns"
       },
       {
         "rank": 4,
@@ -4526,7 +5017,9 @@
         "imageArtist": "Thomas Ledl",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Casa_Mil%C3%A0%2C_general_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/de/Casa_Mil%C3%A0%2C_general_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Casa Milà",
+        "descriptionEn": "An apartment building with a wavy façade"
       },
       {
         "rank": 5,
@@ -4543,7 +5036,9 @@
         "imageArtist": "Ralf Roletschek",
         "imageLicense": "GFDL 1.2",
         "imageLicenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f2/15-10-27-Vista_des_de_l%27est%C3%A0tua_de_Colom_a_Barcelona-WMA_2791.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f2/15-10-27-Vista_des_de_l%27est%C3%A0tua_de_Colom_a_Barcelona-WMA_2791.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "La Rambla",
+        "descriptionEn": "A bustling tree-lined boulevard"
       },
       {
         "rank": 6,
@@ -4560,7 +5055,9 @@
         "imageArtist": "Fernando",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/63/Barcelona_Cathedral_Saint_Eulalia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/63/Barcelona_Cathedral_Saint_Eulalia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Barcelona Cathedral",
+        "descriptionEn": "A grand cathedral in the Gothic Quarter"
       },
       {
         "rank": 7,
@@ -4577,7 +5074,9 @@
         "imageArtist": "Didier Descouens",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/96/Barcelona_-_Mercat_de_Sant_Josep_%28la_Boqueria%29_-_Entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/96/Barcelona_-_Mercat_de_Sant_Josep_%28la_Boqueria%29_-_Entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "La Boqueria",
+        "descriptionEn": "A market of colorful fresh produce"
       },
       {
         "rank": 8,
@@ -4594,7 +5093,9 @@
         "imageArtist": "Fabio Alessandro Locati",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Fale_-_Spain_-_Barcelona_-_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Fale_-_Spain_-_Barcelona_-_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Montjuïc",
+        "descriptionEn": "A green hill overlooking the port and the city"
       },
       {
         "rank": 9,
@@ -4611,7 +5112,9 @@
         "imageArtist": "Ralf Roletschek",
         "imageLicense": "GFDL 1.2",
         "imageLicenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/27/22_11_01_Palau_DSCF2611_52502512616_cc1e7db845_k.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/27/22_11_01_Palau_DSCF2611_52502512616_cc1e7db845_k.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Palau de la Música Catalana",
+        "descriptionEn": "A concert hall with beautiful stained glass"
       },
       {
         "rank": 10,
@@ -4628,7 +5131,9 @@
         "imageArtist": "CPG83",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Platja_de_la_Barceloneta_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Platja_de_la_Barceloneta_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Barceloneta Beach",
+        "descriptionEn": "A Mediterranean beach within walking distance of the city"
       }
     ],
     "restaurants": [
@@ -4647,7 +5152,10 @@
         "imageLicense": "GFDL 1.2",
         "imageLicenseUrl": "http://www.gnu.org/licenses/old-licenses/fdl-1.2.html"
       }
-    ]
+    ],
+    "nameEnglish": "Barcelona",
+    "themeEn": "Gaudí architecture and Mediterranean sun",
+    "countryName": "Spain"
   },
   {
     "id": "prague",
@@ -4677,7 +5185,9 @@
         "imageArtist": "Tilman2007",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Karl%C5%AFv_most_Praha%2C_Star%C3%A9_M%C4%9Bsto_20170810_007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Karl%C5%AFv_most_Praha%2C_Star%C3%A9_M%C4%9Bsto_20170810_007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Prague Castle",
+        "descriptionEn": "One of the world's largest castles, with its cathedral"
       },
       {
         "rank": 2,
@@ -4694,7 +5204,9 @@
         "imageArtist": "A.Savin",
         "imageLicense": "FAL",
         "imageLicenseUrl": "http://artlibre.org/licence/lal/en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/22/Prague_07-2016_view_from_Lesser_Town_Tower_of_Charles_Bridge_img3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/22/Prague_07-2016_view_from_Lesser_Town_Tower_of_Charles_Bridge_img3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Charles Bridge",
+        "descriptionEn": "A stone bridge lined with statues of saints"
       },
       {
         "rank": 3,
@@ -4711,7 +5223,9 @@
         "imageArtist": "A.Savin",
         "imageLicense": "FAL",
         "imageLicenseUrl": "http://artlibre.org/licence/lal/en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/44/Prague_07-2016_View_from_Old_Town_Hall_Tower_img3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/44/Prague_07-2016_View_from_Old_Town_Hall_Tower_img3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Old Town Square",
+        "descriptionEn": "A square surrounded by medieval buildings"
       },
       {
         "rank": 4,
@@ -4728,7 +5242,9 @@
         "imageArtist": "Steve Collis from Melbourne, Australia",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/37/Astronomical_Clock_%288341899828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/37/Astronomical_Clock_%288341899828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Astronomical Clock",
+        "descriptionEn": "A clock whose figures move every hour"
       },
       {
         "rank": 5,
@@ -4745,7 +5261,9 @@
         "imageArtist": "MathKnight   and Zachi Evenor",
         "imageLicense": "CC BY 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.5",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f4/PragueCathedral03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f4/PragueCathedral03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "St. Vitus Cathedral",
+        "descriptionEn": "A Gothic cathedral inside Prague Castle"
       },
       {
         "rank": 6,
@@ -4762,7 +5280,9 @@
         "imageArtist": "A.Savin",
         "imageLicense": "FAL",
         "imageLicenseUrl": "http://artlibre.org/licence/lal/en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Prague_07-2016_View_from_Old_Town_Hall_Tower_img2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Prague_07-2016_View_from_Old_Town_Hall_Tower_img2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Týn Church",
+        "descriptionEn": "A church with two striking spires"
       },
       {
         "rank": 7,
@@ -4779,7 +5299,9 @@
         "imageArtist": "Maros M r a z (Maros)",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/10/Prague_-_Zlata_ulicka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/10/Prague_-_Zlata_ulicka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Golden Lane",
+        "descriptionEn": "A lane of tiny houses inside the castle"
       },
       {
         "rank": 8,
@@ -4796,7 +5318,9 @@
         "imageArtist": "Øyvind Holmstad",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/21/Prague_Praha_2014_Holmstad_Vaclavplassen_i_nybyen_Nove_Mesto_flott.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/21/Prague_Praha_2014_Holmstad_Vaclavplassen_i_nybyen_Nove_Mesto_flott.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Wenceslas Square",
+        "descriptionEn": "The boulevard-like square at the heart of New Town"
       },
       {
         "rank": 9,
@@ -4813,7 +5337,9 @@
         "imageArtist": "Danny Alexander Lettkemann, Architekt",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/97/Tanzendes_Haus_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/97/Tanzendes_Haus_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Dancing House",
+        "descriptionEn": "A modern building that seems to dance"
       },
       {
         "rank": 10,
@@ -4830,7 +5356,9 @@
         "imageArtist": "Ludek",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Petrin_Praha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Petrin_Praha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Petřín Hill",
+        "descriptionEn": "A green hill with a lookout tower over the city"
       }
     ],
     "restaurants": [
@@ -4882,7 +5410,10 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
-    ]
+    ],
+    "nameEnglish": "Prague",
+    "themeEn": "Medieval views in the city of a hundred spires",
+    "countryName": "Czechia"
   },
   {
     "id": "new-york",
@@ -4912,7 +5443,9 @@
         "imageArtist": "AskALotl",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Statue of Liberty",
+        "descriptionEn": "A giant statue standing for freedom"
       },
       {
         "rank": 2,
@@ -4929,7 +5462,9 @@
         "imageArtist": "Terabass",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Times Square",
+        "descriptionEn": "An intersection ablaze with giant billboards"
       },
       {
         "rank": 3,
@@ -4946,7 +5481,9 @@
         "imageArtist": "Anthony Quintano from Hillsborough, NJ, United States",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Global_Citizen_Festival_Central_Park_New_York_City_from_NYonAir_%2815351915006%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Global_Citizen_Festival_Central_Park_New_York_City_from_NYonAir_%2815351915006%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Central Park",
+        "descriptionEn": "A vast park surrounded by skyscrapers"
       },
       {
         "rank": 4,
@@ -4963,7 +5500,9 @@
         "imageArtist": "Sam Valadi",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Empire_State_Building_%28aerial_view%29.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Empire State Building",
+        "descriptionEn": "An Art Deco skyscraper with city views"
       },
       {
         "rank": 5,
@@ -4980,7 +5519,9 @@
         "imageArtist": "Christian David",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Brooklyn Bridge",
+        "descriptionEn": "A historic suspension bridge to Manhattan"
       },
       {
         "rank": 6,
@@ -4997,7 +5538,9 @@
         "imageArtist": "Hugo Schneider",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Metropolitan Museum of Art",
+        "descriptionEn": "A great museum of treasures from around the world"
       },
       {
         "rank": 7,
@@ -5014,7 +5557,9 @@
         "imageArtist": "King of Hearts",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Lower_Manhattan_from_Jersey_City_November_2014_panorama_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Lower_Manhattan_from_Jersey_City_November_2014_panorama_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "One World Trade Center",
+        "descriptionEn": "The tallest skyscraper in the Western Hemisphere"
       },
       {
         "rank": 8,
@@ -5031,7 +5576,9 @@
         "imageArtist": "Dansnguyen",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5a/High_Line_Park%2C_Section_1a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/5a/High_Line_Park%2C_Section_1a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "High Line",
+        "descriptionEn": "An elevated park on a former rail line"
       },
       {
         "rank": 9,
@@ -5048,7 +5595,9 @@
         "imageArtist": "Fcb981 ; Eric Baetscher (attribution required)",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/71/Image-Grand_central_Station_Outside_Night_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/71/Image-Grand_central_Station_Outside_Night_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Grand Central Terminal",
+        "descriptionEn": "A historic station with a painted ceiling"
       },
       {
         "rank": 10,
@@ -5065,7 +5614,9 @@
         "imageArtist": "Anthony Quintano from Mount Laurel, United States",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Rockefeller_Center_Christmas_Tree_2021_%2851770696938%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Rockefeller_Center_Christmas_Tree_2021_%2851770696938%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Rockefeller Center",
+        "descriptionEn": "A complex known for its observation deck and skating rink"
       }
     ],
     "restaurants": [
@@ -5133,7 +5684,10 @@
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
       }
-    ]
+    ],
+    "nameEnglish": "New York",
+    "themeEn": "The city of skyscrapers and entertainment",
+    "countryName": "United States"
   },
   {
     "id": "hawaii",
@@ -5163,7 +5717,9 @@
         "imageArtist": "Pickle the cool",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/fd/City_of_Waikiki_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/fd/City_of_Waikiki_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Waikiki Beach",
+        "descriptionEn": "Honolulu's signature white-sand beach"
       },
       {
         "rank": 2,
@@ -5180,7 +5736,9 @@
         "imageArtist": "mar1865",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/93/Diamond_Head_Hawaii_From_Round_Top_Rd.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/9/93/Diamond_Head_Hawaii_From_Round_Top_Rd.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Diamond Head",
+        "descriptionEn": "A crater with ocean views from the summit"
       },
       {
         "rank": 3,
@@ -5197,7 +5755,9 @@
         "imageArtist": "DoD photo by: PH3(AW/SW) JAYME PASTORIC, USN",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:USS_Arizona_Memorial_%28aerial_view%29.jpg",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c3/USS_Arizona_Memorial_%28aerial_view%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/c/c3/USS_Arizona_Memorial_%28aerial_view%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "USS Arizona Memorial",
+        "descriptionEn": "A memorial to the history of Pearl Harbor"
       },
       {
         "rank": 4,
@@ -5214,7 +5774,9 @@
         "imageArtist": "ErgoSum88",
         "imageLicense": "Public domain",
         "imageLicenseUrl": "https://commons.wikimedia.org/wiki/File:Hanauma_Bay.JPG",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Hanauma_Bay.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Hanauma_Bay.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Hanauma Bay",
+        "descriptionEn": "A snorkeling spot full of tropical fish"
       },
       {
         "rank": 5,
@@ -5231,7 +5793,9 @@
         "imageArtist": "Gage Skidmore from Surprise, AZ, United States of America",
         "imageLicense": "CC BY-SA 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Iolani_Palace_%2851872681413%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Iolani_Palace_%2851872681413%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "ʻIolani Palace",
+        "descriptionEn": "A palace that tells the story of the Hawaiian monarchy"
       },
       {
         "rank": 6,
@@ -5248,7 +5812,9 @@
         "imageArtist": "Wikimedia Commons",
         "imageLicense": "CC BY-SA 2.5",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Kualoa_Ranch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Kualoa_Ranch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Kualoa Ranch",
+        "descriptionEn": "A grand valley used as a movie location"
       },
       {
         "rank": 7,
@@ -5265,7 +5831,9 @@
         "imageArtist": "Daniel Ramirez from Honolulu, USA",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/66/Ala_Moana_Center_Stage_%2823087254924%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/66/Ala_Moana_Center_Stage_%2823087254924%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Ala Moana Center",
+        "descriptionEn": "One of the world's largest open-air shopping malls"
       },
       {
         "rank": 8,
@@ -5282,7 +5850,9 @@
         "imageArtist": "Cristo Vlahos",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Lanikai_Beach%2C_Hawaii.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Lanikai_Beach%2C_Hawaii.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Lanikai Beach",
+        "descriptionEn": "A calm beach with crystal-clear water"
       },
       {
         "rank": 9,
@@ -5299,7 +5869,9 @@
         "imageArtist": "Lukas from Tokyo, Japan",
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/76/Cliffs_of_the_Koolau_Range%2C_Oahu_58.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/76/Cliffs_of_the_Koolau_Range%2C_Oahu_58.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Nuʻuanu Pali Lookout",
+        "descriptionEn": "A clifftop lookout over Oʻahu"
       },
       {
         "rank": 10,
@@ -5316,7 +5888,9 @@
         "imageArtist": "Travisthurston",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/WaimeaBay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d1/WaimeaBay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "North Shore",
+        "descriptionEn": "A surfing mecca famous for big waves"
       }
     ],
     "restaurants": [
@@ -5336,7 +5910,10 @@
         "imageLicense": "CC BY 2.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0"
       }
-    ]
+    ],
+    "nameEnglish": "Hawaii",
+    "themeEn": "Blue seas and a tropical paradise on Oʻahu",
+    "countryName": "United States"
   },
   {
     "id": "sydney",
@@ -5366,7 +5943,9 @@
         "imageArtist": "BAVhah",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Sydney_Opera_House_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Sydney_Opera_House_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sydney Opera House",
+        "descriptionEn": "The theater with iconic sail-like roofs"
       },
       {
         "rank": 2,
@@ -5383,7 +5962,9 @@
         "imageArtist": "Servite et contribuere",
         "imageLicense": "CC0",
         "imageLicenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/55/Sydney_Harbour_Bridge-16_October_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/55/Sydney_Harbour_Bridge-16_October_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sydney Harbour Bridge",
+        "descriptionEn": "A giant arch bridge over the harbor"
       },
       {
         "rank": 3,
@@ -5400,7 +5981,9 @@
         "imageArtist": "Nick Ang",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/79/Bondi_from_above.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/7/79/Bondi_from_above.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Bondi Beach",
+        "descriptionEn": "A popular beach where surfers gather"
       },
       {
         "rank": 4,
@@ -5417,7 +6000,9 @@
         "imageArtist": "Dietmar Rabich",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sydney_%28AU%29%2C_The_Rocks_--_2019_--_2133.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sydney_%28AU%29%2C_The_Rocks_--_2019_--_2133.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "The Rocks",
+        "descriptionEn": "Sydney's cobbled birthplace"
       },
       {
         "rank": 5,
@@ -5434,7 +6019,9 @@
         "imageArtist": "Maksym Kozlenko",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/50/2019-04-10_Sydney_CBD_view_from_Pyrmont_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/50/2019-04-10_Sydney_CBD_view_from_Pyrmont_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Darling Harbour",
+        "descriptionEn": "A harbor of aquariums and restaurants"
       },
       {
         "rank": 6,
@@ -5451,7 +6038,9 @@
         "imageArtist": "Bidgee",
         "imageLicense": "CC BY-SA 3.0 au",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/au/deed.en",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Gates_at_Royal_Botanic_Gardens_viewed_from_Art_Gallery_Road.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Gates_at_Royal_Botanic_Gardens_viewed_from_Art_Gallery_Road.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Royal Botanic Garden",
+        "descriptionEn": "A botanic garden with views of the Opera House"
       },
       {
         "rank": 7,
@@ -5468,7 +6057,9 @@
         "imageArtist": "JJ Harrison (https://www.jjharrison.com.au/)",
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Three_Sisters_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Three_Sisters_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Blue Mountains",
+        "descriptionEn": "A mountain region home to the Three Sisters"
       },
       {
         "rank": 8,
@@ -5485,7 +6076,9 @@
         "imageArtist": "Dietmar Rabich",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sydney_%28AU%29%2C_Queen_Victoria_Building_--_2019_--_3580.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sydney_%28AU%29%2C_Queen_Victoria_Building_--_2019_--_3580.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Queen Victoria Building",
+        "descriptionEn": "A beautiful 19th-century shopping arcade"
       },
       {
         "rank": 9,
@@ -5502,7 +6095,9 @@
         "imageArtist": "Chris Olszewski",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/67/Sydney_Tower_%28Centre_Point_Tower%29_seen_from_Queen%27s_Square%2C_Sydney.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/67/Sydney_Tower_%28Centre_Point_Tower%29_seen_from_Queen%27s_Square%2C_Sydney.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Sydney Tower",
+        "descriptionEn": "An observation tower in the city center"
       },
       {
         "rank": 10,
@@ -5519,7 +6114,9 @@
         "imageArtist": "Hardlinerr",
         "imageLicense": "CC BY-SA 4.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/07/Summer_days_at_Manly_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+        "imageOriginal": "https://upload.wikimedia.org/wikipedia/commons/0/07/Summer_days_at_Manly_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "nameEn": "Manly Beach",
+        "descriptionEn": "An open beach reached by ferry"
       }
     ],
     "restaurants": [
@@ -5539,6 +6136,9 @@
         "imageLicense": "CC BY-SA 3.0",
         "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
       }
-    ]
+    ],
+    "nameEnglish": "Sydney",
+    "themeEn": "Harbor views and open beaches",
+    "countryName": "Australia"
   }
 ]

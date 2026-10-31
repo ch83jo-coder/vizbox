@@ -1,4 +1,4 @@
-let locale=location.pathname.startsWith('/ja/')?'ja':'ko';
+let locale=location.pathname.startsWith('/ja/')?'ja':location.pathname.startsWith('/en/')?'en':'ko';
 const uiTranslations={
 '真栄田岬（青の洞窟がある海岸）':'마에다곶(푸른 동굴이 있는 해안)','世界旅行':'세계 여행','ホーム':'홈','エリアを探す':'지역 둘러보기','お気に入り':'즐겨찾기','あなたの「行きたい」を、次の旅へ。':'가고 싶은 곳을, 다음 여행으로.','掲載順位は編集上のおすすめ順です。営業時間・料金は公式情報をご確認ください。':'순위는 편집상의 추천 순서입니다. 운영 시간과 요금은 공식 정보를 확인해 주세요.',
 '世界の「行きたい」が':'세계에서 가고 싶은 곳,','見つかる。':'여기서 찾아보세요.','心に残る景色も、まだ知らない街も。':'마음에 남는 풍경부터 아직 모르는 거리까지.','人気の観光スポットTOP10から、次の旅を見つけよう。':'인기 관광지 TOP10에서 다음 여행을 찾아보세요.','東京の街並み':'도쿄의 거리 풍경','地域や観光スポットを検索':'지역 또는 관광지 검색','行きたい場所・エリアを探す…':'가고 싶은 장소·지역을 검색하세요…','検索する →':'검색하기 →','次の旅は、どこへ？':'다음 여행은 어디로?','一度は訪れたい、人気スポット':'한 번쯤 가보고 싶은 인기 명소','旅の始まりに。各エリアのおすすめをピックアップ。':'여행의 시작, 지역별 추천 명소를 만나보세요.','すべて見る ↗':'전체 보기 ↗','旅の楽しみは、':'여행의 즐거움은,','「行きたい」から始まる。':'가고 싶은 마음에서 시작됩니다.','気になるスポットはハートで保存。':'마음에 드는 명소는 하트로 저장하세요.','あなただけの旅行リストをつくろう。':'나만의 여행 목록을 만들어 보세요.','お気に入りを見る →':'즐겨찾기 보기 →','日本旅行の写真と地域別TOP10をまとめた旅行コラージュ':'일본 여행 사진과 지역별 TOP10 콜라주',
@@ -6,9 +6,90 @@ const uiTranslations={
 '伝統と未来が交わる街':'전통과 미래가 만나는 도시','おいしい、たのしい、大阪':'맛있고 즐거운 오사카','歴史を歩く、四季を感じる':'역사를 걷고 사계절을 느끼는 곳','温泉と大自然に癒される':'온천과 대자연이 주는 휴식','青い海と、島時間':'푸른 바다와 느긋한 섬의 시간',
 'をお気に入りから削除':' 즐겨찾기에서 삭제','をお気に入りに保存':' 즐겨찾기에 저장','の旅のイメージ':' 여행 이미지','のおすすめ TOP10':' 추천 TOP10','の人気スポット':' 인기 명소','選択したスポットの詳細':'선택한 명소 상세','のエリア':' 지역','の検索結果':' 검색 결과','件のスポット':'개 명소','おすすめ':'추천'
 };
-const sourceText=new WeakMap(),sourceAttributes=new WeakMap();let translationPattern=null;
-function prepareTranslations(data){if(data.length){const countryCount=new Set(data.map(r=>r.country)).size;uiTranslations[`${countryCount}の国・地域、${data.length}エリアから、あなたにぴったりの旅を。`]=`${countryCount}개 나라·지역, ${data.length}개 여행지에서 나에게 꼭 맞는 여행을 찾아보세요.`}for(const region of data){if(region.countryJa)uiTranslations[region.countryJa]=region.countryKo;if(region.themeJa)uiTranslations[region.themeJa]=region.themeKo;uiTranslations[region.nameJa]=region.nameKo;for(const eat of region.restaurants||[])if(eat.nameKo)uiTranslations[eat.nameJa]=eat.nameKo;for(const spot of region.spots){uiTranslations[spot.nameJa]=spot.nameKo;uiTranslations[spot.descriptionJa]=spot.descriptionKo;if(spot.imageCaption)uiTranslations[spot.imageCaption]=spot.imageCaptionKo}}translationPattern=new RegExp(Object.keys(uiTranslations).sort((a,b)=>b.length-a.length).map(s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'g')}
-function translate(value){if(locale==='ja')return value;if(!translationPattern)prepareTranslations([]);return value.replace(translationPattern,match=>uiTranslations[match]).replace(/。/g,'. ')}
+const enTranslations={
+"真栄田岬（青の洞窟がある海岸）":"Cape Maeda (the coast where the Blue Cave is)",
+"世界旅行":"World Travel",
+"ホーム":"Home",
+"エリアを探す":"Explore areas",
+"お気に入り":"Favorites",
+"あなたの「行きたい」を、次の旅へ。":"Turn the places you want to go into your next trip.",
+"掲載順位は編集上のおすすめ順です。営業時間・料金は公式情報をご確認ください。":"Rankings are our editorial picks. Check official sources for opening hours and prices.",
+"世界の「行きたい」が":"Find the places",
+"見つかる。":"you want to go.",
+"心に残る景色も、まだ知らない街も。":"Unforgettable views and cities you have yet to discover.",
+"人気の観光スポットTOP10から、次の旅を見つけよう。":"Find your next trip in our top 10 sights.",
+"東京の街並み":"Tokyo cityscape","東京 / TOKYO":"TOKYO",
+"地域や観光スポットを検索":"Search areas and sights",
+"行きたい場所・エリアを探す…":"Search for a place or area…",
+"検索する →":"Search →",
+"次の旅は、どこへ？":"Where to next?",
+"一度は訪れたい、人気スポット":"Popular sights worth a visit",
+"旅の始まりに。各エリアのおすすめをピックアップ。":"A starting point: our top pick in each area.",
+"すべて見る ↗":"See all ↗",
+"旅の楽しみは、":"The joy of travel",
+"「行きたい」から始まる。":"starts with wanting to go.",
+"気になるスポットはハートで保存。":"Save the sights you like with the heart.",
+"あなただけの旅行リストをつくろう。":"Build a travel list that's all yours.",
+"お気に入りを見る →":"See favorites →",
+"日本旅行の写真と地域別TOP10をまとめた旅行コラージュ":"Travel collage of Japan photos and top 10 lists by area",
+"見つかりませんでした。地域名や別のキーワードをお試しください。":"No results. Try an area name or another keyword.",
+"写真から選ぶ、次の旅。":"Pick your next trip from photos.",
+"← エリア一覧":"← All areas",
+"カテゴリー":"Category",
+"グルメ":"Eats",
+"ショッピング":"Shopping",
+"エリア":"Area",
+"このカテゴリーは準備中です。":"This category is coming soon.",
+"TOP10からおすすめスポットをお楽しみください。":"Enjoy the top 10 picks in the meantime.",
+"保存した「行きたい」を、ひとつのリストに。":"All the places you saved, in one list.",
+"お気に入りの地域フィルター":"Filter favorites by area",
+"すべてのエリア":"All areas",
+"旅のリストをつくろう":"Start your travel list",
+"気になるスポットのハートを押して保存できます。":"Tap the heart on any sight to save it.",
+"気になる景色を見つけて、自分のペースで旅を楽しみましょう。":"Find the views you love and travel at your own pace.",
+"訪問前に最新の営業情報をご確認ください。":"Check the latest opening information before you visit.",
+"写真出典：":"Photo source: ",
+"写真：":"Photo: ",
+"写真情報":"Photo info",
+"撮影者・ライセンス ↗":"Photographer and license ↗",
+"出典を参照":"See source",
+"Google Mapsで見る ↗":"View on Google Maps ↗",
+"近くのグルメを探す ↗":"Find restaurants nearby ↗",
+"の名物グルメ":": local eats",
+"写真と地図で、旅先の味を。":"Local flavors, with photos and maps.",
+"地図で見る ↗":"View map ↗",
+"ランキング":"Ranking",
+"グルメ情報は準備中です。":"Restaurant info is coming soon.",
+"住所の出典 ↗":"Address source ↗",
+"のグルメを探す ↗":": find restaurants ↗",
+"♥ 保存済み":"♥ Saved",
+"♡ お気に入りに保存":"♡ Save to favorites",
+"お気に入りに保存しました":"Saved to favorites",
+"お気に入りから削除しました":"Removed from favorites",
+"閉じる":"Close",
+"旅の景色を読み込み中…":"Loading…",
+"データを読み込めませんでした。ページを再読み込みしてください。":"Couldn't load the data. Please reload the page.",
+"写真を読み込めませんでした":"Couldn't load the photo",
+"伝統と未来が交わる街":"Where tradition meets the future",
+"おいしい、たのしい、大阪":"Delicious, fun Osaka",
+"歴史を歩く、四季を感じる":"Walk through history, feel the seasons",
+"温泉と大自然に癒される":"Unwind in hot springs and nature",
+"青い海と、島時間":"Blue seas and island time",
+"をお気に入りから削除":": remove from favorites",
+"をお気に入りに保存":": save to favorites",
+"の旅のイメージ":" travel image",
+"のおすすめ TOP10":": top 10 picks",
+"の人気スポット":": popular sights",
+"選択したスポットの詳細":"Selected sight details",
+"のエリア":": areas",
+"の検索結果":" search results",
+"件のスポット":" sights",
+"おすすめ":"Pick"
+};
+const dictionaries={ko:uiTranslations,en:enTranslations};
+const sourceText=new WeakMap(),sourceAttributes=new WeakMap();let translationPatterns={};
+function prepareTranslations(data){if(data.length){const countryCount=new Set(data.map(r=>r.country)).size,key=`${countryCount}の国・地域、${data.length}エリアから、あなたにぴったりの旅を。`;uiTranslations[key]=`${countryCount}개 나라·지역, ${data.length}개 여행지에서 나에게 꼭 맞는 여행을 찾아보세요.`;enTranslations[key]=`${countryCount} countries and regions, ${data.length} destinations: find the trip that suits you.`}for(const region of data){if(region.countryJa){uiTranslations[region.countryJa]=region.countryKo;enTranslations[region.countryJa]=region.countryName}if(region.themeJa){uiTranslations[region.themeJa]=region.themeKo;enTranslations[region.themeJa]=region.themeEn}uiTranslations[region.nameJa]=region.nameKo;enTranslations[region.nameJa]=region.nameEnglish;for(const eat of region.restaurants||[]){if(eat.nameKo)uiTranslations[eat.nameJa]=eat.nameKo;if(eat.nameEn)enTranslations[eat.nameJa]=eat.nameEn}for(const spot of region.spots){uiTranslations[spot.nameJa]=spot.nameKo;uiTranslations[spot.descriptionJa]=spot.descriptionKo;enTranslations[spot.nameJa]=spot.nameEn;enTranslations[spot.descriptionJa]=spot.descriptionEn;if(spot.imageCaption){uiTranslations[spot.imageCaption]=spot.imageCaptionKo;enTranslations[spot.imageCaption]=spot.imageCaptionEn}}}for(const [lang,dict] of Object.entries(dictionaries))translationPatterns[lang]=new RegExp(Object.keys(dict).sort((a,b)=>b.length-a.length).map(s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'g')}
+function translate(value){if(locale==='ja')return value;if(!translationPatterns[locale])prepareTranslations([]);const dict=dictionaries[locale],out=value.replace(translationPatterns[locale],match=>dict[match]).replace(/。/g,'. ');return locale==='en'?out.replace(/「/g,'“').replace(/」/g,'”').replace(/、/g,', ').replace(/・/g,' · '):out}
 function localize(root=document.body){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);while(walker.nextNode()){const node=walker.currentNode;if(node.parentElement.closest('script,style,[data-language],#count,[translate="no"]'))continue;if(!sourceText.has(node))sourceText.set(node,node.textContent);node.textContent=translate(sourceText.get(node))}for(const node of root.querySelectorAll('[aria-label],[placeholder],[alt],[label]')){if(!sourceAttributes.has(node))sourceAttributes.set(node,Object.fromEntries(['aria-label','placeholder','alt','label'].filter(a=>node.hasAttribute(a)).map(a=>[a,node.getAttribute(a)])));for(const [key,value] of Object.entries(sourceAttributes.get(node)))node.setAttribute(key,translate(value))}document.documentElement.lang=locale;for(const link of root.querySelectorAll('a[href]')){const href=link.getAttribute('href');if(href.startsWith('#'))link.href=pagePath(href.slice(1));else if(href.startsWith('https://travel.play-labo.com/'))link.href=new URL(href).pathname;}document.querySelectorAll('[data-language]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.language===locale)))}
 
-function pagePath(route=''){const path=(route==='home'?'':route).replace(/^\/+|\/+$/g,'');return (locale==='ja'?'/ja/':'/')+(path?path+'/':'')}
+function pagePath(route=''){const path=(route==='home'?'':route).replace(/^\/+|\/+$/g,'');return (locale==='ko'?'/':'/'+locale+'/')+(path?path+'/':'')}

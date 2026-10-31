@@ -30,15 +30,9 @@ claude --agent japan-travel-designer -p 'travel のUIとアクセシビリティ
 
 ## 言語
 
-初回は韓国語（ko）を表示します。ヘッダーの韓国語・日本語ボタンで切り替え、選択を `japan-travel-language` に保存します。全スポットの名前・説明、ナビゲーション、検索、詳細、代替テキストを両言語に対応させています。検索は表示言語に関係なく韓国語と日本語を受け付け、Google Mapsには元の日本語名を渡します。
+韓国語（`/`）・日本語（`/ja/`）・英語（`/en/`）に対応します。初回は韓国語を表示し、ヘッダーの韓国語・日本語・Englishボタンで同じページの別言語URLへ移動し、選択を `japan-travel-language` に保存します。画面の原文は日本語で、韓国語・英語は `i18n.js` の辞書（`uiTranslations`・`enTranslations`）とデータの各言語フィールドで置き換えます。
 
-## 近くのグルメ
-
-エリアページの見出しに「<エリア>のグルメを探す」、各スポットの詳細に「近くのグルメを探す」リンクを置き、Google Mapsで `restaurants near <スポット名> <エリア名>` を検索します。店舗データは持たず、検索結果はGoogle Mapsに任せます。
-
-### 名物グルメ（写真・住所）
-
-エリアページは「ランキング」（TOP10）と「グルメ」のタブに分かれ、グルメタブにそのエリアの名物グルメを写真・住所・地図リンク付きで表示します。選んだタブは `?tab=eats` としてURLに残るので、再読み込みや共有でもグルメタブが開きます。候補は `scripts/restaurants.json`（エリアIDごとの英語版Wikipedia記事名）に書き、`python3 travel/scripts/fetch_restaurants.py` を実行すると、記事・Wikidata（座標・住所P6375・日韓の名前）・Commons（代表写真・撮影者・ライセンス）で確認できたものだけを `data.json` の `restaurants` に保存し、写真を `assets/restaurants/` に置きます。座標や代表写真がない候補は載せずに一覧表示します。スポットと同じ記事は除外します。Wikidataの名前・住所が誤っている、または足りない場合は、候補を `{"title": ..., "nameKo": ..., "address": ...}` の形で書くと上書きできます。上書きした住所には確認した出典URLを `addressSource` に記録し、カードに「住所の出典」リンクを表示します。Wikipediaに記事のない店は `title` を書かずに `slug`・`nameJa`・`nameKo`・`nameEn`・`address`・`addressSource` を直接書くと、写真なしのカードとして載ります（写真は権利が確認できないため取得しません）。住所は現地表記のまま翻訳しません。その後 `build_seo.py` を実行します。
+データの英語フィールドは、スポットの `nameEn`・`descriptionEn`・`imageCaptionEn`、エリアの `nameEnglish`（表示用の英語名。`nameEn` は大文字の見出し用）・`themeEn`・`countryName`、グルメの `nameEn` です。全スポットの名前・説明、ナビゲーション、検索、詳細、代替テキストを3言語に対応させています。検索は表示言語に関係なく韓国語・日本語・英語を受け付け、Google Mapsには元の日本語名を渡します。
 
 ## 2カラム表示と折りたたみ端末
 
@@ -50,7 +44,7 @@ iPhone DuoのSafariはツールバーを画面の横に置き、ビューポー�
 
 ## SEO / 静的ページ
 
-本番ドメインは https://travel.play-labo.com/ 。韓国語は `/`、日本語は `/ja/`、エリア一覧は `/regions/`、国・地域別は `/countries/<id>/`、エリア別は `/regions/<id>/`、観光地は `/spots/<slug>/` を使用します。旧ハッシュURLは新しいURLへ移動します。
+本番ドメインは https://travel.play-labo.com/ 。韓国語は `/`、日本語は `/ja/`、英語は `/en/`、エリア一覧は `/regions/`、国・地域別は `/countries/<id>/`、エリア別は `/regions/<id>/`、観光地は `/spots/<slug>/` を使用します。旧ハッシュURLは新しいURLへ移動します。
 
 データ・ページ雛形を編集した後は `python3 travel/scripts/build_seo.py` を実行し、生成されたHTMLとsitemap.xmlを一緒にコミットしてください。雛形は `scripts/page-template.html` です。ビルドなしでも全ページの見出し・本文・リンク・JSON-LDをHTTP応答に含めます。言語はURLで決まり、切り替えボタンは同じページの別言語URLへ移動します。
 
@@ -66,4 +60,4 @@ iPhone DuoのSafariはツールバーを画面の横に置き、ビューポー�
 
 ## OG画像
 
-共有画像は `assets/og/japan-travel-ko.jpg` と `japan-travel-ja.jpg`（1200×630）です。`scripts/og-card.html` がデザイン元で、エッフェル塔・浅草寺・シドニー・オペラハウスの掲載写真を使用します。各写真の撮影者・ライセンスは `data.json` の該当スポットを参照してください。全ページに言語別のOG画像・Twitter Cardを設定しています。
+共有画像は `assets/og/japan-travel-ko.jpg`・`japan-travel-ja.jpg`・`japan-travel-en.jpg`（1200×630）です。`scripts/og-card.html` がデザイン元で（`?ja`・`?en` で各言語版）、エッフェル塔・浅草寺・シドニー・オペラハウスの掲載写真を使用します。各写真の撮影者・ライセンスは `data.json` の該当スポットを参照してください。全ページに言語別のOG画像・Twitter Cardを設定しています。
