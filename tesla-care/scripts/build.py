@@ -5,7 +5,7 @@ Korean lives at /, Japanese at /ja/, English at /en/. Under each language:
   /                     pick your car
   /<model>/             everything to buy for that car, and its guides
   /<model>/<guide>/     the guide, with the picks for that car
-Amazon links search the store for each language. When a product has a
+Amazon links go to Amazon Japan for every language. When a product has a
 verified ASIN for a model and store, the link goes straight to it. Put your
 Associates tags in TAGS; every link picks them up on the next build.
 """
@@ -15,7 +15,7 @@ from urllib.parse import quote_plus
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN='https://tesla-care.play-labo.com'
 LANGS=['ko','ja','en']
-STORE={'ko':'us','ja':'jp','en':'us'}
+STORE={'ko':'jp','ja':'jp','en':'jp'}
 STORES={'jp':'https://www.amazon.co.jp','us':'https://www.amazon.com'}
 TAGS={'jp':'','us':''}
 data=json.loads((ROOT/'data.json').read_text())
@@ -44,9 +44,9 @@ T={
  'best':{'ko':'추천','ja':'おすすめ','en':'Our pick'},
  'alts':{'ko':'다른 선택지','ja':'ほかの選択肢','en':'Alternatives'},
  'productsLead':{'ko':'아마존에서 조건에 맞는 상품으로 연결합니다. 구매 전 상품 설명에서 적합 차종을 꼭 확인하세요. 그림은 예시입니다.','ja':'Amazonで条件に合う商品にリンクしています。購入前に商品説明で適合車種を必ず確認してください。イラストはイメージです。','en':'Links go to matching products on Amazon. Check the listing\'s fitment before you buy. Illustrations are examples.'},
- 'buy':{'ko':'Amazon.com에서 보기 ↗','ja':'Amazonで見る ↗','en':'View on Amazon ↗'},
- 'liquid':{'ko':'액체류는 해외 배송이 제한될 수 있어 국내 쇼핑몰이나 마트에서 사는 편이 쉽습니다.','ja':'','en':''},
- 'koStore':{'ko':'한국에서는 Amazon.com(해외 직구)으로 연결됩니다.','ja':'','en':''},
+ 'buy':{'ko':'아마존 재팬에서 보기 ↗','ja':'Amazonで見る ↗','en':'View on Amazon Japan ↗'},
+ 'liquid':{'ko':'액체류는 해외 배송이 제한될 수 있어, 일본 밖에서는 가까운 쇼핑몰이나 마트에서 사는 편이 쉽습니다.','ja':'','en':'Liquids may not ship internationally; outside Japan, a local store is usually easier.'},
+ 'koStore':{'ko':'모든 링크는 아마존 재팬(amazon.co.jp)으로 연결됩니다. 해외 배송 가능 여부는 상품마다 다릅니다.','ja':'','en':'All links go to Amazon Japan (amazon.co.jp). International shipping varies by product.'},
  'sources':{'ko':'참고 자료','ja':'参考資料','en':'Sources'},
  'credits':{'ko':'사진','ja':'写真','en':'Photos'},
  'home':{'ko':'홈','ja':'ホーム','en':'Home'},
