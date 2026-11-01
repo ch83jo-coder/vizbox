@@ -7,6 +7,7 @@
 | [japan-density](./japan-density) | 日本の人口密度 3D マップ |
 | [travel](./travel) | 写真で探す世界旅行 TOP10・14の国・地域260スポット（韓・日・英） |
 | [fire-ready](./fire-ready) | FIRE 資産シミュレーター（Next.js） |
+| [tesla-care](./tesla-care) | テスラ モデル3 初心者向けセルフ整備ガイドと用品紹介（韓・日・英） |
 | [php-security](./php-security) | PHP セキュリティ対応・50サービス一覧（韓・日・英、外部リンクなし） |
 
 ## 構成ルール
