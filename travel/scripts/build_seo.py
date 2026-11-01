@@ -27,8 +27,8 @@ def page(lang,path,title,description,body,extra=None,noindex=False,crumbs=()):
     out=out.replace('</head>',meta+f'<script type="application/ld+json">{schema}</script></head>')
     out=out.replace('<main id="app"></main>',f'<main id="app">{body}</main>')
     for old,new in [('#home',url(lang)),('#regions',url(lang,'regions/')),('#favorites',url(lang,'favorites/'))]:out=out.replace('href="'+old+'"','href="'+new+'"')
-    shell={'ko':[('世界旅行 <b>','세계 여행 <b>'),('>ホーム<','>홈<'),('>エリアを探す<','>지역 둘러보기<'),('♡ お気に入り','♡ 즐겨찾기'),('あなたの「行きたい」を、次の旅へ。','가고 싶은 곳을, 다음 여행으로.'),('掲載順位は編集上のおすすめ順です。営業時間・料金は公式情報をご確認ください。','순위는 편집상의 추천 순서입니다. 운영 시간과 요금은 공식 정보를 확인해 주세요.')],
-           'en':[('世界旅行 <b>','World Travel <b>'),('>ホーム<','>Home<'),('>エリアを探す<','>Explore areas<'),('♡ お気に入り','♡ Favorites'),('あなたの「行きたい」を、次の旅へ。','Turn the places you want to go into your next trip.'),('掲載順位は編集上のおすすめ順です。営業時間・料金は公式情報をご確認ください。','Rankings are our editorial picks. Check official sources for opening hours and prices.')]}
+    shell={'ko':[('世界旅行 <b>','세계 여행 <b>'),('>ホーム<','>홈<'),('>エリアを探す<','>지역 둘러보기<'),('>お気に入り<','>즐겨찾기<'),('あなたの「行きたい」を、次の旅へ。','가고 싶은 곳을, 다음 여행으로.'),('掲載順位は編集上のおすすめ順です。営業時間・料金は公式情報をご確認ください。','순위는 편집상의 추천 순서입니다. 운영 시간과 요금은 공식 정보를 확인해 주세요.')],
+           'en':[('世界旅行 <b>','World Travel <b>'),('>ホーム<','>Home<'),('>エリアを探す<','>Explore areas<'),('>お気に入り<','>Favorites<'),('あなたの「行きたい」を、次の旅へ。','Turn the places you want to go into your next trip.'),('掲載順位は編集上のおすすめ順です。営業時間・料金は公式情報をご確認ください。','Rankings are our editorial picks. Check official sources for opening hours and prices.')]}
     for old,new in shell.get(lang,[]):out=out.replace(old,new)
     out=re.sub(r'data-language="(\w+)" lang="\1" aria-pressed="\w+"',lambda m:f'data-language="{m[1]}" lang="{m[1]}" aria-pressed="{str(m[1]==lang).lower()}"',out)
     target=ROOT/('' if lang=='ko' else lang)/path/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(out)
