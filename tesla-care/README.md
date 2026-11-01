@@ -1,6 +1,20 @@
 # モデル3 セルフ整備（Model 3 DIY Care）
 
-テスラ初心者向けの整備ガイドと用品紹介サイト。モデル3（旧型2017〜2023年・新型ハイランド2024年〜）を対象に、ウォッシャー液の補充・ワイパー交換・タイヤ空気圧の調整を手順と注意点つきで案内し、Amazonの検索結果へのリンクで用品を紹介します。韓国語は `/`、日本語は `/ja/`、英語は `/en/`。
+テスラ初心者向けの整備ガイドと用品紹介サイト。モデル3（旧型2017〜2023年・新型ハイランド2024年〜）を対象に、ウォッシャー液の補充・ワイパー交換・タイヤ空気圧の調整を写真・図解・手順・注意点つきで案内し、車に合う用品をAmazonへのリンクで紹介します。韓国語は `/`、日本語は `/ja/`、英語は `/en/`。
+
+## ページ構成
+
+- `/` 車の選択（写真で旧型かハイランドかを選ぶ。選んだ車はlocalStorage `tc-model` に保存し、次回トップに表示）
+- `/<model>/` その車用の「これだけ買えばOK」リスト（各ガイドの `role: main` の用品）と、あると便利なもの（`extra`）、ガイド一覧
+- `/<model>/<guide>/` 写真、図解、手順、その車での注意（`modelNotes`）、おすすめ1点（`main`）とほかの選択肢
+
+旧URL `/guides/<slug>/` はトップへ308でリダイレクトします（`vercel.json`）。
+
+## 画像
+
+- **写真**: `data.json` の `photos` にCommonsのファイル名を書き、`python3 tesla-care/scripts/fetch_images.py` で `assets/photos/` に保存、撮影者・ライセンスを記録します。各ページのフッターにクレジットを表示します。
+- **図解**: 手順の図は `scripts/build.py` の `diagram()` がページの言語のラベルでインラインSVGとして描きます。
+- **用品のイラスト**: `assets/illustrations/*.svg`。Amazonの商品画像は、Product Advertising API（アソシエイト承認後）経由でないと掲載できないため使っていません。
 
 ## ローカル確認
 
@@ -12,7 +26,7 @@ python3 -m http.server 8080 --directory tesla-care
 
 ガイドと用品は `data.json` を編集し、`python3 tesla-care/scripts/build.py` で全ページ・sitemap.xml・robots.txtを生成します。生成したHTMLも一緒にコミットしてください。
 
-- **Amazonリンク**: 日本語は amazon.co.jp、韓国語・英語は amazon.com の検索結果へリンクします（`STORE`）。商品ページ（ASIN）ではなく検索リンクにしているのは、リンク切れや在庫切れを避けるためです。各用品の `query` が検索語です。
+- **Amazonリンク**: 日本語は amazon.co.jp、韓国語・英語は amazon.com（`STORE`）。用品に `asin`（`{"<model>": {"jp": "...", "us": "..."}}`）があればその商品ページへ、なければ検索結果へリンクします。検索語は `query`、車ごとに変える場合は `queryByModel`。ASINは適合を確認できたものだけ入れてください。
 - **アソシエイトタグ**: `scripts/build.py` の `TAGS`（`jp`・`us`）に入れて再生成すると全リンクに付きます。フッターにアフィリエイトの表記があります。
 - **液体の用品**（`"liquid": true`）は、韓国語ページで海外配送の制限についての注意を表示します。
 - **ドメイン**: 本番は https://tesla-care.play-labo.com 。`ORIGIN`（canonical・hreflang・sitemap用）に設定しています。

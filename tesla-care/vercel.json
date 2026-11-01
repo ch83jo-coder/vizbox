@@ -1,1 +1,1 @@
-{"cleanUrls":true,"trailingSlash":true}
+{"cleanUrls":true,"trailingSlash":true,"redirects":[{"source":"/guides/:slug/","destination":"/","permanent":true},{"source":"/:lang(ja|en)/guides/:slug/","destination":"/:lang/","permanent":true}]}

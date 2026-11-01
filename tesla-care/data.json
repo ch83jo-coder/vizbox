@@ -4,16 +4,53 @@
       "slug": "washer-fluid",
       "icon": "washer",
       "minutes": 5,
-      "title": {"ko": "워셔액 보충", "ja": "ウォッシャー液の補充", "en": "Topping up washer fluid"},
+      "title": {
+        "ko": "워셔액 보충",
+        "ja": "ウォッシャー液の補充",
+        "en": "Topping up washer fluid"
+      },
       "summary": {
         "ko": "앞 트렁크(프렁크) 뒤쪽 보충구에 채우기만 하면 됩니다. 발수·벌레 제거 성분이 든 워셔액은 쓰지 마세요.",
         "ja": "フロントトランク（フランク）奥の注入口から入れるだけ。撥水剤・虫取り成分入りのウォッシャー液は使えません。",
         "en": "Just fill the reservoir behind the front trunk. Never use washer fluid that contains water repellent or bug wash."
       },
       "facts": [
-        {"label": {"ko": "보충구 위치", "ja": "注入口の位置", "en": "Where"}, "value": {"ko": "앞 트렁크(프렁크) 뒤쪽", "ja": "フロントトランクの奥", "en": "Behind the front trunk"}},
-        {"label": {"ko": "용량", "ja": "容量", "en": "Capacity"}, "value": {"ko": "약 3.2L", "ja": "約3.2L", "en": "About 3.2 L"}},
-        {"label": {"ko": "소요 시간", "ja": "所要時間", "en": "Time"}, "value": {"ko": "약 5분", "ja": "約5分", "en": "About 5 min"}}
+        {
+          "label": {
+            "ko": "보충구 위치",
+            "ja": "注入口の位置",
+            "en": "Where"
+          },
+          "value": {
+            "ko": "앞 트렁크(프렁크) 뒤쪽",
+            "ja": "フロントトランクの奥",
+            "en": "Behind the front trunk"
+          }
+        },
+        {
+          "label": {
+            "ko": "용량",
+            "ja": "容量",
+            "en": "Capacity"
+          },
+          "value": {
+            "ko": "약 3.2L",
+            "ja": "約3.2L",
+            "en": "About 3.2 L"
+          }
+        },
+        {
+          "label": {
+            "ko": "소요 시간",
+            "ja": "所要時間",
+            "en": "Time"
+          },
+          "value": {
+            "ko": "약 5분",
+            "ja": "約5分",
+            "en": "About 5 min"
+          }
+        }
       ],
       "steps": [
         {
@@ -56,56 +93,128 @@
       ],
       "products": [
         {
-          "name": {"ko": "겨울용 부동 워셔액", "ja": "解氷・寒冷地用ウォッシャー液", "en": "De-icer washer fluid"},
+          "name": {
+            "ko": "겨울용 부동 워셔액",
+            "ja": "解氷・寒冷地用ウォッシャー液",
+            "en": "De-icer washer fluid"
+          },
           "why": {
             "ko": "추운 계절에도 얼지 않습니다. 라벨에 '발수'·'벌레 제거'가 없는 제품을 고르세요.",
             "ja": "寒い季節でも凍りません。ラベルに「撥水」「虫取り」と書かれていないものを選んでください。",
             "en": "Won't freeze in cold weather. Pick one whose label doesn't mention water repellent or bug removal."
           },
-          "query": {"jp": "ウォッシャー液 解氷 寒冷地", "us": "windshield washer fluid de-icer"},
-          "liquid": true
+          "query": {
+            "jp": "ウォッシャー液 解氷 寒冷地",
+            "us": "windshield washer fluid de-icer"
+          },
+          "liquid": true,
+          "role": "main",
+          "image": "washer-winter"
         },
         {
-          "name": {"ko": "사계절용 워셔액", "ja": "オールシーズン用ウォッシャー液", "en": "All-season washer fluid"},
+          "name": {
+            "ko": "사계절용 워셔액",
+            "ja": "オールシーズン用ウォッシャー液",
+            "en": "All-season washer fluid"
+          },
           "why": {
             "ko": "따뜻한 지역이라면 일반 워셔액으로 충분합니다. 역시 발수 성분이 없는 것으로.",
             "ja": "暖かい地域なら通常のウォッシャー液で十分です。こちらも撥水剤なしのものを。",
             "en": "Fine for mild climates. Again, choose one without water repellent."
           },
-          "query": {"jp": "ウォッシャー液 2L", "us": "windshield washer fluid all season"},
-          "liquid": true
+          "query": {
+            "jp": "ウォッシャー液 2L",
+            "us": "windshield washer fluid all season"
+          },
+          "liquid": true,
+          "role": "alt",
+          "image": "washer-allseason"
         },
         {
-          "name": {"ko": "긴 주둥이 깔때기", "ja": "ロングノズルのじょうご", "en": "Long-spout funnel"},
+          "name": {
+            "ko": "긴 주둥이 깔때기",
+            "ja": "ロングノズルのじょうご",
+            "en": "Long-spout funnel"
+          },
           "why": {
             "ko": "보충구가 안쪽에 있어 깔때기가 있으면 흘리지 않고 넣을 수 있습니다.",
             "ja": "注入口が奥にあるので、じょうごがあるとこぼさずに入れられます。",
             "en": "The filler sits deep in the trunk; a funnel avoids spills."
           },
-          "query": {"jp": "じょうご ロングノズル 車", "us": "automotive funnel long flexible spout"}
+          "query": {
+            "jp": "じょうご ロングノズル 車",
+            "us": "automotive funnel long flexible spout"
+          },
+          "role": "extra",
+          "image": "funnel"
         }
-      ]
+      ],
+      "photo": "frunk",
+      "modelNotes": {
+        "model-3": {
+          "ko": "구형 매뉴얼 기준 탱크 용량은 약 3.2L입니다. 보충구는 앞 트렁크 뒤쪽, 앞 유리 쪽에 있습니다.",
+          "ja": "旧型のマニュアルではタンク容量は約3.2Lです。注入口はフロントトランクの奥、フロントガラス側にあります。",
+          "en": "The earlier Model 3 manual lists a 3.2 L reservoir. The filler is at the back of the front trunk, toward the windshield."
+        },
+        "model-3-highland": {
+          "ko": "하이랜드도 앞 트렁크 뒤쪽에서 보충합니다. 용량은 구형 매뉴얼 기준(약 3.2L)이라, 양보다 주입구 목 바로 아래까지를 기준으로 채우세요.",
+          "ja": "ハイランドもフロントトランクの奥から補充します。容量は旧型マニュアルの値（約3.2L）なので、量より注入口の首のすぐ下を目安に入れてください。",
+          "en": "The Highland is also filled from the back of the front trunk. The 3.2 L figure comes from the earlier manual, so go by the level just below the filler neck rather than the amount."
+        }
+      }
     },
     {
       "slug": "wipers",
       "icon": "wiper",
       "minutes": 10,
-      "title": {"ko": "와이퍼 교체", "ja": "ワイパーの交換", "en": "Replacing wiper blades"},
+      "title": {
+        "ko": "와이퍼 교체",
+        "ja": "ワイパーの交換",
+        "en": "Replacing wiper blades"
+      },
       "summary": {
         "ko": "와이퍼 서비스 모드를 켜고 블레이드만 바꿉니다. 1년에 한 번 이상 교체가 권장됩니다.",
         "ja": "ワイパーサービスモードにしてブレードだけを交換します。少なくとも年に1回の交換が推奨されています。",
         "en": "Turn on Wiper Service Mode and swap the blades. Replace them at least once a year."
       },
       "facts": [
-        {"label": {"ko": "운전석 쪽", "ja": "運転席側", "en": "Driver side"}, "value": {"ko": "26인치 (650mm)", "ja": "26インチ（650mm）", "en": "26 in (650 mm)"}},
-        {"label": {"ko": "조수석 쪽", "ja": "助手席側", "en": "Passenger side"}, "value": {"ko": "19인치 (475mm)", "ja": "19インチ（475mm）", "en": "19 in (475 mm)"}},
-        {"label": {"ko": "교체 주기", "ja": "交換時期", "en": "Interval"}, "value": {"ko": "1년에 1회 이상", "ja": "年1回以上", "en": "At least yearly"}}
+        {
+          "label": {
+            "ko": "운전석 쪽",
+            "ja": "運転席側",
+            "en": "Driver side"
+          },
+          "value": {
+            "ko": "26인치 (650mm)",
+            "ja": "26インチ（650mm）",
+            "en": "26 in (650 mm)"
+          }
+        },
+        {
+          "label": {
+            "ko": "조수석 쪽",
+            "ja": "助手席側",
+            "en": "Passenger side"
+          },
+          "value": {
+            "ko": "19인치 (475mm)",
+            "ja": "19インチ（475mm）",
+            "en": "19 in (475 mm)"
+          }
+        },
+        {
+          "label": {
+            "ko": "교체 주기",
+            "ja": "交換時期",
+            "en": "Interval"
+          },
+          "value": {
+            "ko": "1년에 1회 이상",
+            "ja": "年1回以上",
+            "en": "At least yearly"
+          }
+        }
       ],
-      "versions": {
-        "ko": "구형(2017~2023)과 신형 하이랜드(2024~) 모두 26/19인치 푸시 버튼 방식으로 판매되고 있습니다. 테슬라가 공식 규격을 공개하지 않으니, 사기 전에 지금 달린 블레이드 길이를 재 보세요.",
-        "ja": "旧型（2017〜2023年）と新型ハイランド（2024年〜）のどちらも、26/19インチのプッシュボタン式として販売されています。テスラは公式寸法を公開していないので、購入前に今のブレードの長さを測ってください。",
-        "en": "Blades for both the earlier Model 3 (2017–2023) and the Highland (2024–) are sold in 26/19 in with a push-button fitting. Tesla doesn't publish the sizes, so measure your current blades before buying."
-      },
       "steps": [
         {
           "ko": "와이퍼를 끄고 주차(P)합니다. 서비스 모드는 와이퍼가 꺼져 있을 때만 켤 수 있습니다.",
@@ -152,48 +261,135 @@
       ],
       "products": [
         {
-          "name": {"ko": "Model 3 전용 와이퍼 세트 (26+19인치)", "ja": "モデル3専用ワイパーセット（650mm＋475mm）", "en": "Model 3 wiper set (26 + 19 in)"},
+          "name": {
+            "ko": "Model 3 전용 와이퍼 세트 (26+19인치)",
+            "ja": "モデル3専用ワイパーセット（650mm＋475mm）",
+            "en": "Model 3 wiper set (26 + 19 in)"
+          },
           "why": {
             "ko": "두 개 세트로, 푸시 버튼 어댑터가 미리 끼워진 Model 3 전용품이 편합니다. 상품 설명에서 'Model 3'와 연식을 꼭 확인하세요.",
             "ja": "2本セットで、プッシュボタン用アダプターが付いたモデル3専用品が手軽です。商品説明で「Model 3」と年式を必ず確認してください。",
             "en": "A two-blade set made for the Model 3, with the push-button adapter already fitted, is the easy choice. Check the listing names the Model 3 and your year."
           },
-          "query": {"jp": "テスラ モデル3 ワイパー 650mm 475mm", "us": "Tesla Model 3 wiper blades 26 19"}
+          "query": {
+            "jp": "テスラ モデル3 ワイパー 650mm 475mm",
+            "us": "Tesla Model 3 wiper blades 26 19"
+          },
+          "role": "main",
+          "image": "wiper-set",
+          "queryByModel": {
+            "model-3": {
+              "jp": "テスラ モデル3 ワイパー 650mm 475mm 2017-2023",
+              "us": "Tesla Model 3 2017-2023 wiper blades 26 19"
+            },
+            "model-3-highland": {
+              "jp": "テスラ モデル3 ハイランド ワイパー 650mm 475mm",
+              "us": "Tesla Model 3 Highland 2024 wiper blades 26 19"
+            }
+          }
         },
         {
-          "name": {"ko": "보쉬 에어로트윈 Model 3용 세트", "ja": "ボッシュ エアロツイン モデル3用セット", "en": "Bosch Aerotwin set for Model 3"},
+          "name": {
+            "ko": "보쉬 에어로트윈 Model 3용 세트",
+            "ja": "ボッシュ エアロツイン モデル3用セット",
+            "en": "Bosch Aerotwin set for Model 3"
+          },
           "why": {
             "ko": "유럽 부품점들이 Model 3(하이랜드 포함)용으로 파는 26/19인치 푸시 버튼 세트입니다.",
             "ja": "欧州の部品店がモデル3（ハイランド含む）用として販売している26/19インチのプッシュボタン式セットです。",
             "en": "A 26/19 in push-button set that European parts sellers list for the Model 3, Highland included."
           },
-          "query": {"jp": "ボッシュ エアロツイン テスラ モデル3", "us": "Bosch Aerotwin Tesla Model 3"}
+          "query": {
+            "jp": "ボッシュ エアロツイン テスラ モデル3",
+            "us": "Bosch Aerotwin Tesla Model 3"
+          },
+          "role": "alt",
+          "image": "wiper-set"
         },
         {
-          "name": {"ko": "극세사 타월", "ja": "マイクロファイバータオル", "en": "Microfiber towels"},
+          "name": {
+            "ko": "극세사 타월",
+            "ja": "マイクロファイバータオル",
+            "en": "Microfiber towels"
+          },
           "why": {
             "ko": "교체하는 동안 앞 유리에 깔아 두면 암이 떨어져도 유리가 긁히지 않습니다.",
             "ja": "交換中にフロントガラスに敷いておけば、アームが落ちてもガラスに傷がつきません。",
             "en": "Lay one on the windshield while you work so a dropped arm can't scratch the glass."
           },
-          "query": {"jp": "マイクロファイバータオル 洗車", "us": "microfiber towels car"}
+          "query": {
+            "jp": "マイクロファイバータオル 洗車",
+            "us": "microfiber towels car"
+          },
+          "role": "extra",
+          "image": "towel"
         }
-      ]
+      ],
+      "photo": "screen",
+      "modelNotes": {
+        "model-3": {
+          "ko": "상품 설명에 '2017–2023' 또는 'Model 3 전 연식' 적합이 적힌 26/19인치 세트를 고르세요.",
+          "ja": "商品説明に「2017〜2023」または「モデル3全年式」適合と書かれた26/19インチのセットを選んでください。",
+          "en": "Choose a 26/19 in set whose listing says it fits 2017–2023 or all Model 3 years."
+        },
+        "model-3-highland": {
+          "ko": "'Highland' 또는 '2024+' 적합이 적힌 26/19인치 세트를 고르세요. '2017–2023 전용'이라고만 적힌 제품은 피하세요.",
+          "ja": "「Highland」または「2024年〜」適合と書かれた26/19インチのセットを選んでください。「2017〜2023専用」とだけ書かれた商品は避けてください。",
+          "en": "Choose a 26/19 in set whose listing names the Highland or 2024+. Skip sets listed only for 2017–2023."
+        }
+      }
     },
     {
       "slug": "tire-pressure",
       "icon": "tire",
       "minutes": 15,
-      "title": {"ko": "타이어 공기압 조절", "ja": "タイヤ空気圧の調整", "en": "Adjusting tire pressure"},
+      "title": {
+        "ko": "타이어 공기압 조절",
+        "ja": "タイヤ空気圧の調整",
+        "en": "Adjusting tire pressure"
+      },
       "summary": {
         "ko": "운전석 도어 기둥의 라벨에 적힌 값으로, 타이어가 식었을 때 맞춥니다. 많은 Model 3는 42psi(약 290kPa)입니다.",
         "ja": "運転席ドアの柱にあるラベルの値に、タイヤが冷えているときに合わせます。多くのモデル3は42psi（約290kPa）です。",
         "en": "Set the pressure on the label in the driver's door pillar, with the tires cold. Many Model 3s use 42 psi (about 290 kPa)."
       },
       "facts": [
-        {"label": {"ko": "기준값", "ja": "指定空気圧", "en": "Target"}, "value": {"ko": "도어 기둥 라벨 (흔히 42psi)", "ja": "ドア柱のラベル（多くは42psi）", "en": "Door pillar label (often 42 psi)"}},
-        {"label": {"ko": "측정 시점", "ja": "測るタイミング", "en": "When"}, "value": {"ko": "3시간 이상 세워 둔 뒤", "ja": "3時間以上停めた後", "en": "After 3+ hours parked"}},
-        {"label": {"ko": "확인 주기", "ja": "点検の目安", "en": "How often"}, "value": {"ko": "월 1회 + 장거리 전", "ja": "月1回＋遠出の前", "en": "Monthly and before long trips"}}
+        {
+          "label": {
+            "ko": "기준값",
+            "ja": "指定空気圧",
+            "en": "Target"
+          },
+          "value": {
+            "ko": "도어 기둥 라벨 (흔히 42psi)",
+            "ja": "ドア柱のラベル（多くは42psi）",
+            "en": "Door pillar label (often 42 psi)"
+          }
+        },
+        {
+          "label": {
+            "ko": "측정 시점",
+            "ja": "測るタイミング",
+            "en": "When"
+          },
+          "value": {
+            "ko": "3시간 이상 세워 둔 뒤",
+            "ja": "3時間以上停めた後",
+            "en": "After 3+ hours parked"
+          }
+        },
+        {
+          "label": {
+            "ko": "확인 주기",
+            "ja": "点検の目安",
+            "en": "How often"
+          },
+          "value": {
+            "ko": "월 1회 + 장거리 전",
+            "ja": "月1回＋遠出の前",
+            "en": "Monthly and before long trips"
+          }
+        }
       ],
       "steps": [
         {
@@ -242,38 +438,189 @@
       "converter": true,
       "products": [
         {
-          "name": {"ko": "디지털 타이어 공기압 게이지", "ja": "デジタル エアゲージ", "en": "Digital tire pressure gauge"},
+          "name": {
+            "ko": "디지털 타이어 공기압 게이지",
+            "ja": "デジタル エアゲージ",
+            "en": "Digital tire pressure gauge"
+          },
           "why": {
             "ko": "psi·kPa·bar 단위 전환이 되고, 배출 버튼이 있는 것이 조절하기 편합니다.",
             "ja": "psi・kPa・barを切り替えられ、減圧ボタン付きのものが調整しやすいです。",
             "en": "Pick one that switches between psi, kPa and bar and has a release button for fine adjustment."
           },
-          "query": {"jp": "デジタル エアゲージ 減圧 車", "us": "digital tire pressure gauge with bleed valve"}
+          "query": {
+            "jp": "デジタル エアゲージ 減圧 車",
+            "us": "digital tire pressure gauge with bleed valve"
+          },
+          "role": "main",
+          "image": "gauge"
         },
         {
-          "name": {"ko": "무선 휴대용 공기 주입기 (자동 정지)", "ja": "コードレス 電動空気入れ（自動停止）", "en": "Cordless tire inflator (auto shut-off)"},
+          "name": {
+            "ko": "무선 휴대용 공기 주입기 (자동 정지)",
+            "ja": "コードレス 電動空気入れ（自動停止）",
+            "en": "Cordless tire inflator (auto shut-off)"
+          },
           "why": {
             "ko": "목표 공기압을 정해 두면 그 값에서 자동으로 멈춰 초보자도 쉽게 맞출 수 있습니다.",
             "ja": "目標の空気圧を設定すると自動で止まるので、初めてでも簡単に合わせられます。",
             "en": "Set the target and it stops on its own, which makes it easy even the first time."
           },
-          "query": {"jp": "電動空気入れ 車 自動停止 コードレス", "us": "cordless tire inflator auto shut off"}
+          "query": {
+            "jp": "電動空気入れ 車 自動停止 コードレス",
+            "us": "cordless tire inflator auto shut off"
+          },
+          "role": "alt",
+          "image": "inflator"
         },
         {
-          "name": {"ko": "여분 밸브 캡", "ja": "予備のバルブキャップ", "en": "Spare valve caps"},
+          "name": {
+            "ko": "여분 밸브 캡",
+            "ja": "予備のバルブキャップ",
+            "en": "Spare valve caps"
+          },
           "why": {
             "ko": "작아서 잃어버리기 쉽습니다. 캡이 없으면 밸브에 먼지가 들어갑니다.",
             "ja": "小さくてなくしやすい部品です。キャップがないとバルブにゴミが入ります。",
             "en": "They're easy to lose, and without one dirt gets into the valve."
           },
-          "query": {"jp": "タイヤ バルブキャップ 米式", "us": "tire valve stem caps"}
+          "query": {
+            "jp": "タイヤ バルブキャップ 米式",
+            "us": "tire valve stem caps"
+          },
+          "role": "extra",
+          "image": "valve-caps"
         }
-      ]
+      ],
+      "photo": "wheel",
+      "modelNotes": {
+        "model-3": {
+          "ko": "휠 크기(18·19·20인치)에 따라 권장값이 다를 수 있습니다. 내 차 도어 기둥 라벨 값을 그대로 따르세요.",
+          "ja": "ホイールサイズ（18・19・20インチ）によって指定値が異なる場合があります。自分の車のドア柱ラベルの値に従ってください。",
+          "en": "Recommended pressure can differ by wheel size (18, 19 or 20 in). Follow the label on your own door pillar."
+        },
+        "model-3-highland": {
+          "ko": "하이랜드도 휠 크기에 따라 권장값이 다를 수 있습니다. 내 차 도어 기둥 라벨 값을 그대로 따르세요.",
+          "ja": "ハイランドもホイールサイズによって指定値が異なる場合があります。自分の車のドア柱ラベルの値に従ってください。",
+          "en": "On the Highland too, the recommended pressure can differ by wheel size. Follow the label on your own door pillar."
+        }
+      }
     }
   ],
   "sources": [
-    {"label": "Tesla Model 3 Owner's Manual: Windshield Wiper Blades, Jets and Fluid", "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-197C481B-B4D4-4973-9772-2AF488442CE1.html"},
-    {"label": "Tesla Model 3 Owner's Manual: Tire Care and Maintenance", "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html"},
-    {"label": "Tesla Model 3 Owner's Manual: Do It Yourself Maintenance", "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-57377B7B-867B-48C3-BF30-9E2C082AFAAF.html"}
+    {
+      "label": "Tesla Model 3 Owner's Manual: Windshield Wiper Blades, Jets and Fluid",
+      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-197C481B-B4D4-4973-9772-2AF488442CE1.html"
+    },
+    {
+      "label": "Tesla Model 3 Owner's Manual: Tire Care and Maintenance",
+      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html"
+    },
+    {
+      "label": "Tesla Model 3 Owner's Manual: Do It Yourself Maintenance",
+      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-57377B7B-867B-48C3-BF30-9E2C082AFAAF.html"
+    }
+  ],
+  "photos": {
+    "model3-classic": {
+      "file": "2019 Tesla Model 3 Standard Range Plus RWD in Pearl White Multi-Coat, front left.jpg",
+      "alt": {
+        "ko": "흰색 구형 Model 3 (2019년식)",
+        "ja": "白い旧型モデル3（2019年式）",
+        "en": "A white earlier Model 3 (2019)"
+      },
+      "artist": "Ethan Llamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2019_Tesla_Model_3_Standard_Range_Plus_RWD_in_Pearl_White_Multi-Coat%2C_front_left.jpg"
+    },
+    "model3-highland": {
+      "file": "Tesla Model 3 (Highland, facelift) (front three-quarter view) at Tesla Osaka Ibaraki.jpg",
+      "alt": {
+        "ko": "신형 Model 3 하이랜드",
+        "ja": "新型モデル3 ハイランド",
+        "en": "The Model 3 Highland"
+      },
+      "artist": "Aos.1905",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_%28Highland%2C_facelift%29_%28front_three-quarter_view%29_at_Tesla_Osaka_Ibaraki.jpg"
+    },
+    "frunk": {
+      "file": "Tesla Model 3 (2023), Japan, front trunk.jpg",
+      "alt": {
+        "ko": "Model 3의 앞 트렁크(프렁크)",
+        "ja": "モデル3のフロントトランク",
+        "en": "The Model 3's front trunk"
+      },
+      "artist": "Kazyakuruma",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_%282023%29%2C_Japan%2C_front_trunk.jpg"
+    },
+    "wheel": {
+      "file": "Tesla Model 3 (2023), Japan, 19-inch wheel.jpg",
+      "alt": {
+        "ko": "Model 3의 19인치 휠과 타이어",
+        "ja": "モデル3の19インチホイールとタイヤ",
+        "en": "The Model 3's 19-inch wheel and tire"
+      },
+      "artist": "Kazyakuruma",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_%282023%29%2C_Japan%2C_19-inch_wheel.jpg"
+    },
+    "screen": {
+      "file": "Tesla Model 3 Screen Dec 2020.jpg",
+      "alt": {
+        "ko": "Model 3의 중앙 터치스크린",
+        "ja": "モデル3のセンタータッチスクリーン",
+        "en": "The Model 3's center touchscreen"
+      },
+      "artist": "SirAsdof",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_Screen_Dec_2020.jpg"
+    }
+  },
+  "models": [
+    {
+      "id": "model-3",
+      "photo": "model3-classic",
+      "name": {
+        "ko": "Model 3 (구형)",
+        "ja": "モデル3（旧型）",
+        "en": "Model 3 (earlier)"
+      },
+      "years": {
+        "ko": "2017–2023년식",
+        "ja": "2017〜2023年式",
+        "en": "2017–2023"
+      },
+      "hint": {
+        "ko": "둥근 앞모습, 안개등 자리가 있는 범퍼",
+        "ja": "丸みのあるフロント、フォグランプのあるバンパー",
+        "en": "Rounded nose, bumper with fog-lamp housings"
+      }
+    },
+    {
+      "id": "model-3-highland",
+      "photo": "model3-highland",
+      "name": {
+        "ko": "Model 3 하이랜드 (신형)",
+        "ja": "モデル3 ハイランド（新型）",
+        "en": "Model 3 Highland"
+      },
+      "years": {
+        "ko": "2024년식~",
+        "ja": "2024年式〜",
+        "en": "2024 onward"
+      },
+      "hint": {
+        "ko": "얇고 날카로운 헤드라이트, 매끈한 범퍼",
+        "ja": "細くシャープなヘッドライト、すっきりしたバンパー",
+        "en": "Slim, sharp headlights and a clean bumper"
+      }
+    }
   ]
 }
