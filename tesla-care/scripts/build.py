@@ -9,7 +9,7 @@ import html,json
 from pathlib import Path
 from urllib.parse import quote_plus
 ROOT=Path(__file__).resolve().parents[1]
-ORIGIN='https://tesla.play-labo.com'
+ORIGIN='https://tesla-care.play-labo.com'
 LANGS=['ko','ja','en']
 STORE={'ko':'us','ja':'jp','en':'us'}
 STORES={'jp':'https://www.amazon.co.jp','us':'https://www.amazon.com'}

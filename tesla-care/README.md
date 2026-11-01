@@ -15,7 +15,7 @@ python3 -m http.server 8080 --directory tesla-care
 - **Amazonリンク**: 日本語は amazon.co.jp、韓国語・英語は amazon.com の検索結果へリンクします（`STORE`）。商品ページ（ASIN）ではなく検索リンクにしているのは、リンク切れや在庫切れを避けるためです。各用品の `query` が検索語です。
 - **アソシエイトタグ**: `scripts/build.py` の `TAGS`（`jp`・`us`）に入れて再生成すると全リンクに付きます。フッターにアフィリエイトの表記があります。
 - **液体の用品**（`"liquid": true`）は、韓国語ページで海外配送の制限についての注意を表示します。
-- **ドメイン**: `ORIGIN`（canonical・hreflang・sitemap用）は仮に `https://tesla.play-labo.com` としています。実際のドメインに合わせて変更してください。
+- **ドメイン**: 本番は https://tesla-care.play-labo.com 。`ORIGIN`（canonical・hreflang・sitemap用）に設定しています。
 
 ## 内容の根拠
 

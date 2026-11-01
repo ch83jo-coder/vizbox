@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tesla.play-labo.com/sitemap.xml
+Sitemap: https://tesla-care.play-labo.com/sitemap.xml
