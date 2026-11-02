@@ -754,7 +754,12 @@
         "ja": "丸みのあるフロント、フォグランプのあるバンパー",
         "en": "Rounded nose, bumper with fog-lamp housings"
       },
-      "family": "model-3"
+      "family": "model-3",
+      "seoName": {
+        "ko": "테슬라 모델3 (2017–2023)",
+        "ja": "テスラ モデル3（2017〜2023年式）",
+        "en": "Tesla Model 3 (2017–2023)"
+      }
     },
     {
       "id": "model-3-highland",
@@ -774,7 +779,12 @@
         "ja": "細くシャープなヘッドライト、すっきりしたバンパー",
         "en": "Slim, sharp headlights and a clean bumper"
       },
-      "family": "model-3"
+      "family": "model-3",
+      "seoName": {
+        "ko": "테슬라 모델3 하이랜드",
+        "ja": "テスラ モデル3 ハイランド",
+        "en": "Tesla Model 3 Highland"
+      }
     },
     {
       "id": "model-y",
@@ -794,6 +804,11 @@
         "ko": "좌우로 떨어진 헤드라이트, 둥근 앞모습",
         "ja": "左右に分かれたヘッドライト、丸みのあるフロント",
         "en": "Separate headlights and a rounded nose"
+      },
+      "seoName": {
+        "ko": "테슬라 모델Y (2020–2024)",
+        "ja": "テスラ モデルY（2020〜2024年式）",
+        "en": "Tesla Model Y (2020–2024)"
       }
     },
     {
@@ -814,6 +829,11 @@
         "ko": "앞쪽을 가로지르는 일자형 라이트",
         "ja": "フロントを横切る一文字のライト",
         "en": "A light bar across the whole front"
+      },
+      "seoName": {
+        "ko": "테슬라 모델Y 주니퍼",
+        "ja": "テスラ モデルY ジュニパー",
+        "en": "Tesla Model Y Juniper"
       }
     }
   ],

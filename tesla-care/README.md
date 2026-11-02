@@ -10,6 +10,15 @@
 
 旧URL `/guides/<slug>/` はトップへ308でリダイレクトします（`vercel.json`）。
 
+## SEO
+
+- タイトル・h1・説明文は検索されやすい車名（`models[].seoName`：「テスラ モデルY ジュニパー」など）とガイド名で組み立て、説明文には車ごとの数値（容量・サイズなど）を入れます。
+- 構造化データ（JSON-LD）：全ページに WebSite、車種・ガイドページに BreadcrumbList、車種ページに ItemList、ガイドに HowTo（手順・所要時間・用品）。
+- canonical・hreflang（ko/ja/en・x-default）・OGP（サイズ・alt・locale）・Twitter Card・`max-image-preview:large`。
+- 写真の `width`/`height` はJPEGの実寸を読んで出力し、レイアウトのずれを防ぎます。最初に見える写真は `fetchpriority="high"`。
+- sitemap.xml（言語別alternate・lastmod）、robots.txt、404.html を生成します。
+- 検索エンジンの所有権確認タグは `scripts/build.py` の `VERIFY` に入れて再生成します。公開後、Google Search Console と Naver サーチアドバイザーで `https://tesla-care.play-labo.com/sitemap.xml` を送信してください。
+
 ## 画像
 
 - **写真**: `data.json` の `photos` にCommonsのファイル名を書き、`python3 tesla-care/scripts/fetch_images.py` で `assets/photos/` に保存、撮影者・ライセンスを記録します。各ページのフッターにクレジットを表示します。

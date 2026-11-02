@@ -10,7 +10,7 @@ Amazon links go to Amazon Japan for every language. A product's "link"
 verified ASIN for a model and store, the link goes straight to it. Put your
 Associates tags in TAGS; every link picks them up on the next build.
 """
-import html,json
+import datetime,html,json,struct
 from pathlib import Path
 from urllib.parse import quote_plus
 ROOT=Path(__file__).resolve().parents[1]
@@ -19,6 +19,9 @@ LANGS=['ko','ja','en']
 STORE={'ko':'jp','ja':'jp','en':'jp'}
 STORES={'jp':'https://www.amazon.co.jp','us':'https://www.amazon.com'}
 TAGS={'jp':'','us':''}
+# Search engine ownership tags, e.g. {'google-site-verification':'...','naver-site-verification':'...'}
+VERIFY={}
+LOCALE={'ko':'ko_KR','ja':'ja_JP','en':'en_US'}
 data=json.loads((ROOT/'data.json').read_text())
 MODELS=data['models'];GUIDES=data['guides'];PHOTOS=data['photos']
 e=lambda s:html.escape(str(s),quote=True)
@@ -59,9 +62,15 @@ T={
  'convLead':{'ko':'라벨과 게이지의 단위가 다를 때 쓰세요.','ja':'ラベルとゲージの単位が違うときに使ってください。','en':'Use it when the label and your gauge use different units.'},
  'value':{'ko':'값','ja':'数値','en':'Value'},
  'unit':{'ko':'단위','ja':'単位','en':'Unit'},
+ 'notFound':{'ko':'페이지를 찾을 수 없습니다. 홈으로 →','ja':'ページが見つかりません。ホームへ →','en':'Page not found. Go home →'},
  'langName':{'ko':'한국어','ja':'日本語','en':'English'},
  'title':{'ko':'테슬라 셀프 정비 | Model 3·Model Y 입문자 가이드','ja':'テスラ セルフ整備 | モデル3・モデルY 初心者ガイド','en':'Tesla DIY Care | Model 3 and Model Y guides for new owners'},
- 'hubTitle':{'ko':'{} 정비 가이드와 추천 용품','ja':'{}の整備ガイドとおすすめ用品','en':'{}: maintenance guides and supplies'},
+ 'hubTitle':{'ko':'{} 셀프 정비 가이드와 추천 용품','ja':'{}のセルフ整備ガイドとおすすめ用品','en':'{} DIY maintenance guides and supplies'},
+ 'topics':{'ko':'워셔액 보충·와이퍼 교체·타이어 공기압','ja':'ウォッシャー液の補充・ワイパー交換・タイヤ空気圧','en':'washer fluid, wiper blades and tire pressure'},
+ 'hubDesc':{'ko':'{} 오너를 위한 {} 셀프 정비 가이드. 이 차에 맞는 추천 용품: {}.','ja':'{}オーナー向けの{}のセルフ整備ガイド。この車に合うおすすめ用品：{}。','en':'DIY guides for {} owners: {}. Recommended supplies for this car: {}.'},
+ 'guideH1':{'ko':'{} {}','ja':'{}の{}','en':'{}: {}'},
+ 'guideTitle':{'ko':'{} {} 방법과 추천 용품','ja':'{}の{}のやり方とおすすめ用品','en':'{}: {}'},
+ 'guideDesc':{'ko':'{} {} 방법을 사진과 그림으로 단계별로 안내합니다. {}. 주의사항과 이 차에 맞는 추천 용품까지.','ja':'{}の{}のやり方を写真と図解で手順ごとに解説。{}。注意点とこの車に合うおすすめ用品も紹介します。','en':'{}: {}, step by step with photos and diagrams. {}. Plus the right supplies for this car.'},
 }
 t=lambda key,lang:T[key][lang]
 def url(lang,path=''):return ('/' if lang=='ko' else f'/{lang}/')+path
@@ -126,24 +135,41 @@ def diagram(slug,lang):
 def diagram_html(slug,lang,title):
     _,box,body=diagram(slug,lang)
     return f'<figure class="diagram"><svg viewBox="{box}" role="img" aria-label="{e(title)}">{body}</svg></figure>'
+def jpeg_size(path):
+    # Read width and height from the JPEG's frame header so the page reserves the right space.
+    data=path.read_bytes();i=2
+    while i<len(data):
+        marker,length=data[i+1],struct.unpack('>H',data[i+2:i+4])[0]
+        if 0xC0<=marker<=0xCF and marker not in (0xC4,0xC8,0xCC):h,w=struct.unpack('>HH',data[i+5:i+9]);return w,h
+        i+=2+length
+    return 960,640
+SIZES={k:jpeg_size(ROOT/f'assets/photos/{k}.jpg') for k in PHOTOS}
 def photo(key,lang,cls='photo',loading='lazy'):
-    p=PHOTOS[key]
-    return f'<img class="{cls}" src="/assets/photos/{key}.jpg" alt="{e(p["alt"][lang])}" loading="{loading}" width="960" height="640">'
+    p=PHOTOS[key];w,h=SIZES[key]
+    priority=' fetchpriority="high"' if loading=='eager' else ''
+    return f'<img class="{cls}" src="/assets/photos/{key}.jpg" alt="{e(p["alt"][lang])}" loading="{loading}"{priority} width="{w}" height="{h}">'
 def credit(key):
     p=PHOTOS[key]
     return f'<li>{e(p.get("artist","Wikimedia Commons"))} · <a href="{e(p.get("licenseUrl") or p.get("page",""))}" target="_blank" rel="noopener">{e(p.get("license",""))}</a> · <a href="{e(p.get("page",""))}" target="_blank" rel="noopener">Wikimedia Commons</a></li>'
-def shell(lang,path,title,description,body,photos=(),image=None):
+def ld(*items):
+    return '<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@graph':list(items)},ensure_ascii=False).replace('<','\\u003c')+'</script>'
+def crumbs(lang,*trail):
+    return {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i,'name':name,'item':ORIGIN+url(lang,path)} for i,(name,path) in enumerate([(t('home',lang),''),*trail],1)]}
+def shell(lang,path,title,description,body,photos=(),image=None,schema=()):
     canonical=ORIGIN+url(lang,path)
     alternates=''.join(f'<link rel="alternate" hreflang="{l}" href="{ORIGIN+url(l,path)}">' for l in LANGS)+f'<link rel="alternate" hreflang="x-default" href="{ORIGIN+url("ko",path)}">'
     switch=''.join(f'<a href="{url(l,path)}" lang="{l}" hreflang="{l}"'+(' aria-current="true"' if l==lang else '')+f'>{t("langName",l)}</a>' for l in LANGS)
     credits=f'<p>{t("credits",lang)}:</p><ul class="credits">{"".join(credit(k) for k in dict.fromkeys(photos))}</ul>' if photos else ''
-    og=f'<meta property="og:image" content="{ORIGIN}/assets/photos/{image}.jpg"><meta name="twitter:card" content="summary_large_image">' if image else '<meta name="twitter:card" content="summary">'
-    return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f172a"><title>{e(title)}</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{canonical}">{alternates}<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{canonical}">{og}<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"></head><body>
+    og=f'<meta property="og:image" content="{ORIGIN}/assets/photos/{image}.jpg"><meta property="og:image:width" content="{SIZES[image][0]}"><meta property="og:image:height" content="{SIZES[image][1]}"><meta property="og:image:alt" content="{e(PHOTOS[image]["alt"][lang])}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{ORIGIN}/assets/photos/{image}.jpg">' if image else '<meta name="twitter:card" content="summary">'
+    og+=f'<meta property="og:site_name" content="{e(t("brand",lang))}"><meta property="og:locale" content="{LOCALE[lang]}">'+''.join(f'<meta property="og:locale:alternate" content="{LOCALE[l]}">' for l in LANGS if l!=lang)+f'<meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(description)}">'
+    og+=''.join(f'<meta name="{k}" content="{e(v)}">' for k,v in VERIFY.items())
+    website={'@type':'WebSite','@id':ORIGIN+url(lang)+'#website','name':t('brand',lang),'url':ORIGIN+url(lang),'inLanguage':lang}
+    return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f172a"><title>{e(title)}</title><meta name="description" content="{e(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{canonical}">{alternates}<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{canonical}">{og}<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">{ld(website,*schema)}</head><body>
 <header class="top"><a class="brand" href="{url(lang)}"><span class="logo" aria-hidden="true">{icon("tire","logo-icon")}</span><span>{e(t("brand",lang))}<small>{e(t("tagline",lang))}</small></span></a><nav class="langs" aria-label="Language">{switch}</nav></header>
 <main>{body}</main><footer>{credits}<p>{e(t("disclaimer",lang))}</p><p>{e(t("affiliate",lang))}</p><p>© Tesla DIY Care</p></footer></body></html>'''
 REMEMBER='<script>try{localStorage.setItem("tc-model","%s")}catch{}</script>'
 def model_card(lang,m):
-    return f'<a class="model-card" href="{url(lang,m["id"]+"/")}" data-model="{m["id"]}">{photo(m["photo"],lang,"model-photo","eager")}<span class="model-text"><strong>{e(m["name"][lang])}</strong><span>{e(m["years"][lang])}</span><small>{e(m["hint"][lang])}</small><span class="choose">{t("choose",lang)}</span></span></a>'
+    return f'<a class="model-card" href="{url(lang,m["id"]+"/")}" data-model="{m["id"]}">{photo(m["photo"],lang,"model-photo","eager" if m is MODELS[0] else "lazy")}<span class="model-text"><strong>{e(m["name"][lang])}</strong><span>{e(m["years"][lang])}</span><small>{e(m["hint"][lang])}</small><span class="choose">{t("choose",lang)}</span></span></a>'
 def home(lang):
     names={m['id']:m['name'][lang] for m in MODELS}
     guide_list=''.join(f'<li><span class="card-icon">{icon(g["icon"])}</span><span><strong>{e(g["title"][lang])}</strong><small>{e(g["summary"][lang])}</small></span></li>' for g in GUIDES)
@@ -167,16 +193,20 @@ def hub(lang,m):
     cards=''.join(f'<a class="card" href="{url(lang,m["id"]+"/"+g["slug"]+"/")}">{photo(g["photo"],lang,"card-photo")}<span class="card-body"><h3>{e(g["title"][lang])}</h3><p>{e(g["summary"][lang])}</p><span class="meta">{t("min",lang).format(g["minutes"])} · {t("read",lang)}</span></span></a>' for g in GUIDES)
     store_note=f'<p class="note">{e(t("koStore",lang))}</p>' if t('koStore',lang) else ''
     body=f'''<nav class="crumbs" aria-label="breadcrumb"><a href="{url(lang)}">{e(t("home",lang))}</a> › <span>{e(m["name"][lang])}</span></nav>
-<section class="hub-head">{photo(m["photo"],lang,"hub-photo","eager")}<div><p class="eyebrow">{e(m["years"][lang])}</p><h1>{e(m["name"][lang])}</h1><a class="change" href="{url(lang)}#pick">{icon("car")}{e(t("change",lang))}</a></div></section>
+<section class="hub-head">{photo(m["photo"],lang,"hub-photo","eager")}<div><p class="eyebrow">{e(m["years"][lang])}</p><h1>{e(m["seoName"][lang])}</h1><a class="change" href="{url(lang)}#pick">{icon("car")}{e(t("change",lang))}</a></div></section>
 <section class="kit"><h2>{e(t("kit",lang))}</h2><p class="muted">{e(t("kitLead",lang).format(m["name"][lang]))}</p>{store_note}<ul class="products">{"".join(item(g,p) for g,p in mains)}</ul><h3 class="sub">{e(t("extras",lang))}</h3><ul class="products compact">{"".join(item(g,p) for g,p in extras)}</ul></section>
 <section><h2>{e(t("guides",lang))}</h2><div class="cards">{cards}</div></section>{REMEMBER%m["id"]}'''
-    return shell(lang,m['id']+'/',t('hubTitle',lang).format(m['name'][lang]),t('kitLead',lang).format(m['name'][lang]),body,[m['photo']]+[g['photo'] for g in GUIDES],m['photo'])
+    seo=m['seoName'][lang];topics=t('topics',lang)
+    title=t('hubTitle',lang).format(seo)+' | '+t('brand',lang)
+    desc=t('hubDesc',lang).format(seo,topics,('、' if lang=='ja' else ', ').join(p.get('nameByModel',{}).get(m['id'],p['name'])[lang] for g,p in mains))
+    items={'@type':'ItemList','name':title,'itemListElement':[{'@type':'ListItem','position':i,'name':f'{seo} {g["title"][lang]}','url':ORIGIN+url(lang,m['id']+'/'+g['slug']+'/')} for i,g in enumerate(GUIDES,1)]}
+    return shell(lang,m['id']+'/',title,desc,body,[m['photo']]+[g['photo'] for g in GUIDES],m['photo'],[crumbs(lang,(m['name'][lang],m['id']+'/')),items])
 def converter(lang):
     return f'''<section class="box converter" aria-labelledby="conv-title"><h2 id="conv-title">{e(t("conv",lang))}</h2><p>{e(t("convLead",lang))}</p><div class="conv-row"><label>{e(t("value",lang))}<input id="conv-value" type="number" inputmode="decimal" value="42" min="0" step="0.1"></label><label>{e(t("unit",lang))}<select id="conv-unit"><option value="psi">psi</option><option value="kpa">kPa</option><option value="bar">bar</option></select></label></div><output id="conv-out" for="conv-value conv-unit" aria-live="polite"></output></section>
 <script>(()=>{{const v=document.getElementById('conv-value'),u=document.getElementById('conv-unit'),o=document.getElementById('conv-out'),k={{psi:6.894757,kpa:1,bar:100}};function r(){{const n=parseFloat(v.value);if(!isFinite(n)){{o.textContent='';return}}const p=n*k[u.value];o.textContent=`${{(p/k.psi).toFixed(1)}} psi = ${{Math.round(p)}} kPa = ${{(p/100).toFixed(2)}} bar`}}v.addEventListener('input',r);u.addEventListener('change',r);r()}})()</script>'''
 def guide_page(lang,g,m,nxt):
     facts=''.join(f'<div><dt>{e(f["label"][lang])}</dt><dd>{e(f.get("valueByModel",{}).get(m["id"],f["value"])[lang])}</dd></div>' for f in g['facts'])
-    steps=''.join(f'<li>{e(s[lang])}</li>' for s in g['steps'])
+    steps=''.join(f'<li id="step-{i}">{e(s[lang])}</li>' for i,s in enumerate(g['steps'],1))
     warns=''.join(f'<li>{e(w[lang])}</li>' for w in g['warnings'])
     note=g.get('modelNotes',{}).get(m['id'])
     note=f'<section class="box mine"><h2>{icon("car")}{e(t("myCar",lang).format(m["name"][lang]))}</h2><p>{e(note[lang])}</p></section>' if note else ''
@@ -185,7 +215,7 @@ def guide_page(lang,g,m,nxt):
     sources=''.join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a></li>' for s in data['sources'] if s['family']==m['family'])
     other=[x for x in MODELS if x['id']!=m['id']]
     body=f'''<article class="guide"><nav class="crumbs" aria-label="breadcrumb"><a href="{url(lang)}">{e(t("home",lang))}</a> › <a href="{url(lang,m["id"]+"/")}">{e(m["name"][lang])}</a> › <span>{e(g["title"][lang])}</span></nav>
-<header class="guide-head"><div><p class="eyebrow">{e(m["name"][lang])} · {t("min",lang).format(g["minutes"])}</p><h1>{e(g["title"][lang])}</h1><p class="lead">{e(g["summary"][lang])}</p></div>{photo(g["photo"],lang,"guide-photo","eager")}</header>
+<header class="guide-head"><div><p class="eyebrow">{e(m["name"][lang])} · {t("min",lang).format(g["minutes"])}</p><h1>{e(t("guideH1",lang).format(m["seoName"][lang],g["title"][lang]))}</h1><p class="lead">{e(g["summary"][lang])}</p></div>{photo(g["photo"],lang,"guide-photo","eager")}</header>
 <dl class="facts">{facts}</dl>{note}
 <section><h2>{e(t("steps",lang))}</h2>{diagram_html(g["slug"],lang,g["title"][lang])}<ol class="steps">{steps}</ol></section>
 <section class="box warn"><h2>{icon("warn")}{e(t("careful",lang))}</h2><ul>{warns}</ul></section>
@@ -194,7 +224,14 @@ def guide_page(lang,g,m,nxt):
 <section class="sources"><h2>{e(t("sources",lang))}</h2><ul>{sources}</ul></section>
 <p class="switch-model">{"".join(f'<a href="{url(lang,o["id"]+"/"+g["slug"]+"/")}">{icon("car")}{e(o["name"][lang])} →</a>' for o in other)}</p>
 <a class="next" href="{url(lang,m["id"]+"/"+nxt["slug"]+"/")}"><small>{e(t("next",lang))}</small>{e(nxt["title"][lang])} →</a></article>{REMEMBER%m["id"]}'''
-    return shell(lang,f'{m["id"]}/{g["slug"]}/',f'{g["title"][lang]} ({m["name"][lang]}) | {t("brand",lang)}',g['summary'][lang],body,[g['photo']],g['photo'])
+    seo=m['seoName'][lang];path=f'{m["id"]}/{g["slug"]}/'
+    factline=('、' if lang=='ja' else ', ').join(f'{f["label"][lang]}: {f.get("valueByModel",{}).get(m["id"],f["value"])[lang]}' for f in g['facts'][:2])
+    title=t('guideTitle',lang).format(seo,g['title'][lang])+' | '+t('brand',lang)
+    desc=t('guideDesc',lang).format(seo,g['title'][lang],factline)
+    howto={'@type':'HowTo','name':t('guideH1',lang).format(seo,g['title'][lang]),'description':g['summary'][lang],'inLanguage':lang,'totalTime':f'PT{g["minutes"]}M','image':f'{ORIGIN}/assets/photos/{g["photo"]}.jpg',
+           'supply':[{'@type':'HowToSupply','name':p.get('nameByModel',{}).get(m['id'],p['name'])[lang]} for p in g['products'] if p['role']!='alt'],
+           'step':[{'@type':'HowToStep','position':i,'text':st[lang],'url':ORIGIN+url(lang,path)+f'#step-{i}'} for i,st in enumerate(g['steps'],1)]}
+    return shell(lang,path,title,desc,body,[g['photo']],g['photo'],[crumbs(lang,(m['name'][lang],m['id']+'/'),(g['title'][lang],path)),howto])
 def write(lang,path,content):
     target=ROOT/('' if lang=='ko' else lang)/path/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(content)
 paths=['']
@@ -204,8 +241,10 @@ for lang in LANGS:
         write(lang,m['id']+'/',hub(lang,m))
         for i,g in enumerate(GUIDES):write(lang,f'{m["id"]}/{g["slug"]}/',guide_page(lang,g,m,GUIDES[(i+1)%len(GUIDES)]))
 for m in MODELS:paths+=[m['id']+'/']+[f'{m["id"]}/{g["slug"]}/' for g in GUIDES]
-sitemap=''.join(f'<url><loc>{ORIGIN+url(lang,p)}</loc>'+''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{ORIGIN+url(l,p)}"/>' for l in LANGS)+'</url>' for p in paths for lang in LANGS)
+today=datetime.date.today().isoformat()
+sitemap=''.join(f'<url><loc>{ORIGIN+url(lang,p)}</loc><lastmod>{today}</lastmod>'+''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{ORIGIN+url(l,p)}"/>' for l in LANGS)+'</url>' for p in paths for lang in LANGS)
 (ROOT/'sitemap.xml').write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">{sitemap}</urlset>\n')
+(ROOT/'404.html').write_text('<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>404 | Tesla DIY Care</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"></head><body><main class="notfound"><h1>404</h1><p>'+''.join(f'<a href="{url(l)}" lang="{l}">{t("notFound",l)}</a><br>' for l in LANGS)+'</p></main></body></html>\n')
 (ROOT/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {ORIGIN}/sitemap.xml\n')
 (ROOT/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#0f172a"/><g fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/></g></svg>')
 print('Generated',len(paths)*len(LANGS),'pages in',len(LANGS),'languages.')
