@@ -20,7 +20,7 @@ STORE={'ko':'jp','ja':'jp','en':'jp'}
 STORES={'jp':'https://www.amazon.co.jp','us':'https://www.amazon.com'}
 TAGS={'jp':'','us':''}
 # Search engine ownership tags, e.g. {'google-site-verification':'...','naver-site-verification':'...'}
-VERIFY={}
+VERIFY={'google-site-verification':'f21cCBWKUbZL0yZpFqgmCy_KPK-CHbFkM1C6ExOUjH8'}
 LOCALE={'ko':'ko_KR','ja':'ja_JP','en':'en_US'}
 data=json.loads((ROOT/'data.json').read_text())
 MODELS=data['models'];GUIDES=data['guides'];PHOTOS=data['photos']
