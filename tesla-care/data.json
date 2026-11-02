@@ -133,21 +133,22 @@
         },
         {
           "name": {
-            "ko": "긴 주둥이 깔때기",
-            "ja": "ロングノズルのじょうご",
-            "en": "Long-spout funnel"
+            "ko": "Mirhua 롱 타입 깔때기 (4개)",
+            "ja": "Mirhua ロングタイプ漏斗（4個入）",
+            "en": "Mirhua long funnel (4-pack)"
           },
           "why": {
-            "ko": "보충구가 안쪽에 있어 깔때기가 있으면 흘리지 않고 넣을 수 있습니다.",
-            "ja": "注入口が奥にあるので、じょうごがあるとこぼさずに入れられます。",
-            "en": "The filler sits deep in the trunk; a funnel avoids spills."
+            "ko": "주둥이가 길고 가늘어 앞 트렁크 안쪽 보충구에 꽂고 흘리지 않고 부을 수 있습니다. 4개 들이라 워셔액 전용으로 하나 따로 두기 좋습니다.",
+            "ja": "注ぎ口が長く細いので、フロントトランク奥の注入口に差してこぼさずに注げます。4個入りなのでウォッシャー液専用に1つ分けておけます。",
+            "en": "The long, narrow spout reaches the filler at the back of the front trunk without spills. With four in the pack, you can keep one just for washer fluid."
           },
           "query": {
             "jp": "じょうご ロングノズル 車",
             "us": "automotive funnel long flexible spout"
           },
           "role": "extra",
-          "image": "funnel"
+          "image": "funnel",
+          "link": "https://link.amazon/B01vZAVRG"
         }
       ],
       "photo": "frunk",
