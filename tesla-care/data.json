@@ -343,21 +343,22 @@
         },
         {
           "name": {
-            "ko": "극세사 타월",
-            "ja": "マイクロファイバータオル",
-            "en": "Microfiber towels"
+            "ko": "SHSCLY 극세사 세차 타월 (50×60cm, 2장)",
+            "ja": "SHSCLY マイクロファイバー洗車タオル（50×60cm・2枚入）",
+            "en": "SHSCLY microfiber car towel (50 × 60 cm, 2-pack)"
           },
           "why": {
-            "ko": "교체하는 동안 앞 유리에 깔아 두면 암이 떨어져도 유리가 긁히지 않습니다.",
-            "ja": "交換中にフロントガラスに敷いておけば、アームが落ちてもガラスに傷がつきません。",
-            "en": "Lay one on the windshield while you work so a dropped arm can't scratch the glass."
+            "ko": "와이퍼를 바꾸는 동안 앞 유리에 깔아 두면 암이 떨어져도 유리가 긁히지 않습니다. 도톰해서 세차 후 물기 닦기에도 씁니다.",
+            "ja": "ワイパー交換中にフロントガラスに敷いておけば、アームが落ちてもガラスに傷がつきません。厚手なので洗車後の拭き上げにも使えます。",
+            "en": "Lay it on the windshield while you change the blades so a dropped arm can't scratch the glass. It's thick enough to dry the car after a wash, too."
           },
           "query": {
             "jp": "マイクロファイバータオル 洗車",
             "us": "microfiber towels car"
           },
           "role": "extra",
-          "image": "towel"
+          "image": "towel",
+          "link": "https://link.amazon/B02CvaDNy"
         }
       ],
       "photo": "screen",
