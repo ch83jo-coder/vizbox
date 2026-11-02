@@ -109,8 +109,7 @@
           },
           "liquid": true,
           "role": "main",
-          "image": "washer-winter",
-          "link": "https://amzn.to/3WZMaDQ"
+          "image": "washer-winter"
         },
         {
           "name": {
@@ -310,16 +309,16 @@
           },
           "nameByModel": {
             "model-3-highland": {
-              "ko": "하이랜드용 와이퍼 (650mm + 475mm)",
-              "ja": "ハイランド用ワイパー（650mm＋475mm）",
-              "en": "Highland wiper blades (650 mm + 475 mm)"
+              "ko": "소프트99 글라코 와이퍼 파워 발수 (650mm + 475mm)",
+              "ja": "ソフト99 ガラコワイパー パワー撥水（650mm＋475mm）",
+              "en": "SOFT99 Glaco Wiper Power Repellent (650 mm + 475 mm)"
             }
           },
           "whyByModel": {
             "model-3-highland": {
-              "ko": "하이랜드에 맞는 크기의 블레이드입니다. 운전석용(650mm)과 조수석용(475mm)을 아래 버튼에서 하나씩 사세요.",
-              "ja": "ハイランドに合うサイズのブレードです。運転席側（650mm）と助手席側（475mm）を下のボタンから1本ずつ購入してください。",
-              "en": "Blades sized for the Highland. Buy one of each below: driver side (650 mm) and passenger side (475 mm)."
+              "ko": "하이랜드에 실제로 달아 보고 맞는 것을 확인한 블레이드입니다. 고무에 발수 코팅이 되어 있습니다. 운전석용(650mm)과 조수석용(475mm)을 하나씩 사세요.",
+              "ja": "ハイランドに実際に取り付けて適合を確認したブレードです。ゴムに撥水コーティングが施されています。運転席側（650mm）と助手席側（475mm）を1本ずつ購入してください。",
+              "en": "Blades we fitted on a Highland ourselves. The rubber has a water-repellent coating. Buy one of each: driver side (650 mm) and passenger side (475 mm)."
             }
           }
         },
