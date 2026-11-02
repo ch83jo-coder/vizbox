@@ -494,21 +494,22 @@
         },
         {
           "name": {
-            "ko": "무선 휴대용 공기 주입기 (자동 정지)",
-            "ja": "コードレス 電動空気入れ（自動停止）",
-            "en": "Cordless tire inflator (auto shut-off)"
+            "ko": "ASMAX T40 무선 전동 공기 주입기",
+            "ja": "ASMAX T40 電動空気入れ（コードレス）",
+            "en": "ASMAX T40 cordless tire inflator"
           },
           "why": {
-            "ko": "목표 공기압을 정해 두면 그 값에서 자동으로 멈춰 초보자도 쉽게 맞출 수 있습니다.",
-            "ja": "目標の空気圧を設定すると自動で止まるので、初めてでも簡単に合わせられます。",
-            "en": "Set the target and it stops on its own, which makes it easy even the first time."
+            "ko": "목표 공기압을 맞춰 두면 자동으로 멈춥니다. 화면에 psi·kPa·bar로 현재 공기압이 표시되고, 테슬라와 같은 미국식(슈레더) 밸브에 맞습니다. 6000mAh 충전식이라 선 없이 쓸 수 있습니다.",
+            "ja": "目標の空気圧を設定すると自動で止まります。画面にpsi・kPa・barで現在の空気圧が表示され、テスラと同じ米式バルブに対応。6000mAhの充電式でコードレスで使えます。",
+            "en": "Set the target and it stops on its own. The screen shows the current pressure in psi, kPa or bar, it fits the Schrader valves Tesla uses, and the 6000 mAh battery means no cord."
           },
           "query": {
             "jp": "電動空気入れ 車 自動停止 コードレス",
             "us": "cordless tire inflator auto shut off"
           },
           "role": "alt",
-          "image": "inflator"
+          "image": "inflator",
+          "link": "https://link.amazon/B02VrObE6"
         },
         {
           "name": {
