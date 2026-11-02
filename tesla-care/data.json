@@ -287,6 +287,40 @@
               "jp": "テスラ モデル3 ハイランド ワイパー 650mm 475mm",
               "us": "Tesla Model 3 Highland 2024 wiper blades 26 19"
             }
+          },
+          "linksByModel": {
+            "model-3-highland": [
+              {
+                "url": "https://link.amazon/B04Xl6mLl",
+                "label": {
+                  "ko": "운전석 650mm 보기 ↗",
+                  "ja": "運転席側 650mm を見る ↗",
+                  "en": "Driver side, 650 mm ↗"
+                }
+              },
+              {
+                "url": "https://link.amazon/B0fQEGR0e",
+                "label": {
+                  "ko": "조수석 475mm 보기 ↗",
+                  "ja": "助手席側 475mm を見る ↗",
+                  "en": "Passenger side, 475 mm ↗"
+                }
+              }
+            ]
+          },
+          "nameByModel": {
+            "model-3-highland": {
+              "ko": "하이랜드용 와이퍼 (650mm + 475mm)",
+              "ja": "ハイランド用ワイパー（650mm＋475mm）",
+              "en": "Highland wiper blades (650 mm + 475 mm)"
+            }
+          },
+          "whyByModel": {
+            "model-3-highland": {
+              "ko": "하이랜드에 맞는 크기의 블레이드입니다. 운전석용(650mm)과 조수석용(475mm)을 아래 버튼에서 하나씩 사세요.",
+              "ja": "ハイランドに合うサイズのブレードです。運転席側（650mm）と助手席側（475mm）を下のボタンから1本ずつ購入してください。",
+              "en": "Blades sized for the Highland. Buy one of each below: driver side (650 mm) and passenger side (475 mm)."
+            }
           }
         },
         {

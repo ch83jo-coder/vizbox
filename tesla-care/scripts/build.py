@@ -153,9 +153,14 @@ def home(lang):
 <section><h2>{e(t("guides",lang))}</h2><ul class="guide-list">{guide_list}</ul></section>
 <script>(()=>{{let id;try{{id=localStorage.getItem("tc-model")}}catch{{}}const names={json.dumps(names,ensure_ascii=False)};if(!names[id])return;const p=document.getElementById("remembered"),a=p.querySelector("a");a.href="{url(lang)}"+id+"/";a.textContent=names[id]+" →";p.hidden=false;document.querySelector('[data-model="'+id+'"]').classList.add("is-mine")}})()</script>'''
     return shell(lang,'',t('title',lang),t('heroLead',lang),body,[m['photo'] for m in MODELS],MODELS[-1]['photo'])
+def buttons(lang,p,m):
+    # Separately sold items for one car (e.g. driver and passenger blades) get a button each.
+    links=p.get('linksByModel',{}).get(m['id'])
+    if links:return '<span class="buys">'+''.join(f'<a class="buy" href="{e(l["url"])}" target="_blank" rel="sponsored nofollow noopener">{e(l["label"][lang])}</a>' for l in links)+'</span>'
+    return f'<a class="buy" href="{e(amazon(lang,p,m))}" target="_blank" rel="sponsored nofollow noopener">{t("buy",lang)}</a>'
 def product_card(lang,p,m,big=False):
     note=t('liquid',lang) if p.get('liquid') else ''
-    return f'<li class="product{" best" if big else ""}"><img class="product-img" src="/assets/illustrations/{p["image"]}.svg" alt="" loading="lazy" width="160" height="120"><div>'+(f'<span class="badge">{t("best",lang)}</span>' if big else '')+f'<h3>{e(p["name"][lang])}</h3><p>{e(p["why"][lang])}</p>'+(f'<p class="note">{e(note)}</p>' if note else '')+f'<a class="buy" href="{e(amazon(lang,p,m))}" target="_blank" rel="sponsored nofollow noopener">{t("buy",lang)}</a></div></li>'
+    return f'<li class="product{" best" if big else ""}"><img class="product-img" src="/assets/illustrations/{p["image"]}.svg" alt="" loading="lazy" width="160" height="120"><div>'+(f'<span class="badge">{t("best",lang)}</span>' if big else '')+f'<h3>{e(p.get("nameByModel",{}).get(m["id"],p["name"])[lang])}</h3><p>{e(p.get("whyByModel",{}).get(m["id"],p["why"])[lang])}</p>'+(f'<p class="note">{e(note)}</p>' if note else '')+buttons(lang,p,m)+'</div></li>'
 def hub(lang,m):
     mains=[(g,p) for g in GUIDES for p in g['products'] if p['role']=='main'];extras=[(g,p) for g in GUIDES for p in g['products'] if p['role']=='extra']
     item=lambda g,p:product_card(lang,p,m).replace('<h3>',f'<small class="for">{e(t("forGuide",lang).format(g["title"][lang]))}</small><h3>',1)

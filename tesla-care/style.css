@@ -120,3 +120,4 @@ footer p{margin:0 0 8px}
 @media(max-width:560px){.product{flex-direction:row}.product-img,.product.best .product-img{width:96px;height:72px}.compact .product-img{width:72px;height:54px}}
 @media(prefers-reduced-motion:reduce){.model-card{transition:none}}
 .model-photo,.hub-photo,.guide-photo,.card-photo{height:auto}
+.buys{display:flex;flex-wrap:wrap;gap:8px}
