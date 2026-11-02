@@ -121,3 +121,4 @@ footer p{margin:0 0 8px}
 @media(prefers-reduced-motion:reduce){.model-card{transition:none}}
 .model-photo,.hub-photo,.guide-photo,.card-photo{height:auto}
 .buys{display:flex;flex-wrap:wrap;gap:8px}
+.family{font-size:15px;color:var(--muted);margin:20px 0 10px;letter-spacing:1px}

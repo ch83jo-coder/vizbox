@@ -37,6 +37,18 @@
             "ko": "약 3.2L",
             "ja": "約3.2L",
             "en": "About 3.2 L"
+          },
+          "valueByModel": {
+            "model-y": {
+              "ko": "약 4.5L",
+              "ja": "約4.5L",
+              "en": "About 4.5 L"
+            },
+            "model-y-juniper": {
+              "ko": "약 4.5L",
+              "ja": "約4.5L",
+              "en": "About 4.5 L"
+            }
           }
         },
         {
@@ -99,9 +111,9 @@
             "en": "KYK Clear Washer Fluid 2 L (−30 °C)"
           },
           "why": {
-            "ko": "발수·벌레 제거 성분이 없는 사계절용 워셔액입니다. 물을 타지 않고 그대로 넣으면 −30℃까지 얼지 않아 겨울에도 그대로 쓸 수 있습니다. 2통이면 탱크가 가득 찹니다.",
-            "ja": "撥水剤・虫取り成分なしのオールシーズン用ウォッシャー液です。薄めずにそのまま入れれば−30℃まで凍らないので、冬もそのまま使えます。2本でタンクが満タンになります。",
-            "en": "All-season washer fluid with no water repellent or bug wash. Pour it in undiluted and it won't freeze down to −30 °C, so it works through winter. Two bottles fill the reservoir."
+            "ko": "발수·벌레 제거 성분이 없는 사계절용 워셔액입니다. 물을 타지 않고 그대로 넣으면 −30℃까지 얼지 않아 겨울에도 그대로 쓸 수 있습니다. Model 3는 2통, Model Y는 2~3통이면 가득 찹니다.",
+            "ja": "撥水剤・虫取り成分なしのオールシーズン用ウォッシャー液です。薄めずにそのまま入れれば−30℃まで凍らないので、冬もそのまま使えます。モデル3は2本、モデルYは2〜3本で満タンになります。",
+            "en": "All-season washer fluid with no water repellent or bug wash. Pour it in undiluted and it won't freeze down to −30 °C, so it works through winter. Two bottles fill a Model 3; a Model Y takes two to three."
           },
           "query": {
             "jp": "ウォッシャー液 解氷 寒冷地",
@@ -162,6 +174,16 @@
           "ko": "하이랜드도 앞 트렁크 뒤쪽에서 보충합니다. 용량은 구형 매뉴얼 기준(약 3.2L)이라, 양보다 주입구 목 바로 아래까지를 기준으로 채우세요.",
           "ja": "ハイランドもフロントトランクの奥から補充します。容量は旧型マニュアルの値（約3.2L）なので、量より注入口の首のすぐ下を目安に入れてください。",
           "en": "The Highland is also filled from the back of the front trunk. The 3.2 L figure comes from the earlier manual, so go by the level just below the filler neck rather than the amount."
+        },
+        "model-y": {
+          "ko": "Model Y는 테슬라 문서 기준 탱크 용량이 약 4.5L로 Model 3보다 큽니다. 보충구는 똑같이 앞 트렁크 뒤쪽에 있습니다.",
+          "ja": "モデルYはテスラの資料でタンク容量が約4.5Lと、モデル3より大きめです。注入口は同じくフロントトランクの奥にあります。",
+          "en": "Tesla lists the Model Y reservoir at 4.5 L, larger than the Model 3's. The filler is in the same place, at the back of the front trunk."
+        },
+        "model-y-juniper": {
+          "ko": "주니퍼도 앞 트렁크 뒤쪽에서 보충합니다. 4.5L는 구형 Model Y 문서 기준이라, 양보다 주입구 목 바로 아래까지를 기준으로 채우세요.",
+          "ja": "ジュニパーもフロントトランクの奥から補充します。4.5Lは旧型モデルYの資料の値なので、量より注入口の首のすぐ下を目安に入れてください。",
+          "en": "The Juniper is also filled from the back of the front trunk. The 4.5 L figure comes from the earlier Model Y documents, so go by the level just below the filler neck."
         }
       }
     },
@@ -202,6 +224,18 @@
             "ko": "19인치 (475mm)",
             "ja": "19インチ（475mm）",
             "en": "19 in (475 mm)"
+          },
+          "valueByModel": {
+            "model-y": {
+              "ko": "19인치 (475mm, 일부 20인치)",
+              "ja": "19インチ（475mm、20インチ表記も）",
+              "en": "19 in (475 mm; some list 20 in)"
+            },
+            "model-y-juniper": {
+              "ko": "19인치 (475mm, 일부 20인치)",
+              "ja": "19インチ（475mm、20インチ表記も）",
+              "en": "19 in (475 mm; some list 20 in)"
+            }
           }
         },
         {
@@ -264,18 +298,18 @@
       "products": [
         {
           "name": {
-            "ko": "Model 3 전용 와이퍼 세트 (26+19인치)",
-            "ja": "モデル3専用ワイパーセット（650mm＋475mm）",
-            "en": "Model 3 wiper set (26 + 19 in)"
+            "ko": "차종 전용 와이퍼 세트 (650mm + 475mm)",
+            "ja": "車種専用ワイパーセット（650mm＋475mm）",
+            "en": "Model-specific wiper set (650 mm + 475 mm)"
           },
           "why": {
-            "ko": "두 개 세트로, 푸시 버튼 어댑터가 미리 끼워진 Model 3 전용품이 편합니다. 상품 설명에서 'Model 3'와 연식을 꼭 확인하세요.",
-            "ja": "2本セットで、プッシュボタン用アダプターが付いたモデル3専用品が手軽です。商品説明で「Model 3」と年式を必ず確認してください。",
-            "en": "A two-blade set made for the Model 3, with the push-button adapter already fitted, is the easy choice. Check the listing names the Model 3 and your year."
+            "ko": "푸시 버튼 어댑터가 끼워진 내 차종 전용 2개 세트가 편합니다. 상품 설명에서 차종(Model 3/Model Y)과 연식을 꼭 확인하세요.",
+            "ja": "プッシュボタン用アダプター付きの、自分の車種専用2本セットが手軽です。商品説明で車種（モデル3／モデルY）と年式を必ず確認してください。",
+            "en": "A two-blade set made for your car, with the push-button adapter fitted, is the easy choice. Check the listing names your model (3 or Y) and year."
           },
           "query": {
-            "jp": "テスラ モデル3 ワイパー 650mm 475mm",
-            "us": "Tesla Model 3 wiper blades 26 19"
+            "jp": "テスラ ワイパー 650mm 475mm",
+            "us": "Tesla wiper blades 26 19"
           },
           "role": "main",
           "image": "wiper-set",
@@ -287,6 +321,14 @@
             "model-3-highland": {
               "jp": "テスラ モデル3 ハイランド ワイパー 650mm 475mm",
               "us": "Tesla Model 3 Highland 2024 wiper blades 26 19"
+            },
+            "model-y": {
+              "jp": "テスラ モデルY ワイパー 650mm 2020-2024",
+              "us": "Tesla Model Y 2020-2024 wiper blades"
+            },
+            "model-y-juniper": {
+              "jp": "テスラ モデルY ジュニパー 2025 ワイパー",
+              "us": "Tesla Model Y Juniper 2025 wiper blades"
             }
           },
           "linksByModel": {
@@ -326,21 +368,31 @@
         },
         {
           "name": {
-            "ko": "보쉬 에어로트윈 Model 3용 세트",
-            "ja": "ボッシュ エアロツイン モデル3用セット",
-            "en": "Bosch Aerotwin set for Model 3"
+            "ko": "보쉬 에어로트윈 테슬라용 세트",
+            "ja": "ボッシュ エアロツイン テスラ用セット",
+            "en": "Bosch Aerotwin set for Tesla"
           },
           "why": {
-            "ko": "유럽 부품점들이 Model 3(하이랜드 포함)용으로 파는 26/19인치 푸시 버튼 세트입니다.",
-            "ja": "欧州の部品店がモデル3（ハイランド含む）用として販売している26/19インチのプッシュボタン式セットです。",
-            "en": "A 26/19 in push-button set that European parts sellers list for the Model 3, Highland included."
+            "ko": "유럽 부품점들이 Model 3·Model Y용으로 파는 푸시 버튼 세트입니다. 상품 설명에서 차종을 확인하세요.",
+            "ja": "欧州の部品店がモデル3・モデルY用として販売しているプッシュボタン式セットです。商品説明で車種を確認してください。",
+            "en": "A push-button set that European parts sellers list for the Model 3 and Model Y. Check the listing names your model."
           },
           "query": {
             "jp": "ボッシュ エアロツイン テスラ モデル3",
             "us": "Bosch Aerotwin Tesla Model 3"
           },
           "role": "alt",
-          "image": "wiper-set"
+          "image": "wiper-set",
+          "queryByModel": {
+            "model-y": {
+              "jp": "ボッシュ エアロツイン テスラ モデルY",
+              "us": "Bosch Aerotwin Tesla Model Y"
+            },
+            "model-y-juniper": {
+              "jp": "ボッシュ エアロツイン テスラ モデルY",
+              "us": "Bosch Aerotwin Tesla Model Y"
+            }
+          }
         },
         {
           "name": {
@@ -373,6 +425,16 @@
           "ko": "'Highland' 또는 '2024+' 적합이 적힌 26/19인치 세트를 고르세요. '2017–2023 전용'이라고만 적힌 제품은 피하세요.",
           "ja": "「Highland」または「2024年〜」適合と書かれた26/19インチのセットを選んでください。「2017〜2023専用」とだけ書かれた商品は避けてください。",
           "en": "Choose a 26/19 in set whose listing names the Highland or 2024+. Skip sets listed only for 2017–2023."
+        },
+        "model-y": {
+          "ko": "구형 Model Y는 운전석 26인치, 조수석 19인치로 파는 곳이 많지만 조수석을 20인치로 적은 곳도 있습니다. 지금 달린 조수석 블레이드 길이를 재 보고 고르세요.",
+          "ja": "旧型モデルYは運転席26インチ・助手席19インチで販売されていることが多いものの、助手席を20インチとする店もあります。今の助手席ブレードの長さを測ってから選んでください。",
+          "en": "The earlier Model Y is mostly sold with 26 in driver and 19 in passenger blades, but some sellers list 20 in for the passenger side. Measure your current passenger blade before choosing."
+        },
+        "model-y-juniper": {
+          "ko": "주니퍼용으로는 26/19인치 세트가 판매되고 있습니다. 'Juniper' 또는 '2025+' 적합 표기를 확인하세요. 테슬라가 공식 규격을 공개하지 않으니 사기 전에 지금 블레이드 길이를 재 보세요.",
+          "ja": "ジュニパー用には26/19インチのセットが販売されています。「Juniper」または「2025年〜」適合の表記を確認してください。テスラは公式寸法を公開していないので、購入前に今のブレードの長さを測ってください。",
+          "en": "Sets for the Juniper are sold in 26/19 in. Look for a listing that names the Juniper or 2025+. Tesla doesn't publish the sizes, so measure your current blades first."
         }
       }
     },
@@ -386,9 +448,9 @@
         "en": "Adjusting tire pressure"
       },
       "summary": {
-        "ko": "운전석 도어 기둥의 라벨에 적힌 값으로, 타이어가 식었을 때 맞춥니다. 많은 Model 3는 42psi(약 290kPa)입니다.",
-        "ja": "運転席ドアの柱にあるラベルの値に、タイヤが冷えているときに合わせます。多くのモデル3は42psi（約290kPa）です。",
-        "en": "Set the pressure on the label in the driver's door pillar, with the tires cold. Many Model 3s use 42 psi (about 290 kPa)."
+        "ko": "운전석 도어 기둥의 라벨에 적힌 값으로, 타이어가 식었을 때 맞춥니다. 많은 Model 3·Model Y는 42psi(약 290kPa)입니다.",
+        "ja": "運転席ドアの柱にあるラベルの値に、タイヤが冷えているときに合わせます。多くのモデル3・モデルYは42psi（約290kPa）です。",
+        "en": "Set the pressure on the label in the driver's door pillar, with the tires cold. Many Model 3s and Model Ys use 42 psi (about 290 kPa)."
       },
       "facts": [
         {
@@ -541,6 +603,16 @@
           "ko": "하이랜드도 휠 크기에 따라 권장값이 다를 수 있습니다. 내 차 도어 기둥 라벨 값을 그대로 따르세요.",
           "ja": "ハイランドもホイールサイズによって指定値が異なる場合があります。自分の車のドア柱ラベルの値に従ってください。",
           "en": "On the Highland too, the recommended pressure can differ by wheel size. Follow the label on your own door pillar."
+        },
+        "model-y": {
+          "ko": "Model Y도 휠 크기에 따라 권장값이 다를 수 있습니다. 내 차 도어 기둥 라벨 값을 그대로 따르세요.",
+          "ja": "モデルYもホイールサイズによって指定値が異なる場合があります。自分の車のドア柱ラベルの値に従ってください。",
+          "en": "On the Model Y too, the recommended pressure can differ by wheel size. Follow the label on your own door pillar."
+        },
+        "model-y-juniper": {
+          "ko": "주니퍼는 휠·타이어 사양이 구형과 다를 수 있습니다. 내 차 도어 기둥 라벨 값을 그대로 따르세요.",
+          "ja": "ジュニパーはホイールやタイヤの仕様が旧型と異なる場合があります。自分の車のドア柱ラベルの値に従ってください。",
+          "en": "The Juniper can have different wheel and tire specs from the earlier Model Y. Follow the label on your own door pillar."
         }
       }
     }
@@ -548,15 +620,33 @@
   "sources": [
     {
       "label": "Tesla Model 3 Owner's Manual: Windshield Wiper Blades, Jets and Fluid",
-      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-197C481B-B4D4-4973-9772-2AF488442CE1.html"
+      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-197C481B-B4D4-4973-9772-2AF488442CE1.html",
+      "family": "model-3"
     },
     {
       "label": "Tesla Model 3 Owner's Manual: Tire Care and Maintenance",
-      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html"
+      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html",
+      "family": "model-3"
     },
     {
       "label": "Tesla Model 3 Owner's Manual: Do It Yourself Maintenance",
-      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-57377B7B-867B-48C3-BF30-9E2C082AFAAF.html"
+      "url": "https://www.tesla.com/ownersmanual/model3/en_us/GUID-57377B7B-867B-48C3-BF30-9E2C082AFAAF.html",
+      "family": "model-3"
+    },
+    {
+      "family": "model-y",
+      "label": "Tesla Model Y Owner's Manual: Windshield Wiper Blades, Jets and Fluid",
+      "url": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-197C481B-B4D4-4973-9772-2AF488442CE1.html"
+    },
+    {
+      "family": "model-y",
+      "label": "Tesla Model Y Owner's Manual: Tire Care and Maintenance",
+      "url": "https://www.tesla.com/ownersmanual/modely/en_us/GUID-94F63B13-EA2C-45D9-83AB-5DCA6295D587.html"
+    },
+    {
+      "family": "model-y",
+      "label": "Tesla Model Y: Topping Up Windshield Washer Fluid",
+      "url": "https://service.tesla.com/docs/Public/diy/modely/en_us/GUID-3A80A08E-9DCB-45A4-9796-BCD9153A4A00.html"
     }
   ],
   "photos": {
@@ -619,6 +709,30 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "page": "https://commons.wikimedia.org/wiki/File:Tesla_Model_3_Screen_Dec_2020.jpg"
+    },
+    "modely-classic": {
+      "file": "2023 Tesla Model Y Long Range All-Wheel Drive in Pearl White Multi-Coat, front right, 2024-09-25.jpg",
+      "alt": {
+        "ko": "흰색 구형 Model Y (2023년식)",
+        "ja": "白い旧型モデルY（2023年式）",
+        "en": "A white earlier Model Y (2023)"
+      },
+      "artist": "Elise240SX",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2023_Tesla_Model_Y_Long_Range_All-Wheel_Drive_in_Pearl_White_Multi-Coat%2C_front_right%2C_2024-09-25.jpg"
+    },
+    "modely-juniper": {
+      "file": "2025 Tesla Model Y Juniper Long Range AWD.jpg",
+      "alt": {
+        "ko": "신형 Model Y 주니퍼 (2025년식)",
+        "ja": "新型モデルY ジュニパー（2025年式）",
+        "en": "The new Model Y Juniper (2025)"
+      },
+      "artist": "Chanokchon",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2025_Tesla_Model_Y_Juniper_Long_Range_AWD.jpg"
     }
   },
   "models": [
@@ -639,7 +753,8 @@
         "ko": "둥근 앞모습, 안개등 자리가 있는 범퍼",
         "ja": "丸みのあるフロント、フォグランプのあるバンパー",
         "en": "Rounded nose, bumper with fog-lamp housings"
-      }
+      },
+      "family": "model-3"
     },
     {
       "id": "model-3-highland",
@@ -658,7 +773,60 @@
         "ko": "얇고 날카로운 헤드라이트, 매끈한 범퍼",
         "ja": "細くシャープなヘッドライト、すっきりしたバンパー",
         "en": "Slim, sharp headlights and a clean bumper"
+      },
+      "family": "model-3"
+    },
+    {
+      "id": "model-y",
+      "family": "model-y",
+      "photo": "modely-classic",
+      "name": {
+        "ko": "Model Y (구형)",
+        "ja": "モデルY（旧型）",
+        "en": "Model Y (earlier)"
+      },
+      "years": {
+        "ko": "2020–2024년식",
+        "ja": "2020〜2024年式",
+        "en": "2020–2024"
+      },
+      "hint": {
+        "ko": "좌우로 떨어진 헤드라이트, 둥근 앞모습",
+        "ja": "左右に分かれたヘッドライト、丸みのあるフロント",
+        "en": "Separate headlights and a rounded nose"
+      }
+    },
+    {
+      "id": "model-y-juniper",
+      "family": "model-y",
+      "photo": "modely-juniper",
+      "name": {
+        "ko": "Model Y 주니퍼 (신형)",
+        "ja": "モデルY ジュニパー（新型）",
+        "en": "Model Y Juniper"
+      },
+      "years": {
+        "ko": "2025년식~",
+        "ja": "2025年式〜",
+        "en": "2025 onward"
+      },
+      "hint": {
+        "ko": "앞쪽을 가로지르는 일자형 라이트",
+        "ja": "フロントを横切る一文字のライト",
+        "en": "A light bar across the whole front"
       }
     }
-  ]
+  ],
+  "families": {
+    "model-3": {
+      "ko": "Model 3",
+      "ja": "モデル3",
+      "en": "Model 3"
+    },
+    "model-y": {
+      "ko": "Model Y",
+      "ja": "モデルY",
+      "en": "Model Y"
+    }
+  }
 }

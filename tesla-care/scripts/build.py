@@ -23,7 +23,7 @@ data=json.loads((ROOT/'data.json').read_text())
 MODELS=data['models'];GUIDES=data['guides'];PHOTOS=data['photos']
 e=lambda s:html.escape(str(s),quote=True)
 T={
- 'brand':{'ko':'모델3 셀프 정비','ja':'モデル3 セルフ整備','en':'Model 3 DIY Care'},
+ 'brand':{'ko':'테슬라 셀프 정비','ja':'テスラ セルフ整備','en':'Tesla DIY Care'},
  'tagline':{'ko':'테슬라 입문자를 위한 쉬운 정비 가이드','ja':'テスラ初心者のためのやさしい整備ガイド','en':'Easy maintenance guides for new Tesla owners'},
  'hero':{'ko':'내 차를 고르면<br>필요한 것만 알려 드려요','ja':'車を選ぶだけで<br>必要なものがわかる','en':'Pick your car.<br>We\'ll show you exactly what it needs.'},
  'heroLead':{'ko':'워셔액·와이퍼·타이어 공기압. 공구 없이 집에서 할 수 있는 기본 정비를 사진과 그림으로 안내하고, 내 차에 맞는 용품을 바로 고를 수 있게 정리했습니다.','ja':'ウォッシャー液・ワイパー・タイヤ空気圧。工具なしで自宅でできる基本の整備を写真とイラストで案内し、自分の車に合う用品をすぐ選べるようにまとめました。','en':'Washer fluid, wipers and tire pressure: basic upkeep you can do at home without tools, shown with photos and diagrams, plus the right supplies for your car, ready to buy.'},
@@ -53,14 +53,14 @@ T={
  'home':{'ko':'홈','ja':'ホーム','en':'Home'},
  'change':{'ko':'차 바꾸기','ja':'車を変更','en':'Change car'},
  'next':{'ko':'다음 가이드','ja':'次のガイド','en':'Next guide'},
- 'disclaimer':{'ko':'이 사이트는 Tesla와 관계없는 개인 사이트입니다. 내용은 Model 3 오너스 매뉴얼을 바탕으로 정리했지만, 차량과 소프트웨어 버전에 따라 다를 수 있으니 차량의 매뉴얼과 표시를 우선하세요.','ja':'このサイトはTesla社とは関係のない個人サイトです。内容はモデル3のオーナーズマニュアルをもとにまとめていますが、車両やソフトウェアのバージョンによって異なる場合があるため、お使いの車両のマニュアルと表示を優先してください。','en':'This is an independent site, not affiliated with Tesla. Guides are based on the Model 3 Owner\'s Manual, but details can differ by vehicle and software version, so your car\'s manual and screens come first.'},
+ 'disclaimer':{'ko':'이 사이트는 Tesla와 관계없는 개인 사이트입니다. 내용은 Model 3·Model Y 오너스 매뉴얼을 바탕으로 정리했지만, 차량과 소프트웨어 버전에 따라 다를 수 있으니 차량의 매뉴얼과 표시를 우선하세요.','ja':'このサイトはTesla社とは関係のない個人サイトです。内容はモデル3・モデルYのオーナーズマニュアルをもとにまとめていますが、車両やソフトウェアのバージョンによって異なる場合があるため、お使いの車両のマニュアルと表示を優先してください。','en':'This is an independent site, not affiliated with Tesla. Guides are based on the Model 3 and Model Y Owner\'s Manuals, but details can differ by vehicle and software version, so your car\'s manual and screens come first.'},
  'affiliate':{'ko':'Amazonのアソシエイトとして、当メンバーは適格販売により収入を得ています。 (아마존 어소시에이트로서 사이트 운영자는 적격 판매로 수익을 얻습니다.)','ja':'Amazonのアソシエイトとして、当メンバーは適格販売により収入を得ています。','en':'Amazonのアソシエイトとして、当メンバーは適格販売により収入を得ています。 (As an Amazon Associate, this site earns from qualifying purchases.)'},
  'conv':{'ko':'공기압 단위 변환','ja':'空気圧の単位換算','en':'Pressure unit converter'},
  'convLead':{'ko':'라벨과 게이지의 단위가 다를 때 쓰세요.','ja':'ラベルとゲージの単位が違うときに使ってください。','en':'Use it when the label and your gauge use different units.'},
  'value':{'ko':'값','ja':'数値','en':'Value'},
  'unit':{'ko':'단위','ja':'単位','en':'Unit'},
  'langName':{'ko':'한국어','ja':'日本語','en':'English'},
- 'title':{'ko':'모델3 셀프 정비 | 테슬라 입문자 가이드','ja':'モデル3 セルフ整備 | テスラ初心者ガイド','en':'Model 3 DIY Care | Guides for new Tesla owners'},
+ 'title':{'ko':'테슬라 셀프 정비 | Model 3·Model Y 입문자 가이드','ja':'テスラ セルフ整備 | モデル3・モデルY 初心者ガイド','en':'Tesla DIY Care | Model 3 and Model Y guides for new owners'},
  'hubTitle':{'ko':'{} 정비 가이드와 추천 용품','ja':'{}の整備ガイドとおすすめ用品','en':'{}: maintenance guides and supplies'},
 }
 t=lambda key,lang:T[key][lang]
@@ -140,19 +140,19 @@ def shell(lang,path,title,description,body,photos=(),image=None):
     og=f'<meta property="og:image" content="{ORIGIN}/assets/photos/{image}.jpg"><meta name="twitter:card" content="summary_large_image">' if image else '<meta name="twitter:card" content="summary">'
     return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f172a"><title>{e(title)}</title><meta name="description" content="{e(description)}"><link rel="canonical" href="{canonical}">{alternates}<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{canonical}">{og}<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"></head><body>
 <header class="top"><a class="brand" href="{url(lang)}"><span class="logo" aria-hidden="true">{icon("tire","logo-icon")}</span><span>{e(t("brand",lang))}<small>{e(t("tagline",lang))}</small></span></a><nav class="langs" aria-label="Language">{switch}</nav></header>
-<main>{body}</main><footer>{credits}<p>{e(t("disclaimer",lang))}</p><p>{e(t("affiliate",lang))}</p><p>© Model 3 DIY Care</p></footer></body></html>'''
+<main>{body}</main><footer>{credits}<p>{e(t("disclaimer",lang))}</p><p>{e(t("affiliate",lang))}</p><p>© Tesla DIY Care</p></footer></body></html>'''
 REMEMBER='<script>try{localStorage.setItem("tc-model","%s")}catch{}</script>'
 def model_card(lang,m):
     return f'<a class="model-card" href="{url(lang,m["id"]+"/")}" data-model="{m["id"]}">{photo(m["photo"],lang,"model-photo","eager")}<span class="model-text"><strong>{e(m["name"][lang])}</strong><span>{e(m["years"][lang])}</span><small>{e(m["hint"][lang])}</small><span class="choose">{t("choose",lang)}</span></span></a>'
 def home(lang):
     names={m['id']:m['name'][lang] for m in MODELS}
     guide_list=''.join(f'<li><span class="card-icon">{icon(g["icon"])}</span><span><strong>{e(g["title"][lang])}</strong><small>{e(g["summary"][lang])}</small></span></li>' for g in GUIDES)
-    body=f'''<section class="hero"><p class="eyebrow">TESLA MODEL 3</p><h1>{t("hero",lang)}</h1><p class="lead">{e(t("heroLead",lang))}</p></section>
+    body=f'''<section class="hero"><p class="eyebrow">TESLA MODEL 3 · MODEL Y</p><h1>{t("hero",lang)}</h1><p class="lead">{e(t("heroLead",lang))}</p></section>
 <p class="remembered" id="remembered" hidden>{e(t("remember",lang))}: <a href="#"></a></p>
-<section aria-labelledby="pick"><h2 id="pick">{e(t("pick",lang))}</h2><p class="muted">{e(t("pickLead",lang))}</p><div class="models">{"".join(model_card(lang,m) for m in MODELS)}</div></section>
+<section aria-labelledby="pick"><h2 id="pick">{e(t("pick",lang))}</h2><p class="muted">{e(t("pickLead",lang))}</p>{"".join(f'<h3 class="family">{e(name[lang])}</h3><div class="models">'+"".join(model_card(lang,m) for m in MODELS if m["family"]==fam)+'</div>' for fam,name in data["families"].items())}</section>
 <section><h2>{e(t("guides",lang))}</h2><ul class="guide-list">{guide_list}</ul></section>
 <script>(()=>{{let id;try{{id=localStorage.getItem("tc-model")}}catch{{}}const names={json.dumps(names,ensure_ascii=False)};if(!names[id])return;const p=document.getElementById("remembered"),a=p.querySelector("a");a.href="{url(lang)}"+id+"/";a.textContent=names[id]+" →";p.hidden=false;document.querySelector('[data-model="'+id+'"]').classList.add("is-mine")}})()</script>'''
-    return shell(lang,'',t('title',lang),t('heroLead',lang),body,[m['photo'] for m in MODELS],MODELS[-1]['photo'])
+    return shell(lang,'',t('title',lang),t('heroLead',lang),body,[m['photo'] for m in MODELS],'model3-highland')
 def buttons(lang,p,m):
     # Separately sold items for one car (e.g. driver and passenger blades) get a button each.
     links=p.get('linksByModel',{}).get(m['id'])
@@ -175,14 +175,14 @@ def converter(lang):
     return f'''<section class="box converter" aria-labelledby="conv-title"><h2 id="conv-title">{e(t("conv",lang))}</h2><p>{e(t("convLead",lang))}</p><div class="conv-row"><label>{e(t("value",lang))}<input id="conv-value" type="number" inputmode="decimal" value="42" min="0" step="0.1"></label><label>{e(t("unit",lang))}<select id="conv-unit"><option value="psi">psi</option><option value="kpa">kPa</option><option value="bar">bar</option></select></label></div><output id="conv-out" for="conv-value conv-unit" aria-live="polite"></output></section>
 <script>(()=>{{const v=document.getElementById('conv-value'),u=document.getElementById('conv-unit'),o=document.getElementById('conv-out'),k={{psi:6.894757,kpa:1,bar:100}};function r(){{const n=parseFloat(v.value);if(!isFinite(n)){{o.textContent='';return}}const p=n*k[u.value];o.textContent=`${{(p/k.psi).toFixed(1)}} psi = ${{Math.round(p)}} kPa = ${{(p/100).toFixed(2)}} bar`}}v.addEventListener('input',r);u.addEventListener('change',r);r()}})()</script>'''
 def guide_page(lang,g,m,nxt):
-    facts=''.join(f'<div><dt>{e(f["label"][lang])}</dt><dd>{e(f["value"][lang])}</dd></div>' for f in g['facts'])
+    facts=''.join(f'<div><dt>{e(f["label"][lang])}</dt><dd>{e(f.get("valueByModel",{}).get(m["id"],f["value"])[lang])}</dd></div>' for f in g['facts'])
     steps=''.join(f'<li>{e(s[lang])}</li>' for s in g['steps'])
     warns=''.join(f'<li>{e(w[lang])}</li>' for w in g['warnings'])
     note=g.get('modelNotes',{}).get(m['id'])
     note=f'<section class="box mine"><h2>{icon("car")}{e(t("myCar",lang).format(m["name"][lang]))}</h2><p>{e(note[lang])}</p></section>' if note else ''
     store_note=f'<p class="note">{e(t("koStore",lang))}</p>' if t('koStore',lang) else ''
     main=[p for p in g['products'] if p['role']=='main'];rest=[p for p in g['products'] if p['role']!='main']
-    sources=''.join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a></li>' for s in data['sources'])
+    sources=''.join(f'<li><a href="{e(s["url"])}" target="_blank" rel="noopener">{e(s["label"])}</a></li>' for s in data['sources'] if s['family']==m['family'])
     other=[x for x in MODELS if x['id']!=m['id']]
     body=f'''<article class="guide"><nav class="crumbs" aria-label="breadcrumb"><a href="{url(lang)}">{e(t("home",lang))}</a> › <a href="{url(lang,m["id"]+"/")}">{e(m["name"][lang])}</a> › <span>{e(g["title"][lang])}</span></nav>
 <header class="guide-head"><div><p class="eyebrow">{e(m["name"][lang])} · {t("min",lang).format(g["minutes"])}</p><h1>{e(g["title"][lang])}</h1><p class="lead">{e(g["summary"][lang])}</p></div>{photo(g["photo"],lang,"guide-photo","eager")}</header>
