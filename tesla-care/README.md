@@ -26,7 +26,7 @@ python3 -m http.server 8080 --directory tesla-care
 
 ガイドと用品は `data.json` を編集し、`python3 tesla-care/scripts/build.py` で全ページ・sitemap.xml・robots.txtを生成します。生成したHTMLも一緒にコミットしてください。
 
-- **Amazonリンク**: すべての言語で amazon.co.jp にリンクします（`STORE`）。韓国語・英語ページには、Amazon.co.jpへのリンクであることと海外配送は商品ごとに異なる旨を表示します。用品に `asin`（`{"<model>": {"jp": "...", "us": "..."}}`）があればその商品ページへ、なければ検索結果へリンクします。検索語は `query`、車ごとに変える場合は `queryByModel`。ASINは適合を確認できたものだけ入れてください。
+- **Amazonリンク**: すべての言語で amazon.co.jp にリンクします（`STORE`）。韓国語・英語ページには、Amazon.co.jpへのリンクであることと海外配送は商品ごとに異なる旨を表示します。用品に `asin`（`{"<model>": {"jp": "...", "us": "..."}}`）があればその商品ページへ、なければ検索結果へリンクします。検索語は `query`、車ごとに変える場合は `queryByModel`。ASINは適合を確認できたものだけ入れてください。SiteStripeで作った短縮リンク（`https://amzn.to/...`）は `link` に書くと、全車種・全言語でそのまま使います（タグ込みなので `TAGS` は付けません）。フッターにはアソシエイト規約の表示文（「Amazonのアソシエイトとして…」）を全言語で表示します。
 - **アソシエイトタグ**: `scripts/build.py` の `TAGS`（`jp`・`us`）に入れて再生成すると全リンクに付きます。フッターにアフィリエイトの表記があります。
 - **液体の用品**（`"liquid": true`）は、韓国語・英語ページで海外配送の制限についての注意を表示します。
 - **ドメイン**: 本番は https://tesla-care.play-labo.com 。`ORIGIN`（canonical・hreflang・sitemap用）に設定しています。

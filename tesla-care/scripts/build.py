@@ -5,7 +5,8 @@ Korean lives at /, Japanese at /ja/, English at /en/. Under each language:
   /                     pick your car
   /<model>/             everything to buy for that car, and its guides
   /<model>/<guide>/     the guide, with the picks for that car
-Amazon links go to Amazon Japan for every language. When a product has a
+Amazon links go to Amazon Japan for every language. A product's "link"
+(a SiteStripe/amzn.to link) is used as is for every car and language. When a product has a
 verified ASIN for a model and store, the link goes straight to it. Put your
 Associates tags in TAGS; every link picks them up on the next build.
 """
@@ -53,7 +54,7 @@ T={
  'change':{'ko':'차 바꾸기','ja':'車を変更','en':'Change car'},
  'next':{'ko':'다음 가이드','ja':'次のガイド','en':'Next guide'},
  'disclaimer':{'ko':'이 사이트는 Tesla와 관계없는 개인 사이트입니다. 내용은 Model 3 오너스 매뉴얼을 바탕으로 정리했지만, 차량과 소프트웨어 버전에 따라 다를 수 있으니 차량의 매뉴얼과 표시를 우선하세요.','ja':'このサイトはTesla社とは関係のない個人サイトです。内容はモデル3のオーナーズマニュアルをもとにまとめていますが、車両やソフトウェアのバージョンによって異なる場合があるため、お使いの車両のマニュアルと表示を優先してください。','en':'This is an independent site, not affiliated with Tesla. Guides are based on the Model 3 Owner\'s Manual, but details can differ by vehicle and software version, so your car\'s manual and screens come first.'},
- 'affiliate':{'ko':'아마존 링크에는 제휴 링크가 포함될 수 있으며, 구매 시 사이트 운영자가 수수료를 받을 수 있습니다.','ja':'Amazonへのリンクにはアフィリエイトリンクが含まれる場合があり、購入時にサイト運営者が紹介料を受け取ることがあります。','en':'Amazon links may be affiliate links; the site may earn a commission on purchases.'},
+ 'affiliate':{'ko':'Amazonのアソシエイトとして、当メンバーは適格販売により収入を得ています。 (아마존 어소시에이트로서 사이트 운영자는 적격 판매로 수익을 얻습니다.)','ja':'Amazonのアソシエイトとして、当メンバーは適格販売により収入を得ています。','en':'Amazonのアソシエイトとして、当メンバーは適格販売により収入を得ています。 (As an Amazon Associate, this site earns from qualifying purchases.)'},
  'conv':{'ko':'공기압 단위 변환','ja':'空気圧の単位換算','en':'Pressure unit converter'},
  'convLead':{'ko':'라벨과 게이지의 단위가 다를 때 쓰세요.','ja':'ラベルとゲージの単位が違うときに使ってください。','en':'Use it when the label and your gauge use different units.'},
  'value':{'ko':'값','ja':'数値','en':'Value'},
@@ -65,6 +66,7 @@ T={
 t=lambda key,lang:T[key][lang]
 def url(lang,path=''):return ('/' if lang=='ko' else f'/{lang}/')+path
 def amazon(lang,product,model):
+    if product.get('link'):return product['link']  # a ready-made Associates link (e.g. amzn.to) already carries the tag
     store=STORE[lang];tag=TAGS[store]
     asin=product.get('asin',{}).get(model['id'],{}).get(store)
     if asin:link=f'{STORES[store]}/dp/{asin}'
