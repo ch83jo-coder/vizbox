@@ -94,14 +94,14 @@
       "products": [
         {
           "name": {
-            "ko": "겨울용 부동 워셔액",
-            "ja": "解氷・寒冷地用ウォッシャー液",
-            "en": "De-icer washer fluid"
+            "ko": "KYK 클리어 워셔액 2L (−30℃)",
+            "ja": "KYK クリアウォッシャー液 2L（−30℃）",
+            "en": "KYK Clear Washer Fluid 2 L (−30 °C)"
           },
           "why": {
-            "ko": "추운 계절에도 얼지 않습니다. 라벨에 '발수'·'벌레 제거'가 없는 제품을 고르세요.",
-            "ja": "寒い季節でも凍りません。ラベルに「撥水」「虫取り」と書かれていないものを選んでください。",
-            "en": "Won't freeze in cold weather. Pick one whose label doesn't mention water repellent or bug removal."
+            "ko": "발수·벌레 제거 성분이 없는 사계절용 워셔액입니다. 물을 타지 않고 그대로 넣으면 −30℃까지 얼지 않아 겨울에도 그대로 쓸 수 있습니다. 2통이면 탱크가 가득 찹니다.",
+            "ja": "撥水剤・虫取り成分なしのオールシーズン用ウォッシャー液です。薄めずにそのまま入れれば−30℃まで凍らないので、冬もそのまま使えます。2本でタンクが満タンになります。",
+            "en": "All-season washer fluid with no water repellent or bug wash. Pour it in undiluted and it won't freeze down to −30 °C, so it works through winter. Two bottles fill the reservoir."
           },
           "query": {
             "jp": "ウォッシャー液 解氷 寒冷地",
@@ -109,26 +109,27 @@
           },
           "liquid": true,
           "role": "main",
-          "image": "washer-winter"
+          "image": "washer-winter",
+          "link": "https://link.amazon/B0dLi3pt5"
         },
         {
           "name": {
-            "ko": "사계절용 워셔액",
-            "ja": "オールシーズン用ウォッシャー液",
-            "en": "All-season washer fluid"
+            "ko": "더 추운 지역용: 한랭지용 워셔액",
+            "ja": "さらに寒い地域に：寒冷地用ウォッシャー液",
+            "en": "For colder regions: extra-cold washer fluid"
           },
           "why": {
-            "ko": "따뜻한 지역이라면 일반 워셔액으로 충분합니다. 역시 발수 성분이 없는 것으로.",
-            "ja": "暖かい地域なら通常のウォッシャー液で十分です。こちらも撥水剤なしのものを。",
-            "en": "Fine for mild climates. Again, choose one without water repellent."
+            "ko": "−30℃보다 더 내려가는 지역이라면 한랭지용을 고르세요. 역시 라벨에 '발수'·'벌레 제거'가 없는 것으로.",
+            "ja": "−30℃より冷え込む地域では寒冷地用を選んでください。こちらもラベルに「撥水」「虫取り」がないものを。",
+            "en": "If it gets colder than −30 °C where you live, choose an extra-cold type, again without water repellent or bug wash."
           },
           "query": {
-            "jp": "ウォッシャー液 2L",
-            "us": "windshield washer fluid all season"
+            "jp": "寒冷地用 ウインドウォッシャー液 -40",
+            "us": "washer fluid -40"
           },
           "liquid": true,
           "role": "alt",
-          "image": "washer-allseason"
+          "image": "washer-winter"
         },
         {
           "name": {
