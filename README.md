@@ -9,7 +9,7 @@
 | [fire-ready](./fire-ready) | FIRE 資産シミュレーター（Next.js） |
 | [tesla-care](./tesla-care) | テスラ モデル3・モデルY 初心者向けセルフ整備ガイドと用品紹介（韓・日・英） |
 | [php-security](./php-security) | PHP セキュリティ対応・50サービス一覧（韓・日・英、外部リンクなし） |
-| [seat-view](./seat-view) | 予約前に座席からのスクリーンの見え方を 3D で確認できる映画館シートビュー（韓国語） |
+| [seat-view](./seat-view) | 予約前に座席からのスクリーンの見え方を 3D で確認できる映画館シートビュー |
 
 ## 構成ルール
 

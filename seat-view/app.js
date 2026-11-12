@@ -1,19 +1,19 @@
-/* SEATVIEW — 예매 전 좌석 시야 미리보기 (의존성 없는 정적 앱) */
+/* SEATVIEW — 予約前の座席ビュー（依存ライブラリなしの静的アプリ） */
 (() => {
   'use strict';
 
-  // ───────────────────────── 상영관 데이터 ─────────────────────────
-  // 길이 단위는 미터. 스크린은 z=0 평면, 객석은 +z 방향.
+  // ───────────────────────── 上映館データ ─────────────────────────
+  // 長さの単位はメートル。スクリーンは z=0 平面、客席は +z 方向。
   const HALLS = [
-    { id: 'std', name: '1관', tag: '스탠다드', rows: 10, cols: 14, aisles: [3, 9],
+    { id: 'std', name: 'シアター1', tag: 'スタンダード', rows: 10, cols: 14, aisles: [3, 9],
       seatW: 0.56, pitch: 1.05, riser: 0.32, first: 5.5, screenW: 12, aspect: 2.39, screenBottom: 1.6,
-      ideal: 50, price: 14000, seed: 11, seatColor: [0.50, 0.10, 0.12], wall: [0.20, 0.17, 0.18] },
-    { id: 'large', name: '2관', tag: '라지 스크린', rows: 14, cols: 22, aisles: [5, 15],
+      ideal: 50, price: 2000, seed: 11, seatColor: [0.50, 0.10, 0.12], wall: [0.20, 0.17, 0.18] },
+    { id: 'large', name: 'シアター2', tag: 'ラージスクリーン', rows: 14, cols: 22, aisles: [5, 15],
       seatW: 0.58, pitch: 1.15, riser: 0.45, first: 7.5, screenW: 22, aspect: 1.9, screenBottom: 1.8,
-      ideal: 60, price: 19000, seed: 29, seatColor: [0.14, 0.17, 0.30], wall: [0.15, 0.16, 0.20] },
-    { id: 'private', name: '3관', tag: '프라이빗', rows: 5, cols: 8, aisles: [3],
+      ideal: 60, price: 2600, seed: 29, seatColor: [0.14, 0.17, 0.30], wall: [0.15, 0.16, 0.20] },
+    { id: 'private', name: 'シアター3', tag: 'プライベート', rows: 5, cols: 8, aisles: [3],
       seatW: 0.9, pitch: 1.7, riser: 0.3, first: 4.5, screenW: 8.5, aspect: 2.39, screenBottom: 1.3,
-      ideal: 50, price: 32000, seed: 47, seatColor: [0.46, 0.31, 0.19], wall: [0.19, 0.17, 0.15] },
+      ideal: 50, price: 4500, seed: 47, seatColor: [0.46, 0.31, 0.19], wall: [0.19, 0.17, 0.15] },
   ];
   const AISLE_W = 1.1, EYE_H = 1.18, MAX_PICK = 8;
   const ROW_NAMES = 'ABCDEFGHIJKLMNOPQRST';
@@ -30,7 +30,7 @@
     };
   }
 
-  // 상영관의 기하 정보와 좌석별 시야 지표를 계산한다.
+  // 上映館の形状と、座席ごとの見え方の指標を計算する。
   function buildHall(def) {
     const h = { ...def };
     const xs = [];
@@ -56,10 +56,10 @@
       for (let c = 0; c < h.cols; c++) {
         const eye = [h.xs[c], r * h.riser + EYE_H, h.first + r * h.pitch];
         const m = metrics(h, eye);
-        h.seats.push({ id: r + '-' + c, r, c, eye, ...m, label: ROW_NAMES[r] + '열 ' + (c + 1) + '번', short: ROW_NAMES[r] + (c + 1) });
+        h.seats.push({ id: r + '-' + c, r, c, eye, ...m, label: ROW_NAMES[r] + '列 ' + (c + 1) + '番', short: ROW_NAMES[r] + (c + 1) });
       }
     }
-    // 점수가 높은 자리일수록 먼저 팔리도록 예매 완료 좌석을 만든다.
+    // スコアの高い席ほど先に売れるように予約済みの席を作る。
     const rnd = mulberry32(h.seed);
     for (const s of h.seats) s.taken = rnd() < 0.08 + 0.5 * Math.pow(s.score / 100, 2.2);
     h.best = h.seats.filter((s) => !s.taken).sort((a, b) => b.score - a.score)[0] || h.seats[0];
@@ -79,7 +79,7 @@
     return { dist, hAngle, elev, off, score };
   }
 
-  // ───────────────────────── 상태 ─────────────────────────
+  // ───────────────────────── 状態 ─────────────────────────
   const halls = HALLS.map(buildHall);
   const state = {
     hall: halls[0], selected: [], hover: null,
@@ -88,7 +88,7 @@
   const seatById = (id) => state.hall.seats.find((s) => s.id === id);
   const viewSeat = () => state.hover || (state.selected.length ? seatById(state.selected[state.selected.length - 1]) : state.hall.best);
 
-  // ───────────────────────── 3D 렌더러 (WebGL) ─────────────────────────
+  // ───────────────────────── 3D レンダラー (WebGL) ─────────────────────────
   const STRIDE = 11; // pos3 normal3 color3 uv2
 
   function pushVert(o, p, n, c, u, v) { o.push(p[0], p[1], p[2], n[0], n[1], n[2], c[0], c[1], c[2], u, v); }
@@ -125,19 +125,19 @@
     const carpet = [0.17, 0.14, 0.15], wall = h.wall, dark = [0.035, 0.035, 0.04];
     const shade = (c, k) => [c[0] * k, c[1] * k, c[2] * k];
 
-    // 바닥, 천장, 앞·뒤 벽
+    // 床・天井・前後の壁
     quad(o, [-W, 0, -0.6], [W, 0, -0.6], [W, 0, D], [-W, 0, D], [0, 1, 0], carpet);
     quad(o, [-W, H, -0.6], [W, H, -0.6], [W, H, D], [-W, H, D], [0, -1, 0], shade(wall, 0.45));
     quad(o, [-W, 0, -0.6], [W, 0, -0.6], [W, H, -0.6], [-W, H, -0.6], [0, 0, 1], dark);
     quad(o, [-W, 0, D], [W, 0, D], [W, H, D], [-W, H, D], [0, 0, -1], shade(wall, 0.8));
-    // 옆 벽: 흡음 패널이 번갈아 보이도록 나눈다.
+    // 側壁：吸音パネルが交互に見えるよう分割する。
     const panel = 1.6;
     for (let z = -0.6, i = 0; z < D; z += panel, i++) {
       const z1 = Math.min(D, z + panel), col = shade(wall, i % 2 ? 1 : 0.8);
       quad(o, [-W, 0, z], [-W, 0, z1], [-W, H, z1], [-W, H, z], [1, 0, 0], col);
       quad(o, [W, 0, z], [W, 0, z1], [W, H, z1], [W, H, z], [-1, 0, 0], col);
     }
-    // 스크린과 마스킹
+    // スクリーンとマスキング
     const sw = h.screenW / 2, sb = h.screenBottom, st = sb + h.screenH;
     quad(o, [-sw, sb, 0], [sw, sb, 0], [sw, st, 0], [-sw, st, 0], [0, 0, 1], [1, 1, 1], true);
     const m = 0.18;
@@ -146,7 +146,7 @@
     box(o, -sw - m, sb, -0.05, -sw, st, 0.02, dark);
     box(o, sw, sb, -0.05, sw + m, st, 0.02, dark);
 
-    // 계단식 단상 + 통로 유도등
+    // 段床と通路の誘導灯
     const lamp = [1.0, 0.72, 0.36];
     const aisles = [...h.aisleXs, -h.sideAisle, h.sideAisle];
     for (let r = 1; r < h.rows; r++) {
@@ -156,7 +156,7 @@
         for (const dx of [-0.42, 0.42]) box(o, ax + dx - 0.05, y - 0.07, z0 - 0.012, ax + dx + 0.05, y - 0.04, z0, lamp, true);
       }
     }
-    // 좌석
+    // 座席
     for (const s of h.seats) {
       const x = s.eye[0], y = s.r * h.riser, z = s.eye[2], w = h.seatW * 0.44;
       const c = h.seatColor;
@@ -200,7 +200,7 @@
       } else {
         vec3 n = normalize(vN);
         vec3 light = vec3(0.0);
-        // 스크린을 세 개의 면광원 샘플로 근사한다.
+        // スクリーンを3点の面光源サンプルで近似する。
         for (int i = -1; i <= 1; i++) {
           vec3 L = uSC + vec3(float(i) * uSS.x * 0.33, 0.0, 0.3) - vP;
           float d = length(L); L /= d;
@@ -274,7 +274,7 @@
     };
   }
 
-  // 행렬 (column-major)
+  // 行列（column-major）
   function perspective(fovy, aspect, n, f) {
     const t = 1 / Math.tan(fovy / 2);
     return [t / aspect, 0, 0, 0, 0, t, 0, 0, 0, 0, (f + n) / (n - f), -1, 0, 0, (2 * f * n) / (n - f), 0];
@@ -296,7 +296,7 @@
     return o;
   }
 
-  // ───────────────────────── 스크린에 상영되는 화면 ─────────────────────────
+  // ───────────────────────── スクリーンに映す映像 ─────────────────────────
   const film = document.createElement('canvas');
   film.width = 1024; film.height = 512;
   const fx = film.getContext('2d');
@@ -309,7 +309,7 @@
     return Math.sin(x * 1.3 + i * 2.1) * 0.5 + Math.sin(x * 2.9 + i * 5.3) * 0.28 + Math.sin(x * 6.7 + i * 1.7) * 0.12;
   }
   function drawFilm(t, h) {
-    const W = film.width, H = film.height, kx = 2 / h.aspect; // 가로로 늘어나는 만큼 보정
+    const W = film.width, H = film.height, kx = 2 / h.aspect; // 横に引き伸ばされる分を補正
     if (state.pattern) return drawPattern(W, H, kx, h);
     const g = fx.createLinearGradient(0, 0, 0, H);
     g.addColorStop(0, '#120e2e'); g.addColorStop(0.42, '#51296c'); g.addColorStop(0.66, '#d9604f'); g.addColorStop(0.8, '#ffc57e');
@@ -320,14 +320,14 @@
       fx.fillRect(sx * W, sy * H, sr * kx * 1.6, sr * 1.6);
     }
     fx.globalAlpha = 1;
-    // 해
+    // 太陽
     const sunX = W * 0.63, sunY = H * (0.69 + 0.025 * Math.sin(t * 0.12));
     fx.save(); fx.translate(sunX, sunY); fx.scale(kx, 1);
     const sg = fx.createRadialGradient(0, 0, 0, 0, 0, 230);
     sg.addColorStop(0, 'rgba(255,240,205,1)'); sg.addColorStop(0.16, 'rgba(255,226,170,.95)');
     sg.addColorStop(0.2, 'rgba(255,190,120,.45)'); sg.addColorStop(1, 'rgba(255,170,110,0)');
     fx.fillStyle = sg; fx.beginPath(); fx.arc(0, 0, 230, 0, 7); fx.fill(); fx.restore();
-    // 겹겹의 능선
+    // 重なる稜線
     const cols = ['#8a4a7c', '#5f3168', '#371e4c', '#190f2a', '#09060f'];
     cols.forEach((c, i) => {
       const base = H * (0.66 + 0.075 * i), amp = 46 - i * 3, sp = 0.012 + i * 0.012;
@@ -338,15 +338,15 @@
       mg.addColorStop(0, 'rgba(255,170,140,0)'); mg.addColorStop(1, `rgba(255,170,140,${0.16 - i * 0.03})`);
       fx.fillStyle = mg; fx.fillRect(0, base - 10, W, 80);
     });
-    // 자막
+    // 字幕
     fx.save(); fx.translate(W / 2, H * 0.9); fx.scale(kx, 1);
-    fx.font = '600 27px "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif';
+    fx.font = '600 27px "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif';
     fx.textAlign = 'center'; fx.textBaseline = 'middle';
     fx.shadowColor = 'rgba(0,0,0,.9)'; fx.shadowBlur = 8; fx.fillStyle = '#fff';
     fx.fillText(SUBS[Math.floor(t / 6) % SUBS.length], 0, 0);
     fx.restore();
   }
-  const SUBS = ['“여기서 보면, 전혀 다르게 보이네.”', '“해가 뜨기 전에 능선을 넘어야 해.”', '“자리를 잘 고른 것 같아.”'];
+  const SUBS = ['「ここから見ると、まるで違って見える」', '「夜が明ける前に、稜線を越えないと」', '「いい席を選んだみたいだね」'];
 
   function drawPattern(W, H, kx, h) {
     fx.fillStyle = '#0e1014'; fx.fillRect(0, 0, W, H);
@@ -377,7 +377,7 @@
     return [r * k + 0.05, g * k + 0.05, b * k + 0.05];
   }
 
-  // ───────────────────────── 카메라 & 루프 ─────────────────────────
+  // ───────────────────────── カメラとループ ─────────────────────────
   const canvas = $('gl');
   const renderer = createRenderer(canvas);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -417,7 +417,7 @@
     renderer.draw(vp, h, glow, cam.house, state.people);
   }
 
-  // 드래그로 둘러보기
+  // ドラッグで見回す
   if (renderer) {
     let drag = null;
     canvas.addEventListener('pointerdown', (e) => {
@@ -437,7 +437,7 @@
   }
   function resetLook() { cam.yawT = 0; cam.pitchT = 0; $('tReset').hidden = true; }
 
-  // ───────────────────────── 좌석 배치도 ─────────────────────────
+  // ───────────────────────── 座席表 ─────────────────────────
   const rowsEl = $('rows'), mapEl = $('map'), scrollEl = $('mapScroll');
 
   function heatColor(score) {
@@ -461,8 +461,8 @@
         const b = document.createElement('button');
         b.type = 'button'; b.className = 'seat'; b.dataset.id = s.id; b.textContent = c + 1;
         b.style.setProperty('--heat', heatColor(s.score));
-        if (s.taken) { b.disabled = true; b.textContent = ''; b.setAttribute('aria-label', s.label + ', 예매 완료'); }
-        else { b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', `${s.label}, 시야 점수 ${s.score}점`); }
+        if (s.taken) { b.disabled = true; b.textContent = ''; b.setAttribute('aria-label', s.label + '、予約済み'); }
+        else { b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', `${s.label}、見やすさ ${s.score}点`); }
         row.append(b);
         if (h.aisles.includes(c)) { const a = document.createElement('span'); a.className = 'aisle'; row.append(a); }
       }
@@ -502,7 +502,7 @@
   function toggleSeat(id) {
     const i = state.selected.indexOf(id);
     if (i >= 0) state.selected.splice(i, 1);
-    else if (state.selected.length >= MAX_PICK) return toast(`한 번에 ${MAX_PICK}석까지 고를 수 있어요`);
+    else if (state.selected.length >= MAX_PICK) return toast(`一度に選べるのは${MAX_PICK}席までです`);
     else state.selected.push(id);
     update();
   }
@@ -522,7 +522,7 @@
     if (!d || !b) return;
     e.preventDefault();
     let [r, c] = b.dataset.id.split('-').map(Number);
-    for (;;) { // 예매 완료 좌석은 건너뛴다
+    for (;;) { // 予約済みの席は飛ばす
       r += d[0]; c += d[1];
       const n = rowsEl.querySelector(`[data-id="${r}-${c}"]`);
       if (!n) return;
@@ -531,8 +531,8 @@
   });
   function setHover(s) { if (state.hover !== s) { state.hover = s; update(); } }
 
-  // ───────────────────────── 패널 갱신 ─────────────────────────
-  const won = (n) => n.toLocaleString('ko-KR') + '원';
+  // ───────────────────────── パネル更新 ─────────────────────────
+  const won = (n) => n.toLocaleString('ja-JP') + '円';
   let lastView = null;
 
   function update() {
@@ -542,44 +542,44 @@
 
     const picked = state.selected.includes(s.id);
     const pill = $('viewState');
-    pill.textContent = picked ? '선택한 좌석' : state.hover ? '미리보기' : '추천 좌석';
+    pill.textContent = picked ? '選択した席' : state.hover ? 'プレビュー' : 'おすすめ席';
     pill.classList.toggle('on', picked);
     $('viewSeat').textContent = `${h.name} · ${s.label}`;
 
     $('scoreNum').textContent = s.score;
     $('ring').style.strokeDashoffset = 169.65 * (1 - s.score / 100);
-    $('grade').textContent = s.score >= 85 ? '최고의 시야' : s.score >= 70 ? '좋은 시야' : s.score >= 50 ? '무난한 시야' : '아쉬운 시야';
+    $('grade').textContent = s.score >= 85 ? '最高の見え方' : s.score >= 70 ? '見やすい席' : s.score >= 50 ? '標準的な見え方' : '少し見づらい席';
     const dH = s.hAngle - h.ideal, aV = Math.abs(s.elev);
-    const say = [dH > 18 ? '화면이 시야를 넘칠 만큼 가까워서 압도적이지만 눈이 바쁜 자리예요.'
-      : dH < -12 ? '화면이 조금 작게 느껴지지만 전체를 편하게 볼 수 있는 거리예요.'
-      : '화면이 시야에 알맞게 들어오는 거리예요.'];
-    if (aV >= 18) say.push('고개를 꽤 들어야 해서 목이 뻐근할 수 있어요.');
-    if (s.off >= 20) say.push('측면이라 화면이 비스듬하게 보여요.');
-    else if (s.off < 8 && aV < 8 && Math.abs(dH) <= 12) say.push('정중앙에 눈높이도 편안합니다.');
-    $('say').textContent = say.join(' ');
+    const say = [dH > 18 ? '画面が視野からあふれるほど近く、迫力はありますが目が忙しい席です。'
+      : dH < -12 ? '画面はやや小さく感じますが、全体を楽に見渡せる距離です。'
+      : '画面が視野にちょうどよく収まる距離です。'];
+    if (aV >= 18) say.push('かなり見上げるので、首が疲れるかもしれません。');
+    if (s.off >= 20) say.push('端の席なので、画面が斜めに見えます。');
+    else if (s.off < 8 && aV < 8 && Math.abs(dH) <= 12) say.push('ど真ん中で、目線の高さも快適です。');
+    $('say').textContent = say.join('');
 
     const tag = (id, text, good) => { const el = $(id); el.textContent = text; el.classList.toggle('good', !!good); };
     $('mDist').textContent = s.dist.toFixed(1) + 'm';
-    tag('mDistTag', `스크린 폭 ${h.screenW}m`);
+    tag('mDistTag', `スクリーン幅 ${h.screenW}m`);
     $('mH').textContent = Math.round(s.hAngle) + '°';
-    tag('mHTag', dH > 18 ? '꽉 참' : dH < -12 ? '여유 있음' : '적당', Math.abs(dH) <= 12);
+    tag('mHTag', dH > 18 ? 'いっぱい' : dH < -12 ? 'ゆとりあり' : 'ちょうどいい', Math.abs(dH) <= 12);
     $('mV').textContent = Math.round(aV) + '°';
-    tag('mVTag', aV < 8 ? '편안' : aV < 18 ? '보통' : '목 부담', aV < 8);
+    tag('mVTag', aV < 8 ? '快適' : aV < 18 ? 'ふつう' : '首に負担', aV < 8);
     $('mO').textContent = Math.round(s.off) + '°';
-    tag('mOTag', s.off < 8 ? '정중앙' : s.off < 20 ? '약간 측면' : '측면', s.off < 8);
+    tag('mOTag', s.off < 8 ? 'ど真ん中' : s.off < 20 ? 'やや端' : '端', s.off < 8);
 
     const n = state.selected.length;
-    $('pickedLabel').textContent = n ? `${h.name} ${h.tag}` : '좌석을 골라 주세요';
+    $('pickedLabel').textContent = n ? `${h.name} ${h.tag}` : '座席を選んでください';
     const chips = $('pickedChips');
     chips.textContent = '';
     for (const id of state.selected) {
       const st = seatById(id), c = document.createElement('button');
       c.type = 'button'; c.className = 'pchip'; c.dataset.id = id;
-      c.setAttribute('aria-label', st.label + ' 선택 해제');
+      c.setAttribute('aria-label', st.label + 'の選択を解除');
       c.append(st.short); const x = document.createElement('i'); x.textContent = '×'; c.append(x);
       chips.append(c);
     }
-    $('totalCount').textContent = n ? `${n}명` : '';
+    $('totalCount').textContent = n ? `${n}名` : '';
     $('totalPrice').textContent = n ? won(n * h.price) : '';
     $('bBook').disabled = !n;
   }
@@ -604,12 +604,13 @@
     renderMap(); update();
   }
 
-  // ───────────────────────── 컨트롤 연결 ─────────────────────────
+  // ───────────────────────── コントロールの接続 ─────────────────────────
   for (const h of halls) {
     const t = document.createElement('button');
     t.type = 'button'; t.className = 'tab'; t.dataset.id = h.id; t.setAttribute('role', 'tab');
     const b = document.createElement('b'); b.textContent = h.name;
-    const sm = document.createElement('small'); sm.textContent = `${h.tag} · ${h.rows * h.cols}석`;
+    const sm = document.createElement('small'), n = document.createElement('span');
+    n.textContent = `${h.rows * h.cols}席`; sm.append(h.tag, n);
     t.append(b, sm);
     t.addEventListener('click', () => setHall(h));
     $('tabs').append(t);
@@ -629,23 +630,23 @@
   $('bBest').addEventListener('click', () => {
     const best = state.hall.seats.filter((s) => !s.taken && !state.selected.includes(s.id)).sort((a, b) => b.score - a.score)[0];
     if (!best) return;
-    if (state.selected.length >= MAX_PICK) return toast(`한 번에 ${MAX_PICK}석까지 고를 수 있어요`);
+    if (state.selected.length >= MAX_PICK) return toast(`一度に選べるのは${MAX_PICK}席までです`);
     state.selected.push(best.id); update();
-    toast(`${best.label} · 시야 점수 ${best.score}점`);
+    toast(`${best.label} · 見やすさ ${best.score}点`);
   });
   $('pickedChips').addEventListener('click', (e) => { const c = e.target.closest('.pchip'); if (c) toggleSeat(c.dataset.id); });
   $('bBook').addEventListener('click', () => {
     const h = state.hall, list = $('dlgList');
     list.textContent = '';
-    const rows = [['영화', '새벽의 능선'], ['상영', `오늘 19:40 · ${h.name} ${h.tag}`],
-      ['좌석', state.selected.map((id) => seatById(id).short).join(', ')], ['결제 금액', won(state.selected.length * h.price)]];
+    const rows = [['作品', '夜明けの稜線'], ['上映', `本日 19:40 · ${h.name} ${h.tag}`],
+      ['座席', state.selected.map((id) => seatById(id).short).join(', ')], ['お支払い金額', won(state.selected.length * h.price)]];
     for (const [k, v] of rows) {
       const dt = document.createElement('dt'), dd = document.createElement('dd');
       dt.textContent = k; dd.textContent = v; list.append(dt, dd);
     }
     $('dlg').showModal();
   });
-  $('dlg').addEventListener('close', () => { if ($('dlg').returnValue === 'ok') toast('데모 예매가 완료됐어요'); });
+  $('dlg').addEventListener('close', () => { if ($('dlg').returnValue === 'ok') toast('デモ予約が完了しました'); });
 
   new ResizeObserver(sizeMap).observe(scrollEl);
 
