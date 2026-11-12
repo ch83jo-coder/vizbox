@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="예매하기 전에 그 자리에서 스크린이 어떻게 보이는지 3D로 미리 확인하는 극장 좌석 시야 미리보기.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0a0c">
+<title>SEATVIEW — 예매 전 좌석 시야 미리보기</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="stylesheet" href="./style.css">
+<script src="./app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./" aria-label="SEATVIEW 홈">SEAT<span>VIEW</span></a>
+  <div class="film">
+    <strong>새벽의 능선</strong>
+    <span>오늘 19:40 · 자막 · 118분</span>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="viewport" id="viewport" aria-label="선택한 좌석에서 본 스크린">
+    <canvas id="gl" aria-hidden="true"></canvas>
+    <p class="nogl" id="nogl" hidden>이 브라우저에서는 3D 미리보기를 표시할 수 없어요. 아래 수치로 시야를 확인해 주세요.</p>
+    <div class="hud hud-top">
+      <span class="pill" id="viewState">추천 좌석</span>
+      <strong id="viewSeat">–</strong>
+    </div>
+    <div class="hud hud-tools" role="group" aria-label="미리보기 옵션">
+      <button type="button" class="tool" id="tPeople" aria-pressed="true">관객</button>
+      <button type="button" class="tool" id="tHouse" aria-pressed="false">조명</button>
+      <button type="button" class="tool" id="tPattern" aria-pressed="false">테스트 패턴</button>
+      <button type="button" class="tool ghost" id="tReset" hidden>정면 보기</button>
+    </div>
+    <p class="hud hint" id="hint">드래그해서 둘러보기</p>
+  </section>
+
+  <section class="picker" aria-label="좌석 선택">
+    <div class="tabs" role="tablist" aria-label="상영관" id="tabs"></div>
+
+    <div class="map-wrap">
+      <div class="map-scroll" id="mapScroll">
+        <div class="map" id="map">
+          <div class="screen-arc" aria-hidden="true"><span>SCREEN</span></div>
+          <div class="rows" id="rows" role="group" aria-label="좌석 배치도"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-foot">
+      <ul class="legend" aria-label="범례">
+        <li><i class="sw sw-free"></i>선택 가능</li>
+        <li><i class="sw sw-sel"></i>선택함</li>
+        <li><i class="sw sw-taken"></i>예매 완료</li>
+        <li class="heat-legend" id="heatLegend"><i class="sw sw-grad"></i>시야 점수 낮음 → 높음</li>
+      </ul>
+      <div class="map-actions">
+        <button type="button" class="chip" id="tHeat" aria-pressed="true">시야 점수 색상</button>
+        <button type="button" class="chip accent" id="bBest">추천 좌석 고르기</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="insight" aria-label="좌석 시야 분석" aria-live="polite">
+    <div class="score">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle class="ring-bg" cx="32" cy="32" r="27"/>
+        <circle class="ring-fg" id="ring" cx="32" cy="32" r="27" transform="rotate(-90 32 32)"/>
+      </svg>
+      <div class="score-num"><b id="scoreNum">–</b><small>점</small></div>
+    </div>
+    <div class="verdict">
+      <p class="grade" id="grade">–</p>
+      <p class="say" id="say"></p>
+    </div>
+    <dl class="metrics">
+      <div><dt>스크린까지</dt><dd><b id="mDist">–</b><span id="mDistTag"></span></dd></div>
+      <div><dt>화면이 차지하는 시야</dt><dd><b id="mH">–</b><span id="mHTag"></span></dd></div>
+      <div><dt>올려다보는 각도</dt><dd><b id="mV">–</b><span id="mVTag"></span></dd></div>
+      <div><dt>중앙에서 벗어난 정도</dt><dd><b id="mO">–</b><span id="mOTag"></span></dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="bar">
+  <div class="bar-in">
+    <div class="picked">
+      <p class="picked-label" id="pickedLabel">좌석을 골라 주세요</p>
+      <div class="picked-chips" id="pickedChips"></div>
+    </div>
+    <div class="total">
+      <span id="totalCount"></span>
+      <b id="totalPrice"></b>
+    </div>
+    <button type="button" class="cta" id="bBook" disabled>예매하기</button>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <form method="dialog">
+    <h2 id="dlgTitle">이 좌석으로 예매할까요?</h2>
+    <dl id="dlgList"></dl>
+    <p class="demo-note">데모 화면이라 실제 예매와 결제는 이루어지지 않습니다.</p>
+    <div class="dlg-actions">
+      <button class="chip" value="cancel">다시 고르기</button>
+      <button class="cta" value="ok">확인</button>
+    </div>
+  </form>
+</dialog>
+</body>
+</html>
