@@ -1,101 +1,22 @@
-/* SEATVIEW TOKYO — 東京の映画館の座席からの見え方（依存ライブラリなしの静的アプリ） */
+/* SEATVIEW — 予約前の座席ビュー（依存ライブラリなしの静的アプリ） */
 (() => {
   'use strict';
 
-  // ───────────────────────── 劇場データ ─────────────────────────
+  // ───────────────────────── 上映館データ ─────────────────────────
   // 長さの単位はメートル。スクリーンは z=0 平面、客席は +z 方向。
-  // rows の各列は [列名, 'ブロック|ブロック|ブロック', オプション]。ブロックは座席番号の範囲で、
-  // 3つなら 左|中央|右（通路2本）、1つなら中央のみ。空文字のブロックは席なし。
-  // オプション: gap = 列の前の横通路の幅, rise = 前列からの段差, pitch = 前列からの間隔,
-  //             kind = 特別席の種類, only: 'center' = 特別席は中央ブロックのみ
-  // スクリーンサイズと席数は公表値、列ごとの配置・段差・距離は公開情報からの推定。
-  const KINDS = {
-    std: { name: '通常席', w: 0, color: null },
-    premium: { name: 'プレミアムシート', w: 0.72, color: [0.55, 0.36, 0.14] },
-    box: { name: 'プレミア ボックス シート', w: 0.8, color: [0.30, 0.22, 0.17] },
-    luxury: { name: 'プレミア ラグジュアリー シート', w: 0.86, color: [0.36, 0.26, 0.18] },
-    grand: { name: 'グランドクラス', w: 1.15, color: [0.55, 0.42, 0.20] },
-  };
-
   const HALLS = [
-    {
-      id: 'gcs-imax', area: '池袋', theater: 'グランドシネマサンシャイン 池袋', screen: 'シアター12', tag: 'IMAXレーザー/GT',
-      screenW: 25.8, screenH: 18.9, screenBottom: 0.9, first: 6.8, seatW: 0.54, pitch: 1.05, riser: 0.5,
-      ideal: 70, seed: 29, seatColor: [0.15, 0.18, 0.32], wall: [0.13, 0.14, 0.18],
-      published: { screen: '幅25.8m × 高さ18.9m(1.43:1)', seats: '542席+車椅子2(資料により538〜544席)' },
-      notes: [
-        '日本最大級のIMAXスクリーン。前方(A〜D列)はかなり見上げる',
-        'I列・L列は欠番(紛らわしいため廃止され、以降の列名が繰り上がった)',
-        '標準の列は左1〜10・中央11〜30・右31〜40番の3ブロック',
-        '最後列はグランドクラス(本アプリでは配置を推定)',
-      ],
-      estimated: '最前列までの距離・段差・前方ブロックの席数・特別席の位置',
-      sources: [
-        ['リアルサウンド(開業時の記事)', 'https://realsound.jp/movie/2019/07/post-390411_2.html'],
-        ['cinetabi シアター12の座席', 'https://cinetabi.com/posts/grandcinema-sunshine-theater12'],
-      ],
-      rows: [
-        ['A', '9-10|11-30|31-32', { rise: 0 }], ['B', '9-10|11-30|31-32', { rise: 0.16 }],
-        ['C', '8-10|11-30|31-33', { rise: 0.18 }], ['D', '8-10|11-30|31-33', { rise: 0.2 }],
-        ['E', '8-10|11-30|31-33', { rise: 0.22 }], ['F', '8-10|11-30|31-33', { rise: 0.25 }],
-        ['G', '1-10|11-30|31-40', { gap: 1.3, rise: 0.45 }], ['H', '1-10|11-30|31-40'], ['J', '1-10|11-30|31-40'],
-        ['K', '1-10|11-30|31-40'], ['M', '1-10|11-30|31-40'],
-        ['N', '1-10|11-30|31-40', { gap: 1.3, rise: 0.6 }], ['O', '1-10|11-30|31-40'], ['P', '1-10|11-30|31-40'],
-        ['Q', '1-10|11-30|31-40'], ['R', '1-10|11-20|21-30', { kind: 'grand', only: 'center', pitch: 1.5 }],
-      ],
-    },
-    {
-      id: 'toho-shinjuku-9', area: '新宿', theater: 'TOHOシネマズ 新宿', screen: 'スクリーン9', tag: 'TCX・ドルビーアトモス',
-      screenW: 19.0, screenH: 8.0, screenBottom: 1.6, first: 5.6, seatW: 0.53, pitch: 1.05, riser: 0.36,
-      ideal: 55, seed: 11, seatColor: [0.48, 0.10, 0.13], wall: [0.19, 0.16, 0.17],
-      published: { screen: '幅19.0m × 高さ8.0m(TCX)', seats: '499席+車椅子2' },
-      notes: [
-        '各列の中央は16・17番(1〜32番)',
-        'N〜O列中央がバランスのよい席として紹介されることが多い',
-        'プレミア ボックス シートは18席(本アプリではL・M列の中央に配置)',
-        'I列は欠番として扱っている(推定)',
-      ],
-      estimated: '列の総数・最前列までの距離・段差・横通路とボックス席の位置',
-      sources: [
-        ['TOHOシネマズ 新宿 施設紹介', 'https://www.prd.tohotheater.jp/theater/076/institution.html'],
-        ['MOVIE WALKER PRESS', 'https://press.moviewalker.jp/th705/'],
-      ],
-      rows: [
-        ['A', '3-6|7-26|27-30', { rise: 0 }], ['B', '3-6|7-26|27-30', { rise: 0.12 }], ['C', '3-6|7-26|27-30', { rise: 0.15 }],
-        ['D', '1-6|7-26|27-32', { rise: 0.2 }], ['E', '1-6|7-26|27-32', { rise: 0.25 }],
-        ['F', '1-6|7-26|27-32', { gap: 1.1, rise: 0.38 }], ['G', '1-6|7-26|27-32'], ['H', '1-6|7-26|27-32'], ['J', '1-6|7-26|27-32'],
-        ['K', '1-6|7-26|27-32'], ['L', '1-6|7-15|27-32', { kind: 'box', only: 'center', pitch: 1.35 }],
-        ['M', '1-6|7-15|27-32', { kind: 'box', only: 'center', pitch: 1.35 }],
-        ['N', '1-6|7-26|27-32', { pitch: 1.2 }], ['O', '1-6|7-26|27-32'], ['P', '1-6|7-26|27-32'], ['Q', '1-6|7-26|27-32'],
-        ['R', '|7-26|'],
-      ],
-    },
-    {
-      id: 'toho-hibiya-1', area: '日比谷', theater: 'TOHOシネマズ 日比谷', screen: 'スクリーン1', tag: 'TCX・ドルビーアトモス',
-      screenW: 19.8, screenH: 8.3, screenBottom: 1.6, first: 5.4, seatW: 0.53, pitch: 1.05, riser: 0.36,
-      ideal: 55, seed: 47, seatColor: [0.42, 0.11, 0.12], wall: [0.18, 0.16, 0.15],
-      published: { screen: '幅19.8m × 高さ8.3m(TCX)', seats: '436席+車椅子3' },
-      notes: [
-        'H列はプレミア ラグジュアリー シート、I・J列はプレミア ボックス シート',
-        '特別席の列は1〜26番(中央13・14番)、通常席の列は1〜36番(中央18・19番)',
-        'K列18・19番付近がベストとする紹介が多い',
-      ],
-      estimated: '最前列までの距離・段差・横通路の位置・A〜G列の席数',
-      sources: [
-        ['TOHOシネマズ 日比谷 施設紹介', 'https://www.tohotheater.jp/theater/081/institution05.html'],
-        ['映画館を見に行くヒト。(劇場レポート)', 'https://hihifilm412.hatenablog.com/entry/2019/02/06/000044'],
-      ],
-      rows: [
-        ['A', '2-10|11-26|27-35', { rise: 0 }], ['B', '1-10|11-26|27-36', { rise: 0.12 }], ['C', '1-10|11-26|27-36', { rise: 0.15 }],
-        ['D', '1-10|11-26|27-36', { rise: 0.2 }], ['E', '1-10|11-26|27-36', { rise: 0.25 }],
-        ['F', '1-10|11-26|27-36', { gap: 1.1, rise: 0.38 }], ['G', '1-10|11-26|27-36'],
-        ['H', '1-6|7-20|21-26', { kind: 'luxury', pitch: 1.6 }],
-        ['I', '1-6|7-20|21-26', { kind: 'box', pitch: 1.4 }], ['J', '1-6|7-20|21-26', { kind: 'box', pitch: 1.4 }],
-        ['K', '1-10|11-26|27-36', { pitch: 1.25 }], ['L', '1-10|11-26|27-36'], ['M', '1-10|11-26|27-36'],
-      ],
-    },
+    { id: 'std', name: 'シアター1', tag: 'スタンダード', rows: 10, cols: 14, aisles: [3, 9],
+      seatW: 0.56, pitch: 1.05, riser: 0.32, first: 5.5, screenW: 12, aspect: 2.39, screenBottom: 1.6,
+      ideal: 50, price: 2000, seed: 11, seatColor: [0.50, 0.10, 0.12], wall: [0.20, 0.17, 0.18] },
+    { id: 'large', name: 'シアター2', tag: 'ラージスクリーン', rows: 14, cols: 22, aisles: [5, 15],
+      seatW: 0.58, pitch: 1.15, riser: 0.45, first: 7.5, screenW: 22, aspect: 1.9, screenBottom: 1.8,
+      ideal: 60, price: 2600, seed: 29, seatColor: [0.14, 0.17, 0.30], wall: [0.15, 0.16, 0.20] },
+    { id: 'private', name: 'シアター3', tag: 'プライベート', rows: 5, cols: 8, aisles: [3],
+      seatW: 0.9, pitch: 1.7, riser: 0.3, first: 4.5, screenW: 8.5, aspect: 2.39, screenBottom: 1.3,
+      ideal: 50, price: 4500, seed: 47, seatColor: [0.46, 0.31, 0.19], wall: [0.19, 0.17, 0.15] },
   ];
-  const AISLE_W = 1.1, EYE_H = 1.18, MAX_PICK = 6;
+  const AISLE_W = 1.1, EYE_H = 1.18, MAX_PICK = 8;
+  const ROW_NAMES = 'ABCDEFGHIJKLMNOPQRST';
   const DEG = 180 / Math.PI;
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
   const $ = (id) => document.getElementById(id);
@@ -109,74 +30,40 @@
     };
   }
 
-  const range = (s) => {
-    if (!s) return [];
-    const [a, b] = s.split('-').map(Number);
-    const out = [];
-    for (let i = a; i <= (b || a); i++) out.push(i);
-    return out;
-  };
-
-  // 劇場の形状と、座席ごとの見え方の指標を計算する。
+  // 上映館の形状と、座席ごとの見え方の指標を計算する。
   function buildHall(def) {
-    const h = { ...def, screenCY: def.screenBottom + def.screenH / 2, aspect: def.screenW / def.screenH };
-    // 列ごとのブロックと席幅を決める
-    h.rowList = def.rows.map(([name, spec, o = {}], r) => {
-      const parts = spec.split('|');
-      const pos = parts.length === 3 ? ['left', 'center', 'right'] : ['center'];
-      const blocks = parts.map((p, i) => {
-        const special = o.kind && (o.only !== 'center' || pos[i] === 'center');
-        const kind = special ? o.kind : 'std';
-        return { pos: pos[i], nums: range(p.trim()), kind, w: KINDS[kind].w || h.seatW };
-      });
-      return { name, r, o, blocks };
-    });
-    const centerHalf = Math.max(...h.rowList.map((row) => {
-      const c = row.blocks.find((b) => b.pos === 'center');
-      return c ? (c.nums.length * c.w) / 2 : 0;
-    }));
-    const edge = centerHalf + AISLE_W; // 左右ブロックの内側の端
-    h.aisleXs = h.rowList.some((row) => row.blocks.length === 3) ? [-(centerHalf + AISLE_W / 2), centerHalf + AISLE_W / 2] : [];
-
-    h.seats = [];
-    let z = def.first, y = 0;
-    h.rowList.forEach((row, r) => {
-      if (r > 0) {
-        z += (row.o.pitch || h.pitch) + (row.o.gap || 0);
-        y += row.o.rise ?? lastRise(h, r);
-      }
-      row.z = z; row.y = y; row.seats = [];
-      for (const b of row.blocks) {
-        const n = b.nums.length;
-        const x0 = b.pos === 'center' ? -(n * b.w) / 2 : b.pos === 'left' ? -edge - n * b.w : edge;
-        b.nums.forEach((num, i) => {
-          const x = x0 + (i + 0.5) * b.w;
-          const eye = [x, y + EYE_H, z];
-          const s = {
-            id: row.name + num, r, row: row.name, num, x, y, z, w: b.w, kind: b.kind, eye, ...metrics(h, eye),
-            label: `${row.name}列 ${num}番`, short: row.name + num,
-          };
-          h.seats.push(s); row.seats.push(s);
-        });
-      }
-      row.seats.sort((a, b) => a.x - b.x);
-    });
-    const xs = h.seats.map((s) => [s.x - s.w / 2, s.x + s.w / 2]).flat();
-    h.minX = Math.min(...xs); h.maxX = Math.max(...xs);
-    const seatsHalf = Math.max(-h.minX, h.maxX);
+    const h = { ...def };
+    const xs = [];
+    let x = 0;
+    for (let c = 0; c < h.cols; c++) {
+      xs.push(x);
+      x += h.seatW;
+      if (h.aisles.includes(c)) x += AISLE_W;
+    }
+    const mid = (xs[0] + xs[xs.length - 1]) / 2;
+    h.xs = xs.map((v) => v - mid);
+    h.aisleXs = h.aisles.map((c) => h.xs[c] + h.seatW / 2 + AISLE_W / 2);
+    h.screenH = h.screenW / h.aspect;
+    h.screenCY = h.screenBottom + h.screenH / 2;
+    const seatsHalf = h.xs[h.cols - 1] + h.seatW / 2;
     h.halfW = Math.max(h.screenW / 2 + 1.0, seatsHalf + 1.3);
     h.sideAisle = seatsHalf + (h.halfW - seatsHalf) / 2;
-    const last = h.rowList[h.rowList.length - 1];
-    h.depth = last.z + 2.4;
-    h.height = Math.max(h.screenBottom + h.screenH + 1.2, last.y + 3.4);
-    h.kinds = [...new Set(h.seats.map((s) => s.kind))].filter((k) => k !== 'std');
-    h.best = h.seats.slice().sort((a, b) => b.score - a.score)[0];
+    h.depth = h.first + (h.rows - 1) * h.pitch + 2.2;
+    h.height = Math.max(h.screenBottom + h.screenH + 1.0, (h.rows - 1) * h.riser + 3.3);
+
+    h.seats = [];
+    for (let r = 0; r < h.rows; r++) {
+      for (let c = 0; c < h.cols; c++) {
+        const eye = [h.xs[c], r * h.riser + EYE_H, h.first + r * h.pitch];
+        const m = metrics(h, eye);
+        h.seats.push({ id: r + '-' + c, r, c, eye, ...m, label: ROW_NAMES[r] + '列 ' + (c + 1) + '番', short: ROW_NAMES[r] + (c + 1) });
+      }
+    }
+    // スコアの高い席ほど先に売れるように予約済みの席を作る。
+    const rnd = mulberry32(h.seed);
+    for (const s of h.seats) s.taken = rnd() < 0.08 + 0.5 * Math.pow(s.score / 100, 2.2);
+    h.best = h.seats.filter((s) => !s.taken).sort((a, b) => b.score - a.score)[0] || h.seats[0];
     return h;
-  }
-  // rise を指定しない列は、直前に指定された段差を引き継ぐ（無ければ既定値）。
-  function lastRise(h, r) {
-    for (let i = r - 1; i > 0; i--) if (h.rowList[i].o.rise != null && h.rowList[i].o.rise > 0) return h.rowList[i].o.rise;
-    return h.riser;
   }
 
   function metrics(h, eye) {
@@ -195,12 +82,11 @@
   // ───────────────────────── 状態 ─────────────────────────
   const halls = HALLS.map(buildHall);
   const state = {
-    hall: halls[0], selected: [], focus: null, hover: null,
+    hall: halls[0], selected: [], hover: null,
     heat: true, people: true, house: false, pattern: false,
   };
   const seatById = (id) => state.hall.seats.find((s) => s.id === id);
-  const viewSeat = () => state.hover || (state.focus && seatById(state.focus))
-    || (state.selected.length ? seatById(state.selected[state.selected.length - 1]) : state.hall.best);
+  const viewSeat = () => state.hover || (state.selected.length ? seatById(state.selected[state.selected.length - 1]) : state.hall.best);
 
   // ───────────────────────── 3D レンダラー (WebGL) ─────────────────────────
   const STRIDE = 11; // pos3 normal3 color3 uv2
@@ -263,47 +149,38 @@
     // 段床と通路の誘導灯
     const lamp = [1.0, 0.72, 0.36];
     const aisles = [...h.aisleXs, -h.sideAisle, h.sideAisle];
-    h.rowList.forEach((row, r) => {
-      if (r === 0) return;
-      const prev = h.rowList[r - 1];
-      if (row.y - prev.y < 0.005) return;
-      const z0 = row.z - Math.min(0.62, (row.z - prev.z) * 0.55), y = row.y;
+    for (let r = 1; r < h.rows; r++) {
+      const z0 = h.first + r * h.pitch - h.pitch * 0.62, y = r * h.riser;
       box(o, -W, 0, z0, W, y, D, carpet);
       for (const ax of aisles) {
         for (const dx of [-0.42, 0.42]) box(o, ax + dx - 0.05, y - 0.07, z0 - 0.012, ax + dx + 0.05, y - 0.04, z0, lamp, true);
       }
-    });
-    // 座席（特別席は幅も奥行きも大きく、色を変える）
+    }
+    // 座席
     for (const s of h.seats) {
-      const { x, y, z } = s, big = s.kind !== 'std';
-      const c = KINDS[s.kind].color || h.seatColor, w = s.w * (big ? 0.4 : 0.44);
-      const back = big ? 0.5 : 0.38, front = big ? 0.34 : 0.26;
-      box(o, x - w, y + 0.18, z - front, x + w, y + 0.44, z + back - 0.12, c);
-      box(o, x - w, y + 0.18, z + back - 0.12, x + w, y + (big ? 1.08 : 1.0), z + back, shade(c, 0.85));
-      box(o, x - s.w / 2, y + 0.18, z - front + 0.04, x - w, y + 0.6, z + back, shade(c, 0.45));
-      box(o, x + w, y + 0.18, z - front + 0.04, x + s.w / 2, y + 0.6, z + back, shade(c, 0.45));
+      const x = s.eye[0], y = s.r * h.riser, z = s.eye[2], w = h.seatW * 0.44;
+      const c = h.seatColor;
+      box(o, x - w, y + 0.18, z - 0.26, x + w, y + 0.44, z + 0.26, c);
+      box(o, x - w, y + 0.18, z + 0.26, x + w, y + 1.0, z + 0.38, shade(c, 0.85));
+      box(o, x - h.seatW / 2, y + 0.18, z - 0.22, x - w, y + 0.6, z + 0.36, shade(c, 0.45));
+      box(o, x + w, y + 0.18, z - 0.22, x + h.seatW / 2, y + 0.6, z + 0.36, shade(c, 0.45));
     }
     return new Float32Array(o);
   }
 
-  // 観客は埋まり具合を固定の疑似乱数で決め、席ごとの頂点範囲を覚えておく
-  // （自分が座っている席の人だけ描かないため）。
   function buildPeopleMesh(h) {
-    const o = [], ranges = {};
+    const o = [];
     const rnd = mulberry32(h.seed * 7 + 3);
     for (const s of h.seats) {
-      const busy = rnd() < 0.25 + 0.45 * Math.pow(s.score / 100, 2);
-      const jx = (rnd() - 0.5) * 0.06, t = 0.10 + rnd() * 0.16, tall = (rnd() - 0.5) * 0.1;
+      if (!s.taken) continue;
+      const x = s.eye[0] + (rnd() - 0.5) * 0.06, y = s.r * h.riser, z = s.eye[2];
+      const t = 0.10 + rnd() * 0.16, tall = (rnd() - 0.5) * 0.1;
       const cloth = [t * (0.8 + rnd() * 0.5), t * (0.8 + rnd() * 0.4), t * (0.9 + rnd() * 0.6)];
       const hair = [0.05 + rnd() * 0.07, 0.045 + rnd() * 0.04, 0.04 + rnd() * 0.03];
-      if (!busy) continue;
-      const x = s.x + jx, y = s.y, z = s.z;
-      const start = o.length / STRIDE;
       box(o, x - 0.21, y + 0.44, z + 0.02, x + 0.21, y + 0.98 + tall, z + 0.25, cloth);
       sphere(o, x, y + 1.14 + tall, z + 0.12, 0.105, 0.125, hair);
-      ranges[s.id] = [start, o.length / STRIDE];
     }
-    return { data: new Float32Array(o), ranges };
+    return new Float32Array(o);
   }
 
   const VS = `
@@ -382,7 +259,7 @@
         gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, src);
         gl.generateMipmap(gl.TEXTURE_2D);
       },
-      draw(vp, h, glow, house, showPeople, skip) {
+      draw(vp, h, glow, house, showPeople) {
         gl.viewport(0, 0, canvas.width, canvas.height);
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
         gl.uniformMatrix4fv(loc.uVP, false, vp);
@@ -392,13 +269,7 @@
         gl.uniform2f(loc.uSS, h.screenW, h.screenH);
         gl.uniform1f(loc.uHouse, house);
         bind(meshes.hall); gl.drawArrays(gl.TRIANGLES, 0, meshes.hall.n);
-        const pn = meshes.people.n;
-        if (showPeople && pn) {
-          bind(meshes.people);
-          const [a, b] = skip || [pn, pn];
-          if (a > 0) gl.drawArrays(gl.TRIANGLES, 0, a);
-          if (b < pn) gl.drawArrays(gl.TRIANGLES, b, pn - b);
-        }
+        if (showPeople && meshes.people.n) { bind(meshes.people); gl.drawArrays(gl.TRIANGLES, 0, meshes.people.n); }
       },
     };
   }
@@ -511,7 +382,7 @@
   const renderer = createRenderer(canvas);
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const cam = { eye: [0, 2, 10], yaw: 0, pitch: 0, yawT: 0, pitchT: 0, house: 0 };
-  let glow = [0.4, 0.3, 0.4], frame = 0, last = 0, snap = true, peopleRanges = {};
+  let glow = [0.4, 0.3, 0.4], frame = 0, last = 0, snap = true;
 
   function fitCanvas() {
     const dpr = Math.min(2, window.devicePixelRatio || 1);
@@ -543,7 +414,7 @@
     const aspect = canvas.width / canvas.height;
     const fovy = 2 * Math.atan(Math.tan((88 / DEG) / 2) / Math.max(aspect, 1.2));
     const vp = mul(perspective(fovy, aspect, 0.08, 120), viewMatrix(cam.eye, f));
-    renderer.draw(vp, h, glow, cam.house, state.people, peopleRanges[viewSeat().id]);
+    renderer.draw(vp, h, glow, cam.house, state.people);
   }
 
   // ドラッグで見回す
@@ -567,9 +438,7 @@
   function resetLook() { cam.yawT = 0; cam.pitchT = 0; $('tReset').hidden = true; }
 
   // ───────────────────────── 座席表 ─────────────────────────
-  // 3D と同じ座標から描くので、通路・特別席の幅・横通路が実際の比率で並ぶ。
   const rowsEl = $('rows'), mapEl = $('map'), scrollEl = $('mapScroll');
-  const LABEL_W = 22;
 
   function heatColor(score) {
     const t = clamp((score - 35) / 60, 0, 1);
@@ -579,108 +448,91 @@
     return `rgb(${c[0]},${c[1]},${c[2]})`;
   }
 
-  function mapScale(h) {
-    const avail = Math.max(260, scrollEl.clientWidth - 32 - LABEL_W * 2);
-    const span = h.maxX - h.minX;
-    // 通常席が 16〜32px になる範囲で、できるだけ横幅に収める
-    return clamp(avail / span, 16 / (h.seatW * 0.86), 32 / (h.seatW * 0.86));
-  }
-
   function renderMap() {
-    const h = state.hall, k = mapScale(h);
-    const sPx = h.seatW * k * 0.86, rowPx = sPx * 1.24, kz = rowPx / h.pitch;
-    const width = (h.maxX - h.minX) * k, x0 = LABEL_W - h.minX * k;
-    const z0 = h.rowList[0].z;
+    const h = state.hall;
     rowsEl.textContent = '';
-    mapEl.classList.toggle('dense', sPx < 21);
-    mapEl.style.setProperty('--s', sPx + 'px');
-
-    // スクリーン（実際の幅の比率で描く）
-    const scr = $('screenArc');
-    scr.style.width = h.screenW * k + 'px';
-    scr.style.marginLeft = x0 - (h.screenW / 2) * k + 'px';
-    $('screenLabel').textContent = `SCREEN ${h.screenW}m`;
-
-    let bottom = 0;
-    for (const row of h.rowList) {
-      const top = (row.z - z0) * kz;
-      bottom = top + sPx;
-      for (const side of ['l', 'r']) {
-        const l = document.createElement('span');
-        l.className = 'row-label'; l.textContent = row.name; l.setAttribute('aria-hidden', 'true');
-        l.style.top = top + 'px';
-        if (side === 'l') l.style.left = '0'; else l.style.left = LABEL_W + width + 'px';
-        rowsEl.append(l);
-      }
-      for (const s of row.seats) {
+    for (let r = 0; r < h.rows; r++) {
+      const row = document.createElement('div');
+      row.className = 'row';
+      const lab = () => { const l = document.createElement('span'); l.className = 'row-label'; l.textContent = ROW_NAMES[r]; l.setAttribute('aria-hidden', 'true'); return l; };
+      row.append(lab());
+      for (let c = 0; c < h.cols; c++) {
+        const s = h.seats[r * h.cols + c];
         const b = document.createElement('button');
-        b.type = 'button'; b.className = 'seat' + (s.kind !== 'std' ? ' sp' : ''); b.dataset.id = s.id; b.textContent = s.num;
-        const w = s.w * k * (s.kind !== 'std' ? 0.9 : 0.86);
-        b.style.width = w + 'px';
-        b.style.left = x0 + s.x * k - w / 2 + 'px';
-        b.style.top = top + 'px';
+        b.type = 'button'; b.className = 'seat'; b.dataset.id = s.id; b.textContent = c + 1;
         b.style.setProperty('--heat', heatColor(s.score));
-        const kind = s.kind !== 'std' ? `${KINDS[s.kind].name}、` : '';
-        b.setAttribute('aria-label', `${s.label}、${kind}見やすさ ${s.score}点`);
-        rowsEl.append(b);
+        if (s.taken) { b.disabled = true; b.textContent = ''; b.setAttribute('aria-label', s.label + '、予約済み'); }
+        else { b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', `${s.label}、見やすさ ${s.score}点`); }
+        row.append(b);
+        if (h.aisles.includes(c)) { const a = document.createElement('span'); a.className = 'aisle'; row.append(a); }
       }
+      row.append(lab());
+      rowsEl.append(row);
     }
-    rowsEl.style.width = width + LABEL_W * 2 + 'px';
-    rowsEl.style.height = bottom + 'px';
-    applyHeat(); syncSeats();
+    applyHeat(); sizeMap(); syncSeats();
     scrollEl.scrollLeft = (scrollEl.scrollWidth - scrollEl.clientWidth) / 2;
   }
   function applyHeat() {
-    for (const b of rowsEl.querySelectorAll('.seat')) {
+    for (const b of rowsEl.querySelectorAll('.seat:not(:disabled)')) {
       if (state.heat) b.style.setProperty('--seat-c', b.style.getPropertyValue('--heat'));
       else b.style.removeProperty('--seat-c');
     }
     $('heatLegend').hidden = !state.heat;
     $('tHeat').setAttribute('aria-pressed', state.heat);
   }
+  function sizeMap() {
+    const h = state.hall, avail = scrollEl.clientWidth - 32;
+    let s = 34, g = 5;
+    for (; s > 18; s--) {
+      g = s >= 24 ? 5 : 3;
+      if (h.cols * (s + g) + h.aisles.length * (s * 0.7 + g) + 2 * (16 + g) <= avail) break;
+    }
+    mapEl.style.setProperty('--s', s + 'px');
+    mapEl.style.setProperty('--g', g + 'px');
+    mapEl.classList.toggle('dense', s < 24);
+  }
   function syncSeats() {
     const v = viewSeat();
     for (const b of rowsEl.querySelectorAll('.seat')) {
-      b.setAttribute('aria-pressed', state.selected.includes(b.dataset.id));
+      if (!b.disabled) b.setAttribute('aria-pressed', state.selected.includes(b.dataset.id));
       b.classList.toggle('view', b.dataset.id === v.id);
     }
   }
 
   function toggleSeat(id) {
     const i = state.selected.indexOf(id);
-    if (i >= 0) { state.selected.splice(i, 1); if (state.focus === id) state.focus = null; }
-    else if (state.selected.length >= MAX_PICK) return toast(`比較できるのは${MAX_PICK}席までです`);
-    else { state.selected.push(id); state.focus = id; }
+    if (i >= 0) state.selected.splice(i, 1);
+    else if (state.selected.length >= MAX_PICK) return toast(`一度に選べるのは${MAX_PICK}席までです`);
+    else state.selected.push(id);
     update();
   }
 
-  rowsEl.addEventListener('click', (e) => { const b = e.target.closest('.seat'); if (b) toggleSeat(b.dataset.id); });
+  rowsEl.addEventListener('click', (e) => { const b = e.target.closest('.seat'); if (b && !b.disabled) toggleSeat(b.dataset.id); });
   rowsEl.addEventListener('pointerover', (e) => {
     if (e.pointerType !== 'mouse') return;
     const b = e.target.closest('.seat');
-    setHover(b ? seatById(b.dataset.id) : null);
+    setHover(b && !b.disabled ? seatById(b.dataset.id) : null);
   });
   rowsEl.addEventListener('pointerleave', () => setHover(null));
   rowsEl.addEventListener('focusin', (e) => { const b = e.target.closest('.seat'); if (b && b.matches(':focus-visible')) setHover(seatById(b.dataset.id)); });
   rowsEl.addEventListener('focusout', () => setHover(null));
-  // 矢印キー：左右は同じ列の隣の席、上下は前後の列でいちばん近い席へ
   rowsEl.addEventListener('keydown', (e) => {
     const d = { ArrowLeft: [0, -1], ArrowRight: [0, 1], ArrowUp: [-1, 0], ArrowDown: [1, 0] }[e.key];
     const b = e.target.closest('.seat');
     if (!d || !b) return;
     e.preventDefault();
-    const h = state.hall, s = seatById(b.dataset.id), row = h.rowList[s.r];
-    let next;
-    if (d[1]) next = row.seats[row.seats.indexOf(s) + d[1]];
-    else {
-      const to = h.rowList[s.r + d[0]];
-      if (to) next = to.seats.reduce((a, c) => (Math.abs(c.x - s.x) < Math.abs(a.x - s.x) ? c : a));
+    let [r, c] = b.dataset.id.split('-').map(Number);
+    for (;;) { // 予約済みの席は飛ばす
+      r += d[0]; c += d[1];
+      const n = rowsEl.querySelector(`[data-id="${r}-${c}"]`);
+      if (!n) return;
+      if (!n.disabled) return n.focus();
     }
-    if (next) rowsEl.querySelector(`[data-id="${next.id}"]`).focus();
   });
   function setHover(s) { if (state.hover !== s) { state.hover = s; update(); } }
 
   // ───────────────────────── パネル更新 ─────────────────────────
+  const won = (n) => n.toLocaleString('ja-JP') + '円';
   let lastView = null;
 
   function update() {
@@ -690,11 +542,9 @@
 
     const picked = state.selected.includes(s.id);
     const pill = $('viewState');
-    pill.textContent = state.hover && !picked ? 'プレビュー' : picked ? '比較中の席' : 'おすすめ席';
+    pill.textContent = picked ? '選択した席' : state.hover ? 'プレビュー' : 'おすすめ席';
     pill.classList.toggle('on', picked);
-    $('viewSeat').textContent = `${h.screen} · ${s.label}`;
-    $('viewKind').textContent = s.kind !== 'std' ? KINDS[s.kind].name : '';
-    $('viewKind').hidden = s.kind === 'std';
+    $('viewSeat').textContent = `${h.name} · ${s.label}`;
 
     $('scoreNum').textContent = s.score;
     $('ring').style.strokeDashoffset = 169.65 * (1 - s.score / 100);
@@ -709,7 +559,7 @@
     $('say').textContent = say.join('');
 
     const tag = (id, text, good) => { const el = $(id); el.textContent = text; el.classList.toggle('good', !!good); };
-    $('mDist').textContent = '約' + s.dist.toFixed(1) + 'm';
+    $('mDist').textContent = s.dist.toFixed(1) + 'm';
     tag('mDistTag', `スクリーン幅 ${h.screenW}m`);
     $('mH').textContent = Math.round(s.hAngle) + '°';
     tag('mHTag', dH > 18 ? 'いっぱい' : dH < -12 ? 'ゆとりあり' : 'ちょうどいい', Math.abs(dH) <= 12);
@@ -719,24 +569,19 @@
     tag('mOTag', s.off < 8 ? 'ど真ん中' : s.off < 20 ? 'やや端' : '端', s.off < 8);
 
     const n = state.selected.length;
-    $('pickedLabel').textContent = n ? `比較リスト · ${h.screen}` : '席をタップすると比較リストに追加されます';
+    $('pickedLabel').textContent = n ? `${h.name} ${h.tag}` : '座席を選んでください';
     const chips = $('pickedChips');
     chips.textContent = '';
     for (const id of state.selected) {
-      const st = seatById(id), wrap = document.createElement('span');
-      wrap.className = 'pchip' + (st === s ? ' on' : '');
-      const v = document.createElement('button');
-      v.type = 'button'; v.className = 'pchip-view'; v.dataset.view = id;
-      v.setAttribute('aria-label', `${st.label}からの見え方を表示`);
-      const b = document.createElement('b'); b.textContent = st.short;
-      const sc = document.createElement('small'); sc.textContent = st.score + '点';
-      v.append(b, sc);
-      const x = document.createElement('button');
-      x.type = 'button'; x.className = 'pchip-x'; x.dataset.remove = id; x.textContent = '×';
-      x.setAttribute('aria-label', `${st.label}を比較リストから外す`);
-      wrap.append(v, x);
-      chips.append(wrap);
+      const st = seatById(id), c = document.createElement('button');
+      c.type = 'button'; c.className = 'pchip'; c.dataset.id = id;
+      c.setAttribute('aria-label', st.label + 'の選択を解除');
+      c.append(st.short); const x = document.createElement('i'); x.textContent = '×'; c.append(x);
+      chips.append(c);
     }
+    $('totalCount').textContent = n ? `${n}名` : '';
+    $('totalPrice').textContent = n ? won(n * h.price) : '';
+    $('bBook').disabled = !n;
   }
 
   let toastT;
@@ -746,58 +591,26 @@
     clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove('show'), 2200);
   }
 
-  function renderFacts(h) {
-    $('factTheater').textContent = `${h.theater} ${h.screen}`;
-    $('factTag').textContent = `${h.area} · ${h.tag}`;
-    const dl = $('factList');
-    dl.textContent = '';
-    const add = (k, v) => {
-      const d = document.createElement('div'), dt = document.createElement('dt'), dd = document.createElement('dd');
-      dt.textContent = k; dd.textContent = v; d.append(dt, dd); dl.append(d);
-    };
-    add('スクリーン(公表値)', h.published.screen);
-    add('座席数(公表値)', h.published.seats);
-    add('本アプリの座席数', `${h.seats.length}席(車椅子スペースは含まない)`);
-    add('列', `${h.rowList[0].name}〜${h.rowList[h.rowList.length - 1].name}列(${h.rowList.length}列)`);
-    add('推定している値', h.estimated);
-    const ul = $('factNotes');
-    ul.textContent = '';
-    for (const n of h.notes) { const li = document.createElement('li'); li.textContent = n; ul.append(li); }
-    const src = $('factSources');
-    src.textContent = '';
-    for (const [label, url] of h.sources) {
-      const a = document.createElement('a');
-      a.href = url; a.textContent = label; a.target = '_blank'; a.rel = 'noopener noreferrer';
-      src.append(a);
-    }
-    const kl = $('kindLegend');
-    kl.hidden = !h.kinds.length;
-    kl.lastChild.textContent = h.kinds.map((k) => KINDS[k].name).join('・');
-  }
-
   function setHall(h) {
-    state.hall = h; state.selected = []; state.focus = null; state.hover = null; snap = true;
+    state.hall = h; state.selected = []; state.hover = null; snap = true;
     for (const t of $('tabs').children) {
       const on = t.dataset.id === h.id;
       t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
     }
     if (renderer) {
       renderer.setMesh('hall', buildHallMesh(h));
-      const p = buildPeopleMesh(h);
-      renderer.setMesh('people', p.data);
-      peopleRanges = p.ranges;
+      renderer.setMesh('people', buildPeopleMesh(h));
     }
-    renderFacts(h); renderMap(); update();
-    try { history.replaceState(null, '', '#' + h.id); } catch (e) { /* 無視 */ }
+    renderMap(); update();
   }
 
   // ───────────────────────── コントロールの接続 ─────────────────────────
   for (const h of halls) {
     const t = document.createElement('button');
     t.type = 'button'; t.className = 'tab'; t.dataset.id = h.id; t.setAttribute('role', 'tab');
-    const b = document.createElement('b'); b.textContent = h.area;
-    const sm = document.createElement('small');
-    sm.textContent = h.screen + ' · ' + h.tag.replace(/・.*$/, '');
+    const b = document.createElement('b'); b.textContent = h.name;
+    const sm = document.createElement('small'), n = document.createElement('span');
+    n.textContent = `${h.rows * h.cols}席`; sm.append(h.tag, n);
     t.append(b, sm);
     t.addEventListener('click', () => setHall(h));
     $('tabs').append(t);
@@ -815,28 +628,29 @@
   toggle('tPeople', 'people'); toggle('tHouse', 'house'); toggle('tPattern', 'pattern'); toggle('tHeat', 'heat', applyHeat);
   $('tReset').addEventListener('click', resetLook);
   $('bBest').addEventListener('click', () => {
-    const best = state.hall.seats.filter((s) => !state.selected.includes(s.id)).sort((a, b) => b.score - a.score)[0];
+    const best = state.hall.seats.filter((s) => !s.taken && !state.selected.includes(s.id)).sort((a, b) => b.score - a.score)[0];
     if (!best) return;
-    if (state.selected.length >= MAX_PICK) return toast(`比較できるのは${MAX_PICK}席までです`);
-    state.selected.push(best.id); state.focus = best.id; update();
+    if (state.selected.length >= MAX_PICK) return toast(`一度に選べるのは${MAX_PICK}席までです`);
+    state.selected.push(best.id); update();
     toast(`${best.label} · 見やすさ ${best.score}点`);
   });
-  $('pickedChips').addEventListener('click', (e) => {
-    const v = e.target.closest('[data-view]'), x = e.target.closest('[data-remove]');
-    if (x) toggleSeat(x.dataset.remove);
-    else if (v) { state.focus = v.dataset.view; update(); }
+  $('pickedChips').addEventListener('click', (e) => { const c = e.target.closest('.pchip'); if (c) toggleSeat(c.dataset.id); });
+  $('bBook').addEventListener('click', () => {
+    const h = state.hall, list = $('dlgList');
+    list.textContent = '';
+    const rows = [['作品', '夜明けの稜線'], ['上映', `本日 19:40 · ${h.name} ${h.tag}`],
+      ['座席', state.selected.map((id) => seatById(id).short).join(', ')], ['お支払い金額', won(state.selected.length * h.price)]];
+    for (const [k, v] of rows) {
+      const dt = document.createElement('dt'), dd = document.createElement('dd');
+      dt.textContent = k; dd.textContent = v; list.append(dt, dd);
+    }
+    $('dlg').showModal();
   });
+  $('dlg').addEventListener('close', () => { if ($('dlg').returnValue === 'ok') toast('デモ予約が完了しました'); });
 
-  let resizeT;
-  let lastW = 0;
-  new ResizeObserver(() => {
-    const w = scrollEl.clientWidth;
-    if (Math.abs(w - lastW) < 2) return;
-    lastW = w; clearTimeout(resizeT); resizeT = setTimeout(renderMap, 120);
-  }).observe(scrollEl);
+  new ResizeObserver(sizeMap).observe(scrollEl);
 
   if (!renderer) { $('nogl').hidden = false; canvas.hidden = true; $('hint').hidden = true; document.querySelector('.hud-tools').hidden = true; }
-  setHall(halls.find((h) => '#' + h.id === location.hash) || halls[0]);
-  addEventListener('hashchange', () => { const h = halls.find((x) => '#' + x.id === location.hash); if (h && h !== state.hall) setHall(h); });
+  setHall(halls[0]);
   if (renderer) requestAnimationFrame(tick);
 })();

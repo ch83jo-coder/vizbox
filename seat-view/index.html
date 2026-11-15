@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="グランドシネマサンシャイン池袋のIMAX、TOHOシネマズ新宿・日比谷の大型スクリーンなど、東京の主要な映画館で各座席からスクリーンがどう見えるかを3Dで確かめられる非公式ガイド。">
+<meta name="description" content="予約する前に、その席からスクリーンがどう見えるかを3Dで確かめられる映画館の座席ビュー。">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0a0a0c">
-<title>SEATVIEW TOKYO — 東京の映画館 座席からの見え方</title>
+<title>SEATVIEW — 予約前に座席からの見え方をチェック</title>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="stylesheet" href="./style.css">
 <script src="./app.js" defer></script>
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="./" aria-label="SEATVIEW TOKYO ホーム">SEAT<span>VIEW</span> <em>TOKYO</em></a>
+  <a class="brand" href="./" aria-label="SEATVIEW ホーム">SEAT<span>VIEW</span></a>
   <div class="film">
-    <strong>東京の映画館 座席からの見え方</strong>
-    <span>非公式 · 配置は公開情報からの推定</span>
+    <strong>夜明けの稜線</strong>
+    <span>本日 19:40 · 字幕 · 118分</span>
   </div>
 </header>
 
@@ -27,7 +27,6 @@
     <div class="hud hud-top">
       <span class="pill" id="viewState">おすすめ席</span>
       <strong id="viewSeat">–</strong>
-      <span class="pill kind" id="viewKind" hidden></span>
     </div>
     <div class="hud hud-tools" role="group" aria-label="プレビューの設定">
       <button type="button" class="tool" id="tPeople" aria-pressed="true">観客</button>
@@ -39,12 +38,12 @@
   </section>
 
   <section class="picker" aria-label="座席の選択">
-    <div class="tabs" role="tablist" aria-label="映画館とスクリーン" id="tabs"></div>
+    <div class="tabs" role="tablist" aria-label="スクリーン" id="tabs"></div>
 
     <div class="map-wrap">
       <div class="map-scroll" id="mapScroll">
         <div class="map" id="map">
-          <div class="screen-arc" id="screenArc" aria-hidden="true"><span id="screenLabel">SCREEN</span></div>
+          <div class="screen-arc" aria-hidden="true"><span>SCREEN</span></div>
           <div class="rows" id="rows" role="group" aria-label="座席表"></div>
         </div>
       </div>
@@ -52,23 +51,15 @@
 
     <div class="map-foot">
       <ul class="legend" aria-label="凡例">
-        <li><i class="sw sw-free"></i>座席</li>
-        <li><i class="sw sw-sel"></i>比較中</li>
-        <li id="kindLegend"><i class="sw sw-sp"></i><span></span></li>
+        <li><i class="sw sw-free"></i>選択可</li>
+        <li><i class="sw sw-sel"></i>選択中</li>
+        <li><i class="sw sw-taken"></i>予約済み</li>
         <li class="heat-legend" id="heatLegend"><i class="sw sw-grad"></i>見やすさ 低 → 高</li>
       </ul>
       <div class="map-actions">
         <button type="button" class="chip" id="tHeat" aria-pressed="true">見やすさで色分け</button>
         <button type="button" class="chip accent" id="bBest">おすすめ席を選ぶ</button>
       </div>
-    </div>
-
-    <div class="facts" aria-labelledby="factTheater">
-      <h2><span id="factTheater">–</span><small id="factTag"></small></h2>
-      <dl id="factList"></dl>
-      <ul id="factNotes"></ul>
-      <p class="facts-src">出典 <span id="factSources"></span></p>
-      <p class="facts-note">列ごとの席数・段差・スクリーンまでの距離などは公開情報からの推定です。実際の座席表は各劇場の公式サイトでご確認ください。本サイトは各劇場とは関係のない非公式の参考サイトです。</p>
     </div>
   </section>
 
@@ -96,13 +87,29 @@
 <footer class="bar">
   <div class="bar-in">
     <div class="picked">
-      <p class="picked-label" id="pickedLabel">席をタップすると比較リストに追加されます</p>
+      <p class="picked-label" id="pickedLabel">座席を選んでください</p>
       <div class="picked-chips" id="pickedChips"></div>
     </div>
+    <div class="total">
+      <span id="totalCount"></span>
+      <b id="totalPrice"></b>
+    </div>
+    <button type="button" class="cta" id="bBook" disabled>予約する</button>
   </div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <form method="dialog">
+    <h2 id="dlgTitle">この座席で予約しますか？</h2>
+    <dl id="dlgList"></dl>
+    <p class="demo-note">デモ画面のため、実際の予約・決済は行われません。</p>
+    <div class="dlg-actions">
+      <button class="chip" value="cancel">選び直す</button>
+      <button class="cta" value="ok">確定</button>
+    </div>
+  </form>
+</dialog>
 </body>
 </html>
