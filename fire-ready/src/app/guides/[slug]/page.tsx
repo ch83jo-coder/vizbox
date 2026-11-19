@@ -45,6 +45,9 @@ export async function generateMetadata({
       ? guide.title_ja
       : `${guide.title_ja}（プレビュー）`,
     description: guide.summary_ja,
+    alternates: isPublished(guide)
+      ? { canonical: `/guides/${guide.slug}` }
+      : undefined,
     robots: isPublished(guide) ? undefined : { index: false, follow: false },
   };
 }

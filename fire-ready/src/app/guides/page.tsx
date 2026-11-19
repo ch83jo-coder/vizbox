@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: "FIRE後の生活準備ガイド",
   description:
     "住まい・クレジットカード・社会保険など、FIRE後の生活に向けた準備ガイドを順次公開予定です。",
+  alternates: { canonical: "/guides" },
 };
 
 export default function GuidesPage() {

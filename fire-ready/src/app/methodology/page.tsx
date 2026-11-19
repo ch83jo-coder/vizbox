@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "計算の前提",
   description:
     "FIRE READYのシミュレーターが使う月単位の計算方法、必要資産の目安、単純基準を満たす時期、資産がゼロになる時期の考え方を説明します。",
+  alternates: { canonical: "/methodology" },
 };
 
 const formula = {

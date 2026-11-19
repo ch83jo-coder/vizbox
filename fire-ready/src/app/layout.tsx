@@ -5,6 +5,8 @@ import { Noto_Sans_JP } from "next/font/google";
 import AppTheme from "@/components/AppTheme";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import { FIRE_ASSETS } from "@/lib/assets";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import { tokens } from "@/lib/tokens";
 import "./globals.css";
 
@@ -24,13 +26,30 @@ const notoSansJp = Noto_Sans_JP({
   ],
 });
 
+// openGraph・twitter の title/description は各ページの title/description から自動で補完される
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "FIRE READY｜資産だけでなく、自由に生きる準備を。",
-    template: "%s｜FIRE READY",
+    default: `FIREシミュレーター｜必要資産と資産の推移を試算｜${SITE_NAME}`,
+    template: `%s｜${SITE_NAME}`,
   },
-  description:
-    "いくら必要か、いつ目指せるか。あなたの条件でFIREをシミュレーション。会員登録なしで、必要資産の目安と資産の推移を試算できます。",
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    locale: "ja_JP",
+    images: [
+      {
+        url: FIRE_ASSETS.hero.src,
+        width: FIRE_ASSETS.hero.width,
+        height: FIRE_ASSETS.hero.height,
+        alt: "海と山を望む円い窓の前に、大理石の段とガラス玉、松の木が並ぶイラスト",
+      },
+    ],
+  },
+  twitter: { card: "summary_large_image" },
+  robots: { "max-image-preview": "large" },
   verification: {
     google: "f21cCBWKUbZL0yZpFqgmCy_KPK-CHbFkM1C6ExOUjH8",
   },

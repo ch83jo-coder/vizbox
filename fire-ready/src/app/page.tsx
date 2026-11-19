@@ -3,12 +3,41 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
+import type { Metadata } from "next";
 import GuidePreviewCards from "@/components/guides/GuidePreviewCards";
 import Faq from "@/components/landing/Faq";
 import FeatureCards from "@/components/landing/FeatureCards";
 import Hero from "@/components/landing/Hero";
 import Simulator from "@/components/simulator/Simulator";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import { tokens } from "@/lib/tokens";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_URL,
+      inLanguage: "ja",
+    },
+    {
+      "@type": "WebApplication",
+      name: SITE_NAME,
+      url: SITE_URL,
+      description: SITE_DESCRIPTION,
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "Web",
+      inLanguage: "ja",
+      isAccessibleForFree: true,
+      offers: { "@type": "Offer", price: 0, priceCurrency: "JPY" },
+    },
+  ],
+};
 
 function SectionHeading({
   id,
@@ -36,6 +65,13 @@ function SectionHeading({
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: 定数の JSON-LD を埋め込むだけで、利用者の入力は含まない
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <Hero />
       <FeatureCards />
 

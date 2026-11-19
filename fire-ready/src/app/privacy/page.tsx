@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "プライバシー（保存と共有）",
   description:
     "FIRE READYでの入力内容の取り扱い、端末への保存、共有リンク、画像保存について説明します。",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
