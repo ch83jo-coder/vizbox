@@ -31,6 +31,9 @@ export const metadata: Metadata = {
   },
   description:
     "いくら必要か、いつ目指せるか。あなたの条件でFIREをシミュレーション。会員登録なしで、必要資産の目安と資産の推移を試算できます。",
+  verification: {
+    google: "f21cCBWKUbZL0yZpFqgmCy_KPK-CHbFkM1C6ExOUjH8",
+  },
 };
 
 export const viewport: Viewport = {
