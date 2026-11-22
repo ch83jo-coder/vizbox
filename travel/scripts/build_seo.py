@@ -11,6 +11,14 @@ LANGS=['ko','ja','en'];LOCALES={'ko':'ko_KR','ja':'ja_JP','en':'en_US'}
 def url(lang,path=''):return ORIGIN+('/' if lang=='ko' else '/'+lang+'/')+path
 # Field names per language: Japanese is the source text, Korean and English sit beside it.
 SPOT={'ko':('nameKo','descriptionKo','imageCaptionKo'),'ja':('nameJa','descriptionJa','imageCaption'),'en':('nameEn','descriptionEn','imageCaptionEn')}
+GUIDE={'ko':('aboutKo','accessKo'),'ja':('aboutJa','accessJa'),'en':('aboutEn','accessEn')}
+def lead(text,limit=160):
+    """Whole sentences from the start of text, up to limit characters, for meta descriptions."""
+    out=''
+    for sentence in re.split(r'(?<=。)|(?<=[.!?])\s+',text):
+        if out and len(out)+len(sentence)+1>limit:break
+        out+=('' if not out or out.endswith('。') else ' ')+sentence
+    return out.strip()
 AREA={'ko':('nameKo','countryKo'),'ja':('nameJa','countryJa'),'en':('nameEnglish','countryName')}
 EAT={'ko':'nameKo','ja':'nameJa','en':'nameEn'}
 entries=[]
@@ -71,9 +79,11 @@ for lang in LANGS:
             title=s[namekey]+' | '+t(f'{rn} 여행 관광지 안내',f'{rn}旅行観光ガイド',f'{rn} travel guide');desc=s[desckey]+t(f'. 사진, 지도와 함께 다음 {rn} 여행을 계획해 보세요.',f'。写真と地図で次の{rn}旅行を計画しましょう。',f'. Plan your next trip to {rn} with photos and maps.')
             credit=f'<p class="photo-credit">{e(s["imageArtist"])} · <a href="{e(s["imageLicenseUrl"])}">{e(s["imageLicense"])}</a> · <a href="{e(s["imageFilePage"])}">Wikimedia Commons</a></p>'
             caption=e(s.get(capkey,''))
-            body=f'<section class="section"><a href="{url(lang,"regions/"+r["id"]+"/")}">{rn} TOP10</a><h1>{e(s[namekey])}</h1><img class="seo-spot-image" src="/{s["image"]}" alt="{e(s[namekey])}"><p>{caption}</p><p>{e(desc)}</p>{credit}<a class="primary" href="https://www.google.com/maps/search/?api=1&amp;query={quote(s["nameJa"]+" "+r["nameJa"])}">Google Maps ↗</a> <a class="secondary" href="{food(s["nameJa"]+" "+r["nameJa"])}">{t("근처 맛집 찾기","近くのグルメを探す","Find restaurants nearby")} ↗</a></section>'
-            spot={'@type':'TouristAttraction','@id':url(lang,'spots/'+s['slug']+'/')+'#attraction','name':s[namekey],'description':s[desckey],'image':ORIGIN+'/'+s['image'],'url':url(lang,'spots/'+s['slug']+'/'),'containedInPlace':{'@type':'Place','name':rn,'containedInPlace':{'@type':'Place','name':cn}}}
-            page(lang,'spots/'+s['slug']+'/',title,desc,body,spot,crumbs=[country_crumb,(rn+' TOP10',url(lang,'regions/'+r['id']+'/'))])
+            about=s.get(GUIDE[lang][0],[]);access=s.get(GUIDE[lang][1],'');meta=lead(about[0]) if about else desc
+            guide=(f'<h2>{t("볼거리","見どころ","Highlights")}</h2>'+''.join(f'<p>{e(p)}</p>' for p in about) if about else '')+(f'<h2>{t("가는 법","アクセス","Getting there")}</h2><p>{e(access)}</p>' if access else '')
+            body=f'<section class="section"><a href="{url(lang,"regions/"+r["id"]+"/")}">{rn} TOP10</a><h1>{e(s[namekey])}</h1><img class="seo-spot-image" src="/{s["image"]}" alt="{e(s[namekey])}"><p>{caption}</p><p>{e(desc)}</p>{guide}{credit}<a class="primary" href="https://www.google.com/maps/search/?api=1&amp;query={quote(s["nameJa"]+" "+r["nameJa"])}">Google Maps ↗</a> <a class="secondary" href="{food(s["nameJa"]+" "+r["nameJa"])}">{t("근처 맛집 찾기","近くのグルメを探す","Find restaurants nearby")} ↗</a></section>'
+            spot={'@type':'TouristAttraction','@id':url(lang,'spots/'+s['slug']+'/')+'#attraction','name':s[namekey],'description':meta if about else s[desckey],'image':ORIGIN+'/'+s['image'],'url':url(lang,'spots/'+s['slug']+'/'),'containedInPlace':{'@type':'Place','name':rn,'containedInPlace':{'@type':'Place','name':cn}}}
+            page(lang,'spots/'+s['slug']+'/',title,meta,body,spot,crumbs=[country_crumb,(rn+' TOP10',url(lang,'regions/'+r['id']+'/'))])
 ns='http://www.sitemaps.org/schemas/sitemap/0.9';xh='http://www.w3.org/1999/xhtml';ET.register_namespace('',ns);ET.register_namespace('xhtml',xh);tree=ET.Element('{'+ns+'}urlset')
 for canonical,alternates in entries:
     entry=ET.SubElement(tree,'{'+ns+'}url');ET.SubElement(entry,'{'+ns+'}loc').text=canonical

@@ -16,6 +16,8 @@ http://localhost:8080 を開きます。ビルド不要。画像と日本語フ�
 
 スポットを追加するときは `imageArticle`（英語版WikipediaのURL）と `image`（`assets/spots/<slug>.jpg`）だけを書き、`python3 travel/scripts/fetch_spot_images.py --missing` を実行すると、記事の代表写真（Commonsのjpg）を選んで保存し、撮影者・ライセンスを記録します。代表写真が地図・ロゴなど不適切な場合や見つからない場合は `imageFilePage` にCommonsのファイルページを直接指定します。営業時間・料金は未検証のため掲載していません。
 
+スポットの詳しい紹介は `aboutJa`・`aboutKo`・`aboutEn`（段落の配列。3言語で段落数を揃える）、行き方は `accessJa`・`accessKo`・`accessEn` に書きます。どちらも任意で、ある場合だけ詳細画面とスポットページに「見どころ」「アクセス」として表示し、`aboutXx` の最初の段落をそのページのmeta descriptionに使います。現在は名古屋の10か所に入っています。
+
 ## デプロイ
 
 Vercel Root Directory = `travel`、Framework Preset = Other、Build Command = 空欄。公開操作は別途実施します。
