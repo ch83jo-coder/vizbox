@@ -117,3 +117,15 @@ nav a[href$="/favorites/"] .nav-icon,nav a[href="#favorites"] .nav-icon{color:#f
  .nav-icon{width:18px;height:18px}
 }
 @media(max-width:360px){body>header nav a{flex-direction:column;gap:2px;font-size:11px}}
+/* Split view (tablet): the list column is narrow, so stack the photo above the text instead of squeezing the text into a sliver. */
+.split>.rank-list{container-type:inline-size}
+.rank-row h2,.rank-row h3,.rank-row p{word-break:keep-all}
+@container (max-width:440px){
+ .rank-row{gap:10px;padding:14px 10px;align-items:flex-start}
+ .rank{min-width:24px;font-size:20px;padding-top:4px}
+ .rank-row .spot-open{flex-direction:column;align-items:stretch;gap:10px}
+ .rank-row img{width:100%;height:auto;aspect-ratio:2/1;border-radius:10px}
+ .rank-row h2,.rank-row h3{font-size:15px;line-height:1.45;margin:0 0 4px}
+ .rank-row p{font-size:12px;line-height:1.65}
+ .rank-row .heart{width:40px;height:40px;margin-top:0}
+}
