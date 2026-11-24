@@ -3,6 +3,7 @@ import json,re,html,xml.etree.ElementTree as ET
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 from urllib.parse import quote
+from PIL import Image
 food=lambda q:'https://www.google.com/maps/search/?api=1&amp;query='+quote('restaurants near '+q)
 ORIGIN='https://travel.play-labo.com'
 data=json.loads((ROOT/'data.json').read_text());template=(ROOT/'scripts/page-template.html').read_text()
@@ -22,9 +23,22 @@ def lead(text,limit=160):
 AREA={'ko':('nameKo','countryKo'),'ja':('nameJa','countryJa'),'en':('nameEnglish','countryName')}
 EAT={'ko':'nameKo','ja':'nameJa','en':'nameEn'}
 entries=[]
-def page(lang,path,title,description,body,extra=None,noindex=False,crumbs=()):
-    canonical=url(lang,path);alternates={l:url(l,path) for l in LANGS};image=ORIGIN+f'/assets/og/japan-travel-{lang}.jpg'
-    meta=f'''<base href="/"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><link rel="canonical" href="{canonical}">{''.join(f'<link rel="alternate" hreflang="{l}" href="{h}">' for l,h in alternates.items())}<link rel="alternate" hreflang="x-default" href="{alternates['ko']}"><meta property="og:type" content="website"><meta property="og:site_name" content="World Travel TOP10"><meta property="og:locale" content="{LOCALES[lang]}">{''.join(f'<meta property="og:locale:alternate" content="{LOCALES[l]}">' for l in LANGS if l!=lang)}<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{image}"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="World Travel TOP10"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{image}"><link rel="icon" href="/favicon.svg" type="image/svg+xml">'''
+SIZES={}
+def size(rel):
+    if rel not in SIZES:
+        with Image.open(ROOT/rel) as im:SIZES[rel]=im.size
+    return SIZES[rel]
+def share_image(rel,alt):
+    """Social preview from a spot photo, or None when the photo is too small for link cards."""
+    w,h=size(rel);return (ORIGIN+'/'+rel,w,h,alt) if w>=600 else None
+def local_name(lang,s,r,namekey):
+    """Spot name with the Japanese original beside it on Korean and English pages for Japan, so kanji searches match."""
+    name=s[namekey];return f'{name}{" (" if lang=="en" else "("}{s["nameJa"]})' if lang!='ja' and r['country']=='japan' and s['nameJa']!=name else name
+images=[]
+def page(lang,path,title,description,body,extra=None,noindex=False,crumbs=(),share=None,photos=()):
+    canonical=url(lang,path);alternates={l:url(l,path) for l in LANGS}
+    image,iw,ih,ialt=share or (ORIGIN+f'/assets/og/japan-travel-{lang}.jpg',1200,630,'World Travel TOP10')
+    meta=f'''<base href="/"><meta name="robots" content="{'noindex,follow' if noindex else 'index,follow,max-image-preview:large'}"><link rel="canonical" href="{canonical}">{''.join(f'<link rel="alternate" hreflang="{l}" href="{h}">' for l,h in alternates.items())}<link rel="alternate" hreflang="x-default" href="{alternates['ko']}"><meta property="og:type" content="website"><meta property="og:site_name" content="World Travel TOP10"><meta property="og:locale" content="{LOCALES[lang]}">{''.join(f'<meta property="og:locale:alternate" content="{LOCALES[l]}">' for l in LANGS if l!=lang)}<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{image}"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="{iw}"><meta property="og:image:height" content="{ih}"><meta property="og:image:alt" content="{e(ialt)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}"><meta name="twitter:description" content="{e(description)}"><meta name="twitter:image" content="{image}"><meta name="twitter:image:alt" content="{e(ialt)}"><link rel="icon" href="/favicon.svg" type="image/svg+xml">'''
     graph=[{'@type':'WebSite','@id':ORIGIN+'/#website','url':ORIGIN+'/','name':'World Travel TOP10','inLanguage':LANGS},{'@type':'WebPage','@id':canonical+'#page','url':canonical,'name':title,'description':description,'inLanguage':lang,'isPartOf':{'@id':ORIGIN+'/#website'}}]
     if path and not noindex:graph.append({'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i,'name':name,'item':item} for i,(name,item) in enumerate([({'ko':'홈','ja':'ホーム','en':'Home'}[lang],url(lang)),*crumbs,(title,canonical)],1)]})
     if extra:graph.append(extra)
@@ -40,7 +54,7 @@ def page(lang,path,title,description,body,extra=None,noindex=False,crumbs=()):
     for old,new in shell.get(lang,[]):out=out.replace(old,new)
     out=re.sub(r'data-language="(\w+)" lang="\1" aria-pressed="\w+"',lambda m:f'data-language="{m[1]}" lang="{m[1]}" aria-pressed="{str(m[1]==lang).lower()}"',out)
     target=ROOT/('' if lang=='ko' else lang)/path/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(out)
-    if not noindex:entries.append((canonical,alternates))
+    if not noindex:entries.append((canonical,alternates,photos))
 countries={}
 for r in data:countries.setdefault(r['country'],[]).append(r)
 def region_cards(lang,regions=data):
@@ -74,20 +88,25 @@ for lang in LANGS:
         eat_map=lambda x:'https://www.google.com/maps/search/?api=1&amp;query='+quote(x['nameEn']+' '+x['address'] if x['address'] else f"{x['lat']},{x['lon']}")
         eats='' if not r.get('restaurants') else f'<h2>{e(t(f"{rn} 대표 맛집",f"{rn}の名物グルメ",f"{rn}: local eats"))}</h2><div class="spots eats">'+''.join(f'<article class="spot">'+(f'<img class="spot-img" src="/{x["image"]}" alt="{e(x[eatkey] or x["nameJa"])}" loading="lazy">' if x.get('image') else '<div class="eat-noimg" aria-hidden="true">🍴</div>')+f'<div class="spot-info"><h3>{e(x[eatkey] or x["nameJa"])}</h3>'+(f'<p class="eat-address" translate="no">📍 {e(x["address"])}</p>' if x['address'] else '')+f'<a class="small-link" href="{eat_map(x)}">{t("지도에서 보기","地図で見る","View map")} ↗</a><p class="photo-credit">'+(f'{e(x["imageArtist"])} · <a href="{e(x["imageLicenseUrl"])}">{e(x["imageLicense"])}</a> · <a href="{e(x["article"])}">Wikipedia</a>' if x.get('image') else '')+(f'{" · " if x.get("image") else ""}<a href="{e(x["addressSource"])}">{t("주소 출처","住所の出典","Address source")}</a>' if x.get('addressSource') else '')+'</p></div></article>' for x in r['restaurants'])+'</div>'
         listing={'@type':'ItemList','name':title,'itemListOrder':'https://schema.org/ItemListOrderAscending','numberOfItems':10,'itemListElement':[{'@type':'ListItem','position':s['rank'],'name':s[namekey],'url':url(lang,'spots/'+s['slug']+'/')} for s in r['spots']]}
-        page(lang,'regions/'+r['id']+'/',title,desc,f'<section class="section"><a href="{country_crumb[1]}">{e(cn)}</a><h1>{e(title.split(" | ")[0])}</h1><p>{e(desc)}</p><p><a class="small-link" href="{food(r['nameJa'])}">{e(t(f"{rn} 맛집 찾기",f"{rn}のグルメを探す",f"Find restaurants in {rn}"))} ↗</a></p><div class="rank-list">{items}</div>{eats}</section>',listing,crumbs=[country_crumb])
+        page(lang,'regions/'+r['id']+'/',title,desc,share=share_image(r['spots'][0]['image'],r['spots'][0][namekey]),photos=[ORIGIN+'/'+s['image'] for s in r['spots']],body=f'<section class="section"><a href="{country_crumb[1]}">{e(cn)}</a><h1>{e(title.split(" | ")[0])}</h1><p>{e(desc)}</p><p><a class="small-link" href="{food(r['nameJa'])}">{e(t(f"{rn} 맛집 찾기",f"{rn}のグルメを探す",f"Find restaurants in {rn}"))} ↗</a></p><div class="rank-list">{items}</div>{eats}</section>',extra=listing,crumbs=[country_crumb])
         for s in r['spots']:
-            title=s[namekey]+' | '+t(f'{rn} 여행 관광지 안내',f'{rn}旅行観光ガイド',f'{rn} travel guide');desc=s[desckey]+t(f'. 사진, 지도와 함께 다음 {rn} 여행을 계획해 보세요.',f'。写真と地図で次の{rn}旅行を計画しましょう。',f'. Plan your next trip to {rn} with photos and maps.')
-            credit=f'<p class="photo-credit">{e(s["imageArtist"])} · <a href="{e(s["imageLicenseUrl"])}">{e(s["imageLicense"])}</a> · <a href="{e(s["imageFilePage"])}">Wikimedia Commons</a></p>'
-            caption=e(s.get(capkey,''))
+            full=local_name(lang,s,r,namekey);title=full+' | '+t(f'{rn} 여행 관광지 안내',f'{rn}旅行観光ガイド',f'{rn} travel guide');desc=s[desckey]+t(f'. 사진, 지도와 함께 다음 {rn} 여행을 계획해 보세요.',f'。写真と地図で次の{rn}旅行を計画しましょう。',f'. Plan your next trip to {rn} with photos and maps.')
+            credit=f'<span class="photo-credit">{e(s["imageArtist"])} · <a href="{e(s["imageLicenseUrl"])}">{e(s["imageLicense"])}</a> · <a href="{e(s["imageFilePage"])}">Wikimedia Commons</a></span>'
+            caption=f'<p>{e(s[capkey])}</p>' if s.get(capkey) else ''
+            w,h=size(s['image']);alt=full+t(' 사진',' の写真',' photo')
+            others=''.join(f'<li><a href="{url(lang,"spots/"+o["slug"]+"/")}">{e(o[namekey])}</a></li>' for o in r['spots'] if o is not s)
+            nearby=f'<h2>{e(t(f"{rn}의 다른 추천 관광지",f"{rn}のほかのおすすめスポット",f"More top sights in {rn}"))}</h2><ul class="seo-related">{others}</ul>'
             about=s.get(GUIDE[lang][0],[]);access=s.get(GUIDE[lang][1],'');meta=lead(about[0]) if about else desc
             guide=(f'<h2>{t("볼거리","見どころ","Highlights")}</h2>'+''.join(f'<p>{e(p)}</p>' for p in about) if about else '')+(f'<h2>{t("가는 법","アクセス","Getting there")}</h2><p>{e(access)}</p>' if access else '')
-            body=f'<section class="section"><a href="{url(lang,"regions/"+r["id"]+"/")}">{rn} TOP10</a><h1>{e(s[namekey])}</h1><img class="seo-spot-image" src="/{s["image"]}" alt="{e(s[namekey])}"><p>{caption}</p><p>{e(desc)}</p>{guide}{credit}<a class="primary" href="https://www.google.com/maps/search/?api=1&amp;query={quote(s["nameJa"]+" "+r["nameJa"])}">Google Maps ↗</a> <a class="secondary" href="{food(s["nameJa"]+" "+r["nameJa"])}">{t("근처 맛집 찾기","近くのグルメを探す","Find restaurants nearby")} ↗</a></section>'
-            spot={'@type':'TouristAttraction','@id':url(lang,'spots/'+s['slug']+'/')+'#attraction','name':s[namekey],'description':meta if about else s[desckey],'image':ORIGIN+'/'+s['image'],'url':url(lang,'spots/'+s['slug']+'/'),'containedInPlace':{'@type':'Place','name':rn,'containedInPlace':{'@type':'Place','name':cn}}}
-            page(lang,'spots/'+s['slug']+'/',title,meta,body,spot,crumbs=[country_crumb,(rn+' TOP10',url(lang,'regions/'+r['id']+'/'))])
-ns='http://www.sitemaps.org/schemas/sitemap/0.9';xh='http://www.w3.org/1999/xhtml';ET.register_namespace('',ns);ET.register_namespace('xhtml',xh);tree=ET.Element('{'+ns+'}urlset')
-for canonical,alternates in entries:
+            body=f'<section class="section"><a href="{url(lang,"regions/"+r["id"]+"/")}">{rn} TOP10</a><h1>{e(full)}</h1><figure class="seo-spot-figure"><img class="seo-spot-image" src="/{s["image"]}" alt="{e(alt)}" width="{w}" height="{h}" fetchpriority="high"><figcaption>{credit}</figcaption></figure>{caption}<p>{e(desc)}</p>{guide}<a class="primary" href="https://www.google.com/maps/search/?api=1&amp;query={quote(s["nameJa"]+" "+r["nameJa"])}">Google Maps ↗</a> <a class="secondary" href="{food(s["nameJa"]+" "+r["nameJa"])}">{t("근처 맛집 찾기","近くのグルメを探す","Find restaurants nearby")} ↗</a>{nearby}</section>'
+            photo={'@type':'ImageObject','contentUrl':ORIGIN+'/'+s['image'],'width':w,'height':h,'caption':alt,'creator':{'@type':'Person','name':s['imageArtist']},'creditText':s['imageArtist']+' / Wikimedia Commons','license':s['imageLicenseUrl'],'acquireLicensePage':s['imageFilePage'],'copyrightNotice':s['imageArtist']+', '+s['imageLicense']}
+            spot={'@type':'TouristAttraction','@id':url(lang,'spots/'+s['slug']+'/')+'#attraction','name':s[namekey],'alternateName':sorted({s['nameJa'],s['nameEn'],s['nameKo']}-{s[namekey]}),'description':meta if about else s[desckey],'image':photo,'sameAs':[s['imageArticle']],'url':url(lang,'spots/'+s['slug']+'/'),'containedInPlace':{'@type':'Place','name':rn,'containedInPlace':{'@type':'Place','name':cn}}}
+            page(lang,'spots/'+s['slug']+'/',title,meta,body,spot,share=share_image(s['image'],alt),photos=[ORIGIN+'/'+s['image']],crumbs=[country_crumb,(rn+' TOP10',url(lang,'regions/'+r['id']+'/'))])
+ns='http://www.sitemaps.org/schemas/sitemap/0.9';xh='http://www.w3.org/1999/xhtml';im='http://www.google.com/schemas/sitemap-image/1.1';ET.register_namespace('',ns);ET.register_namespace('xhtml',xh);ET.register_namespace('image',im);tree=ET.Element('{'+ns+'}urlset')
+for canonical,alternates,photos in entries:
     entry=ET.SubElement(tree,'{'+ns+'}url');ET.SubElement(entry,'{'+ns+'}loc').text=canonical
     for language,href in [*alternates.items(),('x-default',alternates['ko'])]:ET.SubElement(entry,'{'+xh+'}link',{'rel':'alternate','hreflang':language,'href':href})
+    for photo in photos:ET.SubElement(ET.SubElement(entry,'{'+im+'}image'),'{'+im+'}loc').text=photo
 ET.ElementTree(tree).write(ROOT/'sitemap.xml',encoding='utf-8',xml_declaration=True)
 (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+ORIGIN+'/sitemap.xml\n')
 (ROOT/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#168ff0"/><text x="32" y="45" text-anchor="middle" font-family="sans-serif" font-size="40" fill="white">旅</text></svg>')

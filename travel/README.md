@@ -50,7 +50,7 @@ iPhone DuoのSafariはツールバーを画面の横に置き、ビューポー�
 
 データ・ページ雛形を編集した後は `python3 travel/scripts/build_seo.py` を実行し、生成されたHTMLとsitemap.xmlを一緒にコミットしてください。雛形は `scripts/page-template.html` です。ビルドなしでも全ページの見出し・本文・リンク・JSON-LDをHTTP応答に含めます。言語はURLで決まり、切り替えボタンは同じページの別言語URLへ移動します。
 
-各ページにcanonical・hreflang・OGP・Twitter Cardを設定。お気に入りはnoindexです。robots.txtからsitemap.xmlを案内します。公開後、Google Search Consoleでドメイン所有権を確認し `https://travel.play-labo.com/sitemap.xml` を送信してください。検索結果への掲載時期は検索エンジンによって決まります。
+各ページにcanonical・hreflang・OGP・Twitter Cardを設定。エリアページとスポットページのOGP画像はスポット写真（幅600px未満の場合はサイト共通画像）です。スポットページは写真を `ImageObject`（撮影者・ライセンス・Commonsのファイルページ）としてJSON-LDに含め、Wikipedia記事を `sameAs` に、他言語名を `alternateName` に入れます。日本のスポットは韓国語・英語ページのtitleと見出しに日本語名を併記し（例：도쿠가와엔(徳川園)）、漢字での検索にも一致させます。スポットページの末尾には同じエリアの他の9か所へのリンクを置きます。sitemap.xmlには画像拡張（`image:image`）で写真も載せます。お気に入りはnoindexです。robots.txtからsitemap.xmlを案内します。公開後、Google Search Consoleでドメイン所有権を確認し `https://travel.play-labo.com/sitemap.xml` を送信してください。検索結果への掲載時期は検索エンジンによって決まります。
 
 ### 旧ドメインからの移行
 
